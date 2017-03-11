@@ -25,34 +25,31 @@
 #include <unordered_set>
 
 class Solution {
-public:
-    bool isMatch(std::string s, std::string p) {
-        return impl1(s, p);
-    }
+   public:
+    bool isMatch(std::string s, std::string p) { return impl1(s, p); }
 
-private:
+   private:
     bool impl1(const std::string& s, const std::string& p) {
         int si = 0, pi = 0, sLen = s.length(), pLen = p.length();
-        int startSI = 0, matchPI = 0;
+        int startSI = 0, matchPI = -1;
 
-        while(si < sLen) {
-            if(pi >= pLen) return false;
-            if(p[pi] == '?' || p[pi] == s[si]) {
+        while (si < sLen) {
+            if (pi < pLen && (p[pi] == '?' || p[pi] == s[si])) {
                 ++si;
                 ++pi;
-            } else if(p[pi] == '*'){
+            } else if (pi < pLen && p[pi] == '*') {
                 startSI = si;
                 matchPI = ++pi;
-            } else {
+            } else if (matchPI > -1) {
                 si = ++startSI;
                 pi = matchPI;
+            } else {
+                return false;
             }
-
         }
-        while(pi < pLen) {
-            if(p[pi++] != '*') return false;
+        while (pi < pLen) {
+            if (p[pi++] != '*') return false;
         }
         return true;
     }
-
 };

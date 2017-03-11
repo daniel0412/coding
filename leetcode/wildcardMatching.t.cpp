@@ -12,4 +12,5 @@ TEST(WildcardMatching, isMatch) {
     EXPECT_TRUE( sol.isMatch("aa", "*") );
     EXPECT_TRUE( sol.isMatch("aa", "a*") );
     EXPECT_TRUE( sol.isMatch("ab", "?*") );
+    EXPECT_TRUE( sol.isMatch("aaaa", "***a") );
 }
