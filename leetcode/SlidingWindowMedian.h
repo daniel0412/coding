@@ -34,7 +34,7 @@ class SlidingWindowMedian {
             addNum(nums[i]);
             res.push_back(getMedian());
         }
-        return move(res);
+        return res;
     }
 
   private:
@@ -80,10 +80,12 @@ class SlidingWindowMedian {
 
     double getMedian()
     {
-        if(d_leftSet.size() == d_rightSet.size())
-            return (*d_leftSet.begin() + *d_rightSet.begin()) * 0.5;
-        else
+        if(d_leftSet.size() == d_rightSet.size()) {
+            return *d_leftSet.begin()*0.5 + *d_rightSet.begin() * 0.5;
+        }
+        else {
             return *d_leftSet.begin();
+        }
     }
 
     multiset<int, greater<int> > d_leftSet;

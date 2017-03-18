@@ -12,3 +12,11 @@ TEST(SlidingWindowMedian, SlidingWindowMedian) {
         EXPECT_EQ(res[i], target[i]);
     }
 }
+
+TEST(SlidingWindowMedian, OverflowTest) {
+    SlidingWindowMedian sol;
+    vector<int> nums1 = {2147483647, 2147483647};
+    vector<double> res1 = sol.medianSlidingWindow(nums1, 2);
+
+    EXPECT_EQ(res1[0], 2147483647.00000);
+}
