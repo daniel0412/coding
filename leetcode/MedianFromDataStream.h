@@ -16,9 +16,6 @@
 
 using namespace std;
 
-static auto lessCmp = [](const int a, const int b) { return a < b; };
-static auto greaterCmp = [](const int a, const int b) { return a > b; };
-
 class MedianFromDataStream {
   public:
     MedianFromDataStream() {}
@@ -36,7 +33,7 @@ class MedianFromDataStream {
             }
         }
         else {
-            if(d_rightMinHeap.size() == 0 || num >= d_leftMaxHeap.top()) {
+            if(num >= d_leftMaxHeap.top()) {
                 d_rightMinHeap.push(num);
             }
             else {
@@ -57,9 +54,6 @@ class MedianFromDataStream {
     }
 
   private:
-    priority_queue<int, vector<int>, decltype(lessCmp)> d_leftMaxHeap(lessCmp);
-    priority_queue<int, vector<int>, decltype(greaterCmp)> d_rightMinHeap(greaterCmp);
-
-     //priority_queue<int, vector<int>, less<int> > d_leftMaxHeap;
-     //priority_queue<int, vector<int>, greater<int> > d_rightMinHeap;
+     priority_queue<int, vector<int>, less<int> > d_leftMaxHeap;
+     priority_queue<int, vector<int>, greater<int> > d_rightMinHeap;
 };
