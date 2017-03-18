@@ -12,12 +12,13 @@ cat << EOF >> "$fileName".h
 
 #include <string>
 #include <vector>
+#include <iostream>
 #include <unordered_map>
 #include <unordered_set>
 
 using namespace std;
 
-class Solution {
+class $1 {
 public:
 
 private:
@@ -30,7 +31,7 @@ cat << EOF >> "$fileName".t.cpp
 #include "${fileName}.h"
 
 TEST($fileName, ) {
-    Solution sol;
+    $1 sol;
 
 }
 EOF

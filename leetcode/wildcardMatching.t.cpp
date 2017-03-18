@@ -1,8 +1,8 @@
 #include "gtest/gtest.h"
-#include "wildcardMatching.h"
+#include "WildcardMatching.h"
 
 TEST(WildcardMatching, isMatch) {
-    Solution sol;
+    WildcardMatching sol;
 
     EXPECT_FALSE( sol.isMatch("aa", "a") );
     EXPECT_FALSE( sol.isMatch("aaa", "as") );

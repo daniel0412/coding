@@ -24,12 +24,22 @@
 #include <unordered_map>
 #include <unordered_set>
 
-class Solution {
+using namespace std;
+
+class WildcardMatching {
    public:
-    bool isMatch(std::string s, std::string p) { return impl1(s, p); }
+    bool isMatch(std::string s, std::string p) { return greedyImpl(s, p); }
 
    private:
-    bool impl1(const std::string& s, const std::string& p) {
+    /**
+     * @brief: greedy implementation, pass the big data test
+     *
+     * @param s
+     * @param p
+     *
+     * @return
+     */
+    bool greedyImpl(const std::string& s, const std::string& p) {
         int si = 0, pi = 0, sLen = s.length(), pLen = p.length();
         int startSI = 0, matchPI = -1;
 
@@ -51,5 +61,45 @@ class Solution {
             if (p[pi++] != '*') return false;
         }
         return true;
+    }
+
+    /**
+     * @brief:  dp implementation, O(m*n) space complexity and O(m*n) time
+     *complexity
+     *          fails the big data test
+     *
+     * @param s
+     * @param p
+     *
+     * @return
+     */
+    bool dpImpl(const string& s, const string& p) {
+        int sLen = s.length(), pLen = p.length();
+
+        vector<vector<bool> > flags(sLen + 1, vector<bool>(pLen + 1, false));
+        for (int si = 0; si <= sLen; ++si) {
+            for (int pi = 0; pi <= pLen; ++pi) {
+                if (si == 0) {
+                    flags[0][pi] =
+                        (pi == 0 ? true : flags[0][pi - 1] && p[pi] == '*');
+                    continue;
+                }
+                if (pi == 0) {
+                    flags[si][0] = (si == 0 ? true : p[0] == '*');
+                    continue;
+                }
+
+                if (p[pi] == s[si] || p[pi] == '?') {
+                    flags[si][pi] = flags[si - 1][pi - 1];
+                    continue;
+                }
+
+                if (p[pi] == '*') {
+                    flags[si][pi] = flags[si - 1][pi] || flags[si][pi - 1];
+                    continue;
+                }
+            }
+        }
+        return flags[sLen][pLen];
     }
 };

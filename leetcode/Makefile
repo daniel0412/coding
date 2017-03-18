@@ -1,3 +1,6 @@
+
+lastModifiedTestFile=$(shell ls -alt *.t.cpp | head -n 1 | rev | cut -d' ' -f1 | rev)
 build:
-	g++ -lgtest -lgtest_main *.t.cpp
+	$(info Test: $(lastModifiedTestFile))
+	g++ -std=c++11 -lgtest -lgtest_main $(lastModifiedTestFile)
 	./a.out
