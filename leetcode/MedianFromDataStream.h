@@ -56,4 +56,7 @@ class MedianFromDataStream {
   private:
      priority_queue<int, vector<int>, less<int> > d_leftMaxHeap;
      priority_queue<int, vector<int>, greater<int> > d_rightMinHeap;
+     //static function<bool(int, int)> d_less;
+     //priority_queue<int, vector<int>, decltype(d_less) > d_leftMaxHeap(d_less);
+
 };
