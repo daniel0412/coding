@@ -15,10 +15,11 @@ cat << EOF >> "$fileName".h
 #include <iostream>
 #include <unordered_map>
 #include <unordered_set>
+#include <queue>
 
 using namespace std;
 
-class $1 {
+class $fileName {
 public:
 
 private:
@@ -30,8 +31,8 @@ cat << EOF >> "$fileName".t.cpp
 #include "gtest/gtest.h"
 #include "${fileName}.h"
 
-TEST($fileName, ) {
-    $1 sol;
+TEST($fileName, $fileName) {
+    $fileName sol;
 
 }
 EOF
