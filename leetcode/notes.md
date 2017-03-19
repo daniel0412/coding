@@ -16,10 +16,26 @@ Issues:
 
 ## Some issues need more attention when coding
 
-### multiset
+### STL Usages
+#### multiset
 - `erase(par)`
     - if `par` is the value type, it will erase all elements of the same value
     - if `par` is the iterator type, it will only erase one element of the same value
+
+
+### Common Coding Skills
+#### overflow issue
+```cpp
+int a, b;
+int mid = (a+b) * 0.5;
+double median = (a+b) * 0.5;
+```
+above overflow issue should be avided using code below
+```cpp
+int a, b;
+int mid = a * 0.5 + b * 0.5;
+double median = a * 0.5 + b * 0.5;
+```
 
 
 
