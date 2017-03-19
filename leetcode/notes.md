@@ -26,16 +26,17 @@ Issues:
 ### Common Coding Skills
 #### overflow issue
 ```cpp
-int a, b;
-int mid = (a+b) * 0.5;
+int a = 1, b = 3;
+int midIndex = (a+b) * 0.5;
 double median = (a+b) * 0.5;
 ```
 above overflow issue should be avided using code below
 ```cpp
-int a, b;
-int mid = a * 0.5 + b * 0.5;
+int a = 1, b = 3;
+int midIndex = a + (b-a) * 0.5; // =2
 double median = a * 0.5 + b * 0.5;
 ```
+Note: due to `double` -> `int` cast, while computing `midIndex`, cannot use the same way for computing `median`.
 
 
 
