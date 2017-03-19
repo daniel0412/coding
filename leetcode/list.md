@@ -7,8 +7,8 @@
  | Regular Expression Matching                            | Hard       |                                     |        |
  | Expression Add Operators                               | Hard       |                                     |        |
  | Merge k Sorted Lists                                   | Hard       |                                     | :v:    |
- | Merge Intervals                                        | Hard       |                                     |        |
  | Insert Interval                                        | Hard       |                                     |        |
+ | Merge Intervals                                        | Medium     |                                     | :v:    |
  | Trapping Rain Water                                    | Hard       |                                     |        |
  | Longest Consecutive Sequence                           | Hard       |                                     |        |
  | LRU Cache                                              | Hard       |                                     |        |
@@ -371,8 +371,6 @@
  | Binary Tree Vertical Order Traversal | Medium     |                  |        |
 
 ## Apple(28)
- | Problems                                | Difficulty | Related Problems | Status |
- | :-------------------------              | :---:      | ----:            | :---:  |
  | Problems                                | Difficulty | Related Problems | Status |
  | :-------------------------              | :---:      | ----:            | :---:  |
  | Two Sum                                 | Easy       |                  |        |

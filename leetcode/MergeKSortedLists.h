@@ -22,11 +22,15 @@ struct ListNode {
 
 class MergeKSortedLists {
   public:
-    ListNode* mergeKLists(vector<ListNode*>& lists) {
+    ListNode* mergeKLists(vector<ListNode*>& lists)
+    {
         ListNode dummy(-1);
         ListNode* cur = &dummy;
-        auto cmp = [](const ListNode* p1, const ListNode* p2) {return p1->val > p2->val;};
-        priority_queue<ListNode*, vector<ListNode*>, decltype(cmp)> minHeap(cmp);
+        auto cmp = [](const ListNode* p1, const ListNode* p2) {
+            return p1->val > p2->val;
+        };
+        priority_queue<ListNode*, vector<ListNode*>, decltype(cmp)> minHeap(
+            cmp);
         for(auto p : lists) {
             if(p != nullptr) {
                 minHeap.push(p);
@@ -35,7 +39,8 @@ class MergeKSortedLists {
         while(!minHeap.empty()) {
             ListNode* tmp = minHeap.top();
             minHeap.pop();
-            if(tmp->next != nullptr) minHeap.push(tmp->next);
+            if(tmp->next != nullptr)
+                minHeap.push(tmp->next);
             cur->next = tmp;
             cur->next->next = nullptr;
             cur = cur->next;
