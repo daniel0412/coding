@@ -1,96 +1,105 @@
+## Status
+| Icon                     | Meaning                                          |
+| :---:                    | :-----                                           |
+| :v:                      | passed all leetcode tests                        |
+| :hourglass_flowing_sand: | locked problem, not tested from leetcode website |
+| :broken_heart:           | think hard to do this                            |
+
 ## Google(90)
- | Problems                                               | Difficulty | Related Problems                    | Status |
- | :-------------------------                             | :---:      | ----:                               | :---:  |
- | Median of Two Sorted Arrays                            | Hard       | MedianFromStrea/SlidingWindowMedian | :v:    |
- | Find Median from Data Stream                           | Hard       |                                     | :v:    |
- | Wildcard Matching                                      | Hard       |                                     | :v:    |
- | Regular Expression Matching                            | Hard       |                                     |        |
- | Expression Add Operators                               | Hard       |                                     |        |
- | Merge k Sorted Lists                                   | Hard       |                                     | :v:    |
- | Insert Interval                                        | Hard       |                                     |        |
- | Merge Intervals                                        | Medium     |                                     | :v:    |
- | Trapping Rain Water                                    | Hard       |                                     |        |
- | Longest Consecutive Sequence                           | Hard       |                                     |        |
- | LRU Cache                                              | Hard       |                                     |        |
- | Letter Combinations of a Phone Number                  | Medium     |                                     |        |
- | Valid Parentheses                                      | Easy       |                                     |        |
- | Generate Parentheses                                   | Medium     |                                     |        |
- | Next Permutation                                       | Medium     |                                     |        |
- | Pow(x, n)                                              | Medium     |                                     |        |
- | Spiral Matrix                                          | Medium     |                                     |        |
- | Plus One                                               | Easy       |                                     |        |
- | Clone Graph                                            | Medium     |                                     |        |
- | Word Break II                                          | Hard       |                                     |        |
- | Word Break                                             | Medium     |                                     |        |
- | Min Stack                                              | Easy       |                                     |        |
- | Read N Characters Given Read4 II – Call multiple times | Hard       |                                     |        |
- | Longest Substring with At Most Two Distinct Characters | Hard       |                                     |        |
- | Find Peak Element                                      | Medium     |                                     |        |
- | Missing Ranges                                         | Medium     |                                     |        |
- | Fraction to Recurring Decimal                          | Medium     |                                     |        |
- | Number of Islands                                      | Medium     |                                     |        |
- | Implement Trie (Prefix Tree)                           | Medium     |                                     |        |
- | Word Search II                                         | Hard       |                                     |        |
- | Shortest Palindrome                                    | Hard       |                                     |        |
- | The Skyline Problem                                    | Hard       |                                     |        |
- | Basic Calculator                                       | Hard       |                                     |        |
- | Summary Ranges                                         | Medium     |                                     |        |
- | Kth Smallest Element in a BST                          | Medium     |                                     |        |
- | Power of Two                                           | Easy       |                                     |        |
- | Sliding Window Maximum                                 | Hard       |                                     |        |
- | Search a 2D Matrix II                                  | Medium     |                                     |        |
- | Strobogrammatic Number                                 | Easy       |                                     |        |
- | Strobogrammatic Number II                              | Medium     |                                     |        |
- | Group Shifted Strings                                  | Easy       |                                     |        |
- | Flatten 2D Vector                                      | Medium     |                                     |        |
- | Meeting Rooms II                                       | Medium     |                                     |        |
- | Binary Tree Paths                                      | Easy       |                                     |        |
- | 3Sum Smaller                                           | Medium     |                                     |        |
- | Graph Valid Tree                                       | Medium     |                                     |        |
- | Palindrome Permutation                                 | Easy       |                                     |        |
- | Alien Dictionary                                       | Hard       |                                     |        |
- | Closest Binary Search Tree Value                       | Easy       |                                     |        |
- | Encode and Decode Strings                              | Medium     |                                     |        |
- | Closest Binary Search Tree Value II                    | Hard       |                                     |        |
- | H-Index                                                | Medium     |                                     |        |
- | Paint Fence                                            | Easy       |                                     |        |
- | Perfect Squares                                        | Medium     |                                     |        |
- | Wiggle Sort                                            | Medium     |                                     |        |
- | Peeking Iterator                                       | Medium     |                                     |        |
- | Zigzag Iterator                                        | Medium     |                                     |        |
- | Flatten Nested List Iterator                           | Medium     |                                     |        |
- | Binary Search Tree Iterator                            | Medium     |                                     |        |
- | Walls and Gates                                        | Medium     |                                     |        |
- | Unique Word Abbreviation                               | Easy       |                                     |        |
- | Game of Life                                           | Medium     |                                     |        |
- | Flip Game                                              | Easy       |                                     |        |
- | Flip Game II                                           | Medium     |                                     |        |
- | Serialize and Deserialize Binary Tree                  | Hard       |                                     |        |
- | Binary Tree Longest Consecutive Sequence               | Medium     |                                     |        |
- | Smallest Rectangle Enclosing Black Pixels              | Hard       |                                     |        |
- | Number of Islands II                                   | Hard       |                                     |        |
- | Range Sum Query 2D – Mutable                           | Hard       |                                     |        |
- | Best Time to Buy and Sell Stock with Cooldown          | Medium     |                                     |        |
- | Minimum Height Trees                                   | Medium     |                                     |        |
- | Burst Balloons                                         | Hard       |                                     |        |
- | Super Ugly Number                                      | Medium     |                                     |        |
- | Binary Tree Vertical Order Traversal                   | Medium     |                                     |        |
- | Count of Smaller Numbers After Self                    | Hard       |                                     |        |
- | Remove Duplicate Letters                               | Hard       |                                     |        |
- | Shortest Distance from All Buildings                   | Hard       |                                     |        |
- | Maximum Product of Word Lengths                        | Medium     |                                     |        |
- | Generalized Abbreviation                               | Medium     |                                     |        |
- | Create Maximum Number                                  | Hard       |                                     |        |
- | Number of Connected Components in an Undirected Graph  | Medium     |                                     |        |
- | Wiggle Sort II                                         | Medium     |                                     |        |
- | Power of Three                                         | Easy       |                                     |        |
- | Count of Range Sum                                     | Hard       |                                     |        |
- | Longest Increasing Path in a Matrix                    | Hard       |                                     |        |
- | Patching Array                                         | Medium     |                                     |        |
- | Verify Preorder Serialization of a Binary Tree         | Medium     |                                     |        |
- | Reconstruct Itinerary                                  | Medium     |                                     |        |
- | Palindrome Pairs                                       | Hard       |                                     |        |
- | Longest Substring with At Most K Distinct Characters   | Hard       |                                     |        |
+ | Problems                                               | Difficulty | Related Problems                    | Status                                  |
+ | :-------------------------                             | :---:      | ----:                               | :---:                                   |
+ | Median of Two Sorted Arrays                            | Hard       | MedianFromStrea/SlidingWindowMedian | :v:                                     |
+ | Find Median from Data Stream                           | Hard       |                                     | :v:                                     |
+ | Wildcard Matching                                      | Hard       |                                     | :v:                                     |
+ | Regular Expression Matching                            | Hard       |                                     |                                         |
+ | Expression Add Operators                               | Hard       |                                     |                                         |
+ | Merge k Sorted Lists                                   | Hard       |                                     | :v:                                     |
+ | Insert Interval                                        | Hard       |                                     |                                         |
+ | Merge Intervals                                        | Medium     |                                     | :v:                                     |
+ | Word Squares                                           | Hard       |                                     | :hourglass_flowing_sand: :broken_heart: |
+ | Valid Word Square                                      | Easy       |                                     | :hourglass_flowing_sand:                |
+ | Trapping Rain Water                                    | Hard       |                                     |                                         |
+ | Longest Consecutive Sequence                           | Hard       |                                     |                                         |
+ | LRU Cache                                              | Hard       |                                     |                                         |
+ | Letter Combinations of a Phone Number                  | Medium     |                                     |                                         |
+ | Valid Parentheses                                      | Easy       |                                     |                                         |
+ | Generate Parentheses                                   | Medium     |                                     |                                         |
+ | Next Permutation                                       | Medium     |                                     |                                         |
+ | Pow(x, n)                                              | Medium     |                                     |                                         |
+ | Spiral Matrix                                          | Medium     |                                     |                                         |
+ | Plus One                                               | Easy       |                                     |                                         |
+ | Clone Graph                                            | Medium     |                                     |                                         |
+ | Word Break II                                          | Hard       |                                     |                                         |
+ | Word Break                                             | Medium     |                                     |                                         |
+ | Min Stack                                              | Easy       |                                     |                                         |
+ | Read N Characters Given Read4 II – Call multiple times | Hard       |                                     |                                         |
+ | Longest Substring with At Most Two Distinct Characters | Hard       |                                     |                                         |
+ | Find Peak Element                                      | Medium     |                                     |                                         |
+ | Missing Ranges                                         | Medium     |                                     |                                         |
+ | Fraction to Recurring Decimal                          | Medium     |                                     |                                         |
+ | Number of Islands                                      | Medium     |                                     |                                         |
+ | Implement Trie (Prefix Tree)                           | Medium     |                                     |                                         |
+ | Word Search II                                         | Hard       |                                     |                                         |
+ | Shortest Palindrome                                    | Hard       |                                     |                                         |
+ | The Skyline Problem                                    | Hard       |                                     |                                         |
+ | Basic Calculator                                       | Hard       |                                     |                                         |
+ | Summary Ranges                                         | Medium     |                                     |                                         |
+ | Kth Smallest Element in a BST                          | Medium     |                                     |                                         |
+ | Power of Two                                           | Easy       |                                     |                                         |
+ | Sliding Window Maximum                                 | Hard       |                                     |                                         |
+ | Search a 2D Matrix II                                  | Medium     |                                     |                                         |
+ | Strobogrammatic Number                                 | Easy       |                                     |                                         |
+ | Strobogrammatic Number II                              | Medium     |                                     |                                         |
+ | Group Shifted Strings                                  | Easy       |                                     |                                         |
+ | Flatten 2D Vector                                      | Medium     |                                     |                                         |
+ | Meeting Rooms II                                       | Medium     |                                     |                                         |
+ | Binary Tree Paths                                      | Easy       |                                     |                                         |
+ | 3Sum Smaller                                           | Medium     |                                     |                                         |
+ | Graph Valid Tree                                       | Medium     |                                     |                                         |
+ | Palindrome Permutation                                 | Easy       |                                     |                                         |
+ | Alien Dictionary                                       | Hard       |                                     |                                         |
+ | Closest Binary Search Tree Value                       | Easy       |                                     |                                         |
+ | Encode and Decode Strings                              | Medium     |                                     |                                         |
+ | Closest Binary Search Tree Value II                    | Hard       |                                     |                                         |
+ | H-Index                                                | Medium     |                                     |                                         |
+ | Paint Fence                                            | Easy       |                                     |                                         |
+ | Perfect Squares                                        | Medium     |                                     |                                         |
+ | Wiggle Sort                                            | Medium     |                                     |                                         |
+ | Peeking Iterator                                       | Medium     |                                     |                                         |
+ | Zigzag Iterator                                        | Medium     |                                     |                                         |
+ | Flatten Nested List Iterator                           | Medium     |                                     |                                         |
+ | Binary Search Tree Iterator                            | Medium     |                                     |                                         |
+ | Walls and Gates                                        | Medium     |                                     |                                         |
+ | Unique Word Abbreviation                               | Easy       |                                     |                                         |
+ | Game of Life                                           | Medium     |                                     |                                         |
+ | Flip Game                                              | Easy       |                                     |                                         |
+ | Flip Game II                                           | Medium     |                                     |                                         |
+ | Serialize and Deserialize Binary Tree                  | Hard       |                                     |                                         |
+ | Binary Tree Longest Consecutive Sequence               | Medium     |                                     |                                         |
+ | Smallest Rectangle Enclosing Black Pixels              | Hard       |                                     |                                         |
+ | Number of Islands II                                   | Hard       |                                     |                                         |
+ | Range Sum Query 2D – Mutable                           | Hard       |                                     |                                         |
+ | Best Time to Buy and Sell Stock with Cooldown          | Medium     |                                     |                                         |
+ | Minimum Height Trees                                   | Medium     |                                     |                                         |
+ | Burst Balloons                                         | Hard       |                                     |                                         |
+ | Super Ugly Number                                      | Medium     |                                     |                                         |
+ | Binary Tree Vertical Order Traversal                   | Medium     |                                     |                                         |
+ | Count of Smaller Numbers After Self                    | Hard       |                                     |                                         |
+ | Remove Duplicate Letters                               | Hard       |                                     |                                         |
+ | Shortest Distance from All Buildings                   | Hard       |                                     |                                         |
+ | Maximum Product of Word Lengths                        | Medium     |                                     |                                         |
+ | Generalized Abbreviation                               | Medium     |                                     |                                         |
+ | Create Maximum Number                                  | Hard       |                                     |                                         |
+ | Number of Connected Components in an Undirected Graph  | Medium     |                                     |                                         |
+ | Wiggle Sort II                                         | Medium     |                                     |                                         |
+ | Power of Three                                         | Easy       |                                     |                                         |
+ | Count of Range Sum                                     | Hard       |                                     |                                         |
+ | Longest Increasing Path in a Matrix                    | Hard       |                                     |                                         |
+ | Patching Array                                         | Medium     |                                     |                                         |
+ | Verify Preorder Serialization of a Binary Tree         | Medium     |                                     |                                         |
+ | Reconstruct Itinerary                                  | Medium     |                                     |                                         |
+ | Palindrome Pairs                                       | Hard       |                                     |                                         |
+ | Longest Substring with At Most K Distinct Characters   | Hard       |                                     |                                         |
 
 ## Facebook(79)
  | Problems                                               | Difficulty | Related Problems | Status |

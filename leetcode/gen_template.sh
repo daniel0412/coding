@@ -21,10 +21,8 @@ cat << EOF >> "$fileName".h
 using namespace std;
 
 class $fileName {
-public:
-
-private:
-
+  public:
+  private:
 };
 EOF
 
@@ -32,8 +30,8 @@ cat << EOF >> "$fileName".t.cpp
 #include "gtest/gtest.h"
 #include "${fileName}.h"
 
-TEST($fileName, $fileName) {
+TEST($fileName, $fileName) 
+{
     $fileName sol;
-
 }
 EOF
