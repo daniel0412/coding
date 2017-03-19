@@ -2,7 +2,7 @@
 
 #### How to define a priority queue as a class data member using a cusomized comparator
 ```cpp
-class Test{
+class Test {
     auto f = [](const int a, const int b) {return a < b};
     priority_queue<int, vector<int>, decltype(f)> d_maxHeap(f);
 };
