@@ -45,24 +45,22 @@ class SlidingWindowMedian {
             return;
         }
         if(d_leftSet.size() <= d_rightSet.size()) {
-            int rightMin = *d_rightSet.begin();
-            if(n <= rightMin) {
+            if(n <= *d_rightSet.begin()) {
                 d_leftSet.insert(n);
             }
             else {
-                d_leftSet.insert(rightMin);
-                d_rightSet.erase(rightMin);
+                d_leftSet.insert(*d_rightSet.begin());
+                d_rightSet.erase(d_rightSet.begin());
                 d_rightSet.insert(n);
             }
         }
         else {
-            int leftMax = *d_leftSet.begin();
-            if(n >= leftMax) {
+            if(n >= *d_leftSet.begin()) {
                 d_rightSet.insert(n);
             }
             else {
-                d_rightSet.insert(leftMax);
-                d_leftSet.erase(leftMax);
+                d_rightSet.insert(*d_leftSet.begin());
+                d_leftSet.erase(d_leftSet.begin());
                 d_leftSet.insert(n);
             }
         }
@@ -70,22 +68,34 @@ class SlidingWindowMedian {
 
     void deleteNum(int n)
     {
-        if(d_rightSet.count(n) > 0) {
-            d_rightSet.erase(n);
-        }
-        else {
-            d_leftSet.erase(n);
+        auto rightIter = d_rightSet.find(n);
+        if(rightIter != d_rightSet.end()) {
+            d_rightSet.erase(rightIter);
+        }else{
+            d_leftSet.erase(d_leftSet.find(n));
         }
     }
 
     double getMedian()
     {
         if(d_leftSet.size() == d_rightSet.size()) {
-            return *d_leftSet.begin()*0.5 + *d_rightSet.begin() * 0.5;
+            return *d_leftSet.begin() * 0.5 + *d_rightSet.begin() * 0.5;
         }
         else {
             return *d_leftSet.begin();
         }
+    }
+
+    void printSets() {
+        cout << "========================" << endl;
+        cout << "> lsize: " << d_leftSet.size() << ", rsize: " << d_rightSet.size() << endl;
+        cout << "> leftset:  ";
+        for(auto d : d_leftSet) cout << d << ",";
+        cout << endl;
+        cout << "> leftset:  ";
+        for(auto d : d_rightSet) cout << d << ",";
+        cout << endl;
+        cout << "========================" << endl;
     }
 
     multiset<int, greater<int> > d_leftSet;
