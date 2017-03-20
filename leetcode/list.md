@@ -7,7 +7,7 @@
 
 ## Google(90)
  | Problems                                               | Difficulty | Related Problems                    | Status                                  |
- | :-------------------------                             | :---:      | ----:                               | :---:                                   |
+ | :-------------------------                             | :---:      | :----                               | :---:                                   |
  | Median of Two Sorted Arrays                            | Hard       | MedianFromStrea/SlidingWindowMedian | :v:                                     |
  | Find Median from Data Stream                           | Hard       |                                     | :v:                                     |
  | Wildcard Matching                                      | Hard       |                                     | :v:                                     |
