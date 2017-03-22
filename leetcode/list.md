@@ -6,6 +6,12 @@
 | :warning:                | truely hard       |
 | :eyes:                   | worth second look |
 
+## Solved problems not in Google list
+ | Problems                    | Difficulty | Techniques                  | Status |
+ | :-------------------------  | :---:      | ----:                       | :---:  |
+ | Binary Tree Right Side View | Medium     | level traversal (dfs/queue) | :v:    |
+
+
 ## Google(90)
  | Problems                                               | Difficulty | Techniques    | Status               |
  | :-------------------------                             | :---:      | :----         | :---:                |
