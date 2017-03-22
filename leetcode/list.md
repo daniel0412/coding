@@ -15,6 +15,8 @@
  | Wildcard Matching                                      | Hard       | two pointer   | :v:                  |
  | Regular Expression Matching                            | Hard       |               |                      |
  | Expression Add Operators                               | Hard       |               |                      |
+ | Populating Next Right Pointers in Each Node II         | Hard       | iteration     | :v: :eyes:           |
+ | Populating Next Right Pointers in Each Node            | Medium     | iteration     | :v:                  |
  | Merge k Sorted Lists                                   | Hard       | heap          | :v:                  |
  | Insert Interval                                        | Hard       |               |                      |
  | Merge Intervals                                        | Medium     |               | :v:                  |
@@ -140,6 +142,7 @@
  | Validate Binary Search Tree                            | Medium     |                  |        |
  | Binary Tree Level Order Traversal                      | Easy       |                  |        |
  | Populating Next Right Pointers in Each Node II         | Hard       |                  |        |
+ | Populating Next Right Pointers in Each Node            | Medium     |                  |        |
  | Best Time to Buy and Sell Stock                        | Easy       |                  |        |
  | Valid Palindrome                                       | Easy       |                  |        |
  | Word Ladder                                            | Medium     |                  |        |
@@ -321,8 +324,8 @@
  | Construct Binary Tree from Inorder and Postorder Traversal | Medium     |                  |        |
  | Path Sum                                                   | Easy       |                  |        |
  | Flatten Binary Tree to Linked List                         | Medium     |                  |        |
- | Populating Next Right Pointers in Each Node                | Medium     |                  |        |
  | Populating Next Right Pointers in Each Node II             | Hard       |                  |        |
+ | Populating Next Right Pointers in Each Node                | Medium     |                  |        |
  | Best Time to Buy and Sell Stock                            | Easy       |                  |        |
  | Binary Tree Maximum Path Sum                               | Hard       |                  |        |
  | Valid Palindrome                                           | Easy       |                  |        |
