@@ -13,6 +13,7 @@ cat << EOF >> "$fileName".h
 #include <string>
 #include <vector>
 #include <stack>
+#include <sstream>
 #include <iostream>
 #include <unordered_map>
 #include <unordered_set>
