@@ -35,23 +35,26 @@ class FractionToRecurringDecimal {
         if(numerator == 0)
             return "0";
 
+        long numeratorL = static_cast<long>(numerator);
+        long denominatorL = static_cast<long>(denominator);
+
         bool isNegative =
-            ((numerator / abs(numerator)) * (denominator / abs(denominator)) ==
+            ((numeratorL / abs(numeratorL)) * (denominatorL / abs(denominatorL)) ==
              -1);
 
-        numerator = abs(numerator);
-        denominator = abs(denominator);
+        numeratorL = abs(numeratorL);
+        denominatorL = abs(denominatorL);
 
-        vector<int> res;
-        unordered_map<int, size_t> mymap;
-        while(numerator != 0 && mymap.find(numerator) == mymap.end()) {
-            int a = numerator / denominator;
-            int r = numerator % denominator;
+        vector<long> res;
+        unordered_map<long, size_t> mymap;
+        while(numeratorL != 0 && mymap.find(numeratorL) == mymap.end()) {
+            long a = numeratorL / denominatorL;
+            long r = numeratorL % denominatorL;
             res.push_back(a);
-            mymap[numerator] = res.size() - 1;
-            numerator = r * 10;
+            mymap[numeratorL] = res.size() - 1;
+            numeratorL = r * 10;
         }
-        bool isRecurring = numerator != 0;
+        bool isRecurring = numeratorL != 0;
 
         stringstream ss;
         if(isNegative)
@@ -59,7 +62,7 @@ class FractionToRecurringDecimal {
         for(size_t i = 0; i < res.size(); ++i) {
             if(i == 1)
                 ss << ".";
-            if(isRecurring && i == mymap[numerator])
+            if(isRecurring && i == mymap[numeratorL])
                 ss << "(";
             ss << res[i];
         }
