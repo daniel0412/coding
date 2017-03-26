@@ -43,6 +43,12 @@ class LRUCache {
 
     void put(int key, int value)
     {
+        if(d_map.find(key) != d_map.end()) {
+            d_list.push_front(make_pair(key, value));
+            d_list.erase(d_map[key]);
+            d_map[key] = d_list.begin();
+            return;
+        }
         if(d_map.size() >= d_capacity) {
             d_map.erase(d_list.rbegin()->first);
             d_list.pop_back();
