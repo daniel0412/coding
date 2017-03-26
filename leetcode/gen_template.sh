@@ -12,6 +12,7 @@ cat << EOF >> "$fileName".h
 
 #include <string>
 #include <vector>
+#include <list>
 #include <stack>
 #include <sstream>
 #include <iostream>
@@ -19,6 +20,7 @@ cat << EOF >> "$fileName".h
 #include <unordered_set>
 #include <queue>
 #include <functional>
+#include <utility>
 
 using namespace std;
 
@@ -32,7 +34,7 @@ cat << EOF >> "$fileName".t.cpp
 #include "gtest/gtest.h"
 #include "${fileName}.h"
 
-TEST($fileName, $fileName) 
+TEST($fileName, $fileName)
 {
     $fileName sol;
 }
