@@ -36,7 +36,7 @@ class LFUCache {
     int get(int key)
     {
         KVMAP::iterator iter = d_kvMap.find(key);
-        if(iter == d_kvMap.end())
+        if(iter == d_kvMap.end() || d_capacity == 0)
             return -1;
         d_freqMap[iter->second.freq].erase(iter->second.loc);
         if(d_minFreq == iter->second.freq &&
@@ -49,6 +49,7 @@ class LFUCache {
 
     void put(int key, int value)
     {
+        if(d_capacity == 0) return;
         if(d_kvMap.count(key) != 0) {
             KVMAP::iterator iter = d_kvMap.find(key);
             iter->second.value = value;
