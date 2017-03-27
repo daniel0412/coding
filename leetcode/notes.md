@@ -21,6 +21,9 @@ Issues:
 - `erase(par)`
     - if `par` is the value type, it will erase all elements of the same value
     - if `par` is the iterator type, it will only erase one element of the same value
+#### make_pair
+- belongs to <utility> header file
+- when use this, do not need to put type arguments in c++11, would be deduced from the context, just use `make_pair(a,b)'
 
 
 ### Common Coding Skills

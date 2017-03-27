@@ -11,7 +11,6 @@
  | :-------------------------  | :---:      | ----:                       | :---:  |
  | Binary Tree Right Side View | Medium     | level traversal (dfs/queue) | :v:    |
 
-
 ## Google(90)
  | Problems                                               | Difficulty | Techniques               | Status               |
  | :-------------------------                             | :---:      | :----                    | :---:                |
@@ -31,6 +30,7 @@
  | Trapping Rain Water                                    | Hard       |                          |                      |
  | Longest Consecutive Sequence                           | Hard       |                          |                      |
  | LRU Cache                                              | Hard       | double linked list/map   | :v: :eyes:           |
+ | LFU Cache                                              | Hard       | double linked list/map   | :v: :eyes:           |
  | Letter Combinations of a Phone Number                  | Medium     |                          |                      |
  | Valid Parentheses                                      | Easy       |                          |                      |
  | Generate Parentheses                                   | Medium     |                          |                      |
