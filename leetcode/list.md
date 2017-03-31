@@ -14,7 +14,7 @@
 ## Google(90)
  | Problems                                               | Difficulty | Techniques               | Status               |
  | :-------------------------                             | :---:      | :----                    | :---:                |
- | Median of Two Sorted Arrays                            | Hard       | binary search            | :v:                  |
+ | Median of Two Sorted Arrays                            | Hard       | binary search            | :v:        :eyes:    |
  | Find Median from Data Stream                           | Hard       | heap                     | :v:                  |
  | SlidingWindowMedian                                    | Hard       | multiset                 | :v:                  |
  | Wildcard Matching                                      | Hard       | two pointer              | :v:                  |
@@ -59,8 +59,9 @@
  | Power of Two                                           | Easy       |                          |                      |
  | Sliding Window Maximum                                 | Hard       |                          |                      |
  | Search a 2D Matrix II                                  | Medium     |                          |                      |
- | Strobogrammatic Number                                 | Easy       |                          |                      |
- | Strobogrammatic Number II                              | Medium     |                          |                      |
+ | Strobogrammatic Number                                 | Easy       | hashmap                  | :v: :lock:           |
+ | Strobogrammatic Number II                              | Medium     | recursion                | :v: :lock:           |
+ | Strobogrammatic Number III                             | Hard       |                          |                      |
  | Group Shifted Strings                                  | Easy       |                          |                      |
  | Flatten 2D Vector                                      | Medium     |                          |                      |
  | Meeting Rooms II                                       | Medium     | sort/heap                | :v: :eyes: :lock:    |
