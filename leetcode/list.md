@@ -32,8 +32,9 @@
  | LRU Cache                                              | Hard       | double linked list/map   | :v: :eyes:        |
  | LFU Cache                                              | Hard       | double linked list/map   | :v: :eyes:        |
  | Letter Combinations of a Phone Number                  | Medium     |                          |                   |
+ | Longest Absolute File Path                             | Medium     | stack/two pointer        | :v:               |
  | Valid Parentheses                                      | Easy       |                          |                   |
- | Moving Average From Data Stream                        | Easy       | queue                    | :v:               |
+ | Moving Average From Data Stream                        | Easy       | queue                    | :v: :lock:        |
  | Generate Parentheses                                   | Medium     |                          |                   |
  | Next Permutation                                       | Medium     |                          |                   |
  | Pow(x, n)                                              | Medium     |                          |                   |
