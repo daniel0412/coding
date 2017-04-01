@@ -60,8 +60,8 @@
  | Sliding Window Maximum                                 | Hard       |                          |                      |
  | Search a 2D Matrix II                                  | Medium     |                          |                      |
  | Strobogrammatic Number                                 | Easy       | hashmap                  | :v: :lock:           |
- | Strobogrammatic Number II                              | Medium     | recursion                | :v: :lock:           |
- | Strobogrammatic Number III                             | Hard       |                          |                      |
+ | Strobogrammatic Number II                              | Medium     | backtracking             | :v: :lock:           |
+ | Strobogrammatic Number III                             | Hard       | combination/backtracking | :v: :lock: :eyes:    |
  | Group Shifted Strings                                  | Easy       |                          |                      |
  | Flatten 2D Vector                                      | Medium     |                          |                      |
  | Meeting Rooms II                                       | Medium     | sort/heap                | :v: :eyes: :lock:    |
