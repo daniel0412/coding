@@ -33,6 +33,7 @@
  | LFU Cache                                              | Hard       | double linked list/map   | :v: :eyes:        |
  | Letter Combinations of a Phone Number                  | Medium     |                          |                   |
  | Longest Absolute File Path                             | Medium     | stack/two pointer        | :v:               |
+ | Walls and Gates                                        | Medium     | dfs/bfs/reverse engineer | :v: :eyes: :lock: |
  | Valid Parentheses                                      | Easy       |                          |                   |
  | Moving Average From Data Stream                        | Easy       | queue                    | :v: :lock:        |
  | Generate Parentheses                                   | Medium     |                          |                   |

@@ -43,3 +43,9 @@ Note: due to `double` -> `int` cast, while computing `midIndex`, cannot use the 
 
 
 
+### Interesting Problems
+- Walls ang Gates
+
+rather than thinking to do dfs for each `room` cell, we can use reverse engineer to start from `gate` to do dfs
+
+
