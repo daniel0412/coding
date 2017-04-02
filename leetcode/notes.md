@@ -29,6 +29,29 @@ Issues:
 - `ss.clear()` only set the error state flag
 - `ss.str("")` is used to reset the string inside`ss` stringstream
 
+#### exception
+c++ exception base class definition
+```cpp
+class exception {
+    public:
+      exception () noexcept;
+      exception (const exception&) noexcept;
+      exception& operator= (const exception&) noexcept;
+      virtual ~exception();
+      virtual const char* what() const noexcept;
+}
+```
+in coding interview, if we want to throw some exception, we can do this
+```cpp
+throw runtime_error("exception msg")
+
+catch (exception e) {
+    cout << e.what() << endl;
+}
+```
+
+
+
 
 ### Common Coding Skills
 #### overflow issue

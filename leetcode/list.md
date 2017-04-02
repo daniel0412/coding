@@ -82,7 +82,7 @@
  | Paint Fence                                            | Easy       |                           |                   |
  | Perfect Squares                                        | Medium     |                           |                   |
  | Wiggle Sort                                            | Medium     |                           |                   |
- | Peeking Iterator                                       | Medium     |                           |                   |
+ | Peeking Iterator                                       | Medium     | subtyping                 | :v: :eyes:        |
  | Zigzag Iterator                                        | Medium     |                           |                   |
  | Flatten Nested List Iterator                           | Medium     |                           |                   |
  | Binary Search Tree Iterator                            | Medium     |                           |                   |
