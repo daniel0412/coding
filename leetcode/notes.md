@@ -25,6 +25,10 @@ Issues:
 - belongs to <utility> header file
 - when use this, do not need to put type arguments in c++11, would be deduced from the context, just use `make_pair(a,b)'
 
+#### stringstream
+- `ss.clear()` only set the error state flag
+- `ss.str("")` is used to reset the string inside`ss` stringstream
+
 
 ### Common Coding Skills
 #### overflow issue
@@ -40,6 +44,15 @@ int midIndex = a + (b-a) * 0.5; // =2
 double median = a * 0.5 + b * 0.5;
 ```
 Note: due to `double` -> `int` cast, while computing `midIndex`, cannot use the same way for computing `median`.
+
+
+#### `size_t` problems
+```cpp
+vector<int> vec{1,2,3};
+for(int i = 0; i < vec.size()-1; ++i)
+```
+any `size()` function returns type `size_t`, which is `unsigned int`, in the case that `size()` return `0`, `size()-1` will overflow, and the 
+condition does not hold any more
 
 
 
