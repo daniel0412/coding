@@ -7,9 +7,11 @@
 | :eyes:                   | worth second look |
 
 ## Solved problems not in Google list
- | Problems                    | Difficulty | Techniques                  | Status |
- | :-------------------------  | :---:      | ----:                       | :---:  |
- | Binary Tree Right Side View | Medium     | level traversal (dfs/queue) | :v:    |
+ | Problems                    | Difficulty | Techniques                  | Status            |
+ | :-------------------------  | :---:      | ----:                       | :---:             |
+ | Binary Tree Right Side View | Medium     | level traversal (dfs/queue) | :v:               |
+ | Nested List Weight Sum      | Easy       | recursion                   | :v: :lock:        |
+ | Nested List Weight Sum II   | Medium     | recursion with states       | :v: :eyes: :lock: |
 
 ## Google(90)
  | Problems                                               | Difficulty | Techniques                | Status            |
@@ -83,8 +85,8 @@
  | Perfect Squares                                        | Medium     |                           |                   |
  | Wiggle Sort                                            | Medium     |                           |                   |
  | Peeking Iterator                                       | Medium     | subtyping                 | :v: :eyes:        |
- | Zigzag Iterator                                        | Medium     |                           |                   |
  | Flatten Nested List Iterator                           | Medium     |                           |                   |
+ | Zigzag Iterator                                        | Medium     |                           |                   |
  | Binary Search Tree Iterator                            | Medium     |                           |                   |
  | Walls and Gates                                        | Medium     |                           |                   |
  | Unique Word Abbreviation                               | Easy       |                           |                   |
