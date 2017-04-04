@@ -47,6 +47,7 @@
  | Next Permutation                                       | Medium     |                           |                   |
  | Pow(x, n)                                              | Medium     |                           |                   |
  | Spiral Matrix                                          | Medium     |                           |                   |
+ | License Key Formatting                                 | Medium     | string operation          | :v:               | :T
  | Plus One                                               | Easy       |                           |                   |
  | Clone Graph                                            | Medium     |                           |                   |
  | Word Break II                                          | Hard       |                           |                   |
