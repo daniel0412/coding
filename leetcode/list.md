@@ -39,8 +39,10 @@
  | The Maze                                               | Medium     | dfs                       | :eyes: :lock:     |
  | The Maze II                                            | Medium     | dfs(mark/recover visited) | :eyes: :lock:     |
  | The Maze III                                           | Hard       |                           |                   |
+ | Lonely Pixel I                                         | Medium     | 2-D vector                | :lock:            |
+ | Lonely Pixel II                                        | Medium     |                           | :eyes: :lock:     |
  | Valid Parentheses                                      | Easy       |                           |                   |
- | Moving Average From Data Stream                        | Easy       | queue                     | :v: :lock:        |
+ | Moving Average From Data Stream                        | Easy       | queue                     | :lock:            |
  | Generate Parentheses                                   | Medium     |                           |                   |
  | Next Permutation                                       | Medium     |                           |                   |
  | Pow(x, n)                                              | Medium     |                           |                   |
