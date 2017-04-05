@@ -16,6 +16,7 @@
 ## Google(90)
  | Problems                                               | Difficulty | Techniques                | Status            |
  | :-------------------------                             | :---:      | :----                     | :---:             |
+ | Reverse Pair                                           | Hard       | divide and conqure(slow)  | :v: :eyes:        |
  | Median of Two Sorted Arrays                            | Hard       | binary search             | :v:        :eyes: |
  | Find Median from Data Stream                           | Hard       | heap                      | :v:               |
  | SlidingWindowMedian                                    | Hard       | multiset                  | :v:               |
