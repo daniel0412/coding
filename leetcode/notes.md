@@ -85,18 +85,36 @@ condition does not hold any more
 rather than thinking to do dfs for each `room` cell, we can use reverse engineer to start from `gate` to do dfs
 
 
-### lower bound coding
+### lower/upper bound coding
 ```cpp
-int start = 0, end = nums.size(), mid;
-while(start < end) {
-    mid = start + (end-start)/2;
-    if(nums[start] < nums[mid]) {
-        start = mid + 1;
-    }else{
-        end = mid;
+int lowerBound(const vector<int>& nums, int target)
+{
+    int l = 0, r = nums.size() - 1, m;
+    while(l <= r) {
+        m = (r - l) / 2 + l;
+        if(nums[m] < target) {
+            l = m + 1;
+        }
+        else {
+            r = m - 1;
+        }
     }
+    return l;
 }
-return nums[mid];
+int upperBound(const vector<int>& nums, int target)
+{
+    int l = 0, r = nums.size() - 1, m;
+    while(l <= r) {
+        m = (r - l) / 2 + l;
+        if(nums[m] <= target) {
+            l = m + 1;
+        }
+        else {
+            r = m - 1;
+        }
+    }
+    return l;
+}
 ```
 
 

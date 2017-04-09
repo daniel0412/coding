@@ -39,18 +39,18 @@ class SmallNumberAfterSelf {
             return d_count;
         for(int i = nums.size() - 1; i >= 0; --i) {
             int val = nums[i];
-            int start = 0, end = d_ordered.size(), mid = 0;
-            while(start < end) {
+            int start = 0, end = d_ordered.size() - 1, mid = 0;
+            while(start <= end) {
                 mid = start + (end - start) / 2;
                 if(val > d_ordered[mid]) {
                     start = mid + 1;
                 }
                 else {
-                    end = mid;
+                    end = mid - 1;
                 }
             }
-            d_count[i] = end;
-            d_ordered.insert(d_ordered.begin() + end, val);
+            d_count[i] = start;
+            d_ordered.insert(d_ordered.begin() + start, val);
         }
         return d_count;
     }
