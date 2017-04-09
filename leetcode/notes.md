@@ -85,3 +85,18 @@ condition does not hold any more
 rather than thinking to do dfs for each `room` cell, we can use reverse engineer to start from `gate` to do dfs
 
 
+### lower bound coding
+```cpp
+int start = 0, end = nums.size(), mid;
+while(start < end) {
+    mid = start + (end-start)/2;
+    if(nums[start] < nums[mid]) {
+        start = mid + 1;
+    }else{
+        end = mid;
+    }
+}
+return nums[mid];
+```
+
+

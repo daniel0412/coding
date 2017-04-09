@@ -110,7 +110,7 @@
  | Burst Balloons                                         | Hard       |                           |                   |
  | Super Ugly Number                                      | Medium     |                           |                   |
  | Binary Tree Vertical Order Traversal                   | Medium     |                           |                   |
- | Count of Smaller Numbers After Self                    | Hard       |                           |                   |
+ | Count of Smaller Numbers After Self                    | Hard       | binary search/lower bound | :v: :eyes:        |
  | Remove Duplicate Letters                               | Hard       |                           |                   |
  | Shortest Distance from All Buildings                   | Hard       |                           |                   |
  | Maximum Product of Word Lengths                        | Medium     |                           |                   |
