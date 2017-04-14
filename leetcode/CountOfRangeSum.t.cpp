@@ -4,21 +4,7 @@
 TEST(CountOfRangeSum, CountOfRangeSum)
 {
     CountOfRangeSum sol;
+    vector<int> given{-2, 5, -1};
+    int target = 3;
+    EXPECT_EQ(target, sol.countRangeSum(given, -2, 2));
 }
-
-TEST(CountOfRangeSum, LowerBound)
-{
-    CountOfRangeSum sol;
-    vector<int> given{1,2,2,2,3};
-    int target = 4;
-    EXPECT_EQ(5, sol.lowerBound(given, target));
-}
-
-TEST(CountOfRangeSum, UpperBound)
-{
-    CountOfRangeSum sol;
-    vector<int> given{1,2,3};
-    int target = 4;
-    EXPECT_EQ(3, sol.upperBound(given, target));
-}
-

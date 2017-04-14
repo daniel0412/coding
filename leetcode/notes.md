@@ -101,6 +101,7 @@ int lowerBound(const vector<int>& nums, int target)
     }
     return l;
 }
+
 int upperBound(const vector<int>& nums, int target)
 {
     int l = 0, r = nums.size() - 1, m;

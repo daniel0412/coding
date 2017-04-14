@@ -119,7 +119,7 @@
  | Number of Connected Components in an Undirected Graph  | Medium     |                           |                   |
  | Wiggle Sort II                                         | Medium     |                           |                   |
  | Power of Three                                         | Easy       |                           |                   |
- | Count of Range Sum                                     | Hard       |                           |                   |
+ | Count of Range Sum                                     | Hard       | multiset/bounds           | :v: :eyes:        |
  | Longest Increasing Path in a Matrix                    | Hard       |                           |                   |
  | Patching Array                                         | Medium     |                           |                   |
  | Verify Preorder Serialization of a Binary Tree         | Medium     |                           |                   |
