@@ -20,6 +20,7 @@ cat << EOF >> "$fileName".h
 #include <unordered_set>
 #include <queue>
 #include <functional>
+#include <algorithm>
 #include <utility>
 
 using namespace std;

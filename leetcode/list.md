@@ -48,11 +48,11 @@
  | Next Permutation                                       | Medium     |                           |                   |
  | Pow(x, n)                                              | Medium     |                           |                   |
  | Spiral Matrix                                          | Medium     |                           |                   |
- | License Key Formatting                                 | Medium     | string operation          | :v:               | :T
+ | License Key Formatting                                 | Medium     | string operation          | :v:               |
  | Plus One                                               | Easy       |                           |                   |
  | Clone Graph                                            | Medium     |                           |                   |
- | Word Break II                                          | Hard       |                           |                   |
- | Word Break                                             | Medium     |                           |                   |
+ | Word Break II                                          | Hard       | dp/back tracking/prunning | :v: :eyes:        |
+ | Word Break                                             | Medium     | dp                        | :v: :eyes:        |
  | Min Stack                                              | Easy       |                           |                   |
  | Read N Characters Given Read4 II – Call multiple times | Hard       |                           |                   |
  | Longest Substring with At Most Two Distinct Characters | Hard       |                           |                   |
