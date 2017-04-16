@@ -83,9 +83,9 @@
  | Graph Valid Tree                                       | Medium     |                           |                   |
  | Palindrome Permutation                                 | Easy       |                           |                   |
  | Alien Dictionary                                       | Hard       |                           |                   |
- | Closest Binary Search Tree Value                       | Easy       |                           |                   |
+ | Closest Binary Search Tree Value II                    | Hard       | heap/BST                  | :lock: :eyes:     |
+ | Closest Binary Search Tree Value                       | Easy       | BST                       | :lock:            |
  | Encode and Decode Strings                              | Medium     |                           |                   |
- | Closest Binary Search Tree Value II                    | Hard       |                           |                   |
  | H-Index                                                | Medium     |                           |                   |
  | Logger Rater Limitter                                  | Easy       | map                       | :v:               |
  | Paint Fence                                            | Easy       |                           |                   |

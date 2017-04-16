@@ -50,6 +50,33 @@ catch (exception e) {
 }
 ```
 
+#### priority_queue declaration with customized comparator
+- comparator class
+```cpp
+class Comp{
+    public:
+    bool operator()(const pair<int, int>& a, const pair<int, int>& b) {
+        return a.first < b.first;
+    }
+};
+priority_queue<pair<int, int>, vector<pair<int, int>>, Comp> heap;
+```
+- comparator function
+```cpp
+bool comp(const pair<int, int>& a, const pair<int, int>& b) {
+    return a.first < b.first;
+}
+priority_queue<pair<int, int>, vector<pair<int, int>>, function<bool(const pair<int, int>&, const pair<int, int>&)> heap(comp);
+
+```
+- lambda function comparator
+```cpp
+auto comp = [](const pair<int, int>& a, const pair<int, int>& b) {
+    return a.first < b.first;
+}
+priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(comp))> heap(comp);
+```
+
 
 
 

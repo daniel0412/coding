@@ -12,6 +12,14 @@
 
 using namespace std;
 
+class TreeNode {
+  public:
+    TreeNode(int v) : val(v), left(nullptr), right(nullptr) {}
+    int val;
+    TreeNode* left;
+    TreeNode* right;
+};
+
 template <typename T>
 T lowerBound(const vector<T>& nums, T target)
 {
