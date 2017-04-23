@@ -22,6 +22,7 @@ cat << EOF >> "$fileName".h
 #include <functional>
 #include <algorithm>
 #include <utility>
+#include "utils.h"
 
 using namespace std;
 

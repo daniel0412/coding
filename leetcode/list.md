@@ -101,7 +101,8 @@
  | Flip Game                                              | Easy       |                           |                   |
  | Flip Game II                                           | Medium     |                           |                   |
  | Serialize and Deserialize Binary Tree                  | Hard       |                           |                   |
- | Binary Tree Longest Consecutive Sequence               | Medium     |                           |                   |
+ | Binary Tree Longest Consecutive Sequence               | Medium     | dfs                       | :lock:            |
+ | Binary Tree Longest Consecutive Sequence II            | Medium     | dfs                       | :lock:            |
  | Smallest Rectangle Enclosing Black Pixels              | Hard       |                           |                   |
  | Number of Islands II                                   | Hard       |                           |                   |
  | Range Sum Query 2D – Mutable                           | Hard       |                           |                   |
