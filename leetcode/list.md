@@ -112,7 +112,7 @@
  | Super Ugly Number                                      | Medium     |                           |                   |
  | Binary Tree Vertical Order Traversal                   | Medium     | tree traversal            | :lock:            |
  | Count of Smaller Numbers After Self                    | Hard       | binary search/lower bound | :v: :eyes:        |
- | Remove Duplicate Letters                               | Hard       |                           |                   |
+ | Remove Duplicate Letters                               | Hard       | map/stack                 | :v: :eyes:        |
  | Shortest Distance from All Buildings                   | Hard       |                           |                   |
  | Maximum Product of Word Lengths                        | Medium     |                           |                   |
  | Generalized Abbreviation                               | Medium     |                           |                   |
@@ -330,6 +330,7 @@
  | Maximum Subarray                                           | Medium     |                  |        |
  | Spiral Matrix                                              | Medium     |                  |        |
  | Jump Game                                                  | Medium     |                  |        |
+ | Jump Game II                                                 | Hard|                  |        |
  | Merge Intervals                                            | Hard       |                  |        |
  | Simplify Path                                              | Medium     |                  |        |
  | Set Matrix Zeroes                                          | Medium     |                  |        |
