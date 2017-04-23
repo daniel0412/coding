@@ -110,7 +110,7 @@
  | Minimum Height Trees                                   | Medium     |                           |                   |
  | Burst Balloons                                         | Hard       |                           |                   |
  | Super Ugly Number                                      | Medium     |                           |                   |
- | Binary Tree Vertical Order Traversal                   | Medium     |                           |                   |
+ | Binary Tree Vertical Order Traversal                   | Medium     | tree traversal            | :lock:            |
  | Count of Smaller Numbers After Self                    | Hard       | binary search/lower bound | :v: :eyes:        |
  | Remove Duplicate Letters                               | Hard       |                           |                   |
  | Shortest Distance from All Buildings                   | Hard       |                           |                   |
