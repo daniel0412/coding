@@ -26,7 +26,7 @@
  | Populating Next Right Pointers in Each Node II         | Hard       | iteration                 | :v: :eyes:        |
  | Populating Next Right Pointers in Each Node            | Medium     | iteration                 | :v:               |
  | Merge k Sorted Lists                                   | Hard       | heap                      | :v:               |
- | Insert Interval                                        | Hard       |                           |                   |
+ | Insert Interval                                        | Hard       | corner cases                           | :v:               |
  | Merge Intervals                                        | Medium     |                           | :v:               |
  | Word Squares                                           | Hard       | dfs/trie                  | :warning: :lock:  |
  | Valid Word Square                                      | Easy       | brute force               | :lock:            |
