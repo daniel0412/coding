@@ -26,7 +26,7 @@
  | Populating Next Right Pointers in Each Node II         | Hard       | iteration                 | :v: :eyes:        |
  | Populating Next Right Pointers in Each Node            | Medium     | iteration                 | :v:               |
  | Merge k Sorted Lists                                   | Hard       | heap                      | :v:               |
- | Insert Interval                                        | Hard       | corner cases                           | :v:               |
+ | Insert Interval                                        | Hard       | corner cases              | :v:               |
  | Merge Intervals                                        | Medium     |                           | :v:               |
  | Word Squares                                           | Hard       | dfs/trie                  | :warning: :lock:  |
  | Valid Word Square                                      | Easy       | brute force               | :lock:            |
@@ -96,7 +96,9 @@
  | Zigzag Iterator                                        | Medium     |                           |                   |
  | Binary Search Tree Iterator                            | Medium     |                           |                   |
  | Walls and Gates                                        | Medium     |                           |                   |
- | Unique Word Abbreviation                               | Easy       |                           |                   |
+ | Unique Word Abbreviation                               | Easy       |                           | :lock:            |
+ | Valid Word Abbreviation                                | Easy       |                           | :lock:            |
+ | Generalized Abbreviation                               | Medium     | dfs                       | :lock:            |
  | Game of Life                                           | Medium     |                           |                   |
  | Flip Game                                              | Easy       |                           |                   |
  | Flip Game II                                           | Medium     |                           |                   |
@@ -115,7 +117,6 @@
  | Remove Duplicate Letters                               | Hard       | map/stack                 | :v: :eyes:        |
  | Shortest Distance from All Buildings                   | Hard       |                           |                   |
  | Maximum Product of Word Lengths                        | Medium     |                           |                   |
- | Generalized Abbreviation                               | Medium     |                           |                   |
  | Create Maximum Number                                  | Hard       |                           |                   |
  | Number of Connected Components in an Undirected Graph  | Medium     |                           |                   |
  | Wiggle Sort II                                         | Medium     |                           |                   |
