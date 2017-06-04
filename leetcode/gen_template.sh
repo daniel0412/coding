@@ -18,6 +18,7 @@ cat << EOF >> "$fileName".h
 #include <iostream>
 #include <unordered_map>
 #include <unordered_set>
+#include <set>
 #include <queue>
 #include <functional>
 #include <algorithm>
