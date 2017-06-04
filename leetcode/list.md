@@ -131,7 +131,9 @@
 ## Facebook(79)
  | Problems                                               | Difficulty | Related Problems                     | Status        |
  | :-------------------------                             | :---:      | ----:                                | :---:         |
- | Two Sum                                                | Easy       |                                      |               |
+ | Two Sum                                                | Easy       | hashmap/two pointer                  | :v: :eyes:    |
+ | Two Sum II – Input array is sorted                     | Medium     | two pointer to squeeze               | :v:           |
+ | Two Sum III – Data structure design                    | Easy       | hashmap/multiset                     | :v:           |
  | 3Sum                                                   | Medium     |                                      |               |
  | Regular Expression Matching                            | Hard       |                                      |               |
  | Roman to Integer                                       | Easy       |                                      |               |
