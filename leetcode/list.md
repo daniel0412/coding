@@ -132,9 +132,9 @@
  | Problems                                               | Difficulty | Related Problems                     | Status        |
  | :-------------------------                             | :---:      | ----:                                | :---:         |
  | Two Sum                                                | Easy       |                                      |               |
+ | 3Sum                                                   | Medium     |                                      |               |
  | Regular Expression Matching                            | Hard       |                                      |               |
  | Roman to Integer                                       | Easy       |                                      |               |
- | 3Sum                                                   | Medium     |                                      |               |
  | Letter Combinations of a Phone Number                  | Medium     |                                      |               |
  | Valid Parentheses                                      | Easy       |                                      |               |
  | Merge k Sorted Lists                                   | Hard       |                                      |               |
