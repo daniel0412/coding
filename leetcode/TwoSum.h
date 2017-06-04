@@ -21,43 +21,37 @@ using namespace std;
 
 class TwoSum {
   public:
+    // ATTENTION: the array is not sorted
+    // sorting will corrupt the index order
     vector<int> twoSum(vector<int>& nums, int target)
     {
         vector<int> res;
-        if(nums.size() <= 2)
+        if(nums.size() < 2)
             return res;
-        sort(nums.begin(), nums.end());
-        for(int firstId = 0; firstId < nums.size() / 2; ++firstId) {
-            int secondId = binarySearch(
-                nums, firstId + 1, nums.size() - 1, target - nums[firstId]);
-            if(secondId != -1) {
-                res.push_back(firstId);
-                res.push_back(secondId);
-                break;
+
+        unordered_map<int, vector<int>> valToIndexListMap;
+        for(int i = 0; i < nums.size(); ++i) {
+            valToIndexListMap[nums[i]].push_back(i);
+        }
+
+        for(int firstId = 0; firstId < nums.size(); ++firstId) {
+            unordered_map<int, vector<int> >::iterator iter =
+                valToIndexListMap.find(target - nums[firstId]);
+            if(iter != valToIndexListMap.end()) {
+                for(auto secondId : iter->second) {
+                    if(secondId == firstId) {
+                        continue;
+                    }
+                    else {
+                        res.push_back(firstId);
+                        res.push_back(secondId);
+                        return res;
+                    }
+                }
             }
         }
         return res;
     }
 
   private:
-    // return the index, -1 if not found
-    int binarySearch(const vector<int>& nums,
-                     int start,
-                     int end,
-                     const int target)
-    {
-        while(start <= end) {
-            int mid = start + (end - start) * 0.5;
-            if(nums[mid] == target) {
-                return mid;
-            }
-            else if(nums[mid] < target) {
-                start = mid + 1;
-            }
-            else {
-                end = mid - 1;
-            }
-        }
-        return -1;
-    }
 };
