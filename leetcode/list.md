@@ -132,9 +132,11 @@
  | Problems                                               | Difficulty | Related Problems                     | Status        |
  | :-------------------------                             | :---:      | ----:                                | :---:         |
  | Two Sum                                                | Easy       | hashmap/two pointer                  | :v: :eyes:    |
- | Two Sum II – Input array is sorted                     | Medium     | two pointer to squeeze               | :v:           |
+ | Two Sum II – Input array is sorted                     | Easy       | two pointer to squeeze               | :v:           |
  | Two Sum III – Data structure design                    | Easy       | hashmap/multiset                     | :v:           |
  | 3Sum                                                   | Medium     |                                      |               |
+ | 3Sum Closest                                              | Medium     |                  |        |
+ | 3Sum Smaller                                           | Medium     |                           |                   |
  | Regular Expression Matching                            | Hard       |                                      |               |
  | Roman to Integer                                       | Easy       |                                      |               |
  | Letter Combinations of a Phone Number                  | Medium     |                                      |               |
