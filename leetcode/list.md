@@ -130,13 +130,15 @@
 
 ## Facebook(79)
  | Problems                                               | Difficulty | Related Problems                     | Status        |
- | :-------------------------                             | :---:      | ----:                                | :---:         |
+ | :-------------------------                             | :---:      | :----                                | :---:         |
  | Two Sum                                                | Easy       | hashmap/two pointer                  | :v: :eyes:    |
  | Two Sum II – Input array is sorted                     | Easy       | two pointer to squeeze               | :v:           |
  | Two Sum III – Data structure design                    | Easy       | hashmap/multiset                     | :v:           |
  | 3Sum                                                   | Medium     | two pointer/de-duplicate             | :v: :eyes:    |
- | 3Sum Closest                                           | Medium     | two pointer/de-duplicate             |               |
- | 3Sum Smaller                                           | Medium     | two pointer                                     |            :v:   |
+ | 3Sum Closest                                           | Medium     | two pointer/de-duplicate             | :v:           |
+ | 3Sum Smaller                                           | Medium     | two pointer                          | :v:           |
+ | Minimum Window Substring                               | Hard       | hash map/idea                        | :v: :eyes:    |
+ | Divide Two Integers                                    | Medium     |                                      |               |
  | Regular Expression Matching                            | Hard       |                                      |               |
  | Roman to Integer                                       | Easy       |                                      |               |
  | Letter Combinations of a Phone Number                  | Medium     |                                      |               |
@@ -157,7 +159,6 @@
  | Sqrt(x)                                                | Medium     |                                      |               |
  | Simplify Path                                          | Medium     |                                      |               |
  | Sort Colors                                            | Medium     |                                      |               |
- | Minimum Window Substring                               | Hard       |                                      |               |
  | Subsets                                                | Medium     |                                      |               |
  | Subsets II                                             | Medium     |                                      |               |
  | Increasing Subsequence                                 | Medium     |                                      | :v:           |

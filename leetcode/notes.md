@@ -122,6 +122,9 @@ rather than thinking to do dfs for each `room` cell, we can use reverse engineer
 
 
 ### lower/upper bound coding
+#### lower bound
+- definition: given `val`, the first element `>= val`
+
 ```cpp
 int lowerBound(const vector<int>& nums, int target)
 {
@@ -137,7 +140,12 @@ int lowerBound(const vector<int>& nums, int target)
     }
     return l;
 }
+```
 
+#### upper bound
+- definition: given `val`, the first element `> val`
+
+```cpp
 int upperBound(const vector<int>& nums, int target)
 {
     int l = 0, r = nums.size() - 1, m;
