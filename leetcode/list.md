@@ -138,6 +138,8 @@
  | 3Sum Closest                                           | Medium     | two pointer/de-duplicate             | :v:           |
  | 3Sum Smaller                                           | Medium     | two pointer                          | :v:           |
  | Minimum Window Substring                               | Hard       | hash map/idea                        | :v: :eyes:    |
+ | Rearrange String K Distance Apart                      | Hard       | hash/heap/rearrange task w/o reorder | :lock: :eyes: |
+ | Kth Largest Element in an Array                        | Medium     |                                      |               |
  | Divide Two Integers                                    | Medium     |                                      |               |
  | Regular Expression Matching                            | Hard       |                                      |               |
  | Roman to Integer                                       | Easy       |                                      |               |
@@ -189,7 +191,6 @@
  | Minimum Size Subarray Sum                              | Medium     |                                      |               |
  | Course Schedule II                                     | Medium     |                                      |               |
  | Add and Search Word – Data structure design            | Medium     |                                      |               |
- | Kth Largest Element in an Array                        | Medium     |                                      |               |
  | The Skyline Problem                                    | Hard       |                                      |               |
  | Maximal Square                                         | Medium     |                                      |               |
  | Palindrome Linked List                                 | Easy       |                                      |               |
@@ -217,7 +218,6 @@
  | Binary Tree Vertical Order Traversal                   | Medium     |                                      |               |
  | Maximum Size Subarray Sum Equals k                     | Easy       |                                      |               |
  | Increasing Triplet Subsequence                         | Medium     |                                      |               |
- | Rearrange String K Distance Apart                      | Hard       | hash/heap/rearrange task w/o reorder | :lock: :eyes: |
 
 ## Twitter(21)
  | Problems                                       | Difficulty | Related Problems | Status |
