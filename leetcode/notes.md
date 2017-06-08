@@ -162,4 +162,26 @@ int upperBound(const vector<int>& nums, int target)
 }
 ```
 
+### quick sort/select
+For `quick sort` or `quick select`, the key is the embedded partition function
 
+```cpp
+int partition(vector<int>& nums, int left, int right)
+{
+    int p = left;
+    // pick `right` as the pivot
+    for(int i = left; i < right; ++i) {
+        if(nums[i] < nums[right]) {
+            if(nums[i] != nums[p]) {
+                swap(nums[i], nums[p]);
+            }
+            ++p;
+        }
+    }
+    swap(nums[p], nums[end]);
+    // now `p` is the index of the pivot
+    // it is possible that `p = right`, but sub sort/select will start within [left, p-1] or [p+1, right]
+    // so it will no enter into an infinity loop
+    return p;
+}
+```

@@ -139,7 +139,7 @@
  | 3Sum Smaller                                           | Medium     | two pointer                          | :v:           |
  | Minimum Window Substring                               | Hard       | hash map/idea                        | :v: :eyes:    |
  | Rearrange String K Distance Apart                      | Hard       | hash/heap/rearrange task w/o reorder | :lock: :eyes: |
- | Kth Largest Element in an Array                        | Medium     |                                      |               |
+ | Kth Largest Element in an Array                        | Medium     | quick select/heap                                     | :v: :eyes:              |
  | Divide Two Integers                                    | Medium     |                                      |               |
  | Regular Expression Matching                            | Hard       |                                      |               |
  | Roman to Integer                                       | Easy       |                                      |               |

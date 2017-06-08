@@ -27,6 +27,7 @@ class KthLargest {
             return -1;
          return recursiveImpl(nums, 0, nums.size() - 1, k);
 
+        // iterative verion
         //int left = 0, right = nums.size() - 1;
         //int p = 0;
         //while(left <= right) {
@@ -45,6 +46,7 @@ class KthLargest {
         //return nums[p];
     }
 
+    // quick sort solution
     void quickSort(vector<int>& nums, int left, int right)
     {
         if(left < right) {
