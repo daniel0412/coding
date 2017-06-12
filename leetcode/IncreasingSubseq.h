@@ -35,12 +35,13 @@ class IncreasingSubseq {
                        vector<int>& path,
                        set<vector<int> >& results)
     {
-        //if(start >= nums.size()) return;
         if(path.size() >= 2) {
             results.insert(path);
         }
         for(int i = start; i < nums.size(); ++i) {
             if(!path.empty() && path.back() > nums[i])
+                continue;
+            if(i > start && nums[i] == nums[i-1])
                 continue;
             path.push_back(nums[i]);
             recursiveImpl(nums, i + 1, path, results);
