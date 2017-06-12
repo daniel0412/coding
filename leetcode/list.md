@@ -131,6 +131,7 @@
 ## Facebook(79)
  | Problems                                               | Difficulty | Related Problems                     | Status              |
  | :-------------------------                             | :---:      | :----                                | :---:               |
+ | Move Zeroes                                            | Easy       | array/swap                           | :v:                 |
  | Two Sum                                                | Easy       | hashmap/two pointer                  | :v: :eyes:          |
  | Two Sum II – Input array is sorted                     | Easy       | two pointer to squeeze               | :v:                 |
  | Two Sum III – Data structure design                    | Easy       | hashmap/multiset                     | :v:                 |
@@ -140,6 +141,7 @@
  | Minimum Window Substring                               | Hard       | hash map/idea                        | :v: :eyes:          |
  | Rearrange String K Distance Apart                      | Hard       | hash/heap/rearrange task w/o reorder | :lock: :eyes:       |
  | Kth Largest Element in an Array                        | Medium     | quick select/heap                    | :v: :eyes:          |
+ | Maximum Size Subarray Sum Equals k                     | Medium     | hash map/idea                        | :v: :eyes:          |
  | Divide Two Integers                                    | Medium     |                                      |                     |
  | Regular Expression Matching                            | Hard       |                                      |                     |
  | Roman to Integer                                       | Easy       |                                      |                     |
@@ -209,14 +211,12 @@
  | Find the Celebrity                                     | Medium     |                                      |                     |
  | First Bad Version                                      | Easy       |                                      |                     |
  | Expression Add Operators                               | Hard       |                                      |                     |
- | Move Zeroes                                            | Easy       |                                      |                     |
  | Inorder Successor in BST                               | Medium     |                                      |                     |
  | Walls and Gates                                        | Medium     |                                      |                     |
  | Serialize and Deserialize Binary Tree                  | Hard       |                                      |                     |
  | Remove Invalid Parentheses                             | Hard       |                                      |                     |
  | Sparse Matrix Multiplication                           | Medium     |                                      |                     |
  | Binary Tree Vertical Order Traversal                   | Medium     |                                      |                     |
- | Maximum Size Subarray Sum Equals k                     | Easy       |                                      |                     |
  | Increasing Triplet Subsequence                         | Medium     |                                      |                     |
 
 ## Twitter(21)
