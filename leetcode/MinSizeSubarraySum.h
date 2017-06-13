@@ -29,8 +29,7 @@ class MinSizeSubarraySum {
               sum += nums[right];
               if(sum >= s) {
                   while(sum - nums[left] >= s) {
-                      ++left;
-                      sum -= nums[left];
+                      sum -= nums[left++];
                   }
                   minLen = min(minLen, right - left + 1);
               }

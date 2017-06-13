@@ -141,8 +141,13 @@
  | Minimum Window Substring                               | Hard       | hash map/idea                        | :v: :eyes:          |
  | Rearrange String K Distance Apart                      | Hard       | hash/heap/rearrange task w/o reorder | :lock: :eyes:       |
  | Kth Largest Element in an Array                        | Medium     | quick select/heap                    | :v: :eyes:          |
+ | Continuous Subarray Sum                                | Medium     | hash map/(a-c)%b==0/cornercase       | :v: :eyes:          |
+ | Maximum Subarray Sum                                   | Medium     |                                      |                     |
+ | Minimum Size Subarray Sum                              | Medium     | hash map/prefix sum                  | :v: :eyes:          |
  | Maximum Size Subarray Sum Equals k                     | Medium     | hash map/idea                        | :v: :eyes:          |
- | Divide Two Integers                                    | Medium     |                                      |                     |
+ | Subarray Sum Equals k                                  | Medium     | hash map/idea                        | :v: :eyes:          |
+ | Remove Invalid Parentheses                             | Hard       |                                      |                     |
+ | Divide Two Integers                                    | Medium     | hash map/prefix sum                  | :v: :eyes:          |
  | Regular Expression Matching                            | Hard       |                                      |                     |
  | Roman to Integer                                       | Easy       |                                      |                     |
  | Letter Combinations of a Phone Number                  | Medium     |                                      |                     |
@@ -190,7 +195,6 @@
  | Number of Islands                                      | Medium     |                                      |                     |
  | Reverse Linked List                                    | Easy       |                                      |                     |
  | Implement Trie (Prefix Tree)                           | Medium     |                                      |                     |
- | Minimum Size Subarray Sum                              | Medium     |                                      |                     |
  | Course Schedule II                                     | Medium     |                                      |                     |
  | Add and Search Word – Data structure design            | Medium     |                                      |                     |
  | The Skyline Problem                                    | Hard       |                                      |                     |
@@ -214,7 +218,6 @@
  | Inorder Successor in BST                               | Medium     |                                      |                     |
  | Walls and Gates                                        | Medium     |                                      |                     |
  | Serialize and Deserialize Binary Tree                  | Hard       |                                      |                     |
- | Remove Invalid Parentheses                             | Hard       |                                      |                     |
  | Sparse Matrix Multiplication                           | Medium     |                                      |                     |
  | Binary Tree Vertical Order Traversal                   | Medium     |                                      |                     |
  | Increasing Triplet Subsequence                         | Medium     |                                      |                     |

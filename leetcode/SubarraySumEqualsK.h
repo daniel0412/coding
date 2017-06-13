@@ -26,8 +26,8 @@ class SubarraySumEqualsK {
           int res = 0, sum = 0;
           for(int i = 0; i < nums.size(); ++i) {
               sum += nums[i];
-              ++sumToCount[sum];
               res += sumToCount[sum-k];
+              ++sumToCount[sum];
           }
           return res;
       }

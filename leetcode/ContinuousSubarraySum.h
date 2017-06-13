@@ -21,24 +21,25 @@ using namespace std;
 
 class ContinuousSubarraySum {
   public:
-      bool checkSubarraySum(vector<int>& nums, int k) {
-          unordered_map<int, int> sumToIndex{{0,0}};
-          int sum = 0;
-          for(int i = 0; i < nums.size(); ++i) {
-              sum += nums[i];
-              if(sumToIndex.count(sum) == 0) {
-                  sumToIndex[sum] = i;
-              }
-              int n = 1;
-              while(sum >= n * k) {
-                  int diff = sum - n * k;
-                  if(sumToIndex.count(diff) && i > sumToIndex[diff]) {
-                      return true;
-                  }
-                  ++n;
-              }
-          }
-          return false;
-      }
+    bool checkSubarraySum(vector<int>& nums, int k)
+    {
+        unordered_map<int, int> modToIndex{{0, -1}};
+        int sum = 0;
+        for(int i = 0; i < nums.size(); ++i) {
+            sum += nums[i];
+            int m = (k == 0) ? sum : sum % k;
+            if(modToIndex.count(m)) {
+                if(i - modToIndex[m] > 1) {
+                    cout << "i: " << i << ", mod: " << modToIndex[m] << endl;
+                    return true;
+                }
+            }
+            else {
+                modToIndex[m] = i;
+            }
+        }
+        return false;
+    }
+
   private:
 };
