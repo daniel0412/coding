@@ -146,12 +146,12 @@
  | Minimum Size Subarray Sum                              | Medium     | hash map/prefix sum                  | :v: :eyes:          |
  | Maximum Size Subarray Sum Equals k                     | Medium     | hash map/idea                        | :v: :eyes:          |
  | Subarray Sum Equals k                                  | Medium     | hash map/idea                        | :v: :eyes:          |
+ | Valid Parentheses                                      | Easy       |                                      |                     |
  | Remove Invalid Parentheses                             | Hard       |                                      |                     |
  | Divide Two Integers                                    | Medium     | hash map/prefix sum                  | :v: :eyes:          |
  | Regular Expression Matching                            | Hard       |                                      |                     |
  | Roman to Integer                                       | Easy       |                                      |                     |
  | Letter Combinations of a Phone Number                  | Medium     |                                      |                     |
- | Valid Parentheses                                      | Easy       |                                      |                     |
  | Merge k Sorted Lists                                   | Hard       |                                      |                     |
  | Reverse Nodes in k-Group                               | Hard       |                                      |                     |
  | Remove Duplicates from Sorted Array                    | Easy       |                                      |                     |
