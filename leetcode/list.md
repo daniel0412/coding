@@ -146,7 +146,8 @@
  | Minimum Size Subarray Sum                              | Medium     | hash map/prefix sum                  | :v: :eyes:          |
  | Maximum Size Subarray Sum Equals k                     | Medium     | hash map/idea                        | :v: :eyes:          |
  | Subarray Sum Equals k                                  | Medium     | hash map/idea                        | :v: :eyes:          |
- | Valid Parentheses                                      | Easy       |                                      |                     |
+ | Valid Parentheses                                      | Easy       | stack                                | :v:                 |
+ | Generate Parentheses                                   | Medium     |                           |                   |
  | Remove Invalid Parentheses                             | Hard       |                                      |                     |
  | Divide Two Integers                                    | Medium     | hash map/prefix sum                  | :v: :eyes:          |
  | Regular Expression Matching                            | Hard       |                                      |                     |
