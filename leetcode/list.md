@@ -148,11 +148,11 @@
  | Subarray Sum Equals k                                  | Medium     | hash map/idea                        | :v: :eyes:          |
  | Valid Parentheses                                      | Easy       | stack/non-stack counter solution     | :v:                 |
  | Generate Parentheses                                   | Medium     | n-1 -> n                             | :v: :eyes:          |
- | Remove Invalid Parentheses                             | Hard       |                                      |                     |
+ | Remove Invalid Parentheses                             | Hard       | count num to remove, then dfs        | :v: :eyes:          |
  | Divide Two Integers                                    | Medium     | hash map/prefix sum                  | :v: :eyes:          |
  | Regular Expression Matching                            | Hard       |                                      |                     |
  | Roman to Integer                                       | Easy       |                                      |                     |
- | Letter Combinations of a Phone Number                  | Medium     |                                      |                     |
+ | Letter Combinations of a Phone Number                  | Medium     | dfs                                  | :v:                 |
  | Merge k Sorted Lists                                   | Hard       |                                      |                     |
  | Reverse Nodes in k-Group                               | Hard       |                                      |                     |
  | Remove Duplicates from Sorted Array                    | Easy       |                                      |                     |
