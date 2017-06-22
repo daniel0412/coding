@@ -42,6 +42,7 @@
 #include <stack>
 #include <sstream>
 #include <iostream>
+#include <map>
 #include <unordered_map>
 #include <unordered_set>
 #include <queue>
@@ -79,7 +80,32 @@ class BinaryTreeVOT {
         recursiveImpl(root->left, col - 1);
         recursiveImpl(root->right, col + 1);
     }
+    // we can also use map, then no need to keep track of left/right
     unordered_map<int, vector<int> > d_vot;
     int d_left;
     int d_right;
+
+
+    void iterativeImpl(TreeNode* root, vector<vector<int> >& res)
+    {
+        if(root == nullptr)
+            return;
+
+        map<int, vector<int> > mymap;
+        queue<pair<int, TreeNode*> > myque;
+
+        myque.emplace(0, root);
+        while(!myque.empty()) {
+            const auto& p = myque.front();
+            mymap[p.first].push_back(p.second->val);
+            if(p.second->left)
+                myque.emplace(p.first - 1, p.second->left);
+            if(p.second->right)
+                myque.emplace(p.first + 1, p.second->right);
+            myque.pop();
+        }
+        for(const auto& kv : mymap) {
+            res.push_back(kv.second);
+        }
+    }
 };
