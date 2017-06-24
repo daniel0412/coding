@@ -219,9 +219,11 @@
  | Expression Add Operators                               | Hard       |                                       |                     |
  | Inorder Successor in BST                               | Medium     |                                       |                     |
  | Walls and Gates                                        | Medium     |                                       |                     |
- | Binary Tree Vertical Order Traversal                   | Medium     | map/inorder recursion/queue iteration | :eye: :lock:        |
+ | Binary Tree Vertical Order Traversal                   | Medium     | map/inorder recursion/queue iteration | :eyes: :lock:       |
  | Serialize and Deserialize Binary Tree                  | Hard       |                                       |                     |
  | Increasing Triplet Subsequence                         | Medium     |                                       |                     |
+ | Hamming Distance                                       | Easy       | clear right most left 1               | :eyes:   :v:        |
+ | Total Hamming Distance                                 | Medium     | vertical 1s, combination              | :eyes: :v:          |
 
 ## Twitter(21)
  | Problems                                       | Difficulty | Related Problems | Status |

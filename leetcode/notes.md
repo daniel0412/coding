@@ -113,7 +113,15 @@ for(int i = 0; i < vec.size()-1; ++i)
 any `size()` function returns type `size_t`, which is `unsigned int`, in the case that `size()` return `0`, `size()-1` will overflow, and the 
 condition does not hold any more
 
-
+#### count number of 1s in an int
+```cpp
+int res = 0;
+while(num) {
+    ++res;
+// this line will clear the right most 1
+    num = num & (num-1);
+}
+```
 
 ### Interesting Problems
 - Walls ang Gates
