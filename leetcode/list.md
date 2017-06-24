@@ -155,6 +155,8 @@
  | Roman to Integer                                       | Easy       |                                       |                     |
  | Letter Combinations of a Phone Number                  | Medium     | dfs                                   | :v:                 |
  | Merge k Sorted Lists                                   | Hard       |                                       |                     |
+ | Read N Characters Given Read4                          | Easy       | so concise                            | :lock: :eyes:       |
+ | Read N Characters Given Read4 II – Call multiple times | Hard       | buffer/read-write pos tracker         | :lock: :eyes:       |
  | Reverse Nodes in k-Group                               | Hard       |                                       |                     |
  | Remove Duplicates from Sorted Array                    | Easy       |                                       |                     |
  | Implement strStr()                                     | Easy       |                                       |                     |
@@ -189,8 +191,6 @@
  | Clone Graph                                            | Medium     |                                       |                     |
  | Word Break                                             | Medium     |                                       |                     |
  | LRU Cache                                              | Hard       |                                       |                     |
- | Read N Characters Given Read4                          | Easy       |                                       |                     |
- | Read N Characters Given Read4 II – Call multiple times | Hard       |                                       |                     |
  | One Edit Distance                                      | Medium     |                                       |                     |
  | Excel Sheet Column Title                               | Easy       |                                       |                     |
  | Binary Search Tree Iterator                            | Medium     |                                       |                     |
