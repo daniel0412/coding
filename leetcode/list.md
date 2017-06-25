@@ -171,6 +171,7 @@
  | Insert Interval                                        | Hard       |                                       |                     |
  | Add Binary                                             | Easy       |                                       |                     |
  | Sqrt(x)                                                | Medium     |                                       |                     |
+ | Decode Ways                                            | Medium     | recursion(slow)/dp(cornor cases)      | :v: :eyes:          |
  | Simplify Path                                          | Medium     |                                       |                     |
  | Sort Colors                                            | Medium     |                                       |                     |
  | Subsets                                                | Medium     | recursion -> think about iterative    | :v:       :eyes:    |
@@ -180,7 +181,6 @@
  | Remove Duplicates from Sorted Array II                 | Medium     |                                       |                     |
  | Maximal Rectangle                                      | Hard       |                                       |                     |
  | Merge Sorted Array                                     | Easy       |                                       |                     |
- | Decode Ways                                            | Medium     |                                       |                     |
  | Validate Binary Search Tree                            | Medium     |                                       |                     |
  | Binary Tree Level Order Traversal                      | Easy       |                                       |                     |
  | Populating Next Right Pointers in Each Node II         | Hard       |                                       |                     |
