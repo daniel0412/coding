@@ -129,102 +129,102 @@
  | Palindrome Pairs                                       | Hard       |                           |                   |
 
 ## Facebook(79)
- | Problems                                               | Difficulty | Related Problems                      | Status              |
- | :-------------------------                             | :---:      | :----                                 | :---:               |
- | Move Zeroes                                            | Easy       | array/swap                            | :v:                 |
- | Two Sum                                                | Easy       | hashmap/two pointer                   | :v: :eyes:          |
- | Two Sum II – Input array is sorted                     | Easy       | two pointer to squeeze                | :v:                 |
- | Two Sum III – Data structure design                    | Easy       | hashmap/multiset                      | :v:                 |
- | 3Sum                                                   | Medium     | two pointer/de-duplicate              | :v: :eyes:          |
- | 3Sum Closest                                           | Medium     | two pointer/de-duplicate              | :v:                 |
- | 3Sum Smaller                                           | Medium     | two pointer                           | :v:                 |
- | Split Array Largest Sum                                | Hard       | find range, then binary search /dp    | :v: :eyes:          |
- | Minimum Window Substring                               | Hard       | hash map/idea                         | :v: :eyes:          |
- | Rearrange String K Distance Apart                      | Hard       | hash/heap/rearrange task w/o reorder  | :lock: :eyes:       |
- | Kth Largest Element in an Array                        | Medium     | quick select/heap                     | :v: :eyes:          |
- | Continuous Subarray Sum                                | Medium     | hash map/(a-c)%b==0/cornercase        | :v: :eyes:          |
- | Maximum Subarray Sum                                   | Medium     |                                       |                     |
- | Minimum Size Subarray Sum                              | Medium     | hash map/prefix sum                   | :v: :eyes:          |
- | Maximum Size Subarray Sum Equals k                     | Medium     | hash map/idea                         | :v: :eyes:          |
- | Subarray Sum Equals k                                  | Medium     | hash map/idea                         | :v: :eyes:          |
- | Valid Parentheses                                      | Easy       | stack/non-stack counter solution      | :v:                 |
- | Generate Parentheses                                   | Medium     | n-1 -> n                              | :v: :eyes:          |
- | Remove Invalid Parentheses                             | Hard       | count num to remove, then dfs         | :v: :eyes:          |
- | Divide Two Integers                                    | Medium     | hash map/prefix sum                   | :v: :eyes:          |
- | Sparse Matrix Multiplication                           | Medium     | avoid multiplication when possible    | :lock:              |
- | Regular Expression Matching                            | Hard       |                                       |                     |
- | Roman to Integer                                       | Easy       |                                       |                     |
- | Letter Combinations of a Phone Number                  | Medium     | dfs                                   | :v:                 |
- | Merge k Sorted Lists                                   | Hard       |                                       |                     |
- | Read N Characters Given Read4                          | Easy       | so concise                            | :lock: :eyes:       |
- | Read N Characters Given Read4 II – Call multiple times | Hard       | buffer/read-write pos tracker         | :lock: :eyes:       |
- | Reverse Nodes in k-Group                               | Hard       |                                       |                     |
- | Remove Duplicates from Sorted Array                    | Easy       |                                       |                     |
- | Implement strStr()                                     | Easy       |                                       |                     |
- | Search in Rotated Sorted Array                         | Hard       |                                       |                     |
- | Count and Say                                          | Easy       |                                       |                     |
- | Multiply Strings                                       | Medium     |                                       |                     |
- | Wildcard Matching                                      | Hard       |                                       |                     |
- | Group Anagrams                                         | Medium     |                                       |                     |
- | Pow(x, n)                                              | Medium     |                                       |                     |
- | Merge Intervals                                        | Hard       |                                       |                     |
- | Insert Interval                                        | Hard       |                                       |                     |
- | Add Binary                                             | Easy       |                                       |                     |
- | Sqrt(x)                                                | Medium     |                                       |                     |
- | Decode Ways                                            | Medium     | recursion(slow)/dp(cornor cases)      | :v: :eyes:          |
- | Simplify Path                                          | Medium     |                                       |                     |
- | Sort Colors                                            | Medium     |                                       |                     |
- | Subsets                                                | Medium     | recursion -> think about iterative    | :v:       :eyes:    |
- | Subsets II                                             | Medium     | recursion/deduplication               | :v: :eyes:          |
- | Increasing Subsequence                                 | Medium     | dfs/set to deduplicate                | :v:          :eyes: |
- | Word Search                                            | Medium     |                                       |                     |
- | Remove Duplicates from Sorted Array II                 | Medium     |                                       |                     |
- | Maximal Rectangle                                      | Hard       |                                       |                     |
- | Merge Sorted Array                                     | Easy       |                                       |                     |
- | Validate Binary Search Tree                            | Medium     |                                       |                     |
- | Binary Tree Level Order Traversal                      | Easy       |                                       |                     |
- | Populating Next Right Pointers in Each Node II         | Hard       |                                       |                     |
- | Populating Next Right Pointers in Each Node            | Medium     |                                       |                     |
- | Best Time to Buy and Sell Stock                        | Easy       |                                       |                     |
- | Valid Palindrome                                       | Easy       |                                       |                     |
- | Word Ladder                                            | Medium     |                                       |                     |
- | Longest Consecutive Sequence                           | Hard       |                                       |                     |
- | Clone Graph                                            | Medium     |                                       |                     |
- | Word Break                                             | Medium     |                                       |                     |
- | LRU Cache                                              | Hard       |                                       |                     |
- | One Edit Distance                                      | Medium     |                                       |                     |
- | Excel Sheet Column Title                               | Easy       |                                       |                     |
- | Binary Search Tree Iterator                            | Medium     |                                       |                     |
- | Number of Islands                                      | Medium     |                                       |                     |
- | Reverse Linked List                                    | Easy       |                                       |                     |
- | Implement Trie (Prefix Tree)                           | Medium     |                                       |                     |
- | Course Schedule II                                     | Medium     |                                       |                     |
- | Add and Search Word – Data structure design            | Medium     |                                       |                     |
- | The Skyline Problem                                    | Hard       |                                       |                     |
- | Maximal Square                                         | Medium     |                                       |                     |
- | Palindrome Linked List                                 | Easy       |                                       |                     |
- | Lowest Common Ancestor of a Binary Search Tree         | Easy       |                                       |                     |
- | Lowest Common Ancestor of a Binary Tree                | Medium     |                                       |                     |
- | Product of Array Except Self                           | Medium     |                                       |                     |
- | Meeting Rooms                                          | Easy       |                                       |                     |
- | Meeting Rooms II                                       | Medium     |                                       |                     |
- | Binary Tree Paths                                      | Easy       |                                       |                     |
- | Graph Valid Tree                                       | Medium     |                                       |                     |
- | Paint House II                                         | Hard       |                                       |                     |
- | Alien Dictionary                                       | Hard       |                                       |                     |
- | Integer to English Words                               | Hard       |                                       |                     |
- | H-Index                                                | Medium     |                                       |                     |
- | H-Index II                                             | Medium     |                                       |                     |
- | Find the Celebrity                                     | Medium     |                                       |                     |
- | First Bad Version                                      | Easy       |                                       |                     |
- | Expression Add Operators                               | Hard       |                                       |                     |
- | Inorder Successor in BST                               | Medium     |                                       |                     |
- | Walls and Gates                                        | Medium     |                                       |                     |
- | Binary Tree Vertical Order Traversal                   | Medium     | map/inorder recursion/queue iteration | :eyes: :lock:       |
- | Serialize and Deserialize Binary Tree                  | Hard       |                                       |                     |
- | Increasing Triplet Subsequence                         | Medium     |                                       |                     |
- | Hamming Distance                                       | Easy       | clear right most left 1               | :eyes:   :v:        |
- | Total Hamming Distance                                 | Medium     | vertical 1s, combination              | :eyes: :v:          |
+ | Problems                                               | Difficulty | Related Problems                              | Status              |
+ | :-------------------------                             | :---:      | :----                                         | :---:               |
+ | Move Zeroes                                            | Easy       | array/swap                                    | :v:                 |
+ | Two Sum                                                | Easy       | hashmap/two pointer                           | :v: :eyes:          |
+ | Two Sum II – Input array is sorted                     | Easy       | two pointer to squeeze                        | :v:                 |
+ | Two Sum III – Data structure design                    | Easy       | hashmap/multiset                              | :v:                 |
+ | 3Sum                                                   | Medium     | two pointer/de-duplicate                      | :v: :eyes:          |
+ | 3Sum Closest                                           | Medium     | two pointer/de-duplicate                      | :v:                 |
+ | 3Sum Smaller                                           | Medium     | two pointer                                   | :v:                 |
+ | Split Array Largest Sum                                | Hard       | find range, then binary search /dp            | :v: :eyes:          |
+ | Minimum Window Substring                               | Hard       | hash map/idea                                 | :v: :eyes:          |
+ | Rearrange String K Distance Apart                      | Hard       | hash/heap/rearrange task w/o reorder          | :lock: :eyes:       |
+ | Kth Largest Element in an Array                        | Medium     | quick select/heap                             | :v: :eyes:          |
+ | Continuous Subarray Sum                                | Medium     | hash map/(a-c)%b==0/cornercase                | :v: :eyes:          |
+ | Maximum Subarray Sum                                   | Medium     |                                               |                     |
+ | Minimum Size Subarray Sum                              | Medium     | hash map/prefix sum                           | :v: :eyes:          |
+ | Maximum Size Subarray Sum Equals k                     | Medium     | hash map/idea                                 | :v: :eyes:          |
+ | Subarray Sum Equals k                                  | Medium     | hash map/idea                                 | :v: :eyes:          |
+ | Valid Parentheses                                      | Easy       | stack/non-stack counter solution              | :v:                 |
+ | Generate Parentheses                                   | Medium     | n-1 -> n                                      | :v: :eyes:          |
+ | Remove Invalid Parentheses                             | Hard       | count num to remove, then dfs                 | :v: :eyes:          |
+ | Divide Two Integers                                    | Medium     | hash map/prefix sum                           | :v: :eyes:          |
+ | Sparse Matrix Multiplication                           | Medium     | avoid multiplication when possible            | :lock:              |
+ | Roman to Integer                                       | Easy       |                                               |                     |
+ | Letter Combinations of a Phone Number                  | Medium     | dfs                                           | :v:                 |
+ | Merge k Sorted Lists                                   | Hard       |                                               |                     |
+ | Read N Characters Given Read4                          | Easy       | so concise                                    | :lock: :eyes:       |
+ | Read N Characters Given Read4 II – Call multiple times | Hard       | buffer/read-write pos tracker                 | :lock: :eyes:       |
+ | Reverse Nodes in k-Group                               | Hard       |                                               |                     |
+ | Remove Duplicates from Sorted Array                    | Easy       |                                               |                     |
+ | Implement strStr()                                     | Easy       |                                               |                     |
+ | Search in Rotated Sorted Array                         | Hard       |                                               |                     |
+ | Count and Say                                          | Easy       |                                               |                     |
+ | Multiply Strings                                       | Medium     |                                               |                     |
+ | Group Anagrams                                         | Medium     |                                               |                     |
+ | Pow(x, n)                                              | Medium     |                                               |                     |
+ | Merge Intervals                                        | Hard       |                                               |                     |
+ | Insert Interval                                        | Hard       |                                               |                     |
+ | Add Binary                                             | Easy       |                                               |                     |
+ | Sqrt(x)                                                | Medium     |                                               |                     |
+ | Decode Ways                                            | Medium     | recursion(slow)/dp(cornor cases)              | :v: :eyes:          |
+ | Simplify Path                                          | Medium     | last char not being '/' case                  | :v:                 |
+ | Wildcard Matching                                      | Hard       | greedy two pointer: mark * matchign start pos | :v: :eyes:          |
+ | Expression Add Operators                               | Hard       |                                               |                     |
+ | Regular Expression Matching                            | Hard       |                                               |                     |
+ | Sort Colors                                            | Medium     |                                               |                     |
+ | Subsets                                                | Medium     | recursion -> think about iterative            | :v:       :eyes:    |
+ | Subsets II                                             | Medium     | recursion/deduplication                       | :v: :eyes:          |
+ | Increasing Subsequence                                 | Medium     | dfs/set to deduplicate                        | :v:          :eyes: |
+ | Word Search                                            | Medium     |                                               |                     |
+ | Remove Duplicates from Sorted Array II                 | Medium     |                                               |                     |
+ | Maximal Rectangle                                      | Hard       |                                               |                     |
+ | Merge Sorted Array                                     | Easy       |                                               |                     |
+ | Validate Binary Search Tree                            | Medium     |                                               |                     |
+ | Binary Tree Level Order Traversal                      | Easy       |                                               |                     |
+ | Populating Next Right Pointers in Each Node II         | Hard       |                                               |                     |
+ | Populating Next Right Pointers in Each Node            | Medium     |                                               |                     |
+ | Best Time to Buy and Sell Stock                        | Easy       |                                               |                     |
+ | Valid Palindrome                                       | Easy       |                                               |                     |
+ | Word Ladder                                            | Medium     |                                               |                     |
+ | Longest Consecutive Sequence                           | Hard       |                                               |                     |
+ | Clone Graph                                            | Medium     |                                               |                     |
+ | Word Break                                             | Medium     |                                               |                     |
+ | LRU Cache                                              | Hard       |                                               |                     |
+ | One Edit Distance                                      | Medium     |                                               |                     |
+ | Excel Sheet Column Title                               | Easy       |                                               |                     |
+ | Binary Search Tree Iterator                            | Medium     |                                               |                     |
+ | Number of Islands                                      | Medium     |                                               |                     |
+ | Reverse Linked List                                    | Easy       |                                               |                     |
+ | Implement Trie (Prefix Tree)                           | Medium     |                                               |                     |
+ | Course Schedule II                                     | Medium     |                                               |                     |
+ | Add and Search Word – Data structure design            | Medium     |                                               |                     |
+ | The Skyline Problem                                    | Hard       |                                               |                     |
+ | Maximal Square                                         | Medium     |                                               |                     |
+ | Palindrome Linked List                                 | Easy       |                                               |                     |
+ | Lowest Common Ancestor of a Binary Search Tree         | Easy       |                                               |                     |
+ | Lowest Common Ancestor of a Binary Tree                | Medium     |                                               |                     |
+ | Product of Array Except Self                           | Medium     |                                               |                     |
+ | Meeting Rooms                                          | Easy       |                                               |                     |
+ | Meeting Rooms II                                       | Medium     |                                               |                     |
+ | Binary Tree Paths                                      | Easy       |                                               |                     |
+ | Graph Valid Tree                                       | Medium     |                                               |                     |
+ | Paint House II                                         | Hard       |                                               |                     |
+ | Alien Dictionary                                       | Hard       |                                               |                     |
+ | Integer to English Words                               | Hard       |                                               |                     |
+ | H-Index                                                | Medium     |                                               |                     |
+ | H-Index II                                             | Medium     |                                               |                     |
+ | Find the Celebrity                                     | Medium     |                                               |                     |
+ | First Bad Version                                      | Easy       |                                               |                     |
+ | Inorder Successor in BST                               | Medium     |                                               |                     |
+ | Walls and Gates                                        | Medium     |                                               |                     |
+ | Binary Tree Vertical Order Traversal                   | Medium     | map/inorder recursion/queue iteration         | :eyes: :lock:       |
+ | Serialize and Deserialize Binary Tree                  | Hard       |                                               |                     |
+ | Increasing Triplet Subsequence                         | Medium     |                                               |                     |
+ | Hamming Distance                                       | Easy       | clear right most left 1                       | :eyes:   :v:        |
+ | Total Hamming Distance                                 | Medium     | vertical 1s, combination                      | :eyes: :v:          |
 
 ## Twitter(21)
  | Problems                                       | Difficulty | Related Problems | Status |

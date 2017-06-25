@@ -28,7 +28,7 @@ using namespace std;
 
 class WildcardMatching {
    public:
-    bool isMatch(std::string s, std::string p) { return greedyImpl(s, p); }
+    bool isMatch(std::string s, std::string p) { return greedySecondWrite(s, p); }
 
    private:
     /**
@@ -59,6 +59,31 @@ class WildcardMatching {
         }
         while (pi < pLen) {
             if (p[pi++] != '*') return false;
+        }
+        return true;
+    }
+
+    bool greedySecondWrite(const std::string& s, const string& p)
+    {
+        int sLen = s.size(), pLen = p.size();
+        int si = 0, pi = 0;
+        int sStartId = 0, pMatchedId = -1;
+        while(si < sLen) {
+            if(pi < pLen && (p[pi] == '?' || p[pi] ==  s[si])){
+                ++si;
+                ++pi;
+            }else if(pi < pLen && p[pi] == '*') {
+                sStartId = si;
+                pMatchedId = ++pi;
+            }else if (pMatchedId > -1) {
+                si = ++sStartId;
+                pi = pMatchedId;
+            }else {
+                return false;
+            }
+        }
+        while(pi < pLen) {
+            if(p[pi++] != '*') return false;
         }
         return true;
     }
