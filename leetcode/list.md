@@ -178,7 +178,9 @@
  | Subsets                                                | Medium     | recursion -> think about iterative            | :v:       :eyes:    |
  | Subsets II                                             | Medium     | recursion/deduplication                       | :v: :eyes:          |
  | Increasing Subsequence                                 | Medium     | dfs/set to deduplicate                        | :v:          :eyes: |
- | Word Search                                            | Medium     |                                               |                     |
+ | Word Search                                            | Medium     | dfs                                           | :v: :eyes:          |
+ | Word Ladder                                            | Medium     |                                               |                     |
+ | Word Break                                             | Medium     |                                               |                     |
  | Remove Duplicates from Sorted Array II                 | Medium     |                                               |                     |
  | Maximal Rectangle                                      | Hard       |                                               |                     |
  | Merge Sorted Array                                     | Easy       |                                               |                     |
@@ -188,10 +190,8 @@
  | Populating Next Right Pointers in Each Node            | Medium     |                                               |                     |
  | Best Time to Buy and Sell Stock                        | Easy       |                                               |                     |
  | Valid Palindrome                                       | Easy       |                                               |                     |
- | Word Ladder                                            | Medium     |                                               |                     |
  | Longest Consecutive Sequence                           | Hard       |                                               |                     |
  | Clone Graph                                            | Medium     |                                               |                     |
- | Word Break                                             | Medium     |                                               |                     |
  | LRU Cache                                              | Hard       |                                               |                     |
  | One Edit Distance                                      | Medium     |                                               |                     |
  | Excel Sheet Column Title                               | Easy       |                                               |                     |
