@@ -172,8 +172,8 @@
  | Decode Ways                                            | Medium     | recursion(slow)/dp(cornor cases)              | :v: :eyes:          |
  | Simplify Path                                          | Medium     | last char not being '/' case                  | :v:                 |
  | Wildcard Matching                                      | Hard       | greedy two pointer: mark * matchign start pos | :v: :eyes:          |
+ | Regular Expression Matching                            | Hard       | hard&slow recursion/fast dp!!!                | :v: :eyes:          |
  | Expression Add Operators                               | Hard       |                                               |                     |
- | Regular Expression Matching                            | Hard       |                                               |                     |
  | Sort Colors                                            | Medium     |                                               |                     |
  | Subsets                                                | Medium     | recursion -> think about iterative            | :v:       :eyes:    |
  | Subsets II                                             | Medium     | recursion/deduplication                       | :v: :eyes:          |
