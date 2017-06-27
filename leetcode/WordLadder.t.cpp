@@ -6,6 +6,6 @@ TEST(WordLadder, WordLadder)
     WordLadder sol;
     string beginword = "hit";
     string endword = "cog";
-    vector<string> wordlist({"hot", "dot", "dog", "lot", "log", "cog"});
-    EXPECT_EQ(5, sol.ladderLength(beginword, endword, wordlist));
+    vector<string> wordlist({"hot", "dot", "dog", "lot", "log"});
+    EXPECT_EQ(0, sol.ladderLength(beginword, endword, wordlist));
 }

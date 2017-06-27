@@ -179,8 +179,8 @@
  | Subsets                                                | Medium     | recursion -> think about iterative            | :v:       :eyes:    |
  | Subsets II                                             | Medium     | recursion/deduplication                       | :v: :eyes:          |
  | Increasing Subsequence                                 | Medium     | dfs/set to deduplicate                        | :v:          :eyes: |
- | Word Ladder                                            | Medium     | queue                                         | :v:                 |
- | Word Break                                             | Medium     | dp(fast)/recursion(slow)                                               |                     |
+ | Word Ladder                                            | Medium     | (double) bfs                                  | :v:  :eyes:         |
+ | Word Break                                             | Medium     | dp(fast)/recursion(timeout)                   |                     |
  | Word Search                                            | Medium     | dfs                                           | :v: :eyes:          |
  | Implement Trie (Prefix Tree)                           | Medium     |                                               |                     |
  | Add and Search Word – Data structure design            | Medium     |                                               |                     |
