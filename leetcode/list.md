@@ -159,6 +159,7 @@
  | Read N Characters Given Read4 II – Call multiple times | Hard       | buffer/read-write pos tracker                 | :lock: :eyes:       |
  | Reverse Nodes in k-Group                               | Hard       |                                               |                     |
  | Remove Duplicates from Sorted Array                    | Easy       |                                               |                     |
+ | Remove Duplicates from Sorted Array II                 | Medium     |                                               |                     |
  | Implement strStr()                                     | Easy       |                                               |                     |
  | Search in Rotated Sorted Array                         | Hard       |                                               |                     |
  | Count and Say                                          | Easy       |                                               |                     |
@@ -178,10 +179,12 @@
  | Subsets                                                | Medium     | recursion -> think about iterative            | :v:       :eyes:    |
  | Subsets II                                             | Medium     | recursion/deduplication                       | :v: :eyes:          |
  | Increasing Subsequence                                 | Medium     | dfs/set to deduplicate                        | :v:          :eyes: |
+ | Word Ladder                                            | Medium     | queue                                         | :v:                 |
+ | Word Break                                             | Medium     | dp(fast)/recursion(slow)                                               |                     |
  | Word Search                                            | Medium     | dfs                                           | :v: :eyes:          |
- | Word Ladder                                            | Medium     |                                               |                     |
- | Word Break                                             | Medium     |                                               |                     |
- | Remove Duplicates from Sorted Array II                 | Medium     |                                               |                     |
+ | Implement Trie (Prefix Tree)                           | Medium     |                                               |                     |
+ | Add and Search Word – Data structure design            | Medium     |                                               |                     |
+ | Integer to English Words                               | Hard       |                                               |                     |
  | Maximal Rectangle                                      | Hard       |                                               |                     |
  | Merge Sorted Array                                     | Easy       |                                               |                     |
  | Validate Binary Search Tree                            | Medium     |                                               |                     |
@@ -198,9 +201,7 @@
  | Binary Search Tree Iterator                            | Medium     |                                               |                     |
  | Number of Islands                                      | Medium     |                                               |                     |
  | Reverse Linked List                                    | Easy       |                                               |                     |
- | Implement Trie (Prefix Tree)                           | Medium     |                                               |                     |
  | Course Schedule II                                     | Medium     |                                               |                     |
- | Add and Search Word – Data structure design            | Medium     |                                               |                     |
  | The Skyline Problem                                    | Hard       |                                               |                     |
  | Maximal Square                                         | Medium     |                                               |                     |
  | Palindrome Linked List                                 | Easy       |                                               |                     |
@@ -213,7 +214,6 @@
  | Graph Valid Tree                                       | Medium     |                                               |                     |
  | Paint House II                                         | Hard       |                                               |                     |
  | Alien Dictionary                                       | Hard       |                                               |                     |
- | Integer to English Words                               | Hard       |                                               |                     |
  | H-Index                                                | Medium     |                                               |                     |
  | H-Index II                                             | Medium     |                                               |                     |
  | Find the Celebrity                                     | Medium     |                                               |                     |

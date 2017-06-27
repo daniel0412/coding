@@ -57,13 +57,12 @@ class WordSearch {
                 return;
             }
             else {
-                char tmp = board[r][c];
                 board[r][c] = '0';
                 recursiveImpl(board, r - 1, c, word, pos + 1, found);
                 recursiveImpl(board, r + 1, c, word, pos + 1, found);
                 recursiveImpl(board, r, c - 1, word, pos + 1, found);
                 recursiveImpl(board, r, c + 1, word, pos + 1, found);
-                board[r][c] = tmp;
+                board[r][c] = word[pos];
             }
         }
     }

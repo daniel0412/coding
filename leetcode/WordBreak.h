@@ -31,22 +31,44 @@ class WordBreak {
   public:
     bool wordBreak(string s, vector<string>& wordDict)
     {
+        return dpImpl(s, wordDict);
+        // unordered_set<string> dict(wordDict.begin(), wordDict.end());
+        // return recursiveImpl(s, dict, 0);
+    }
+
+  private:
+    bool dpImpl(const string& s, const vector<string>& wordDict)
+    {
         unordered_set<string> dict(wordDict.begin(), wordDict.end());
         vector<bool> dp(s.size() + 1, false);
         dp[0] = true;
         for(int i = 0; i < s.size(); ++i) {
-            for(int end = 0; end < i; ++end) {
-                if(dp[end + 1] && dict.count(s.substr(end + 1, i - end)) > 0) {
+            for(int breakPos = 0; breakPos < i; ++breakPos) {
+                if(dp[breakPos + 1] &&
+                   dict.count(s.substr(breakPos + 1, i - breakPos)) > 0) {
                     dp[i + 1] = true;
                     break;
                 }
             }
-            if(!dp[i + 1]) {
-                dp[i + 1] = dict.count(s.substr(0, i + 1)) > 0;
+            if(!dp[i + 1] && dict.count(s.substr(0, i + 1)) > 0) {
+                dp[i + 1] = true;
             }
         }
-        return dp[s.size()];
+        return dp.back();
     }
 
-  private:
+    bool recursiveImpl(const string& s,
+                       const unordered_set<string>& dict,
+                       int breakPos)
+    {
+        if(breakPos == s.size())
+            return true;
+        for(int i = breakPos; i < s.size(); ++i) {
+            if(dict.count(s.substr(breakPos, i - breakPos + 1)) > 0) {
+                if(recursiveImpl(s, dict, i + 1))
+                    return true;
+            }
+        }
+        return false;
+    }
 };
