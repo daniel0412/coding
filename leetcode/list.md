@@ -158,10 +158,12 @@
  | Read N Characters Given Read4                          | Easy       | so concise                                    | :lock: :eyes:       |
  | Read N Characters Given Read4 II – Call multiple times | Hard       | buffer/read-write pos tracker                 | :lock: :eyes:       |
  | Reverse Nodes in k-Group                               | Hard       |                                               |                     |
- | Remove Duplicates from Sorted Array                    | Easy       |                                               |                     |
- | Remove Duplicates from Sorted Array II                 | Medium     |                                               |                     |
- | Implement strStr()                                     | Easy       |                                               |                     |
+ | Remove Duplicates from Sorted Array                    | Easy       | two pointer                                   | :v:                 |
+ | Remove Duplicates from Sorted Array II                 | Medium     | two pointer + condition                       | :v:                 |
  | Search in Rotated Sorted Array                         | Hard       |                                               |                     |
+ | Merge Sorted Array                                     | Easy       |                                               |                     |
+ | Product of Array Except Self                           | Medium     |                                               |                     |
+ | Implement strStr()                                     | Easy       |                                               |                     |
  | Count and Say                                          | Easy       |                                               |                     |
  | Multiply Strings                                       | Medium     |                                               |                     |
  | Group Anagrams                                         | Medium     |                                               |                     |
@@ -186,11 +188,10 @@
  | Add and Search Word – Data structure design            | Medium     |                                               |                     |
  | Integer to English Words                               | Hard       |                                               |                     |
  | Maximal Rectangle                                      | Hard       |                                               |                     |
- | Merge Sorted Array                                     | Easy       |                                               |                     |
  | Validate Binary Search Tree                            | Medium     |                                               |                     |
  | Binary Tree Level Order Traversal                      | Easy       |                                               |                     |
- | Populating Next Right Pointers in Each Node II         | Hard       |                                               |                     |
  | Populating Next Right Pointers in Each Node            | Medium     |                                               |                     |
+ | Populating Next Right Pointers in Each Node II         | Hard       |                                               |                     |
  | Best Time to Buy and Sell Stock                        | Easy       |                                               |                     |
  | Valid Palindrome                                       | Easy       |                                               |                     |
  | Longest Consecutive Sequence                           | Hard       |                                               |                     |
@@ -207,7 +208,6 @@
  | Palindrome Linked List                                 | Easy       |                                               |                     |
  | Lowest Common Ancestor of a Binary Search Tree         | Easy       |                                               |                     |
  | Lowest Common Ancestor of a Binary Tree                | Medium     |                                               |                     |
- | Product of Array Except Self                           | Medium     |                                               |                     |
  | Meeting Rooms                                          | Easy       |                                               |                     |
  | Meeting Rooms II                                       | Medium     |                                               |                     |
  | Binary Tree Paths                                      | Easy       |                                               |                     |
