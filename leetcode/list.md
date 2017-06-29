@@ -161,8 +161,8 @@
  | Remove Duplicates from Sorted Array                    | Easy       | two pointer                                   | :v:                 |
  | Remove Duplicates from Sorted Array II                 | Medium     | two pointer + condition                       | :v:                 |
  | Search in Rotated Sorted Array                         | Hard       |                                               |                     |
- | Merge Sorted Array                                     | Easy       |                                               |                     |
- | Product of Array Except Self                           | Medium     |                                               |                     |
+ | Merge Sorted Array                                     | Easy       | two pointer                                   | :v:                 |
+ | Product of Array Except Self                           | Medium     | left->right, then right->left                 | :v:                 |
  | Implement strStr()                                     | Easy       |                                               |                     |
  | Count and Say                                          | Easy       |                                               |                     |
  | Multiply Strings                                       | Medium     |                                               |                     |
