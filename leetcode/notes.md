@@ -77,6 +77,11 @@ auto comp = [](const pair<int, int>& a, const pair<int, int>& b) {
 priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(comp))> heap(comp);
 ```
 
+#### some useful functions might be used in coding
+- string
+```
+find_last_of('/')
+
 #### good coding ways to format string
 ```cpp
 // turn a vecotr into ',' separated string
@@ -85,9 +90,6 @@ copy(vec.begin(), vec.end()-1, ostream_iterator<string>(ss, ","));
 ss << *vec.rbegin();
 return ss.str();
 ```
-
-
-
 
 ### Common Coding Skills
 #### overflow issue

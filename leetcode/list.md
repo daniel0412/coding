@@ -154,15 +154,15 @@
  | Sparse Matrix Multiplication                           | Medium     | avoid multiplication when possible            | :lock:              |
  | Roman to Integer                                       | Easy       |                                               |                     |
  | Letter Combinations of a Phone Number                  | Medium     | dfs                                           | :v:                 |
- | Merge k Sorted Lists                                   | Hard       |                                               |                     |
  | Read N Characters Given Read4                          | Easy       | so concise                                    | :lock: :eyes:       |
  | Read N Characters Given Read4 II – Call multiple times | Hard       | buffer/read-write pos tracker                 | :lock: :eyes:       |
- | Reverse Nodes in k-Group                               | Hard       |                                               |                     |
  | Remove Duplicates from Sorted Array                    | Easy       | two pointer                                   | :v:                 |
  | Remove Duplicates from Sorted Array II                 | Medium     | two pointer + condition                       | :v:                 |
- | Search in Rotated Sorted Array                         | Hard       |                                               |                     |
+ | Search in Rotated Sorted Array                         | Medium     | binary search, think which direction to go    | :v: :eyes:          |
  | Merge Sorted Array                                     | Easy       | two pointer                                   | :v:                 |
  | Product of Array Except Self                           | Medium     | left->right, then right->left                 | :v:                 |
+ | Merge k Sorted Lists                                   | Hard       |                                               |                     |
+ | Reverse Nodes in k-Group                               | Hard       |                                               |                     |
  | Implement strStr()                                     | Easy       |                                               |                     |
  | Count and Say                                          | Easy       |                                               |                     |
  | Multiply Strings                                       | Medium     |                                               |                     |
@@ -172,6 +172,7 @@
  | Insert Interval                                        | Hard       |                                               |                     |
  | Add Binary                                             | Easy       |                                               |                     |
  | Sqrt(x)                                                | Medium     |                                               |                     |
+ | Encode/Decode Tiny Url                                 | Medium     | rand()/unordered_map                          | :v: :eyes:          |
  | Decode Ways                                            | Medium     | recursion(slow)/dp(cornor cases)              | :v: :eyes:          |
  | Simplify Path                                          | Medium     | last char not being '/' case                  | :v:                 |
  | Wildcard Matching                                      | Hard       | greedy two pointer: mark * matchign start pos | :v: :eyes:          |
