@@ -148,6 +148,7 @@
  | Minimum Size Subarray Sum                              | Medium     | hash map/prefix sum                           | :v: :eyes:          |
  | Maximum Size Subarray Sum Equals k                     | Medium     | hash map/idea                                 | :v: :eyes:          |
  | Subarray Sum Equals k                                  | Medium     | hash map/idea                                 | :v: :eyes:          |
+ | Contiguous Array                                       | Medium     | hash map/presum idea                          | :v: :eyes:          |
  | Valid Parentheses                                      | Easy       | stack/non-stack counter solution              | :v:                 |
  | Generate Parentheses                                   | Medium     | n-1 -> n                                      | :v: :eyes:          |
  | Remove Invalid Parentheses                             | Hard       | count num to remove, then dfs                 | :v: :eyes:          |
@@ -200,7 +201,7 @@
  | Clone Graph                                            | Medium     |                                               |                     |
  | LRU Cache                                              | Hard       |                                               |                     |
  | One Edit Distance                                      | Medium     |                                               |                     |
- | Excel Sheet Column Title                               | Easy       |                                               |                     |
+ | Excel Sheet Column Title                               | Easy       | mod/division                                  | :v:                 |
  | Binary Search Tree Iterator                            | Medium     |                                               |                     |
  | Number of Islands                                      | Medium     |                                               |                     |
  | Reverse Linked List                                    | Easy       |                                               |                     |
