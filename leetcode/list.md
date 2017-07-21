@@ -216,7 +216,7 @@
  | Binary Tree Paths                                      | Easy       |                                               |                     |
  | Graph Valid Tree                                       | Medium     |                                               |                     |
  | Diameter of Binary Tree                                | Medium     | what is needed to compute the path            | :v:                 |
- | Paint House II                                         | Hard       |                                               |                     |
+ | Paint House II                                         | Hard       | dp->no dp storage needed                      | :lock: :eyes:       |
  | Alien Dictionary                                       | Hard       |                                               |                     |
  | H-Index                                                | Medium     |                                               |                     |
  | H-Index II                                             | Medium     |                                               |                     |
