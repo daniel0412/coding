@@ -191,6 +191,7 @@
  | Add and Search Word – Data structure design            | Medium     |                                               |                     |
  | Integer to English Words                               | Hard       |                                               |                     |
  | Maximal Rectangle                                      | Hard       |                                               |                     |
+ | Sum of Left Leaves                                     | Easy       | recursion/iterative                           | :v: :eyes:          |
  | Validate Binary Search Tree                            | Medium     |                                               |                     |
  | Binary Tree Level Order Traversal                      | Easy       |                                               |                     |
  | Populating Next Right Pointers in Each Node            | Medium     |                                               |                     |
