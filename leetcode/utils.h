@@ -11,6 +11,11 @@
 #include <utility>
 
 using namespace std;
+struct ListNode{
+    int val;
+    ListNode* next;
+    ListNode(const int val) : val(val), next(nullptr) {}
+};
 
 class TreeNode {
   public:

@@ -209,7 +209,7 @@
  | Course Schedule II                                     | Medium     |                                               |                     |
  | The Skyline Problem                                    | Hard       |                                               |                     |
  | Maximal Square                                         | Medium     |                                               |                     |
- | Palindrome Linked List                                 | Easy       |                                               |                     |
+ | Palindrome Linked List                                 | Easy       | stack/reverselist/two pointer                 | :v: :eyes:          |
  | Lowest Common Ancestor of a Binary Search Tree         | Easy       |                                               |                     |
  | Lowest Common Ancestor of a Binary Tree                | Medium     |                                               |                     |
  | Meeting Rooms                                          | Easy       |                                               |                     |
