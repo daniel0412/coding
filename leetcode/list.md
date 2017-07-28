@@ -215,7 +215,7 @@
  | Meeting Rooms                                          | Easy       |                                               |                     |
  | Meeting Rooms II                                       | Medium     |                                               |                     |
  | Binary Tree Paths                                      | Easy       |                                               |                     |
- | Graph Valid Tree                                       | Medium     |                                               |                     |
+ | Graph Valid Tree                                       | Medium     | dfs/bfs/union find                            | :lock: :eyes:       |
  | Diameter of Binary Tree                                | Medium     | what is needed to compute the path            | :v:                 |
  | Paint House II                                         | Hard       | dp->no dp storage needed                      | :lock: :eyes:       |
  | Alien Dictionary                                       | Hard       |                                               |                     |

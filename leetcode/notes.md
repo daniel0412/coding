@@ -79,8 +79,9 @@ priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(comp))> heap(com
 
 #### some useful functions might be used in coding
 - string
-```
+```cpp
 find_last_of('/')
+```
 
 #### good coding ways to format string
 ```cpp
