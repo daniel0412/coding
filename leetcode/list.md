@@ -199,22 +199,22 @@
  | Best Time to Buy and Sell Stock                        | Easy       |                                               |                     |
  | Valid Palindrome                                       | Easy       |                                               |                     |
  | Longest Consecutive Sequence                           | Hard       |                                               |                     |
- | Clone Graph                                            | Medium     |                                               |                     |
  | LRU Cache                                              | Hard       |                                               |                     |
  | One Edit Distance                                      | Medium     |                                               |                     |
  | Excel Sheet Column Title                               | Easy       | mod/division                                  | :v:                 |
  | Binary Search Tree Iterator                            | Medium     |                                               |                     |
  | Number of Islands                                      | Medium     |                                               |                     |
- | Reverse Linked List                                    | Easy       |                                               |                     |
- | Course Schedule II                                     | Medium     |                                               |                     |
  | The Skyline Problem                                    | Hard       |                                               |                     |
  | Maximal Square                                         | Medium     |                                               |                     |
+ | Reverse Linked List                                    | Easy       |                                               | :v:                    |
  | Palindrome Linked List                                 | Easy       | stack/reverselist/two pointer                 | :v: :eyes:          |
  | Lowest Common Ancestor of a Binary Search Tree         | Easy       |                                               |                     |
  | Lowest Common Ancestor of a Binary Tree                | Medium     |                                               |                     |
  | Meeting Rooms                                          | Easy       |                                               |                     |
  | Meeting Rooms II                                       | Medium     |                                               |                     |
  | Binary Tree Paths                                      | Easy       |                                               |                     |
+ | Course Schedule II                                     | Medium     |                                               |                     |
+ | Clone Graph                                            | Medium     |                                               |                     |
  | Graph Valid Tree                                       | Medium     | dfs/bfs/union find                            | :lock: :eyes:       |
  | Diameter of Binary Tree                                | Medium     | what is needed to compute the path            | :v:                 |
  | Paint House II                                         | Hard       | dp->no dp storage needed                      | :lock: :eyes:       |
