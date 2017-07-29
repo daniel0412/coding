@@ -214,12 +214,12 @@
  | Meeting Rooms II                                       | Medium     |                                               |                     |
  | Binary Tree Paths                                      | Easy       |                                               |                     |
  | Course Schedule I                                      | Medium     | dfs/bfs(tricker, use degree)                  | :v:                 |
- | Course Schedule II                                     | Medium     | dfs/bfs(same as above), keep track of path    | :v: :eyes:          |
+ | Course Schedule II                                     | Medium     | dfs/bfs(tricker), path tracking               | :v: :eyes:          |
+ | Alien Dictionary                                       | Hard       | order is DAG edges (topological sort)         | :lock: :eyes:       |
  | Clone Graph                                            | Medium     |                                               |                     |
  | Graph Valid Tree                                       | Medium     | dfs/bfs/union find                            | :lock: :eyes:       |
  | Diameter of Binary Tree                                | Medium     | what is needed to compute the path            | :v:                 |
  | Paint House II                                         | Hard       | dp->no dp storage needed                      | :lock: :eyes:       |
- | Alien Dictionary                                       | Hard       |                                               |                     |
  | H-Index                                                | Medium     |                                               |                     |
  | H-Index II                                             | Medium     |                                               |                     |
  | Find the Celebrity                                     | Medium     |                                               |                     |
