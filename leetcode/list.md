@@ -206,14 +206,15 @@
  | Number of Islands                                      | Medium     |                                               |                     |
  | The Skyline Problem                                    | Hard       |                                               |                     |
  | Maximal Square                                         | Medium     |                                               |                     |
- | Reverse Linked List                                    | Easy       |                                               | :v:                    |
+ | Reverse Linked List                                    | Easy       |                                               | :v:                 |
  | Palindrome Linked List                                 | Easy       | stack/reverselist/two pointer                 | :v: :eyes:          |
  | Lowest Common Ancestor of a Binary Search Tree         | Easy       |                                               |                     |
  | Lowest Common Ancestor of a Binary Tree                | Medium     |                                               |                     |
  | Meeting Rooms                                          | Easy       |                                               |                     |
  | Meeting Rooms II                                       | Medium     |                                               |                     |
  | Binary Tree Paths                                      | Easy       |                                               |                     |
- | Course Schedule II                                     | Medium     |                                               |                     |
+ | Course Schedule I                                      | Medium     | dfs/bfs(tricker, use degree)                  | :v:                 |
+ | Course Schedule II                                     | Medium     | dfs/bfs(same as above), keep track of path    | :v: :eyes:          |
  | Clone Graph                                            | Medium     |                                               |                     |
  | Graph Valid Tree                                       | Medium     | dfs/bfs/union find                            | :lock: :eyes:       |
  | Diameter of Binary Tree                                | Medium     | what is needed to compute the path            | :v:                 |

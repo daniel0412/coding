@@ -23,7 +23,7 @@ class CourseSchedule {
   public:
     bool canFinish(int numCourses, vector<pair<int, int> >& prerequisites) {
         if(numCourses <= 2) return true;
-        return dfs(numCourses, prerequisites);
+        return bfs(numCourses, prerequisites);
     }
 
   private:
@@ -42,6 +42,7 @@ class CourseSchedule {
     {
         if(visited[i] == -1) return false;
         if(visited[i] == 1) return true;
+        visited[i]=-1;
         for(auto c : graph[i]) {
             if(!dfsImpl(graph, visited, c)) return false;
         }
@@ -57,8 +58,8 @@ class CourseSchedule {
             ++in[p.first];
         }
         queue<int> q;
-        for(auto i : in) {
-            if(i==0) q.push(i);
+        for(size_t i = 0; i < in.size(); ++i) {
+            if(in[i]==0) q.push(i);
         }
         while(!q.empty()) {
             int i = q.front();
