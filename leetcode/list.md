@@ -139,6 +139,7 @@
  | 3Sum                                                   | Medium     | two pointer/de-duplicate                      | :v: :eyes:          |
  | 3Sum Closest                                           | Medium     | two pointer/de-duplicate                      | :v:                 |
  | 3Sum Smaller                                           | Medium     | two pointer                                   | :v:                 |
+ | Target Sum                                             | Medium     | recursion                                     | :v:                 |
  | Split Array Largest Sum                                | Hard       | find range, then binary search /dp            | :v: :eyes:          |
  | Minimum Window Substring                               | Hard       | hash map/idea                                 | :v: :eyes:          |
  | Rearrange String K Distance Apart                      | Hard       | hash/heap/rearrange task w/o reorder          | :lock: :eyes:       |
