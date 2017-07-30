@@ -206,7 +206,7 @@
  | Binary Search Tree Iterator                            | Medium     |                                               |                     |
  | Number of Islands                                      | Medium     | dfs/marking                                   | :v:                 |
  | Number of Islands II                                   | Medium     | union find + pass compression                 | :lock: :eyes:       |
- | The Skyline Problem                                    | Hard       |                                               |                     |
+ | The Skyline Problem                                    | Hard       | start/end points/mulitset erase               | :v: :eyes:          |
  | Maximal Square                                         | Medium     | dp/find len of sides                          | :v: :eyes:          |
  | Maximal Rectangle                                      | Hard       | find width(histogram)/height                  | :v: :eyes:          |
  | Reverse Linked List                                    | Easy       |                                               | :v:                 |
