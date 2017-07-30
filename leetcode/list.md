@@ -181,7 +181,7 @@
  | Wildcard Matching                                      | Hard       | greedy two pointer: mark * matchign start pos | :v: :eyes:          |
  | Regular Expression Matching                            | Hard       | hard&slow recursion/fast dp!!!                | :v: :eyes:          |
  | Text Justification                                     | Hard       | just deal with string corner case             | :v:                 |
- | Expression Add Operators                               | Hard       |                                               |                     |
+ | Expression Add Operators                               | Hard       | tricy dfs: get first val, then (op, val) pair | :v: :eyes:          |
  | Sort Colors                                            | Medium     |                                               |                     |
  | Subsets                                                | Medium     | recursion -> think about iterative            | :v:       :eyes:    |
  | Subsets II                                             | Medium     | recursion/deduplication                       | :v: :eyes:          |
