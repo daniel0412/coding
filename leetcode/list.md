@@ -205,8 +205,8 @@
  | Number of Islands                                      | Medium     | dfs/marking                                   | :v:                 |
  | Number of Islands II                                   | Medium     | union find + pass compression                 | :lock: :eyes:       |
  | The Skyline Problem                                    | Hard       |                                               |                     |
- | Maximal Square                                         | Medium     |                                               |                     |
- | Maximal Rectangle                                      | Hard       |                                               |                     |
+ | Maximal Square                                         | Medium     | dp/find len of sides                          | :v: :eyes:          |
+ | Maximal Rectangle                                      | Hard       | find width(histogram)/height                  | :v: :eyes:          |
  | Reverse Linked List                                    | Easy       |                                               | :v:                 |
  | Palindrome Linked List                                 | Easy       | stack/reverselist/two pointer                 | :v: :eyes:          |
  | Lowest Common Ancestor of a Binary Search Tree         | Easy       |                                               |                     |
