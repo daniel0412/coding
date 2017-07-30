@@ -201,7 +201,8 @@
  | Valid Palindrome                                       | Easy       |                                               |                     |
  | Longest Consecutive Sequence                           | Hard       |                                               |                     |
  | LRU Cache                                              | Hard       |                                               |                     |
- | One Edit Distance                                      | Medium     |                                               |                     |
+ | One Edit Distance                                      | Medium     | 3 cases, and combine for concise code         | :v:                 |
+ | Edit Distance                                          | Hard       | 2-dim dp                                            | :v:  :eyes:         |
  | Excel Sheet Column Title                               | Easy       | mod/division                                  | :v:                 |
  | Binary Search Tree Iterator                            | Medium     |                                               |                     |
  | Number of Islands                                      | Medium     | dfs/marking                                   | :v:                 |
