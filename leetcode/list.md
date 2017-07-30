@@ -230,7 +230,7 @@
  | Walls and Gates                                        | Medium     |                                               |                     |
  | Binary Tree Vertical Order Traversal                   | Medium     | map/inorder recursion/queue iteration         | :eyes: :lock:       |
  | Serialize and Deserialize Binary Tree                  | Hard       |                                               |                     |
- | Increasing Triplet Subsequence                         | Medium     |                                               |                     |
+ | Increasing Triplet Subsequence                         | Medium     | think hard, tricky                            | :v: :eyes:          |
  | Hamming Distance                                       | Easy       | clear right most left 1                       | :eyes:   :v:        |
  | Total Hamming Distance                                 | Medium     | vertical 1s, combination                      | :eyes: :v:          |
  | Random Pick Index                                      | Medium     | reservoir sampling                            | :eyes: :v:          |
