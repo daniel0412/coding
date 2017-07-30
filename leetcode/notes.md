@@ -196,3 +196,8 @@ int partition(vector<int>& nums, int left, int right)
     return p;
 }
 ```
+
+### reservoir sampling
+given online stream of numbers, make sure probably for each number gets selected is the same.
+
+idea: keep the first number, then with probability `1/i` to select the `i-th` number

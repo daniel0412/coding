@@ -179,6 +179,7 @@
  | Simplify Path                                          | Medium     | last char not being '/' case                  | :v:                 |
  | Wildcard Matching                                      | Hard       | greedy two pointer: mark * matchign start pos | :v: :eyes:          |
  | Regular Expression Matching                            | Hard       | hard&slow recursion/fast dp!!!                | :v: :eyes:          |
+ | Text Justification                                     | Hard       | just deal with string corner case             | :v:                 |
  | Expression Add Operators                               | Hard       |                                               |                     |
  | Sort Colors                                            | Medium     |                                               |                     |
  | Subsets                                                | Medium     | recursion -> think about iterative            | :v:       :eyes:    |
@@ -232,6 +233,7 @@
  | Increasing Triplet Subsequence                         | Medium     |                                               |                     |
  | Hamming Distance                                       | Easy       | clear right most left 1                       | :eyes:   :v:        |
  | Total Hamming Distance                                 | Medium     | vertical 1s, combination                      | :eyes: :v:          |
+ | Random Pick Index                                      | Medium     | reservoir sampling                            | :eyes: :v:          |
 
 ## Twitter(21)
  | Problems                                       | Difficulty | Related Problems | Status |
