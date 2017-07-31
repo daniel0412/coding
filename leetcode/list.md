@@ -216,7 +216,6 @@
  | Lowest Common Ancestor of a Binary Tree                | Medium     |                                               |                     |
  | Meeting Rooms                                          | Easy       |                                               |                     |
  | Meeting Rooms II                                       | Medium     |                                               |                     |
- | Binary Tree Paths                                      | Easy       |                                               |                     |
  | Course Schedule I                                      | Medium     | dfs/bfs(tricker, use degree)                  | :v:                 |
  | Course Schedule II                                     | Medium     | dfs/bfs(tricker), path tracking               | :v: :eyes:          |
  | Alien Dictionary                                       | Hard       | order is DAG edges (topological sort)         | :lock: :eyes:       |
@@ -229,6 +228,7 @@
  | Find the Celebrity                                     | Medium     |                                               |                     |
  | First Bad Version                                      | Easy       |                                               |                     |
  | Walls and Gates                                        | Medium     |                                               |                     |
+ | Binary Tree Paths                                      | Easy       | dfs                                           | :v:                 |
  | Inorder Successor in BST                               | Medium     | BST property, track last larger node          | :lock: :eyes:       |
  | Binary Tree Vertical Order Traversal                   | Medium     | map/inorder recursion/queue iteration         | :eyes: :lock:       |
  | Serialize and Deserialize Binary Tree                  | Hard       |                                               |                     |
