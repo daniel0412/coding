@@ -202,7 +202,7 @@
  | Longest Consecutive Sequence                           | Hard       |                                               |                     |
  | LRU Cache                                              | Hard       |                                               |                     |
  | One Edit Distance                                      | Medium     | 3 cases, and combine for concise code         | :v:                 |
- | Edit Distance                                          | Hard       | 2-dim dp                                            | :v:  :eyes:         |
+ | Edit Distance                                          | Hard       | 2-dim dp                                      | :v:  :eyes:         |
  | Excel Sheet Column Title                               | Easy       | mod/division                                  | :v:                 |
  | Binary Search Tree Iterator                            | Medium     |                                               |                     |
  | Number of Islands                                      | Medium     | dfs/marking                                   | :v:                 |
@@ -228,8 +228,8 @@
  | H-Index II                                             | Medium     |                                               |                     |
  | Find the Celebrity                                     | Medium     |                                               |                     |
  | First Bad Version                                      | Easy       |                                               |                     |
- | Inorder Successor in BST                               | Medium     |                                               |                     |
  | Walls and Gates                                        | Medium     |                                               |                     |
+ | Inorder Successor in BST                               | Medium     | BST property, track last larger node          | :lock: :eyes:       |
  | Binary Tree Vertical Order Traversal                   | Medium     | map/inorder recursion/queue iteration         | :eyes: :lock:       |
  | Serialize and Deserialize Binary Tree                  | Hard       |                                               |                     |
  | Increasing Triplet Subsequence                         | Medium     | think hard, tricky                            | :v: :eyes:          |
