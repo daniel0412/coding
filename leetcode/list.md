@@ -225,7 +225,7 @@
  | Paint House II                                         | Hard       | dp->no dp storage needed                      | :lock: :eyes:       |
  | H-Index                                                | Medium     |                                               |                     |
  | H-Index II                                             | Medium     |                                               |                     |
- | Find the Celebrity                                     | Medium     |                                               |                     |
+ | Find the Celebrity                                     | Medium     | heuristic                                     | :lock: :eyes:       |
  | First Bad Version                                      | Easy       |                                               |                     |
  | Walls and Gates                                        | Medium     |                                               |                     |
  | Binary Tree Paths                                      | Easy       | dfs                                           | :v:                 |
