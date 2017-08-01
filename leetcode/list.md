@@ -199,7 +199,7 @@
  | Populating Next Right Pointers in Each Node II         | Hard       |                                                    |                     |
  | Best Time to Buy and Sell Stock                        | Easy       |                                                    |                     |
  | Valid Palindrome                                       | Easy       |                                                    |                     |
- | Longest Consecutive Sequence                           | Hard       |                                                    |                     |
+ | Longest Consecutive Sequence                           | Hard       | think differently                                  | :v: :eyes:          |
  | LRU Cache                                              | Hard       |                                                    |                     |
  | One Edit Distance                                      | Medium     | 3 cases, and combine for concise code              | :v:                 |
  | Edit Distance                                          | Hard       | 2-dim dp                                           | :v:  :eyes:         |
