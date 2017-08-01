@@ -164,7 +164,7 @@
  | Search in Rotated Sorted Array                         | Medium     | binary search, think which direction to go         | :v: :eyes:          |
  | Merge Sorted Array                                     | Easy       | two pointer                                        | :v:                 |
  | Product of Array Except Self                           | Medium     | left->right, then right->left                      | :v:                 |
- | Merge k Sorted Lists                                   | Hard       |                                                    |                     |
+ | Merge k Sorted Lists                                   | Hard       | min heap                                           | :v:                 |
  | Reverse Nodes in k-Group                               | Hard       |                                                    |                     |
  | Implement strStr()                                     | Easy       |                                                    |                     |
  | Count and Say                                          | Easy       |                                                    |                     |
