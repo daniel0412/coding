@@ -212,8 +212,8 @@
  | Maximal Rectangle                                      | Hard       | find width(histogram)/height                       | :v: :eyes:          |
  | Reverse Linked List                                    | Easy       |                                                    | :v:                 |
  | Palindrome Linked List                                 | Easy       | stack/reverselist/two pointer                      | :v: :eyes:          |
- | Lowest Common Ancestor of a Binary Search Tree         | Easy       |                                                    |                     |
- | Lowest Common Ancestor of a Binary Tree                | Medium     |                                                    |                     |
+ | Lowest Common Ancestor of a Binary Tree                | Medium     | recursion                                          | :v: :eyes:          |
+ | Lowest Common Ancestor of a Binary Search Tree         | Easy       | use bst property                                   | :v:                 |
  | Meeting Rooms                                          | Easy       |                                                    |                     |
  | Meeting Rooms II                                       | Medium     |                                                    |                     |
  | Course Schedule I                                      | Medium     | dfs/bfs(tricker, use degree)                       | :v:                 |
