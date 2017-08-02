@@ -21,7 +21,8 @@ using namespace std;
 
 class MinWinStr {
   public:
-    string minWindow(string s, string t)
+    string minWindow(string s, string t) { return impl1(s, t); }
+    string impl0(string s, string t)
     {
         if(s.size() < t.size() || t.empty())
             return "";
@@ -77,4 +78,53 @@ class MinWinStr {
     }
 
   private:
+    string impl1(const string& s, const string& t)
+    {
+        int sLen = s.size(), tLen = t.size();
+        if(sLen < tLen)
+            return "";
+        unordered_map<char, int> needs;
+        for(auto c : t) {
+            ++needs[c];
+        }
+        int numMiss = tLen;
+        int begin = 0, end = 0, head = 0;
+        int dist = INT_MAX;
+        while(end < sLen) {
+            if(needs.count(s[end])) {
+                if(needs[s[end]]-- > 0) {
+                    --numMiss;
+                }
+                if(numMiss == 0) {
+                    //cout << "before window: " << begin << ", " << end << endl;
+                    while(begin <= end) {
+                        if(needs.count(s[begin])) {
+                            if(needs[s[begin]] >= 0) {
+                                if(numMiss == 0) {
+                                    ++numMiss;
+                                    ++needs[s[begin]];
+                                    int tmpDist = end - begin;
+                                    if(tmpDist < dist) {
+                                        head = begin;
+                                        dist = tmpDist;
+                                    }
+                                }
+                                else {
+                                    break;
+                                }
+                            }
+                            else {
+                                ++needs[s[begin]];
+                            }
+                        }
+                        ++begin;
+                    }
+                    // cout << "after : " << begin << ":" << s[begin] << endl;
+                    cout << "after window: " << begin << ", " << end << endl;
+                }
+            }
+            ++end;
+        }
+        return dist == INT_MAX ? "" : s.substr(head, dist + 1);
+    }
 };
