@@ -42,7 +42,7 @@ class CombinationSum {
               if(diff == 0) {
                   res.emplace_back(path);
               }
-              if(diff > 0) recursiveImpl(candidates, target - candidates[i], i, path, res);
+              if(diff > 0) recursiveImpl(candidates, diff, i, path, res);
               path.pop_back();
           }
       }
