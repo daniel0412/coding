@@ -157,6 +157,7 @@
  | Sparse Matrix Multiplication                           | Medium     | avoid multiplication when possible                 | :lock:              |
  | Roman to Integer                                       | Easy       | add then minus two if voliate                      | :v: :eyes:          |
  | Integer to Roman                                       | Medium     | find separating points, then all adding            | :v: :eyes:          |
+ | Integer to English Words                               | Hard       | list all special cases + convert hundreds          | :v: :eyes:          |
  | Letter Combinations of a Phone Number                  | Medium     | dfs                                                | :v:                 |
  | Read N Characters Given Read4                          | Easy       | so concise                                         | :lock: :eyes:       |
  | Read N Characters Given Read4 II – Call multiple times | Hard       | buffer/read-write pos tracker                      | :lock: :eyes:       |
@@ -192,7 +193,6 @@
  | Word Search                                            | Medium     | dfs                                                | :v: :eyes:          |
  | Implement Trie (Prefix Tree)                           | Medium     |                                                    |                     |
  | Add and Search Word – Data structure design            | Medium     |                                                    |                     |
- | Integer to English Words                               | Hard       |                                                    |                     |
  | Sum of Left Leaves                                     | Easy       | recursion/iterative                                | :v: :eyes:          |
  | Validate Binary Search Tree                            | Medium     | recursion (pitfall, track min/max for eachsubtree) | :v: :eyes:          |
  | Binary Tree Level Order Traversal                      | Easy       |                                                    |                     |
