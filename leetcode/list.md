@@ -145,7 +145,7 @@
  | Kth Largest Element in an Array                        | Medium     | quick select/heap                                  | :v: :eyes:          |
  | Combination Sum IV                                     | Medium     | dp (different from I/II/III)                       | :v: :eyes:          |
  | Continuous Subarray Sum                                | Medium     | hash map/(a-c)%b==0/cornercase                     | :v: :eyes:          |
- | Maximum Subarray Sum                                   | Medium     |                                                    |                     |
+ | Maximum Subarray                                       | Easy       | dp/think about divide & conqure                    | :v:                 |
  | Minimum Size Subarray Sum                              | Medium     | hash map/prefix sum                                | :v: :eyes:          |
  | Maximum Size Subarray Sum Equals k                     | Medium     | hash map/idea                                      | :v: :eyes:          |
  | Subarray Sum Equals k                                  | Medium     | hash map/idea                                      | :v: :eyes:          |
