@@ -101,4 +101,27 @@ class WallsAndGates {
             }
         }
     }
+    void wallsAndGates(vector<vector<int>>& rooms) {
+        if(rooms.empty()) return;
+        int numRows = rooms.size();
+        int numCols = rooms[0].size();
+        for(int i = 0; i < numRows; ++i) {
+            for(int j = 0; j < numCols; ++j) {
+                if(rooms[i][j] == 0) {
+                    dfs(rooms, i, j, 0);
+                }
+            }
+        }
+    }
+    void dfs(vector<vector<int> >& rooms, int i, int j, int steps)
+    {
+        if(i < 0 || j < 0 || i >= rooms.size() || j >= rooms[0].size() || rooms[i][j]<=steps)
+            return;
+        rooms[i][j] = steps;
+        ++steps;
+        dfs(rooms, i+1, j, steps);
+        dfs(rooms, i-1, j, steps);
+        dfs(rooms, i, j+1, steps);
+        dfs(rooms, i, j-1, steps);
+    }
 };

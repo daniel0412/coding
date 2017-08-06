@@ -96,7 +96,6 @@
  | Flatten Nested List Iterator                           | Medium     |                                    |                   |
  | Zigzag Iterator                                        | Medium     |                                    |                   |
  | Binary Search Tree Iterator                            | Medium     |                                    |                   |
- | Walls and Gates                                        | Medium     |                                    |                   |
  | Unique Word Abbreviation                               | Easy       |                                    | :lock:            |
  | Valid Word Abbreviation                                | Easy       |                                    | :lock:            |
  | Generalized Abbreviation                               | Medium     | dfs                                | :lock:            |
@@ -228,7 +227,7 @@
  | H-Index II                                             | Medium     |                                                    |                     |
  | Find the Celebrity                                     | Medium     | heuristic                                          | :lock: :eyes:       |
  | First Bad Version                                      | Easy       |                                                    |                     |
- | Walls and Gates                                        | Medium     |                                                    |                     |
+ | Walls and Gates                                        | Medium     | start from gates see how far it goes               | :v:                 |
  | Binary Tree Paths                                      | Easy       | dfs                                                | :v:                 |
  | Inorder Successor in BST                               | Medium     | BST property, track last larger node               | :lock: :eyes:       |
  | Binary Tree Vertical Order Traversal                   | Medium     | map/inorder recursion/queue iteration              | :eyes: :lock:       |
