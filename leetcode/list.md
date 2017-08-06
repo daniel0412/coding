@@ -158,6 +158,7 @@
  | Roman to Integer                                       | Easy       | add then minus two if voliate                      | :v: :eyes:          |
  | Integer to Roman                                       | Medium     | find separating points, then all adding            | :v: :eyes:          |
  | Integer to English Words                               | Hard       | list all special cases + convert hundreds          | :v: :eyes:          |
+ | Multiply Strings                                       | Medium     | string addition/accumulate+reverse/quicker sol     | :v: :eyes:          |
  | Letter Combinations of a Phone Number                  | Medium     | dfs                                                | :v:                 |
  | Read N Characters Given Read4                          | Easy       | so concise                                         | :lock: :eyes:       |
  | Read N Characters Given Read4 II – Call multiple times | Hard       | buffer/read-write pos tracker                      | :lock: :eyes:       |
@@ -170,7 +171,6 @@
  | Reverse Nodes in k-Group                               | Hard       |                                                    |                     |
  | Implement strStr()                                     | Easy       |                                                    |                     |
  | Count and Say                                          | Easy       |                                                    |                     |
- | Multiply Strings                                       | Medium     |                                                    |                     |
  | Group Anagrams                                         | Medium     |                                                    |                     |
  | Pow(x, n)                                              | Medium     |                                                    |                     |
  | Merge Intervals                                        | Hard       |                                                    |                     |

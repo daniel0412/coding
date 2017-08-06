@@ -81,6 +81,7 @@ priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(comp))> heap(com
 - string
 ```cpp
 find_last_of('/')
+find_last_not_of(' ')
 ```
 
 #### good coding ways to format string
@@ -90,6 +91,18 @@ ostringstream ss;
 copy(vec.begin(), vec.end()-1, ostream_iterator<string>(ss, ","));
 ss << *vec.rbegin();
 return ss.str();
+```
+
+#### some algorithms
+```cpp
+reverse(nums.begin(), nums.end()); // return void, but chagne in place;
+sort(nums.begin(), nums.end()); // return void, but chagne in place;
+struct OP {
+    string operator()(const string& s1, const string& s2) {
+        ...
+    }
+};
+string s = accumulate(string1, string2, initstring, OP());
 ```
 
 ### Common Coding Skills
