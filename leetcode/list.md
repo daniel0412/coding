@@ -159,6 +159,7 @@
  | Integer to Roman                                       | Medium     | find separating points, then all adding            | :v: :eyes:          |
  | Integer to English Words                               | Hard       | list all special cases + convert hundreds          | :v: :eyes:          |
  | Multiply Strings                                       | Medium     | string addition/accumulate+reverse/quicker sol     | :v: :eyes:          |
+ | Add Binary                                             | Easy       | bit by bit                                         | :v:                 |
  | Letter Combinations of a Phone Number                  | Medium     | dfs                                                | :v:                 |
  | Read N Characters Given Read4                          | Easy       | so concise                                         | :lock: :eyes:       |
  | Read N Characters Given Read4 II – Call multiple times | Hard       | buffer/read-write pos tracker                      | :lock: :eyes:       |
@@ -175,7 +176,6 @@
  | Pow(x, n)                                              | Medium     |                                                    |                     |
  | Merge Intervals                                        | Hard       |                                                    |                     |
  | Insert Interval                                        | Hard       |                                                    |                     |
- | Add Binary                                             | Easy       |                                                    |                     |
  | Sqrt(x)                                                | Medium     |                                                    |                     |
  | Encode/Decode Tiny Url                                 | Medium     | rand()/unordered_map                               | :v: :eyes:          |
  | Decode Ways                                            | Medium     | recursion(slow)/dp(cornor cases)                   | :v: :eyes:          |
