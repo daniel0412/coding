@@ -167,6 +167,7 @@
  | Remove Duplicates from Sorted Array II                 | Medium     | two pointer + condition                            | :v:                 |
  | Search in Rotated Sorted Array                         | Medium     | binary search, think which direction to go         | :v: :eyes:          |
  | Merge Sorted Array                                     | Easy       | two pointer                                        | :v:                 |
+ | Sort Colors                                            | Medium     | two pointer/two side to middle                     | :v: :eyes:          |
  | Product of Array Except Self                           | Medium     | left->right, then right->left                      | :v:                 |
  | Merge k Sorted Lists                                   | Hard       | min heap                                           | :v:                 |
  | Reverse Nodes in k-Group                               | Hard       |                                                    |                     |
@@ -176,7 +177,7 @@
  | Pow(x, n)                                              | Medium     |                                                    |                     |
  | Sqrt(x)                                                | Medium     |                                                    |                     |
  | Merge Intervals                                        | Medium     | customized sorting criteria                        | :v:                 |
- | Insert Interval                                        | Hard       | think about it twice | :v: :eyes:          |
+ | Insert Interval                                        | Hard       | think about it twice                               | :v: :eyes:          |
  | Encode/Decode Tiny Url                                 | Medium     | rand()/unordered_map                               | :v: :eyes:          |
  | Decode Ways                                            | Medium     | recursion(slow)/dp(cornor cases)                   | :v: :eyes:          |
  | Simplify Path                                          | Medium     | last char not being '/' case                       | :v:                 |
@@ -184,7 +185,6 @@
  | Regular Expression Matching                            | Hard       | hard&slow recursion/fast dp!!!                     | :v: :eyes:          |
  | Text Justification                                     | Hard       | just deal with string corner case                  | :v:                 |
  | Expression Add Operators                               | Hard       | tricy dfs: get first val, then (op, val) pair      | :v: :eyes:          |
- | Sort Colors                                            | Medium     |                                                    |                     |
  | Subsets                                                | Medium     | recursion -> think about iterative                 | :v:       :eyes:    |
  | Subsets II                                             | Medium     | recursion/deduplication                            | :v: :eyes:          |
  | Increasing Subsequence                                 | Medium     | dfs/set to deduplicate                             | :v:          :eyes: |
