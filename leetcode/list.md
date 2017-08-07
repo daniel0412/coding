@@ -215,8 +215,8 @@
  | Palindrome Linked List                                 | Easy       | stack/reverselist/two pointer                      | :v: :eyes:          |
  | Lowest Common Ancestor of a Binary Tree                | Medium     | recursion                                          | :v: :eyes:          |
  | Lowest Common Ancestor of a Binary Search Tree         | Easy       | use bst property                                   | :v:                 |
- | Meeting Rooms                                          | Easy       |                                                    |                     |
- | Meeting Rooms II                                       | Medium     |                                                    |                     |
+ | Meeting Rooms                                          | Easy       | easy/customized sorting lambda                     | :v:                 |
+ | Meeting Rooms II                                       | Medium     | idea important                                     | :v: :eyes:          |
  | Course Schedule I                                      | Medium     | dfs/bfs(tricker, use degree)                       | :v:                 |
  | Course Schedule II                                     | Medium     | dfs/bfs(tricker), path tracking                    | :v: :eyes:          |
  | Alien Dictionary                                       | Hard       | order is DAG edges (topological sort)              | :lock: :eyes:       |

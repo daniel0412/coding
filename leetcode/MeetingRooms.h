@@ -29,18 +29,31 @@ struct Interval {
 
 class MeetingRooms {
   public:
+    //bool canAttendMeetings(vector<Interval>& intervals)
+    //{
+        //auto cmp = [](const Interval& a, const Interval& b) {
+            //return a.start < b.start;
+        //};
+        //sort(intervals.begin(), intervals.end(), cmp);
+        //for(int i = 1; i < intervals.size(); ++i) {
+            //if(intervals[i].start < intervals[i - 1].end)
+                //return false;
+        //}
+        //return true;
+    //}
+
+  //private:
     bool canAttendMeetings(vector<Interval>& intervals)
     {
-        auto cmp = [](const Interval& a, const Interval& b) {
-            return a.start < b.start;
-        };
-        sort(intervals.begin(), intervals.end(), cmp);
-        for(int i = 1; i < intervals.size(); ++i) {
-            if(intervals[i].start < intervals[i - 1].end)
+        sort(intervals.begin(),
+             intervals.end(),
+             [](const Interval& a, const Interval& b) {
+                 return a.start < b.start;
+             });
+        for(size_t i = 1; i < intervals.size(); ++i) {
+            if(intervals[i - 1].end > intervals[i].start)
                 return false;
         }
         return true;
     }
-
-  private:
 };
