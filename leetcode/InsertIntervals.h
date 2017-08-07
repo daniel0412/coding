@@ -41,51 +41,84 @@ struct Interval {
 
 class InsertIntervals {
   public:
-    vector<Interval> insert(vector<Interval>& intervals, Interval newInterval)
-    {
+    //vector<Interval> insert(vector<Interval>& intervals, Interval newInterval)
+    //{
+        //vector<Interval> res;
+        //int s, e;
+        //bool started = false;
+        //bool inserted = false;
+        //for(int i = 0; i < intervals.size();) {
+            //if(inserted || newInterval.start > intervals[i].end) {
+                //res.push_back(intervals[i++]);
+            //}
+            //else {
+                //if(newInterval.end < intervals[i].start) {
+                    //res.push_back(newInterval);
+                    //inserted = true;
+                    //continue;
+                //}
+                //else {
+                    //if(newInterval.start < intervals[i].start) {
+                        //s = newInterval.start;
+                    //}
+                    //else if(newInterval.start >= intervals[i].start &&
+                            //newInterval.start <= intervals[i].end) {
+                        //s = intervals[i].start;
+                    //}
+                    //while(newInterval.end >= intervals[i].end) {
+                        //if(i < intervals.size() - 1 &&
+                           //newInterval.end >= intervals[i + 1].start) {
+                            //++i;
+                        //}
+                        //else {
+                            //break;
+                        //}
+                    //}
+                    //e = intervals[i].end > newInterval.end ? intervals[i].end :
+                                                             //newInterval.end;
+                    //++i;
+                    //res.push_back(Interval(s, e));
+                    //inserted = true;
+                //}
+            //}
+        //}
+        //if(!inserted)
+            //res.push_back(newInterval);
+        //return res;
+    //}
+
+  //private:
+    vector<Interval> insert(vector<Interval>& intervals, Interval newInterval) {
         vector<Interval> res;
-        int s, e;
-        bool started = false;
-        bool inserted = false;
-        for(int i = 0; i < intervals.size();) {
-            if(inserted || newInterval.start > intervals[i].end) {
-                res.push_back(intervals[i++]);
+        auto iter = intervals.begin();
+        while(iter!=intervals.end()) {
+            if(iter->end < newInterval.start) {
+                res.emplace_back(*iter);
+                ++iter;
+            }else{
+                break;
             }
-            else {
-                if(newInterval.end < intervals[i].start) {
-                    res.push_back(newInterval);
-                    inserted = true;
-                    continue;
+        }
+        if(iter == intervals.end()) {
+            res.emplace_back(newInterval);
+            return res;
+        }
+        if(newInterval.end < iter->start) {
+            res.emplace_back(newInterval);
+            res.insert(res.end(), iter, intervals.end());
+        }
+        else {
+            res.emplace_back(min(iter->start, newInterval.start),
+                             max(iter->end, newInterval.end));
+            while(++iter != intervals.end()) {
+                if(iter->start <= res.back().end) {
+                    res.back().end = max(res.back().end, iter->end);
                 }
                 else {
-                    if(newInterval.start < intervals[i].start) {
-                        s = newInterval.start;
-                    }
-                    else if(newInterval.start >= intervals[i].start &&
-                            newInterval.start <= intervals[i].end) {
-                        s = intervals[i].start;
-                    }
-                    while(newInterval.end >= intervals[i].end) {
-                        if(i < intervals.size() - 1 &&
-                           newInterval.end >= intervals[i + 1].start) {
-                            ++i;
-                        }
-                        else {
-                            break;
-                        }
-                    }
-                    e = intervals[i].end > newInterval.end ? intervals[i].end :
-                                                             newInterval.end;
-                    ++i;
-                    res.push_back(Interval(s, e));
-                    inserted = true;
+                    res.emplace_back(*iter);
                 }
             }
         }
-        if(!inserted)
-            res.push_back(newInterval);
         return res;
     }
-
-  private:
 };

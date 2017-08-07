@@ -176,7 +176,7 @@
  | Pow(x, n)                                              | Medium     |                                                    |                     |
  | Sqrt(x)                                                | Medium     |                                                    |                     |
  | Merge Intervals                                        | Medium     | customized sorting criteria                        | :v:                 |
- | Insert Interval                                        | Hard       |                                                    |                     |
+ | Insert Interval                                        | Hard       | think about it twice | :v: :eyes:          |
  | Encode/Decode Tiny Url                                 | Medium     | rand()/unordered_map                               | :v: :eyes:          |
  | Decode Ways                                            | Medium     | recursion(slow)/dp(cornor cases)                   | :v: :eyes:          |
  | Simplify Path                                          | Medium     | last char not being '/' case                       | :v:                 |
