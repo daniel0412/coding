@@ -31,23 +31,22 @@ class MergeIntervals {
         if(intervals.size() <= 1)
             return intervals;
 
+        sort(intervals.begin(),
+             intervals.end(),
+             [](const Interval& a, const Interval& b) {
+                 return a.start < b.start;
+             });
+
         vector<Interval> res;
-        auto cmp = [](const Interval& a, const Interval& b) {
-            return a.start < b.start;
-        };
-        sort(intervals.begin(), intervals.end(), cmp);
-        Interval tmp(intervals[0].start, intervals[0].end);
+        res.push_back(intervals[0]);
         for(int i = 1; i < intervals.size(); ++i) {
-            if(intervals[i].start <= tmp.end) {
-                tmp.end = max(tmp.end, intervals[i].end);
+            if(intervals[i].start <= res.back().end) {
+                res.back().end = max(res.back().end, intervals[i].end);
             }
             else {
-                res.push_back(tmp);
-                tmp.start = intervals[i].start;
-                tmp.end = intervals[i].end;
+                res.push_back(intervals[i]);
             }
         }
-        res.push_back(tmp);
         return res;
     }
 

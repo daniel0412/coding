@@ -174,9 +174,9 @@
  | Count and Say                                          | Easy       |                                                    |                     |
  | Group Anagrams                                         | Medium     |                                                    |                     |
  | Pow(x, n)                                              | Medium     |                                                    |                     |
- | Merge Intervals                                        | Hard       |                                                    |                     |
- | Insert Interval                                        | Hard       |                                                    |                     |
  | Sqrt(x)                                                | Medium     |                                                    |                     |
+ | Merge Intervals                                        | Medium     | customized sorting criteria                        | :v:                 |
+ | Insert Interval                                        | Hard       |                                                    |                     |
  | Encode/Decode Tiny Url                                 | Medium     | rand()/unordered_map                               | :v: :eyes:          |
  | Decode Ways                                            | Medium     | recursion(slow)/dp(cornor cases)                   | :v: :eyes:          |
  | Simplify Path                                          | Medium     | last char not being '/' case                       | :v:                 |
