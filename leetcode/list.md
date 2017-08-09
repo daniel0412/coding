@@ -172,8 +172,8 @@
  | Merge k Sorted Lists                                   | Hard       | min heap                                           | :v:                 |
  | Reverse Nodes in k-Group                               | Hard       |                                                    |                     |
  | Implement strStr()                                     | Easy       |                                                    |                     |
- | Count and Say                                          | Easy       |                                                    |                     |
- | Group Anagrams                                         | Medium     |                                                    |                     |
+ | Count and Say                                          | Easy       | iterative/recursive/deduction                      | :v:                 |
+ | Group Anagrams                                         | Medium     | hash map/sort string                               | :v:                 |
  | Pow(x, n)                                              | Medium     |                                                    |                     |
  | Sqrt(x)                                                | Medium     |                                                    |                     |
  | Merge Intervals                                        | Medium     | customized sorting criteria                        | :v:                 |
