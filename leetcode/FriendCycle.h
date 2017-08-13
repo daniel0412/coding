@@ -31,8 +31,8 @@ class FriendCycle {
         for(int i = 0; i < n; ++i) {
             for(int j = 0; j < i; ++j) {
                 if(M[i][j]) {
-                    int rooti = findRoot(i);
-                    int rootj = findRoot(j);
+                    int rooti = findRoot(roots, i);
+                    int rootj = findRoot(roots, j);
                     if(rooti != rootj) {
                         --res;
                         roots[rooti] = rootj;
