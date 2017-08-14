@@ -220,6 +220,7 @@
  | Meeting Rooms II                                       | Medium     | idea important                                     | :v: :eyes:          |
  | Course Schedule I                                      | Medium     | dfs/bfs(tricker, use degree)                       | :v:                 |
  | Course Schedule II                                     | Medium     | dfs/bfs(tricker), path tracking                    | :v: :eyes:          |
+ | Course Schedule III                                    | Medium     | greedy/replace the course taking longest time      | :eyes:  :v:         |
  | Alien Dictionary                                       | Hard       | order is DAG edges (topological sort)              | :lock: :eyes:       |
  | Clone Graph                                            | Medium     |                                                    |                     |
  | Graph Valid Tree                                       | Medium     | dfs/bfs/union find                                 | :lock: :eyes:       |
