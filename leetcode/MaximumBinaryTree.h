@@ -25,7 +25,8 @@ class MaximumBinaryTree {
     {
         if(nums.empty())
             return nullptr;
-        return recursive(nums, 0, nums.size() - 1);
+        return iterative(nums);
+        //return recursive(nums, 0, nums.size() - 1);
     }
 
   private:
@@ -49,7 +50,7 @@ class MaximumBinaryTree {
     {
         vector<TreeNode*> nodes;
         for(auto n : nums) {
-            TreeNode* cur(n);
+            TreeNode* cur = new TreeNode(n);
             while(!nodes.empty() && nodes.back()->val < n) {
                 cur->left = nodes.back();
                 nodes.pop_back();
