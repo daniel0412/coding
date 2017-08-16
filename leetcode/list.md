@@ -244,4 +244,5 @@
  | Problems                   | Difficulty | Techniques                       | Status     |
  | :------------------------- | :---:      | :----                            | :---:      |
  | Maximum Binary Tree        | Medium     | recursion/iterative (think this) | :eyes: :v: |
- | Add One Row to Tree | Medium     | recursion/iterative |  :v: |
+ | Add One Row to Tree        | Medium     | recursion/iterative              | :v:        |
+ | Find Mode in BST           | Medium     | BST inorder is sorted            | :eyes: :v: |
