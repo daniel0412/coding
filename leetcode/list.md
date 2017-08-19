@@ -243,6 +243,7 @@
 ## Other Leetcode
  | Problems                          | Difficulty | Techniques                                | Status        |
  | :-------------------------        | :---:      | :----                                     | :---:         |
+ | Delete a Node in BST              | Medium     | analyze 3 situations                      | :eyes: :v:    |
  | Maximum Binary Tree               | Medium     | recursion/iterative (think this)          | :eyes: :v:    |
  | Print Binary Tree                 | Medium     | find matrix size, then populate           | :eyes: :v:    |
  | Find Mode in BST                  | Medium     | BST inorder is sorted                     | :eyes: :v:    |
