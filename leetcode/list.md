@@ -251,4 +251,5 @@
  | Most Frequent Subtree Sum         | Medium     | postorder travesal to capture subtree sum | :v:           |
  | Count Univalue Subtree            | Medium     | postorder                                 | :eyes: :lock: |
  | Subtree of Another Tree           | Easy       |                                           | :v:           |
+ | Average of Levels in Binary Tree  | Easy       | level order (bfs with queue/dfs)          | :v:           |
  | Construct String From Binary Tree | Easy       |                                           | :v:           |
