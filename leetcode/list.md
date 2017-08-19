@@ -244,6 +244,7 @@
  | Problems                          | Difficulty | Techniques                                | Status        |
  | :-------------------------        | :---:      | :----                                     | :---:         |
  | Maximum Binary Tree               | Medium     | recursion/iterative (think this)          | :eyes: :v:    |
+ | Print Binary Tree                 | Medium     | find matrix size, then populate           | :eyes: :v:    |
  | Find Mode in BST                  | Medium     | BST inorder is sorted                     | :eyes: :v:    |
  | Find Duplicate Subtrees           | Medium     | serialize each subtree                    | :eyes: :v:    |
  | Add One Row to Tree               | Medium     | recursion/iterative                       | :v:           |
