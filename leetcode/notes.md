@@ -77,6 +77,12 @@ auto comp = [](const pair<int, int>& a, const pair<int, int>& b) {
 priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(comp))> heap(comp);
 ```
 
+#### level order travesal of binary tree
+- use dfs and tracking parameter
+- use bfs with queue
+    - can use a `nullptr` separator each row in the queue
+    - load one row, and then `for` loop, avoid separator logics
+
 #### some useful functions might be used in coding
 - string
 ```cpp
