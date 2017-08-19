@@ -36,8 +36,8 @@ class TwoSumBST {
         if(found || !node)
             return;
         found = findVal(root, k - node->val);
-            findImpl(node->left, root, k, found);
-            findImpl(node->right, root, k, found);
+        findImpl(node->left, root, k, found);
+        findImpl(node->right, root, k, found);
     }
     bool findVal(TreeNode* root, int val)
     {

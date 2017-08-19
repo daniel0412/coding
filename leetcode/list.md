@@ -124,7 +124,7 @@
  | Power of Three                                         | Easy       |                                                        |                   |
  | Count of Range Sum                                     | Hard       | multiset/bounds                                        | :v: :eyes:        |
  | Longest Increasing Path in a Matrix                    | Hard       |                                                        |                   |
- | Patching Array                                         | Medium     |                                                        |                   |
+ | Patching Array                                         | Hard       | greedily expand [0, sum) range                         | :eyes: :v:        |
  | Verify Preorder Serialization of a Binary Tree         | Medium     |                                                        |                   |
  | Reconstruct Itinerary                                  | Medium     |                                                        |                   |
  | Palindrome Pairs                                       | Hard       |                                                        |                   |
