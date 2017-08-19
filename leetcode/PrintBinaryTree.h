@@ -21,8 +21,8 @@ using namespace std;
 
 class PrintBinaryTree {
   public:
-      vector<vector<string>> printTree(TreeNode* root) {
-      }
+    vector<vector<string> > printTree(TreeNode* root) {}
+
   private:
-      void dfs()
+    void dfs()
 };
