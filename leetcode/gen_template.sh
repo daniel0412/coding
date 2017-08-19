@@ -33,12 +33,12 @@ class $fileName {
 };
 EOF
 
-cat << EOF >> "$fileName".t.cpp
+#cat << EOF >> "$fileName".t.cpp
 #include "gtest/gtest.h"
 #include "${fileName}.h"
 
-TEST($fileName, $fileName)
-{
-    $fileName sol;
-}
-EOF
+#TEST($fileName, $fileName)
+#{
+    #$fileName sol;
+#}
+#EOF

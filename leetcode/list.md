@@ -241,12 +241,13 @@
  | Random Pick Index                                      | Medium     | reservoir sampling                                 | :eyes: :v:          |
 
 ## Other Leetcode
- | Problems                          | Difficulty | Techniques                       | Status     |
- | :-------------------------        | :---:      | :----                            | :---:      |
- | Maximum Binary Tree               | Medium     | recursion/iterative (think this) | :eyes: :v: |
- | Find Mode in BST                  | Medium     | BST inorder is sorted            | :eyes: :v: |
- | Find Duplicate Subtrees           | Medium     | serialize each subtree           | :eyes: :v: |
- | Add One Row to Tree               | Medium     | recursion/iterative              | :v:        |
- | Find Bottom Left Tree Value       | Medium     | inorder travesal                 | :v:        |
- | Construct String From Binary Tree | Easy       |                                  | :v:        |
- | Subtree of Another Tree           | Easy       |                                  | :v:        |
+ | Problems                          | Difficulty | Techniques                                | Status     |
+ | :-------------------------        | :---:      | :----                                     | :---:      |
+ | Maximum Binary Tree               | Medium     | recursion/iterative (think this)          | :eyes: :v: |
+ | Find Mode in BST                  | Medium     | BST inorder is sorted                     | :eyes: :v: |
+ | Find Duplicate Subtrees           | Medium     | serialize each subtree                    | :eyes: :v: |
+ | Add One Row to Tree               | Medium     | recursion/iterative                       | :v:        |
+ | Find Bottom Left Tree Value       | Medium     | inorder travesal                          | :v:        |
+ | Most Frequent Subtree Sum         | Medium     | postorder travesal to capture subtree sum | :v:        |
+ | Subtree of Another Tree           | Easy       |                                           | :v:        |
+ | Construct String From Binary Tree | Easy       |                                           | :v:        |
