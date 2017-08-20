@@ -117,8 +117,6 @@
  | Remove Duplicate Letters                               | Hard       | map/stack                                              | :v: :eyes:        |
  | Shortest Distance from All Buildings                   | Hard       |                                                        |                   |
  | Maximum Product of Word Lengths                        | Medium     |                                                        |                   |
- | Remove K Digits                                        | Medium     | idea                                                   | :eyes: :v:        |
- | Create Maximum Number                                  | Hard       | max num from one array/merge/try  all combinations     | :eyes: :eyes: :v: |
  | Friend Cycle                                           | Medium     | union find (var to track count, when union reduce one) | :eyes: :v:        |
  | Number of Connected Components in an Undirected Graph  | Medium     | union find/dfs(vector with diff vals to track state    | :eyes: :lock:     |
  | Wiggle Sort II                                         | Medium     |                                                        |                   |
@@ -129,6 +127,8 @@
  | Verify Preorder Serialization of a Binary Tree         | Medium     |                                                        |                   |
  | Reconstruct Itinerary                                  | Medium     |                                                        |                   |
  | Palindrome Pairs                                       | Hard       |                                                        |                   |
+ | Remove K Digits                                        | Medium     | idea                                                   | :eyes: :v:        |
+ | Create Maximum Number                                  | Hard       | max num from one array/merge/try  all combinations     | :eyes: :eyes: :v: |
 
 ## Facebook(79)
  | Problems                                               | Difficulty | Related Problems                                   | Status              |
@@ -262,3 +262,4 @@
  | Larget Value in Each Tree Row     | Easy       | level order (bfs with queue/dfs)          | :v:           |
  | Construct String From Binary Tree | Easy       |                                           | :v:           |
  | Non-overlapping Intervals         | Medium     | idea (which one to remove!)               | :eyes: :v:    |
+ | K Inverse Pair Array              | Hard       | dp formula                                | :eyes: :v:    |
