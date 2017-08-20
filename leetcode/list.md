@@ -259,3 +259,4 @@
  | Average of Levels in Binary Tree  | Easy       | level order (bfs with queue/dfs)          | :v:           |
  | Larget Value in Each Tree Row     | Easy       | level order (bfs with queue/dfs)          | :v:           |
  | Construct String From Binary Tree | Easy       |                                           | :v:           |
+ | Non-overlapping Intervals         | Medium     | idea (which one to remove!)               | :eyes: :v:    |
