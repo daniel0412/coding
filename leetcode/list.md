@@ -254,6 +254,7 @@
  | Count Univalue Subtree            | Medium     | postorder                                 | :eyes: :lock: |
  | Two Sum in BST                    | Easy       | inorder to form sorted array, two pointer | :eyes: :v:    |
  | Binary Tree Tilt                  | Easy       | postorder sum and track                   | :v:           |
+ | Merge Two Binary Trees            | Easy       | recursion                                 | :v:           |
  | Subtree of Another Tree           | Easy       |                                           | :v:           |
  | Convert BST to Greater Tree       | Easy       | right-inorder-left traversal              | :v:           |
  | Average of Levels in Binary Tree  | Easy       | level order (bfs with queue/dfs)          | :v:           |
