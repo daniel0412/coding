@@ -117,7 +117,8 @@
  | Remove Duplicate Letters                               | Hard       | map/stack                                              | :v: :eyes:        |
  | Shortest Distance from All Buildings                   | Hard       |                                                        |                   |
  | Maximum Product of Word Lengths                        | Medium     |                                                        |                   |
- | Create Maximum Number                                  | Hard       | max num from one array/merge/try  all combinations     | :eyes: :eyes: :v:        |
+ | Remove K Digits                                        | Medium     | idea                                                   | :eyes: :v:        |
+ | Create Maximum Number                                  | Hard       | max num from one array/merge/try  all combinations     | :eyes: :eyes: :v: |
  | Friend Cycle                                           | Medium     | union find (var to track count, when union reduce one) | :eyes: :v:        |
  | Number of Connected Components in an Undirected Graph  | Medium     | union find/dfs(vector with diff vals to track state    | :eyes: :lock:     |
  | Wiggle Sort II                                         | Medium     |                                                        |                   |
