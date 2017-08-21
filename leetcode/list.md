@@ -129,6 +129,7 @@
  | Palindrome Pairs                                       | Hard       |                                                        |                   |
  | Remove K Digits                                        | Medium     | idea                                                   | :eyes: :v:        |
  | Create Maximum Number                                  | Hard       | max num from one array/merge/try  all combinations     | :eyes: :eyes: :v: |
+ |Design Phone Directory | Medium ||:v:|
 
 ## Facebook(79)
  | Problems                                               | Difficulty | Related Problems                                   | Status              |
