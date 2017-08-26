@@ -96,7 +96,7 @@
  | Flatten Nested List Iterator                           | Medium     |                                                        |                   |
  | Zigzag Iterator                                        | Medium     |                                                        |                   |
  | Binary Search Tree Iterator                            | Medium     |                                                        |                   |
- | Unique Word Abbreviation                               | Easy       |                                                        | :lock:            |
+ | Unique Word Abbreviation                               | Easy       |  pass                                                       | :lock:            |
  | Valid Word Abbreviation                                | Easy       |                                                        | :lock:            |
  | Generalized Abbreviation                               | Medium     | dfs                                                    | :lock:            |
  | Game of Life                                           | Medium     |                                                        |                   |
@@ -129,7 +129,7 @@
  | Palindrome Pairs                                       | Hard       |                                                        |                   |
  | Remove K Digits                                        | Medium     | idea                                                   | :eyes: :v:        |
  | Create Maximum Number                                  | Hard       | max num from one array/merge/try  all combinations     | :eyes: :eyes: :v: |
- |Design Phone Directory | Medium ||:v:|
+ | Design Phone Directory                                 | Medium     | keep track of recycled and used                        | :v:               |
 
 ## Facebook(79)
  | Problems                                               | Difficulty | Related Problems                                   | Status              |
@@ -264,3 +264,4 @@
  | Construct String From Binary Tree | Easy       |                                           | :v:           |
  | Non-overlapping Intervals         | Medium     | idea (which one to remove!)               | :eyes: :v:    |
  | K Inverse Pair Array              | Hard       | dp formula                                | :eyes: :v:    |
+ | Single Element in Sorted Array    | Medium     | O(lgn) binary search, but how             | :eyes: :v:    |
