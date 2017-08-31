@@ -19,6 +19,7 @@
  | Reverse Pair                                           | Hard       | divide and conqure(slow)                               | :v: :eyes:        |
  | Median of Two Sorted Arrays                            | Hard       | binary search                                          | :v:        :eyes: |
  | Find Median from Data Stream                           | Hard       | heap                                                   | :v:               |
+ | Sort Transformed Array                                 | Medium     | quadratic function, dist from optimal                  | :eyes: :v:        |
  | SlidingWindowMedian                                    | Hard       | multiset                                               | :v:               |
  | Wildcard Matching                                      | Hard       | two pointer                                            | :v:               |
  | Regular Expression Matching                            | Hard       |                                                        |                   |
@@ -96,7 +97,7 @@
  | Flatten Nested List Iterator                           | Medium     |                                                        |                   |
  | Zigzag Iterator                                        | Medium     |                                                        |                   |
  | Binary Search Tree Iterator                            | Medium     |                                                        |                   |
- | Unique Word Abbreviation                               | Easy       |  pass                                                       | :lock:            |
+ | Unique Word Abbreviation                               | Easy       | pass                                                   | :lock:            |
  | Valid Word Abbreviation                                | Easy       |                                                        | :lock:            |
  | Generalized Abbreviation                               | Medium     | dfs                                                    | :lock:            |
  | Game of Life                                           | Medium     |                                                        |                   |
