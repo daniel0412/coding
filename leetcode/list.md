@@ -41,6 +41,7 @@
  | The Maze                                               | Medium     | dfs                                                    | :eyes: :lock:     |
  | The Maze II                                            | Medium     | dfs(mark/recover visited)                              | :eyes: :lock:     |
  | The Maze III                                           | Hard       |                                                        |                   |
+ | 01 Matrix                                              | Medium     | dfs(TLE)/bfs/two pass idea(fastest)                    | :eyes: :v:        |
  | Lonely Pixel I                                         | Medium     | 2-D vector                                             | :lock:            |
  | Lonely Pixel II                                        | Medium     |                                                        | :eyes: :lock:     |
  | Valid Parentheses                                      | Easy       |                                                        |                   |
