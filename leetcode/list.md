@@ -74,6 +74,7 @@
  | Sliding Window Maximum                                 | Hard       |                                                        |                   |
  | Search a 2D Matrix                                     | Medium     | binary search, location conversion                     | :v:               |
  | Search a 2D Matrix II                                  | Medium     | find correct starting location                         | :v: :eyes:        |
+ | Diagonal Traversal                                     | Medium     | own impl so slow: how to deal with bounary univasally  | :v:               |
  | Strobogrammatic Number                                 | Easy       | hashmap                                                | :v: :lock:        |
  | Strobogrammatic Number II                              | Medium     | backtracking                                           | :v: :lock:        |
  | Strobogrammatic Number III                             | Hard       | combination/backtracking                               | :v: :lock: :eyes: |
