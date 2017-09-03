@@ -272,3 +272,4 @@
  | Numbers Disappeared in Array      | Easy       | no extra space, use array itself          | :v:           |
  | First Missing Positive            | Hard       | use array itself and index to store value | :v:           |
  | Next Greater Element I            | Easy       | O(n) with stack                           | :eyes: :v:    |
+ | Next Greater Element II           | Medium     | cycular array + stack                     | :eyes: :v:    |
