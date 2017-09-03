@@ -268,3 +268,4 @@
  | Non-overlapping Intervals         | Medium     | idea (which one to remove!)               | :eyes: :v:    |
  | K Inverse Pair Array              | Hard       | dp formula                                | :eyes: :v:    |
  | Single Element in Sorted Array    | Medium     | O(lgn) binary search, but how             | :eyes: :v:    |
+ | Number of Boomerangs              | Easy       | brute force                               | :v:           |
