@@ -270,3 +270,4 @@
  | Single Element in Sorted Array    | Medium     | O(lgn) binary search, but how             | :eyes: :v:    |
  | Number of Boomerangs              | Easy       | brute force                               | :v:           |
  | Numbers Disappeared in Array      | Easy       | no extra space, use array itself          | :v:           |
+ | First Missing Positive | Hard | use array itself and index to store value | :v: |
