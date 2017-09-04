@@ -274,3 +274,4 @@
  | Next Greater Element I            | Easy       | O(n) with stack                           | :eyes: :v:    |
  | Next Greater Element II           | Medium     | cycular array + stack                     | :eyes: :v:    |
  | Next Greater Element III          | Medium     | digits comp, think!!                      | :eyes: :v:    |
+ | Relative Ranks                    | Easy       | customized sorting                        | :v:           |
