@@ -246,33 +246,34 @@
  | Random Pick Index                                      | Medium     | reservoir sampling                                 | :eyes: :v:          |
 
 ## Other Leetcode
- | Problems                          | Difficulty | Techniques                                | Status        |
- | :-------------------------        | :---:      | :----                                     | :---:         |
- | Delete a Node in BST              | Medium     | analyze 3 situations                      | :eyes: :v:    |
- | Maximum Binary Tree               | Medium     | recursion/iterative (think this)          | :eyes: :v:    |
- | Print Binary Tree                 | Medium     | find matrix size, then populate           | :eyes: :v:    |
- | Find Mode in BST                  | Medium     | BST inorder is sorted                     | :eyes: :v:    |
- | Find Duplicate Subtrees           | Medium     | serialize each subtree                    | :eyes: :v:    |
- | Add One Row to Tree               | Medium     | recursion/iterative                       | :v:           |
- | Find Bottom Left Tree Value       | Medium     | inorder travesal                          | :v:           |
- | Most Frequent Subtree Sum         | Medium     | postorder travesal to capture subtree sum | :v:           |
- | Count Univalue Subtree            | Medium     | postorder                                 | :eyes: :lock: |
- | Two Sum in BST                    | Easy       | inorder to form sorted array, two pointer | :eyes: :v:    |
- | Binary Tree Tilt                  | Easy       | postorder sum and track                   | :v:           |
- | Merge Two Binary Trees            | Easy       | recursion                                 | :v:           |
- | Subtree of Another Tree           | Easy       |                                           | :v:           |
- | Convert BST to Greater Tree       | Easy       | right-inorder-left traversal              | :v:           |
- | Average of Levels in Binary Tree  | Easy       | level order (bfs with queue/dfs)          | :v:           |
- | Larget Value in Each Tree Row     | Easy       | level order (bfs with queue/dfs)          | :v:           |
- | Construct String From Binary Tree | Easy       |                                           | :v:           |
- | Non-overlapping Intervals         | Medium     | idea (which one to remove!)               | :eyes: :v:    |
- | K Inverse Pair Array              | Hard       | dp formula                                | :eyes: :v:    |
- | Single Element in Sorted Array    | Medium     | O(lgn) binary search, but how             | :eyes: :v:    |
- | Number of Boomerangs              | Easy       | brute force                               | :v:           |
- | Numbers Disappeared in Array      | Easy       | no extra space, use array itself          | :v:           |
- | First Missing Positive            | Hard       | use array itself and index to store value | :v:           |
- | Next Greater Element I            | Easy       | O(n) with stack                           | :eyes: :v:    |
- | Next Greater Element II           | Medium     | cycular array + stack                     | :eyes: :v:    |
- | Next Greater Element III          | Medium     | digits comp, think!!                      | :eyes: :v:    |
- | Relative Ranks                    | Easy       | customized sorting                        | :v:           |
- | Detect Capitals                   | Easy       |                                           | :v:           |
+ | Problems                                    | Difficulty | Techniques                                | Status        |
+ | :-------------------------                  | :---:      | :----                                     | :---:         |
+ | Delete a Node in BST                        | Medium     | analyze 3 situations                      | :eyes: :v:    |
+ | Maximum Binary Tree                         | Medium     | recursion/iterative (think this)          | :eyes: :v:    |
+ | Print Binary Tree                           | Medium     | find matrix size, then populate           | :eyes: :v:    |
+ | Find Mode in BST                            | Medium     | BST inorder is sorted                     | :eyes: :v:    |
+ | Find Duplicate Subtrees                     | Medium     | serialize each subtree                    | :eyes: :v:    |
+ | Add One Row to Tree                         | Medium     | recursion/iterative                       | :v:           |
+ | Find Bottom Left Tree Value                 | Medium     | inorder travesal                          | :v:           |
+ | Most Frequent Subtree Sum                   | Medium     | postorder travesal to capture subtree sum | :v:           |
+ | Count Univalue Subtree                      | Medium     | postorder                                 | :eyes: :lock: |
+ | Two Sum in BST                              | Easy       | inorder to form sorted array, two pointer | :eyes: :v:    |
+ | Binary Tree Tilt                            | Easy       | postorder sum and track                   | :v:           |
+ | Merge Two Binary Trees                      | Easy       | recursion                                 | :v:           |
+ | Subtree of Another Tree                     | Easy       |                                           | :v:           |
+ | Convert BST to Greater Tree                 | Easy       | right-inorder-left traversal              | :v:           |
+ | Average of Levels in Binary Tree            | Easy       | level order (bfs with queue/dfs)          | :v:           |
+ | Larget Value in Each Tree Row               | Easy       | level order (bfs with queue/dfs)          | :v:           |
+ | Construct String From Binary Tree           | Easy       |                                           | :v:           |
+ | Non-overlapping Intervals                   | Medium     | idea (which one to remove!)               | :eyes: :v:    |
+ | K Inverse Pair Array                        | Hard       | dp formula                                | :eyes: :v:    |
+ | Single Element in Sorted Array              | Medium     | O(lgn) binary search, but how             | :eyes: :v:    |
+ | Number of Boomerangs                        | Easy       | brute force                               | :v:           |
+ | Numbers Disappeared in Array                | Easy       | no extra space, use array itself          | :v:           |
+ | First Missing Positive                      | Hard       | use array itself and index to store value | :v:           |
+ | Next Greater Element I                      | Easy       | O(n) with stack                           | :eyes: :v:    |
+ | Next Greater Element II                     | Medium     | cycular array + stack                     | :eyes: :v:    |
+ | Next Greater Element III                    | Medium     | digits comp, think!!                      | :eyes: :v:    |
+ | Longest Word in Dictionary through Deleting | Medium     |                                           | :v:           |
+ | Relative Ranks                              | Easy       | customized sorting                        | :v:           |
+ | Detect Capitals                             | Easy       |                                           | :v:           |
