@@ -47,7 +47,7 @@
  | Valid Parentheses                                      | Easy       |                                                        |                   |
  | Moving Average From Data Stream                        | Easy       | queue                                                  | :lock:            |
  | Generate Parentheses                                   | Medium     |                                                        |                   |
- | Next Permutation                                       | Medium     |                                                        |                   |
+ | Next Permutation                                       | Medium     | reverse order check                                    | :eyes:   :v:      |
  | Pow(x, n)                                              | Medium     |                                                        |                   |
  | Spiral Matrix                                          | Medium     |                                                        |                   |
  | License Key Formatting                                 | Medium     | string operation                                       | :v:               |
