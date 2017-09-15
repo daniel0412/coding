@@ -109,6 +109,7 @@
  | Flip Game II                                           | Medium     |                                                        |                   |
  | Serialize and Deserialize Binary Tree                  | Hard       |                                                        |                   |
  | Max Consecutive Ones                                   | Easy       |                                                        | :v:               |
+ | Max Consecutive Ones  II                               | Medium     | idea                                                   | :eyes: :v:        |
  | Binary Tree Longest Consecutive Sequence               | Medium     | dfs                                                    | :lock:            |
  | Binary Tree Longest Consecutive Sequence II            | Medium     | dfs                                                    | :lock:            |
  | Smallest Rectangle Enclosing Black Pixels              | Hard       |                                                        |                   |
