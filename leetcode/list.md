@@ -59,7 +59,8 @@
  | Read N Characters Given Read4 II – Call multiple times | Hard       |                                                        |                   |
  | Longest Substring with At Most Two Distinct Characters | Hard       |                                                        |                   |
  | Longest Substring with At Most K Distinct Characters   | Hard       | hashmap                                                | :v:   :lock:      |
- | Repeated Substring Pattern                             | Easy       |                                                        | :v:               |
+ | Repeated Substring Pattern                             | Easy       |                                                        | :eyes: :v:        |
+ | Heaters                                                | Easy       | upper/lower bound                                      | :eyes: :v:        |
  | Find Peak Element                                      | Medium     |                                                        |                   |
  | Missing Ranges                                         | Medium     |                                                        |                   |
  | Fraction to Recurring Decimal                          | Medium     | hashmap/sstream/overflow                               | :v:               |

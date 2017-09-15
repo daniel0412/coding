@@ -190,6 +190,7 @@ int upperBound(const vector<int>& nums, int target)
     }
     return l;
 }
+// note: in case all num are smaller than val, returned l would be nums.size()
 ```
 
 ### quick sort/select
