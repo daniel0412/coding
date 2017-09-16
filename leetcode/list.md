@@ -171,7 +171,7 @@
  | Multiply Strings                                       | Medium     | string addition/accumulate+reverse/quicker sol     | :v: :eyes:          |
  | Reverse String                                         | Easy       |                                                    | :v:                 |
  | Reverse StringII                                       | Easy       |                                                    | :v:                 |
- | Magical String                                         | Medium     | think about how to generate it                     | :eyes: :v:                 |
+ | Magical String                                         | Medium     | think about how to generate it                     | :eyes: :v:          |
  | Add Binary                                             | Easy       | bit by bit                                         | :v:                 |
  | Letter Combinations of a Phone Number                  | Medium     | dfs                                                | :v:                 |
  | Read N Characters Given Read4                          | Easy       | so concise                                         | :lock: :eyes:       |
@@ -233,6 +233,7 @@
  | Course Schedule I                                      | Medium     | dfs/bfs(tricker, use degree)                       | :v:                 |
  | Course Schedule II                                     | Medium     | dfs/bfs(tricker), path tracking                    | :v: :eyes:          |
  | Course Schedule III                                    | Medium     | greedy/replace the course taking longest time      | :eyes:  :v:         |
+ | Minimu Height Trees                                    | Medium     | bf timeout, use graph degree                       | :eyes: :v:          |
  | Alien Dictionary                                       | Hard       | order is DAG edges (topological sort)              | :lock: :eyes:       |
  | Clone Graph                                            | Medium     |                                                    |                     |
  | Graph Valid Tree                                       | Medium     | dfs/bfs/union find                                 | :lock: :eyes:       |
