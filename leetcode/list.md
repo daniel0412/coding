@@ -112,6 +112,7 @@
  | Max Consecutive Ones  II                               | Medium     | idea                                                   | :eyes: :v:        |
  | Binary Tree Longest Consecutive Sequence               | Medium     | dfs                                                    | :lock:            |
  | Binary Tree Longest Consecutive Sequence II            | Medium     | dfs                                                    | :lock:            |
+ | Longest Increasing Path in a Matrix                    | Hard       | dfs + memorization to prun                             | :eyes: :v:        |
  | Smallest Rectangle Enclosing Black Pixels              | Hard       |                                                        |                   |
  | Number of Islands II                                   | Hard       |                                                        |                   |
  | Range Sum Query 2D – Mutable                           | Hard       |                                                        |                   |
@@ -129,7 +130,6 @@
  | Wiggle Sort II                                         | Medium     |                                                        |                   |
  | Power of Three                                         | Easy       |                                                        |                   |
  | Count of Range Sum                                     | Hard       | multiset/bounds                                        | :v: :eyes:        |
- | Longest Increasing Path in a Matrix                    | Hard       |                                                        |                   |
  | Patching Array                                         | Hard       | greedily expand [0, sum) range                         | :eyes: :v:        |
  | Verify Preorder Serialization of a Binary Tree         | Medium     |                                                        |                   |
  | Reconstruct Itinerary                                  | Medium     |                                                        |                   |
