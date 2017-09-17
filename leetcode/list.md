@@ -32,7 +32,6 @@
  | Word Squares                                           | Hard       | dfs/trie                                               | :warning: :lock:  |
  | Valid Word Square                                      | Easy       | brute force                                            | :lock:            |
  | Trapping Rain Water                                    | Hard       |                                                        |                   |
- | Longest Consecutive Sequence                           | Hard       |                                                        |                   |
  | LRU Cache                                              | Hard       | double linked list/map                                 | :v: :eyes:        |
  | LFU Cache                                              | Hard       | double linked list/map                                 | :v: :eyes:        |
  | Letter Combinations of a Phone Number                  | Medium     |                                                        |                   |
@@ -123,7 +122,8 @@
  | Binary Tree Vertical Order Traversal                   | Medium     | tree traversal                                         | :lock:            |
  | Count of Smaller Numbers After Self                    | Hard       | binary search/lower bound                              | :v: :eyes:        |
  | Remove Duplicate Letters                               | Hard       | map/stack                                              | :v: :eyes:        |
- | Shortest Distance from All Buildings                   | Hard       |                                                        |                   |
+ | Best Meeting Point                                     | Medium     | consider one dimensional case                          | :eyes: :v:        |
+ | Shortest Distance from All Buildings                   | Hard       | bfs, shortest dist + accessible from all buildings     | :eyes: :v:        |
  | Maximum Product of Word Lengths                        | Medium     |                                                        |                   |
  | Friend Cycle                                           | Medium     | union find (var to track count, when union reduce one) | :eyes: :v:        |
  | Number of Connected Components in an Undirected Graph  | Medium     | union find/dfs(vector with diff vals to track state    | :eyes: :lock:     |
@@ -213,7 +213,7 @@
  | Populating Next Right Pointers in Each Node II         | Hard       |                                                    |                     |
  | Best Time to Buy and Sell Stock                        | Easy       |                                                    |                     |
  | Valid Palindrome                                       | Easy       |                                                    |                     |
- | Longest Consecutive Sequence                           | Hard       | think differently                                  | :v: :eyes:          |
+ | Longest Consecutive Sequence                           | Hard       | think differently  (linear solution)               | :eyes: :v:          |
  | LRU Cache                                              | Hard       |                                                    |                     |
  | One Edit Distance                                      | Medium     | 3 cases, and combine for concise code              | :v:                 |
  | Edit Distance                                          | Hard       | 2-dim dp                                           | :v:  :eyes:         |
