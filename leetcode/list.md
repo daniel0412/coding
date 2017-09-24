@@ -103,7 +103,7 @@
  | Unique Word Abbreviation                               | Easy       | pass                                                   | :lock:            |
  | Valid Word Abbreviation                                | Easy       |                                                        | :lock:            |
  | Generalized Abbreviation                               | Medium     | dfs                                                    | :lock:            |
- | Game of Life                                           | Medium     |                                                        |                   |
+ | Game of Life                                           | Medium     | track state, note state changes cell value             | :eyes: :v:        |
  | Flip Game                                              | Easy       |                                                        |                   |
  | Flip Game II                                           | Medium     |                                                        |                   |
  | Serialize and Deserialize Binary Tree                  | Hard       |                                                        |                   |
