@@ -41,61 +41,61 @@ struct Interval {
 
 class InsertIntervals {
   public:
-    //vector<Interval> insert(vector<Interval>& intervals, Interval newInterval)
-    //{
-        //vector<Interval> res;
-        //int s, e;
-        //bool started = false;
-        //bool inserted = false;
-        //for(int i = 0; i < intervals.size();) {
-            //if(inserted || newInterval.start > intervals[i].end) {
-                //res.push_back(intervals[i++]);
-            //}
-            //else {
-                //if(newInterval.end < intervals[i].start) {
-                    //res.push_back(newInterval);
-                    //inserted = true;
-                    //continue;
-                //}
-                //else {
-                    //if(newInterval.start < intervals[i].start) {
-                        //s = newInterval.start;
-                    //}
-                    //else if(newInterval.start >= intervals[i].start &&
-                            //newInterval.start <= intervals[i].end) {
-                        //s = intervals[i].start;
-                    //}
-                    //while(newInterval.end >= intervals[i].end) {
-                        //if(i < intervals.size() - 1 &&
-                           //newInterval.end >= intervals[i + 1].start) {
-                            //++i;
-                        //}
-                        //else {
-                            //break;
-                        //}
-                    //}
-                    //e = intervals[i].end > newInterval.end ? intervals[i].end :
-                                                             //newInterval.end;
-                    //++i;
-                    //res.push_back(Interval(s, e));
-                    //inserted = true;
-                //}
-            //}
-        //}
-        //if(!inserted)
-            //res.push_back(newInterval);
-        //return res;
-    //}
 
-  //private:
-    vector<Interval> insert(vector<Interval>& intervals, Interval newInterval) {
+      // easy to understand
+    vector<Interval> insert(vector<Interval>& intervals, Interval newInterval)
+    {
+        if(intervals.emtpy() || intervals.back().end < newInterval.start) {
+            intervals.emplace_back(newInterval);
+            return intervals;
+        }
+        if(intervals.front().start < newInterval.end) {
+            intervals.insert(intervals.begin(), newInterval);
+            return intervals;
+        }
+        vector<Interval> res;
+        bool inserted = false;
+        for(auto& i : intervals) {
+            if(!inserted) {
+                if(newInterval.start <= intervals[i].start) {
+                    if(!res.empty() && res.back().end >= newInterval.start) {
+                        res.back().end = max(res.back().end, newInterval.end);
+                    }
+                    else {
+                        res.emplace_back(newInterval);
+                    }
+                    inserted = true;
+                }
+            }
+            if(!res.empty() && res.back().end >= intervals[i].start) {
+                res.back().end = max(res.back().end, intervals[i].end);
+            }
+            else {
+                res.emplace_back(intervals[i]);
+            }
+        }
+        // deal with case that newInterval is not merged yet
+        if(!inserted) {
+            if(res.back().end >= newInterval.start) {
+                res.back().end = max(res.back().end, newInterval.end);
+            }
+            else {
+                res.emplace_back(newInterval);
+            }
+        }
+        return res;
+    }
+    // private:
+    vector<Interval> insert(vector<Interval>& intervals, Interval newInterval)
+    {
         vector<Interval> res;
         auto iter = intervals.begin();
-        while(iter!=intervals.end()) {
+        while(iter != intervals.end()) {
             if(iter->end < newInterval.start) {
                 res.emplace_back(*iter);
                 ++iter;
-            }else{
+            }
+            else {
                 break;
             }
         }
@@ -121,4 +121,5 @@ class InsertIntervals {
         }
         return res;
     }
+
 };
