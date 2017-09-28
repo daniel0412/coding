@@ -21,36 +21,24 @@ using namespace std;
 
 class ShortestUnsortedContinuousSubarray {
   public:
-      int findUnsortedSubarray(vector<int>& nums) {
-	  int start = -1, end = -1;
-	  int maxId = 0, i = 1;
-	  while(i < nums.size()) {
-	      if(nums[i-1] <= nums[i]) {
-		  ++i;
-	      }else if(start = -1) {
+    int findUnsortedSubarray(vector<int>& nums)
+    {
+        int n = nums.size();
+        if(n <= 1)
+            return 0;
+        int start = -1, end = -2;  // in case start/end is not changed, meaning
+                                   // 0 disordered elements
+        int imax = nums[0], imin = nums[n - 1];
+        for(int i = 1; i < n; ++i) {
+            imax = max(imax, nums[i]);          // tracks max from 0 -> n-1
+            imin = min(imin, nums[n - i - 1]);  // tracks min from n-1 -> 0
+            if(imax > nums[i])
+                end = i;
+            if(imin < nums[n - i - 1])
+                start = n - i - 1;
+        }
+        return end - start + 1;
+    }
 
-	      }
-
-	  }
-	  for(int i = 1; i < nums.size(); ++i) {
-	      if(nums[i] >= nums[maxId]) {
-		  maxId = i;
-	      }else{
-
-	      }
-
-	  }
-      }
   private:
-      int upper(const vector<int>& nums, const int target, int s, int e) {
-	  while(s < e) {
-	      int m = s + (e-s)/2;
-	      if(nums[m] <= target) {
-		  s = m + 1;
-	      }else{
-		  e = m;
-	      }
-	  }
-	  return e;
-      }
 };

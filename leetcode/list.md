@@ -285,3 +285,4 @@
  | Longest Word in Dictionary through Deleting | Medium     |                                           | :v:           |
  | Relative Ranks                              | Easy       | customized sorting                        | :v:           |
  | Detect Capitals                             | Easy       |                                           | :v:           |
+ | Shortest Unsorted Continuous Subarray       | Easy       | find the disordered index boundary        | :eyes: :v:    |
