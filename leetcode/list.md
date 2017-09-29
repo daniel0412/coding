@@ -70,7 +70,7 @@
  | The Skyline Problem                                    | Hard       |                                                        |                   |
  | Basic Calculator                                       | Hard       |                                                        |                   |
  | Summary Ranges                                         | Medium     | stringstream/array/size_t                              | :v:               |
- | Kth Smallest Element in a BST                          | Medium     |                                                        |                   |
+ | Kth Smallest Element in a BST                          | Medium     | iterative/recursive, make sure return type             | :eyes: :v:        |
  | Power of Two                                           | Easy       |                                                        |                   |
  | Sliding Window Maximum                                 | Hard       |                                                        |                   |
  | Search a 2D Matrix                                     | Medium     | binary search, location conversion                     | :v:               |
