@@ -288,3 +288,4 @@
  | Shortest Unsorted Continuous Subarray       | Easy       | find the disordered index boundary        | :eyes: :v:    |
  | Maximum Swap                                | Medium     | locate max after non-decreasing seq       | :eyes: :v:    |
  | Flatten Binary Tree                         | Medium     | recursion, think about iterative          | :eyes: :v:    |
+ | Max Width of Binary Tree                    | Medium     | BFS with deque (not queue)                | :eyes: :v:    |
