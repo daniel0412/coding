@@ -287,3 +287,4 @@
  | Detect Capitals                             | Easy       |                                           | :v:           |
  | Shortest Unsorted Continuous Subarray       | Easy       | find the disordered index boundary        | :eyes: :v:    |
  | Maximum Swap                                | Medium     | locate max after non-decreasing seq       | :eyes: :v:    |
+ | Flatten Binary Tree                         | Medium     | recursion, think about iterative          | :eyes: :v:    |
