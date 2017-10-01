@@ -29,7 +29,7 @@ class Search2DMatrix {
         int start = 0, end = m * n - 1;
         while(start <= end) {
             int mid = start + (end - start) / 2;
-            int x = mid / m, y = mid % n;
+            int x = mid / n, y = mid % n;
             int val = matrix[x][y];
             if(val == target)
                 return true;
