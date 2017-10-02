@@ -28,4 +28,5 @@ TEST(RearrangeDistanceK, RearrangeDistanceK)
     res = sol.rearrangeString(s,k);
     cout << s << "->" << res << endl;
     EXPECT_FALSE(res.empty());
+
 }
