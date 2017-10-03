@@ -70,11 +70,12 @@
  | The Skyline Problem                                    | Hard       |                                                        |                   |
  | Basic Calculator                                       | Hard       |                                                        |                   |
  | Summary Ranges                                         | Medium     | stringstream/array/size_t                              | :v:               |
- | Kth Smallest Element in a BST                          | Medium     | iterative/recursive, make sure return type             | :eyes: :v:        |
  | Power of Two                                           | Easy       |                                                        |                   |
  | Sliding Window Maximum                                 | Hard       |                                                        |                   |
  | Search a 2D Matrix                                     | Medium     | binary search, location conversion                     | :v:               |
  | Search a 2D Matrix II                                  | Medium     | find correct starting location                         | :v: :eyes:        |
+ | Kth Smallest Element in a sorted matrix                | Medium     | priority queue with prunning                           | :eyes: :v:        |
+ | Kth Smallest Element in a BST                          | Medium     | iterative/recursive, make sure return type             | :eyes: :v:        |
  | Diagonal Traversal                                     | Medium     | own impl so slow: how to deal with bounary univasally  | :v:               |
  | Strobogrammatic Number                                 | Easy       | hashmap                                                | :v: :lock:        |
  | Strobogrammatic Number II                              | Medium     | backtracking                                           | :v: :lock:        |
