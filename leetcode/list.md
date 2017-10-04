@@ -290,3 +290,5 @@
  | Maximum Swap                                | Medium     | locate max after non-decreasing seq          | :eyes: :v:    |
  | Flatten Binary Tree                         | Medium     | recursion, think about iterative             | :eyes: :v:    |
  | Max Width of Binary Tree                    | Medium     | BFS with queue (which stores node and index) | :eyes: :v:    |
+ | Majority Element                            | Easy       | cancel out                                   | :v:           |
+ | Majority Element II                         | Medium     | extend to n/k case                           | :eyes: :v:    |
