@@ -100,7 +100,7 @@
  | Flatten Nested List Iterator                           | Medium     | use stack to track begin/end, hasNext promote pointers | :eyes: :v:        |
  | Flatten 2D Vector                                      | Medium     | track row, col index                                   | :v:               |
  | Zigzag Iterator                                        | Medium     |                                                        |                   |
- | Binary Search Tree Iterator                            | Medium     |                                                        |                   |
+ | Binary Search Tree Iterator                            | Medium     | inorder iterative impl                                 | :v:               |
  | Unique Word Abbreviation                               | Easy       | pass                                                   | :lock:            |
  | Valid Word Abbreviation                                | Easy       |                                                        | :lock:            |
  | Generalized Abbreviation                               | Medium     | dfs                                                    | :lock:            |
@@ -219,7 +219,6 @@
  | One Edit Distance                                      | Medium     | 3 cases, and combine for concise code                       | :v:                 |
  | Edit Distance                                          | Hard       | 2-dim dp                                                    | :v:  :eyes:         |
  | Excel Sheet Column Title                               | Easy       | mod/division                                                | :v:                 |
- | Binary Search Tree Iterator                            | Medium     |                                                             |                     |
  | Number of Islands                                      | Medium     | dfs/marking                                                 | :v:                 |
  | Number of Islands II                                   | Medium     | union find + pass compression                               | :lock: :eyes:       |
  | The Skyline Problem                                    | Hard       | start/end points/mulitset erase                             | :v: :eyes:          |
