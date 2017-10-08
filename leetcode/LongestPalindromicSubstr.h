@@ -41,5 +41,36 @@ class LongestPalindromicSubstr {
         return s.substr(start, maxLen);
     }
 
+    string fasterImpl(string s)
+    {
+        int maxLen = 0, start = 0;
+        int n = s.size();
+        for(int i = 0; i < n; ++i) {
+            int j = i, k = i;
+            while(j > 0 && k < n-1 && s[j-1] == s[k+1]) {
+                --j;
+                ++k;
+            }
+            int tmpLen = k-j+1;
+            if(tmpLen > maxLen) {
+                maxLen = tmpLen;
+                start = j;
+            }
+            j = i, k = i+1;
+            if(k < n && s[j]==s[k]) {
+                while(j > 0 && k < n-1 && s[j-1]==s[k+1]) {
+                    --j;
+                    ++k;
+                }
+                tmpLen = k-j+1;
+                if(tmpLen > maxLen) {
+                    maxLen = tmpLen;
+                    start = j;
+                }
+            }
+        }
+        return s.substr(start, maxLen);
+    }
+
   private:
 };
