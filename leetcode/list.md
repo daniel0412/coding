@@ -112,7 +112,7 @@
  | Binary Tree Longest Consecutive Sequence II            | Medium     | dfs                                                    | :lock:            |
  | Longest Increasing Path in a Matrix                    | Hard       | dfs + memorization to prun                             | :eyes: :v:        |
  | Longest Increasing Subsequence                         | Medium     | construct array, then binary search to replace         | :eyes: :v:        |
- | Number of Longest Increasing Subsequence               | Medium     | construct array, then binary search to replace         | :eyes: :v:        |
+ | Number of Longest Increasing Subsequence               | Medium     | | :eyes: :v:        |
  | Smallest Rectangle Enclosing Black Pixels              | Hard       |                                                        |                   |
  | Number of Islands II                                   | Hard       |                                                        |                   |
  | Range Sum Query 2D – Mutable                           | Hard       |                                                        |                   |
@@ -235,6 +235,7 @@
  | Lowest Common Ancestor of a Binary Search Tree         | Easy       | use bst property                                            | :v:                 |
  | Meeting Rooms                                          | Easy       | easy/customized sorting lambda                              | :v:                 |
  | Meeting Rooms II                                       | Medium     | idea important                                              | :v: :eyes:          |
+ | Maximum Length of Pair Chains                          | Medium     | sort by ending time then greedy                             | :eyes: :v:          |
  | Course Schedule I                                      | Medium     | dfs/bfs(tricker, use degree)                                | :v:                 |
  | Course Schedule II                                     | Medium     | dfs/bfs(tricker), path tracking                             | :v: :eyes:          |
  | Course Schedule III                                    | Medium     | greedy/replace the course taking longest time               | :eyes:  :v:         |
