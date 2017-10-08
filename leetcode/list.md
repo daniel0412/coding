@@ -224,7 +224,9 @@
  | Valid Palindrome                                       | Easy       |                                                             |                     |
  | Palindrome Linked List                                 | Easy       | stack/reverselist/two pointer                               | :v: :eyes:          |
  | Palindrome Permutation                                 | Easy       |                                                             |                     |
- | Palindromic Substrings                                 | Medium     | dp to decide palindrome                                     | :eyes: :v:          |
+ | Palindromic Substrings                                 | Medium     | dp, str end to front                                        | :eyes: :v:          |
+ | Longest Palindromic Sub sequence                       | Medium     | dp, back to front, find how to transfer states              | :eyes: :v:          |
+ | Longest Palindromic Sub string                         | Medium     |                                                             | :eyes: :v:          |
  | Shortest Palindrome                                    | Hard       |                                                             |                     |
  | Palindrome Pairs                                       | Hard       |                                                             |                     |
  | Lowest Common Ancestor of a Binary Tree                | Medium     | recursion                                                   | :v: :eyes:          |
