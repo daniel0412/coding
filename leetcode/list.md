@@ -66,7 +66,6 @@
  | Number of Islands                                      | Medium     |                                                        |                   |
  | Implement Trie (Prefix Tree)                           | Medium     |                                                        |                   |
  | Word Search II                                         | Hard       |                                                        |                   |
- | Shortest Palindrome                                    | Hard       |                                                        |                   |
  | The Skyline Problem                                    | Hard       |                                                        |                   |
  | Basic Calculator                                       | Hard       |                                                        |                   |
  | Summary Ranges                                         | Medium     | stringstream/array/size_t                              | :v:               |
@@ -86,7 +85,6 @@
  | Binary Tree Paths                                      | Easy       |                                                        |                   |
  | 3Sum Smaller                                           | Medium     |                                                        |                   |
  | Graph Valid Tree                                       | Medium     |                                                        |                   |
- | Palindrome Permutation                                 | Easy       |                                                        |                   |
  | Alien Dictionary                                       | Hard       |                                                        |                   |
  | Closest Binary Search Tree Value II                    | Hard       | heap/BST                                               | :lock: :eyes:     |
  | Closest Binary Search Tree Value                       | Easy       | BST                                                    | :lock:            |
@@ -134,7 +132,6 @@
  | Patching Array                                         | Hard       | greedily expand [0, sum) range                         | :eyes: :v:        |
  | Verify Preorder Serialization of a Binary Tree         | Medium     |                                                        |                   |
  | Reconstruct Itinerary                                  | Medium     |                                                        |                   |
- | Palindrome Pairs                                       | Hard       |                                                        |                   |
  | Remove K Digits                                        | Medium     | idea                                                   | :eyes: :v:        |
  | Create Maximum Number                                  | Hard       | max num from one array/merge/try  all combinations     | :eyes: :eyes: :v: |
  | Design Phone Directory                                 | Medium     | keep track of recycled and used                        | :v:               |
@@ -213,7 +210,6 @@
  | Populating Next Right Pointers in Each Node            | Medium     |                                                             |                     |
  | Populating Next Right Pointers in Each Node II         | Hard       |                                                             |                     |
  | Best Time to Buy and Sell Stock                        | Easy       |                                                             |                     |
- | Valid Palindrome                                       | Easy       |                                                             |                     |
  | Longest Consecutive Sequence                           | Hard       | think differently  (linear solution)                        | :eyes: :v:          |
  | LRU Cache                                              | Hard       |                                                             |                     |
  | One Edit Distance                                      | Medium     | 3 cases, and combine for concise code                       | :v:                 |
@@ -225,7 +221,12 @@
  | Maximal Square                                         | Medium     | dp/find len of sides                                        | :v: :eyes:          |
  | Maximal Rectangle                                      | Hard       | find width(histogram)/height                                | :v: :eyes:          |
  | Reverse Linked List                                    | Easy       |                                                             | :v:                 |
+ | Valid Palindrome                                       | Easy       |                                                             |                     |
  | Palindrome Linked List                                 | Easy       | stack/reverselist/two pointer                               | :v: :eyes:          |
+ | Palindrome Permutation                                 | Easy       |                                                             |                     |
+ | Palindromic Substrings                                 | Medium     | dp to decide palindrome                                     | :eyes: :v:          |
+ | Shortest Palindrome                                    | Hard       |                                                             |                     |
+ | Palindrome Pairs                                       | Hard       |                                                             |                     |
  | Lowest Common Ancestor of a Binary Tree                | Medium     | recursion                                                   | :v: :eyes:          |
  | Lowest Common Ancestor of a Binary Search Tree         | Easy       | use bst property                                            | :v:                 |
  | Meeting Rooms                                          | Easy       | easy/customized sorting lambda                              | :v:                 |
