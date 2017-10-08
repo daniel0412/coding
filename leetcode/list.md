@@ -112,6 +112,7 @@
  | Binary Tree Longest Consecutive Sequence II            | Medium     | dfs                                                    | :lock:            |
  | Longest Increasing Path in a Matrix                    | Hard       | dfs + memorization to prun                             | :eyes: :v:        |
  | Longest Increasing Subsequence                         | Medium     | construct array, then binary search to replace         | :eyes: :v:        |
+ | Number of Longest Increasing Subsequence               | Medium     | construct array, then binary search to replace         | :eyes: :v:        |
  | Smallest Rectangle Enclosing Black Pixels              | Hard       |                                                        |                   |
  | Number of Islands II                                   | Hard       |                                                        |                   |
  | Range Sum Query 2D – Mutable                           | Hard       |                                                        |                   |
