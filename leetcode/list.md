@@ -281,6 +281,7 @@
  | Construct String From Binary Tree           | Easy       |                                              | :v:           |
  | Non-overlapping Intervals                   | Medium     | idea (which one to remove!)                  | :eyes: :v:    |
  | Find Right Interval                         | Medium     | lower bound function                         | :v:           |
+ | Data Stream as Disjoint Intervals           | Hard       | vector vs bst using set, how to merge/insert | :eyes: :v:    |
  | K Inverse Pair Array                        | Hard       | dp formula                                   | :eyes: :v:    |
  | Single Element in Sorted Array              | Medium     | O(lgn) binary search, but how                | :eyes: :v:    |
  | Number of Boomerangs                        | Easy       | brute force                                  | :v:           |

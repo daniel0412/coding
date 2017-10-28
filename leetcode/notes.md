@@ -90,6 +90,21 @@ find_last_of('/')
 find_last_not_of(' ')
 ```
 
+- set
+    - `set` can be used as a binary search tree `O(log(n))` insertion
+    - `set` does not have `iter+1` operation, but can do `++iter` or `--iter`
+    - define with comparator
+    ```cpp
+    class Comp {
+        public:
+        bool operator()(const pair<int,int>& a, const pair<int,int>& b) {
+            return a.first < b.first;
+        };
+    };
+    set<pair<int,int>, Comp> s;
+    // or use the labmda function definition with decltype
+    ```
+
 #### good coding ways to format string
 ```cpp
 // turn a vecotr into ',' separated string
@@ -109,6 +124,12 @@ struct OP {
     }
 };
 string s = accumulate(string1, string2, initstring, OP());
+```
+
+#### initializer list
+```cpp
+vector<pair<int,int>> v{{1,2}, {2,3}};
+v.emplace_back(4,5); // takes in a list of arguments, but not {4,5}
 ```
 
 ### Common Coding Skills
