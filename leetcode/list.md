@@ -61,7 +61,6 @@
  | Repeated Substring Pattern                             | Easy       |                                                        | :eyes: :v:        |
  | Heaters                                                | Easy       | upper/lower bound                                      | :eyes: :v:        |
  | Find Peak Element                                      | Medium     |                                                        |                   |
- | Missing Ranges                                         | Medium     |                                                        |                   |
  | Fraction to Recurring Decimal                          | Medium     | hashmap/sstream/overflow                               | :v:               |
  | Number of Islands                                      | Medium     |                                                        |                   |
  | Implement Trie (Prefix Tree)                           | Medium     |                                                        |                   |
@@ -69,6 +68,7 @@
  | The Skyline Problem                                    | Hard       |                                                        |                   |
  | Basic Calculator                                       | Hard       |                                                        |                   |
  | Summary Ranges                                         | Medium     | stringstream/array/size_t                              | :v:               |
+ | Missing Ranges                                         | Medium     | same as above                                                        | :v:               |
  | Power of Two                                           | Easy       |                                                        |                   |
  | Sliding Window Maximum                                 | Hard       |                                                        |                   |
  | Search a 2D Matrix                                     | Medium     | binary search, location conversion                     | :v:               |
@@ -112,7 +112,7 @@
  | Binary Tree Longest Consecutive Sequence II            | Medium     | dfs                                                    | :lock:            |
  | Longest Increasing Path in a Matrix                    | Hard       | dfs + memorization to prun                             | :eyes: :v:        |
  | Longest Increasing Subsequence                         | Medium     | construct array, then binary search to replace         | :eyes: :v:        |
- | Number of Longest Increasing Subsequence               | Medium     | | :eyes: :v:        |
+ | Number of Longest Increasing Subsequence               | Medium     |                                                        | :eyes: :v:        |
  | Smallest Rectangle Enclosing Black Pixels              | Hard       |                                                        |                   |
  | Number of Islands II                                   | Hard       |                                                        |                   |
  | Range Sum Query 2D – Mutable                           | Hard       |                                                        |                   |
