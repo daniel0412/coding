@@ -38,15 +38,20 @@ class MergeIntervals {
              });
 
         vector<Interval> res;
-        res.push_back(intervals[0]);
+        int start = intervals[0].start, end = intervals[0].end;
         for(int i = 1; i < intervals.size(); ++i) {
-            if(intervals[i].start <= res.back().end) {
-                res.back().end = max(res.back().end, intervals[i].end);
+            if(intervals[i].start <= end) {
+                // ATTENTION: here pick the largest 'end'
+                end = max(end, intervals[i].end);
             }
             else {
-                res.push_back(intervals[i]);
+                res.emplace_back(start, end);
+                start = intervals[i].start;
+                end = intervals[i].end;
             }
         }
+        // here to take care of the last interval
+        res.emplace_back(start, end);
         return res;
     }
 

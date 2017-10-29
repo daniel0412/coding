@@ -152,7 +152,7 @@
  | Split Array Largest Sum                                | Hard       | find range, then binary search /dp                          | :v: :eyes:          |
  | Minimum Window Substring                               | Hard       | hash map/idea(ci qu fa)                                     | :v: :eyes:          |
  | Rearrange String K Distance Apart                      | Hard       | hash/heap/rearrange task w/o reorder                        | :lock: :eyes:       |
- | Task Scheduler                                         | Medium     | find formular + heap solution                                               | :eyes: :v:          |
+ | Task Scheduler                                         | Medium     | find formular + heap solution                               | :eyes: :v:          |
  | Kth Largest Element in an Array                        | Medium     | quick select/heap                                           | :v: :eyes:          |
  | Combination Sum IV                                     | Medium     | dp (different from I/II/III)                                | :v: :eyes:          |
  | Continuous Subarray Sum                                | Medium     | hash map/(a-c)%b==0/cornercase                              | :v: :eyes:          |
@@ -235,7 +235,7 @@
  | Lowest Common Ancestor of a Binary Tree                | Medium     | recursion                                                   | :v: :eyes:          |
  | Lowest Common Ancestor of a Binary Search Tree         | Easy       | use bst property                                            | :v:                 |
  | Meeting Rooms                                          | Easy       | easy/customized sorting lambda                              | :v:                 |
- | Meeting Rooms II                                       | Medium     | idea important                                              | :v: :eyes:          |
+ | Meeting Rooms II                                       | Medium     | greedy ideas                                                | :eyes: :v:          |
  | Maximum Length of Pair Chains                          | Medium     | sort by ending time then greedy                             | :eyes: :v:          |
  | Course Schedule I                                      | Medium     | dfs/bfs(tricker, use degree)                                | :v:                 |
  | Course Schedule II                                     | Medium     | dfs/bfs(tricker), path tracking                             | :v: :eyes:          |
