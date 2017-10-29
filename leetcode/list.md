@@ -152,7 +152,7 @@
  | Split Array Largest Sum                                | Hard       | find range, then binary search /dp                          | :v: :eyes:          |
  | Minimum Window Substring                               | Hard       | hash map/idea(ci qu fa)                                     | :v: :eyes:          |
  | Rearrange String K Distance Apart                      | Hard       | hash/heap/rearrange task w/o reorder                        | :lock: :eyes:       |
- | Task Scheduler                                         | Medium     |                                                             | :v:                 |
+ | Task Scheduler                                         | Medium     | find formular + heap solution                                               | :eyes: :v:          |
  | Kth Largest Element in an Array                        | Medium     | quick select/heap                                           | :v: :eyes:          |
  | Combination Sum IV                                     | Medium     | dp (different from I/II/III)                                | :v: :eyes:          |
  | Continuous Subarray Sum                                | Medium     | hash map/(a-c)%b==0/cornercase                              | :v: :eyes:          |

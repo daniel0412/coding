@@ -43,13 +43,13 @@ class RearrangeDistanceK {
           }
 
           // fill the res string from the max heap
+          /* this part is wrong
           const char DEFAULT_CHAR = '0';
           int len = str.size();
           string res(len, DEFAULT_CHAR);
 
           while(!q.empty()) {
               pair<int, char> p = q.top();
-              // find first '0'
               int startId = res.find_first_of(DEFAULT_CHAR);
               for(int i = 0; i < p.first; ++i) {
                   int nextId = startId + i * k;
@@ -57,6 +57,24 @@ class RearrangeDistanceK {
                   res[nextId] = p.second;
               }
               q.pop();
+          }
+          */
+          int len = str.size();
+          string res;
+          while(!q.empty()) {
+              vector<pair<int, char>> v;
+              // make sure for the last block, cycle has the right number of elements
+              int cycle = min(k, len);
+              for(int i = 0; i < cycley; ++i) {
+                  if(q.empty()) return "";
+                  res.push_back(q.top().second);
+                  if(q.top().first > 1) {
+                      v.emplace_back(q.top().first-1, q.top().second);
+                  }
+                  q.pop();
+                  --len;
+              }
+              for(auto kv : v) q.emplace(kv.first, kv.second);
           }
           return res;
       }

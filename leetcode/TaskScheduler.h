@@ -58,5 +58,23 @@ class TaskScheduler {
         return res;
     }
 
+    int leastInterval2(vector<char>& tasks, int n)
+    {
+        unordered_map<char, int> m;
+        // get the largest frequency of the tasks
+        int maxCnt = 0;
+        for(auto c : tasks) {
+            maxCnt = max(maxCnt, ++m[c]);
+        }
+        // get number of tasks that have the largest frequency
+        int cnt = 0;
+        for(auto& kv : m) {
+            if(kv.second == maxCnt)
+                ++cnt;
+        }
+        // when n <= cnt, cpu time is the size of the tasks
+        return max((int) tasks.size(), (maxCnt - 1) * (n + 1) + cnt);
+    }
+
   private:
 };
