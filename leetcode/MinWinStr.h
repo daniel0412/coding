@@ -127,4 +127,52 @@ class MinWinStr {
         }
         return dist == INT_MAX ? "" : s.substr(head, dist + 1);
     }
+
+    string towPointerImpl(string s, string t)
+    {
+        if(s.size() < t.size())
+            return "";
+        unordered_map<char, int> m;
+        for(auto c : t)
+            ++m[c];
+        int left = 0, right = 0;
+        int cnt = t.size(), len = s.size();
+
+        // locate the first char included in 't'
+        while(left < len && m.count(s[left]) == 0) {
+            ++left;
+        }
+        if(left == len)
+            return "";
+
+        right = left;
+        string minStr(s.size() + t.size() + 1, ' ');
+        while(right < s.size()) {
+            // if current char is not needed, continue;
+            if(m.count(s[right]) == 0) {
+                ++right;
+                continue;
+            }
+            else {
+                if(m[s[right++]]-- > 0)
+                    --cnt;
+                if(cnt == 0) {
+                    // move left to shorten str lenght to find a valid answer
+                    while(m.count(s[left]) == 0 || m[s[left]] < 0) {
+                        if(m.count(s[left]))
+                            ++m[s[left]];
+                        ++left;
+                    }
+                    minStr = minStr.size() < (right - left) ?
+                        minStr :
+                        s.substr(left, right - left);
+                    // move left to start next valid string search
+                    ++m[s[left++]];
+                    ++cnt;
+                }
+            }
+        }
+        return minStr.size() <= s.size() ? minStr : "";
+    }
+
 };
