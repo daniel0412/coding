@@ -157,7 +157,7 @@
  | Combination Sum IV                                     | Medium     | dp (different from I/II/III)                                | :v: :eyes:          |
  | Continuous Subarray Sum                                | Medium     | hash map/(a-c)%b==0/cornercase                              | :v: :eyes:          |
  | Maximum Subarray                                       | Easy       | dp/think about divide & conqure                             | :v:                 |
- | Minimum Size Subarray Sum                              | Medium     | hash map/prefix sum                                         | :v: :eyes:          |
+ | Minimum Size Subarray Sum                              | Medium     | two pointer find range, then reduce range, analyze why O(n) | :eyes: :v:          |
  | Maximum Size Subarray Sum Equals k                     | Medium     | hash map/idea                                               | :v: :eyes:          |
  | Subarray Sum Equals k                                  | Medium     | hash map/idea                                               | :v: :eyes:          |
  | Contiguous Array                                       | Medium     | hash map/presum idea                                        | :v: :eyes:          |
@@ -302,4 +302,5 @@
  | Majority Element II                         | Medium     | extend to n/k case                           | :eyes: :v:    |
  | Find All Anagrams in String                 | Easy       | sliding window                               | :eyes: :v:    |
  | Permuation in String                        | Medium     | ideas same as sliding window                 | :v:           |
+ | Smallest Range                              | Medium     | same ideas as minimum window string          | :eyes: :v:    |
 

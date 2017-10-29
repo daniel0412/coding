@@ -24,7 +24,8 @@ class MinSizeSubarraySum {
       int minSubArrayLen(int s, vector<int>& nums) {
           int left = 0, right = 0;
           int sum = 0;
-          int minLen = INT_MAX;
+          int minLen = numeric_limits<int>::max();
+          // this is O(n) since inner loop the `left` index is moving all the time
           while(right < nums.size()) {
               sum += nums[right];
               if(sum >= s) {
@@ -35,7 +36,7 @@ class MinSizeSubarraySum {
               }
               ++right;
           }
-          return minLen == INT_MAX ? 0 : minLen;
+          return minLen == numeric_limits<int>::max() ? 0 : minLen;
       }
   private:
 };
