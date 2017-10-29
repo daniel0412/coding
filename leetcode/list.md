@@ -160,7 +160,8 @@
  | Minimum Size Subarray Sum                              | Medium     | two pointer find range, then reduce range, analyze why O(n) | :eyes: :v:          |
  | Maximum Size Subarray Sum Equals k                     | Medium     | hash map/idea                                               | :v: :eyes:          |
  | Subarray Sum Equals k                                  | Medium     | hash map/idea                                               | :v: :eyes:          |
- | Contiguous Array                                       | Medium     | hash map/presum idea                                        | :v: :eyes:          |
+ | Subarray Prod Less Than k                              | Medium     | idea                                                        | :eyes: :v:          |
+ | Contiguous Array                                       | Medium     | hash map/presum idea/store mod                              | :v: :eyes:          |
  | Valid Parentheses                                      | Easy       | stack/non-stack counter solution                            | :v:                 |
  | Generate Parentheses                                   | Medium     | n-1 -> n                                                    | :v: :eyes:          |
  | Remove Invalid Parentheses                             | Hard       | count num to remove, then dfs                               | :v: :eyes:          |
