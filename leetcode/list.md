@@ -300,3 +300,4 @@
  | Max Width of Binary Tree                    | Medium     | BFS with queue (which stores node and index) | :eyes: :v:    |
  | Majority Element                            | Easy       | cancel out                                   | :v:           |
  | Majority Element II                         | Medium     | extend to n/k case                           | :eyes: :v:    |
+ | Find All Anagrams in String                 | Easy       | sliding window                               | :eyes: :v:    |

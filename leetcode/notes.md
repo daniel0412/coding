@@ -92,6 +92,7 @@ find_last_not_of(' ')
 - set
     - `set` can be used as a binary search tree `O(log(n))` insertion
     - `set` does not have `iter+1` operation, but can do `++iter` or `--iter`
+    - `set` can use `set.lower_bound()` api
     - define with comparator
     ```cpp
     class Comp {
