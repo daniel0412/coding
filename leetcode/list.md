@@ -284,6 +284,7 @@
  | Non-overlapping Intervals                   | Medium     | idea (which one to remove!)                             | :eyes: :v:    |
  | Find Right Interval                         | Medium     | lower bound function                                    | :v:           |
  | Data Stream as Disjoint Intervals           | Hard       | vector vs bst using set, how to merge/insert            | :eyes: :v:    |
+ | Range Module                                | Hard       | treemap based/vector based/so many corner case          | :eyes: :v:    |
  | K Inverse Pair Array                        | Hard       | dp formula                                              | :eyes: :v:    |
  | Single Element in Sorted Array              | Medium     | O(lgn) binary search, but how                           | :eyes: :v:    |
  | Number of Boomerangs                        | Easy       | brute force                                             | :v:           |
