@@ -68,7 +68,7 @@
  | The Skyline Problem                                    | Hard       |                                                        |                   |
  | Basic Calculator                                       | Hard       |                                                        |                   |
  | Summary Ranges                                         | Medium     | stringstream/array/size_t                              | :v:               |
- | Missing Ranges                                         | Medium     | same as above                                                        | :v:               |
+ | Missing Ranges                                         | Medium     | same as above                                          | :v:               |
  | Power of Two                                           | Easy       |                                                        |                   |
  | Sliding Window Maximum                                 | Hard       |                                                        |                   |
  | Search a 2D Matrix                                     | Medium     | binary search, location conversion                     | :v:               |
@@ -86,8 +86,8 @@
  | 3Sum Smaller                                           | Medium     |                                                        |                   |
  | Graph Valid Tree                                       | Medium     |                                                        |                   |
  | Alien Dictionary                                       | Hard       |                                                        |                   |
- | Closest Binary Search Tree Value II                    | Hard       | heap/BST                                               | :lock: :eyes:     |
- | Closest Binary Search Tree Value                       | Easy       | BST                                                    | :lock:            |
+ | Closest Binary Search Tree Value                       | Easy       | BST                                                    | :eyes: :lock:     |
+ | Closest Binary Search Tree Value II                    | Hard       | heap/BST                                               | :eyes: :lock:     |
  | Encode and Decode Strings                              | Medium     |                                                        |                   |
  | H-Index                                                | Medium     |                                                        |                   |
  | Logger Rater Limitter                                  | Easy       | map                                                    | :v:               |
@@ -221,9 +221,10 @@
  | Excel Sheet Column Title                               | Easy       | mod/division                                                | :v:                 |
  | Number of Islands                                      | Medium     | dfs/marking                                                 | :v:                 |
  | Number of Islands II                                   | Medium     | union find + pass compression                               | :lock: :eyes:       |
- | The Skyline Problem                                    | Hard       | start/end points/mulitset erase                             | :v: :eyes:          |
- | Maximal Square                                         | Medium     | dp/find len of sides                                        | :v: :eyes:          |
- | Maximal Rectangle                                      | Hard       | find width(histogram)/height                                | :v: :eyes:          |
+ | The Skyline Problem                                    | Hard       | start/end points/mulitset erase                             | :eyes: :v:          |
+ | Maximal Square                                         | Medium     | dp/find len of sides                                        | :eyes: :v:          |
+ | Maximal Rectangle                                      | Hard       | find width(histogram)/height                                | :eyes: :v:          |
+ | Largest Rectangle in Histogram                         | Hard       | stack idea important                                        | :eyes: :v:          |
  | Reverse Linked List                                    | Easy       |                                                             | :v:                 |
  | Valid Palindrome                                       | Easy       |                                                             |                     |
  | Palindrome Linked List                                 | Easy       | stack/reverselist/two pointer                               | :v: :eyes:          |
