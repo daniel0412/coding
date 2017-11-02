@@ -45,7 +45,7 @@ class LargestRectangeInHistogram {
         return res;
     }
 
-    int timeoutImpl(vector<int>& heights)
+    int twosidedSearchTimeoutImpl(vector<int>& heights)
     {
         int res = 0;
 
@@ -59,6 +59,21 @@ class LargestRectangeInHistogram {
             while(++j < heights.size() && heights[j] >= h)
                 ++w;
             res = max(res, w * h);
+        }
+        return res;
+    }
+
+    int onesideSearchTimeoutImpl(vector<int>& heights) {
+        int res = 0;
+        for(int i = 0; i < heights.size(); ++i) {
+            int minH = heights[i];
+            int j = i;
+            while(j >= 0) {
+                minH = min(minH, heights[j]);
+                if(minH == 0) break;
+                res = max(res, minH * (i-j+1));
+                --j;
+            }
         }
         return res;
     }
