@@ -310,4 +310,5 @@
  | Maximal Gap                                 | Medium     | bucket sort idea, find bucket size and number of bucket | :eyes: :v:    |
  | Exclusive Time of Functions                 | Medium     | stack                                                   | :eyes: :v:    |
  | Elimination Game                            | Medium     |                                                         | :eyes: :v:    |
+ | Top K Frequent Words                        | Medium     | think about how to define comparator                    | :v:           |
 
