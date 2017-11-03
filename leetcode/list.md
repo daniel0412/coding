@@ -88,6 +88,7 @@
  | Alien Dictionary                                       | Hard       |                                                        |                   |
  | Closest Binary Search Tree Value                       | Easy       | BST                                                    | :eyes: :lock:     |
  | Closest Binary Search Tree Value II                    | Hard       | heap/BST                                               | :eyes: :lock:     |
+ | Find K Closest Elements                                | Medium     |                                                        | :v:               |
  | Encode and Decode Strings                              | Medium     |                                                        |                   |
  | H-Index                                                | Medium     |                                                        |                   |
  | Logger Rater Limitter                                  | Easy       | map                                                    | :v:               |
@@ -313,5 +314,4 @@
  | Top K Frequent Words                        | Medium     | think about how to define comparator                    | :v:           |
  | Partition Equal Subset Sum                  | Medium     | recursion timout, dp to the rescue                      | :eyes: :v:    |
  | Partition to  k Equal Sum Subset            | Medium     | dfs recursion                                           | :eyes: :v:    |
- 
 
