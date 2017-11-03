@@ -89,6 +89,7 @@
  | Closest Binary Search Tree Value                       | Easy       | BST                                                    | :eyes: :lock:     |
  | Closest Binary Search Tree Value II                    | Hard       | heap/BST                                               | :eyes: :lock:     |
  | Find K Closest Elements                                | Medium     |                                                        | :v:               |
+ | Find K Pairs with Smallest Sum                         | Medium     | heap idea                                              | :eyes: :v:        |
  | Encode and Decode Strings                              | Medium     |                                                        |                   |
  | H-Index                                                | Medium     |                                                        |                   |
  | Logger Rater Limitter                                  | Easy       | map                                                    | :v:               |
