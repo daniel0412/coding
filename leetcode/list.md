@@ -311,4 +311,7 @@
  | Exclusive Time of Functions                 | Medium     | stack                                                   | :eyes: :v:    |
  | Elimination Game                            | Medium     |                                                         | :eyes: :v:    |
  | Top K Frequent Words                        | Medium     | think about how to define comparator                    | :v:           |
+ | Partition Equal Subset Sum                  | Medium     |                                                         | :eyes: :v:    |
+ | Partition to  k Equal Sum Subset            | Medium     | dfs recursion                                           | :eyes: :v:    |
+ 
 
