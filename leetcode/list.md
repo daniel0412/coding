@@ -87,7 +87,7 @@
  | Search a 2D Matrix                                     | Medium     | binary search, location conversion                     | :v:               |
  | Search a 2D Matrix II                                  | Medium     | find correct starting location                         | :v: :eyes:        |
  | Kth Smallest Element in a BST                          | Medium     | iterative/recursive, make sure return type             | :eyes: :v:        |
- | Kth Smallest Element in a sorted matrix                | Medium     | priority queue with prunning                           | :eyes: :v:        |
+ | Kth Smallest Element in a sorted matrix                | Medium     | 1. heap 2. binary search for the answer + cnt          | :eyes: :v:        |
  | Find K Closest Elements                                | Medium     |                                                        | :v:               |
  | Find K Pairs with Smallest Sum                         | Medium     | heap idea                                              | :eyes: :v:        |
  | Find Kth Smallest Pair Distance                        | Hard       | find dist boundary, and then binary search             | :eyes: :v:        |
