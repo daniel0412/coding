@@ -35,4 +35,25 @@ class KthSmallestElementInBST {
             return root;
         return helper(root->right, k);
     }
+
+    int iterativeImpl(TreeNode* root, const int k)
+    {
+        stack<TreeNode*> s;
+        while(root) {
+            s.emplace(root);
+            root = root->left;
+        }
+        TreeNode* cur = nullptr;
+        while(!s.empty() && k) {
+            cur = s.top();
+            s.pop();
+            --k;
+            TreeNode* candidate = cur->right;
+            while(candidate) {
+                s.emplace(candidate);
+                candidate = candidate->left;
+            }
+        }
+        return cur ? cur->val : numeric_limits<int>::min();
+    }
 };

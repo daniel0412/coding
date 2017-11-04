@@ -71,10 +71,6 @@
  | Missing Ranges                                         | Medium     | same as above                                          | :v:               |
  | Power of Two                                           | Easy       |                                                        |                   |
  | Sliding Window Maximum                                 | Hard       |                                                        |                   |
- | Search a 2D Matrix                                     | Medium     | binary search, location conversion                     | :v:               |
- | Search a 2D Matrix II                                  | Medium     | find correct starting location                         | :v: :eyes:        |
- | Kth Smallest Element in a sorted matrix                | Medium     | priority queue with prunning                           | :eyes: :v:        |
- | Kth Smallest Element in a BST                          | Medium     | iterative/recursive, make sure return type             | :eyes: :v:        |
  | Diagonal Traversal                                     | Medium     | own impl so slow: how to deal with bounary univasally  | :v:               |
  | Strobogrammatic Number                                 | Easy       | hashmap                                                | :v: :lock:        |
  | Strobogrammatic Number II                              | Medium     | backtracking                                           | :v: :lock:        |
@@ -88,6 +84,10 @@
  | Alien Dictionary                                       | Hard       |                                                        |                   |
  | Closest Binary Search Tree Value                       | Easy       | BST                                                    | :eyes: :lock:     |
  | Closest Binary Search Tree Value II                    | Hard       | heap/BST                                               | :eyes: :lock:     |
+ | Search a 2D Matrix                                     | Medium     | binary search, location conversion                     | :v:               |
+ | Search a 2D Matrix II                                  | Medium     | find correct starting location                         | :v: :eyes:        |
+ | Kth Smallest Element in a BST                          | Medium     | iterative/recursive, make sure return type             | :eyes: :v:        |
+ | Kth Smallest Element in a sorted matrix                | Medium     | priority queue with prunning                           | :eyes: :v:        |
  | Find K Closest Elements                                | Medium     |                                                        | :v:               |
  | Find K Pairs with Smallest Sum                         | Medium     | heap idea                                              | :eyes: :v:        |
  | Find Kth Smallest Pair Distance                        | Hard       | find dist boundary, and then binary search             | :eyes: :v:        |
