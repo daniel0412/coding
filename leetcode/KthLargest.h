@@ -27,33 +27,6 @@ class KthLargest {
             return -1;
          return recursiveImpl(nums, 0, nums.size() - 1, k);
 
-        // iterative verion
-        //int left = 0, right = nums.size() - 1;
-        //int p = 0;
-        //while(left <= right) {
-            //p = partition(nums, left, right);
-            //int numGreater = right - p + 1;
-            //if(numGreater == k)
-                //break;
-            //else if(numGreater < k) {
-                //right = p - 1;
-                //k = k - numGreater;
-            //}
-            //else {
-                //left = p + 1;
-            //}
-        //}
-        //return nums[p];
-    }
-
-    // quick sort solution
-    void quickSort(vector<int>& nums, int left, int right)
-    {
-        if(left < right) {
-            int p = partition(nums, left, right);
-            quickSort(nums, left, p - 1);
-            quickSort(nums, p + 1, right);
-        }
     }
 
   private:
@@ -82,6 +55,26 @@ class KthLargest {
         }
     }
 
+    int iterativeImpl(vector<int>& nums, int k)
+    {
+        int left = 0, right = nums.size() - 1;
+        int p = 0;
+        while(left <= right) {
+            p = partition(nums, left, right);
+            int numGreater = right - p + 1;
+            if(numGreater == k)
+                break;
+            else if(numGreater < k) {
+                right = p - 1;
+                k = k - numGreater;
+            }
+            else {
+                left = p + 1;
+            }
+        }
+        return nums[p];
+    }
+
     int partition(vector<int>& nums, int start, int end)
     {
         int p = end;
@@ -97,4 +90,16 @@ class KthLargest {
         swap(nums[j], nums[end]);
         return j;
     }
+
+    // quick sort implementation practice
+    void quickSort(vector<int>& nums, int left, int right)
+    {
+        if(left < right) {
+            int p = partition(nums, left, right);
+            quickSort(nums, left, p - 1);
+            quickSort(nums, p + 1, right);
+        }
+    }
+
+
 };

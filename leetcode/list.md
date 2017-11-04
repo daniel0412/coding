@@ -86,6 +86,7 @@
  | Closest Binary Search Tree Value II                    | Hard       | heap/BST                                               | :eyes: :lock:     |
  | Search a 2D Matrix                                     | Medium     | binary search, location conversion                     | :v:               |
  | Search a 2D Matrix II                                  | Medium     | find correct starting location                         | :v: :eyes:        |
+ | Kth Largest Element in an Array                        | Medium     | quick select/heap                                           | :v: :eyes:          |
  | Kth Smallest Element in a BST                          | Medium     | iterative/recursive, make sure return type             | :eyes: :v:        |
  | Kth Smallest Element in a sorted matrix                | Medium     | 1. heap 2. binary search for the answer + cnt          | :eyes: :v:        |
  | Find K Closest Elements                                | Medium     |                                                        | :v:               |
@@ -156,7 +157,6 @@
  | Minimum Window Substring                               | Hard       | hash map/idea(ci qu fa)                                     | :v: :eyes:          |
  | Rearrange String K Distance Apart                      | Hard       | hash/heap/rearrange task w/o reorder                        | :lock: :eyes:       |
  | Task Scheduler                                         | Medium     | find formular + heap solution                               | :eyes: :v:          |
- | Kth Largest Element in an Array                        | Medium     | quick select/heap                                           | :v: :eyes:          |
  | Combination Sum IV                                     | Medium     | dp (different from I/II/III)                                | :v: :eyes:          |
  | Continuous Subarray Sum                                | Medium     | hash map/(a-c)%b==0/cornercase                              | :v: :eyes:          |
  | Maximum Subarray                                       | Easy       | dp/think about divide & conqure                             | :v:                 |
