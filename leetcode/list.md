@@ -314,6 +314,7 @@
  | Exclusive Time of Functions                 | Medium     | stack                                                   | :eyes: :v:    |
  | Elimination Game                            | Medium     |                                                         | :eyes: :v:    |
  | Top K Frequent Words                        | Medium     | think about how to define comparator                    | :v:           |
+ | Top K Frequent Element                      | Medium     | 1. map+heap 2. bucket sort                              | :eyes: :v:    |
  | Partition Equal Subset Sum                  | Medium     | recursion timout, dp to the rescue                      | :eyes: :v:    |
  | Partition to  k Equal Sum Subset            | Medium     | dfs recursion                                           | :eyes: :v:    |
 
