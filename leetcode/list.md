@@ -86,7 +86,7 @@
  | Closest Binary Search Tree Value II                    | Hard       | heap/BST                                               | :eyes: :lock:     |
  | Search a 2D Matrix                                     | Medium     | binary search, location conversion                     | :v:               |
  | Search a 2D Matrix II                                  | Medium     | find correct starting location                         | :v: :eyes:        |
- | Kth Largest Element in an Array                        | Medium     | quick select/heap                                           | :v: :eyes:          |
+ | Kth Largest Element in an Array                        | Medium     | quick select/heap                                      | :v: :eyes:        |
  | Kth Smallest Element in a BST                          | Medium     | iterative/recursive, make sure return type             | :eyes: :v:        |
  | Kth Smallest Element in a sorted matrix                | Medium     | 1. heap 2. binary search for the answer + cnt          | :eyes: :v:        |
  | Find K Closest Elements                                | Medium     |                                                        | :v:               |
@@ -118,6 +118,7 @@
  | Longest Increasing Subsequence                         | Medium     | construct array, then binary search to replace         | :eyes: :v:        |
  | Number of Longest Increasing Subsequence               | Medium     |                                                        | :eyes: :v:        |
  | Smallest Rectangle Enclosing Black Pixels              | Hard       |                                                        |                   |
+ | Max Sum of Rectangle No Greater Thank K                | Hard       | idea: max sum of sub rectangle + lower bound  of diff  | :eyes: :v:        |
  | Number of Islands II                                   | Hard       |                                                        |                   |
  | Range Sum Query 2D – Mutable                           | Hard       |                                                        |                   |
  | Best Time to Buy and Sell Stock with Cooldown          | Medium     |                                                        |                   |
