@@ -154,6 +154,7 @@
  | 3Sum Smaller                                           | Medium     | two pointer                                                 | :v:                 |
  | Target Sum                                             | Medium     | recursion                                                   | :v:                 |
  | Split Array into Consecutive Sequence                  | Medium     | array sorted, greedy idea                                   | :eyes: :v:          |
+ | Split Array With Equal Sums                            | Medium     | cache sum + split strategy                                  | :eyes: :lock:       |
  | Split Array Largest Sum                                | Hard       | find range, then binary search /dp                          | :eyes:  :v:         |
  | Minimum Window Substring                               | Hard       | hash map/idea(ci qu fa)                                     | :v: :eyes:          |
  | Rearrange String K Distance Apart                      | Hard       | hash/heap/rearrange task w/o reorder                        | :lock: :eyes:       |
