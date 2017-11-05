@@ -150,10 +150,11 @@
  | Two Sum II – Input array is sorted                     | Easy       | two pointer to squeeze                                      | :v:                 |
  | Two Sum III – Data structure design                    | Easy       | hashmap/multiset                                            | :v:                 |
  | 3Sum                                                   | Medium     | two pointer/de-duplicate                                    | :v: :eyes:          |
- | 3Sum Closest                                           | Medium     | two pointer/de-duplicate                                    | :v:                 |
+ | 3Sum Closest                                           | Medium     | two pointer/de-dupicate                                     | :v:                 |
  | 3Sum Smaller                                           | Medium     | two pointer                                                 | :v:                 |
  | Target Sum                                             | Medium     | recursion                                                   | :v:                 |
- | Split Array Largest Sum                                | Hard       | find range, then binary search /dp                          | :v: :eyes:          |
+ | Split Array into Consecutive Sequence                  | Medium     | array sorted, greedy idea                                   | :eyes: :v:          |
+ | Split Array Largest Sum                                | Hard       | find range, then binary search /dp                          | :eyes:  :v:         |
  | Minimum Window Substring                               | Hard       | hash map/idea(ci qu fa)                                     | :v: :eyes:          |
  | Rearrange String K Distance Apart                      | Hard       | hash/heap/rearrange task w/o reorder                        | :lock: :eyes:       |
  | Task Scheduler                                         | Medium     | find formular + heap solution                               | :eyes: :v:          |

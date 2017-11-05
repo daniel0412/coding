@@ -27,11 +27,11 @@ class SplitArrayLargestSum {
     }
 
   private:
-    int binarySearchImpl(vector<int>& nums, int m)
+    int binarySearchImpl(const vector<int>& nums, int m)
     {
         // find the range of the split array sum
         int minSum = 0, maxSum = 0;
-        for(auto n : nums) {
+        for(const auto n : nums) {
             maxSum += n;
             minSum = max(minSum, n);
         }
@@ -40,16 +40,16 @@ class SplitArrayLargestSum {
         int res = INT_MAX;
         while(minSum <= maxSum) {
             int midSum = minSum + (maxSum - minSum) / 2;
-            cout << "[" << minSum << ", " << maxSum << "]" << endl;
-            cout << "trying " << midSum;
+            //cout << "[" << minSum << ", " << maxSum << "]" << endl;
+            //cout << "trying " << midSum;
             if(validSplitBelowSum(nums, m, midSum)) {
                 res = min(res, midSum);
                 maxSum = midSum - 1;
-                cout << " got " << res << endl;
+                //cout << " got " << res << endl;
             }
             else {
                 minSum = midSum + 1;
-                cout << " but failed" << endl;
+                //cout << " but failed" << endl;
             }
         }
         return res;
