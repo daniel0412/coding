@@ -319,4 +319,5 @@
  | Top K Frequent Element                      | Medium     | 1. map+heap 2. bucket sort                              | :eyes: :v:    |
  | Partition Equal Subset Sum                  | Medium     | recursion timout, dp to the rescue                      | :eyes: :v:    |
  | Partition to  k Equal Sum Subset            | Medium     | dfs recursion                                           | :eyes: :v:    |
+ | Equal Tree Partition                        | Medium     | node sum + corner case                                  | :eyes: :v:    |
 
