@@ -117,7 +117,7 @@
  | Longest Increasing Path in a Matrix                    | Hard       | dfs + memorization to prun                             | :eyes: :v:        |
  | Longest Increasing Subsequence                         | Medium     | construct array, then binary search to replace         | :eyes: :v:        |
  | Number of Longest Increasing Subsequence               | Medium     |                                                        | :eyes: :v:        |
- | Smallest Rectangle Enclosing Black Pixels              | Hard       |                                                        |                   |
+ | Smallest Rectangle Enclosing Black Pixels              | Hard       | 1. brute force  2. four directions binary search idea  | :eyes: :lock:     |
  | Max Sum of Rectangle No Greater Thank K                | Hard       | idea: max sum of sub rectangle + lower bound  of diff  | :eyes: :v:        |
  | Number of Islands II                                   | Hard       |                                                        |                   |
  | Range Sum Query 2D – Mutable                           | Hard       |                                                        |                   |
