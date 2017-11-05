@@ -321,6 +321,8 @@
  | Partition to  k Equal Sum Subset            | Medium     | dfs recursion                                           | :eyes: :v:    |
  | Equal Tree Partition                        | Medium     | node sum + corner case                                  | :eyes: :v:    |
  | Partition List                              | Medium     | two pointers                                            | :v:           |
+ | Palindrom Partition                         | Medium     |                                                         | :eyes: :v:    |
+ | Palindrom Partition II                      | Hard       |                                                         | :eyes: :v:    |
  
- | Palindrom Partition | Medium | | :eyes: :v: |
+ 
 
