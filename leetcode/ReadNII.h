@@ -38,5 +38,5 @@ class ReadNII {
   private:
     int d_readPos;
     int d_writePos;
-      char d_buffer[4];
+    char d_buffer[4];
 };

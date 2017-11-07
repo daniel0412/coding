@@ -28,14 +28,17 @@ class ReadN {
   public:
     int read(char* buf, int n)
     {
-        int res = 0;
-        for(int i = 0; i <= n / N_PER_READ; ++i) {
-            int c = read4(buf + res);
-            if(c == 0)
+        char buf4[4];
+        int offset = 0;
+        while(offset < n) {
+            int num = read(buf4);
+            for(int i = 0; i < num && offset < n; ++i) {
+                buf[offset++] = buf4[i];
+            }
+            if(num < 4)
                 break;
-            res += c;
         }
-        return min(n, res);
+        return min(res, n);
     }
 
   private:
