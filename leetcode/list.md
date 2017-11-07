@@ -324,6 +324,12 @@
  | Partition List                              | Medium     | two pointers                                            | :v:           |
  | Palindrom Partition                         | Medium     |                                                         | :eyes: :v:    |
  | Palindrom Partition II                      | Hard       | 1. dp 2. two-sided extending                            | :eyes: :v:    |
+
+## Linked Lists
+ | Reverse Linked List | Easy | 1. iterative 2. recursive | :eyes: :v:    |
+
+
+
  
  
 
