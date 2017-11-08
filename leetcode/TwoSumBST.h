@@ -48,4 +48,22 @@ class TwoSumBST {
         return root->val > val ? findVal(root->left, val) :
                                  findVal(root->right, val);
     }
+
+    // implementation based on dfs and set
+    bool findTargetII(TreeNode* tree, int k)
+    {
+        unordered_set<int> s;
+        return dfs(root, k, s);
+    }
+    bool dfs(TreeNode* root, int target, unordered_set<int>& s)
+    {
+        if(root == nullptr) {
+            return false;
+        }
+        int diff = target - root->val;
+        if(s.count(diff))
+            return true;
+        s.insert(root->val);
+        return dfs(root->left, target, s) || dfs(root->right, target, s);
+    }
 };
