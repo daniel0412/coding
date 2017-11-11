@@ -270,6 +270,7 @@
  | Total Hamming Distance                                 | Medium     | vertical 1s, combination                                    | :eyes: :v:          |
  | Random Pick Index                                      | Medium     | reservoir sampling                                          | :eyes: :v:          |
  | Design Tic Tac Toe                                     | Medium     | extra space to keep track of current status                 | :eyes: :lock:       |
+ | Restore IP Address                                     | Medium     | recursion                                                   | :eyes: :v:          |
 
 ## Other Leetcode
  | Problems                                    | Difficulty | Techniques                                              | Status        |
