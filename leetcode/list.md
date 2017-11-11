@@ -150,6 +150,7 @@
  | Two Sum                                                | Easy       | hashmap/two pointer                                         | :v: :eyes:          |
  | Two Sum II – Input array is sorted                     | Easy       | two pointer to squeeze                                      | :v:                 |
  | Two Sum III – Data structure design                    | Easy       | hashmap/multiset                                            | :v:                 |
+ | Two Sum in BST                                         | Easy       | inorder to form sorted array, two pointer                   | :eyes: :v:          |
  | 3Sum                                                   | Medium     | two pointer/de-duplicate                                    | :v: :eyes:          |
  | 3Sum Closest                                           | Medium     | two pointer/de-dupicate                                     | :v:                 |
  | 3Sum Smaller                                           | Medium     | two pointer                                                 | :v:                 |
@@ -171,6 +172,7 @@
  | Valid Parentheses                                      | Easy       | stack/non-stack counter solution                            | :v:                 |
  | Generate Parentheses                                   | Medium     | n-1 -> n                                                    | :v: :eyes:          |
  | Remove Invalid Parentheses                             | Hard       | count num to remove, then dfs                               | :v: :eyes:          |
+ | Remove Invalid Parentheses (return one valid solution) | Hard       | 1.two loops 2. one loop                                     | :v: :eyes:          |
  | Divide Two Integers                                    | Medium     | hash map/prefix sum                                         | :v: :eyes:          |
  | Sparse Matrix Multiplication                           | Medium     | avoid multiplication when possible                          | :lock:              |
  | Roman to Integer                                       | Easy       | add then minus two if voliate                               | :v: :eyes:          |
@@ -267,6 +269,7 @@
  | Hamming Distance                                       | Easy       | clear right most left 1                                     | :eyes:   :v:        |
  | Total Hamming Distance                                 | Medium     | vertical 1s, combination                                    | :eyes: :v:          |
  | Random Pick Index                                      | Medium     | reservoir sampling                                          | :eyes: :v:          |
+ | Design Tic Tac Toe                                     | Medium     | extra space to keep track of current status                 | :eyes: :lock:       |
 
 ## Other Leetcode
  | Problems                                    | Difficulty | Techniques                                              | Status        |
@@ -280,7 +283,6 @@
  | Find Bottom Left Tree Value                 | Medium     | inorder travesal                                        | :v:           |
  | Most Frequent Subtree Sum                   | Medium     | postorder travesal to capture subtree sum               | :v:           |
  | Count Univalue Subtree                      | Medium     | postorder                                               | :eyes: :lock: |
- | Two Sum in BST                              | Easy       | inorder to form sorted array, two pointer               | :eyes: :v:    |
  | Binary Tree Tilt                            | Easy       | postorder sum and track                                 | :v:           |
  | Merge Two Binary Trees                      | Easy       | recursion                                               | :v:           |
  | Subtree of Another Tree                     | Easy       |                                                         | :v:           |
