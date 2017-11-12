@@ -45,6 +45,7 @@ class NumOfIslandII {
                 if(id != newRoot) {
                     --nums;
                     roots[id] = newRoot;
+                    // update to keep track of the parent
                     id = newRoot;
                 }
             }

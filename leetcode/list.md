@@ -271,7 +271,7 @@
  | Random Pick Index                                      | Medium     | reservoir sampling                                          | :eyes: :v:          |
  | Design Tic Tac Toe                                     | Medium     | extra space to keep track of current status                 | :eyes: :lock:       |
  | Restore IP Address                                     | Medium     | recursion                                                   | :eyes: :v:          |
- | Intersection of Two Arrays I/II | Easy | check follow up questions | :eyes: :v: |
+ | Intersection of Two Arrays I/II                        | Easy       | check follow up questions                                   | :eyes: :v:          |
 
 ## Other Leetcode
  | Problems                                    | Difficulty | Techniques                                              | Status        |
@@ -328,6 +328,8 @@
  | Partition List                              | Medium     | two pointers                                            | :v:           |
  | Palindrom Partition                         | Medium     |                                                         | :eyes: :v:    |
  | Palindrom Partition II                      | Hard       | 1. dp 2. two-sided extending                            | :eyes: :v:    |
+ | Convert BST to Double Linked List           | Medium     | think about the recursion                               | :eyes: :v:    |
+ | Balanced Binary Tree                        | Easy       | 1. top-down 2. buttom up                                | :eyes: :v:    |
 
 ## Linked Lists
  | Reverse Linked List | Easy | 1. iterative 2. recursive | :eyes: :v:    |
