@@ -271,6 +271,7 @@
  | Random Pick Index                                      | Medium     | reservoir sampling                                          | :eyes: :v:          |
  | Design Tic Tac Toe                                     | Medium     | extra space to keep track of current status                 | :eyes: :lock:       |
  | Restore IP Address                                     | Medium     | recursion                                                   | :eyes: :v:          |
+ | Intersection of Two Arrays I/II | Easy | check follow up questions | :eyes: :v: |
 
 ## Other Leetcode
  | Problems                                    | Difficulty | Techniques                                              | Status        |
