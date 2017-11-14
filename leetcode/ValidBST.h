@@ -31,7 +31,7 @@ class ValidBST {
             return true;
         if(root->val <= minVal || root->val >= maxVal)
             return false;
-        return recursiveImpl(root->left, minVal, maxVal) &&
+        return recursiveImpl(root->left, minVal, root->val) &&
             recursiveImpl(root->right, root->val, maxVal);
     }
 };

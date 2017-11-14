@@ -211,7 +211,8 @@
  | Subsets                                                | Medium     | recursion -> think about iterative                          | :v:       :eyes:    |
  | Subsets II                                             | Medium     | recursion/deduplication                                     | :v: :eyes:          |
  | Increasing Subsequence                                 | Medium     | dfs/set to deduplicate                                      | :v:          :eyes: |
- | Word Ladder                                            | Medium     | (double) bfs                                                | :v:  :eyes:         |
+ | Word Ladder                                            | Medium     | (double) bfs                                                | :eyes: :v:          |
+ | Word Ladder II                                         | Hard       | (double) bfs                                                | :eyes: :v:          |
  | Word Break                                             | Medium     | dp(fast)/recursion(timeout)                                 |                     |
  | Word Search                                            | Medium     | dfs                                                         | :v: :eyes:          |
  | Implement Trie (Prefix Tree)                           | Medium     |                                                             |                     |
