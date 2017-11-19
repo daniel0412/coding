@@ -203,6 +203,7 @@
  | Insert Interval                                        | Hard       | think about it twice                                        | :v: :eyes:          |
  | Encode/Decode Tiny Url                                 | Medium     | rand()/unordered_map                                        | :v: :eyes:          |
  | Decode Ways                                            | Medium     | recursion(slow)/dp(cornor cases)                            | :v: :eyes:          |
+ | Decode Ways II                                         | Medium     | with * decoded as 1-9                           | :v: :eyes:          |
  | Simplify Path                                          | Medium     | last char not being '/' case                                | :v:                 |
  | Wildcard Matching                                      | Hard       | greedy two pointer: mark * matchign start pos               | :v: :eyes:          |
  | Regular Expression Matching                            | Hard       | hard&slow recursion/fast dp!!!                              | :v: :eyes:          |
@@ -324,7 +325,7 @@
  | Top K Frequent Words                        | Medium     | think about how to define comparator                    | :v:           |
  | Top K Frequent Element                      | Medium     | 1. map+heap 2. bucket sort                              | :eyes: :v:    |
  | Partition Equal Subset Sum                  | Medium     | recursion timout, dp to the rescue                      | :eyes: :v:    |
- | Partition to  k Equal Sum Subset            | Medium     | dfs recursion                                           | :eyes: :v:    |
+ | Partition to k Equal Sum Subset             | Medium     | dfs recursion                                           | :eyes: :v:    |
  | Equal Tree Partition                        | Medium     | node sum + corner case                                  | :eyes: :v:    |
  | Partition List                              | Medium     | two pointers                                            | :v:           |
  | Palindrom Partition                         | Medium     |                                                         | :eyes: :v:    |

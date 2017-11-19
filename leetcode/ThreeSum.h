@@ -38,9 +38,13 @@ class ThreeSum {
                     ++b;
                     continue;
                 }
+                if(c < nums.size()-1 && nums[c] == nums[c+1]) {
+                    --c;
+                    continue;
+                }
                 int sum = nums[a] + nums[b] + nums[c];
                 if(sum == 0) {
-                    res.push_back(vector<int>({nums[a], nums[b], nums[c]}));
+                    res.emplace_back(vector<int>{nums[a], nums[b], nums[c]});
                     ++b;
                     --c;
                 }

@@ -51,25 +51,20 @@ class DecodeWays {
 
     int dpImpl(const string& s)
     {
-        vector<int> dp(s.size() + 1, 1);
+        if(s.size() < 1 || s[0] == '0')
+            return 0;
+        int first = 1, second = 1, cur = second;
         for(int i = 1; i < s.size(); ++i) {
-            if(s[i-1] == '0') {
-                dp[i+1] = (s[i] == '0') ? 0 : dp[i];
-            }
-            else {
-                if(s[i] == '0') {
-                    dp[i + 1] = s[i - 1] < '3' ? dp[i-1] : 0;
-                }
-                else {
-                    if(s[i - 1] == '1' || (s[i - 1] == '2' && s[i] <= '6')) {
-                        dp[i + 1] = dp[i - 1] + dp[i];
-                    }
-                    else {
-                        dp[i + 1] = dp[i];
-                    }
-                }
-            }
+            cur = 0;
+            // decode with preceding char as one number
+            if(s[i - 1] == '1' || (s[i - 1] == '2' && s[i] <= '6'))
+                cur += first;
+            // decode current digit as single number
+            if(s[i] != '0')
+                cur += second;
+            first = second;
+            second = cur;
         }
-        return dp.back();
+        return cur;
     }
 };
