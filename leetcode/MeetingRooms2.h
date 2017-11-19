@@ -29,6 +29,7 @@ struct Interval {
 class MeetingRooms2 {
   public:
 
+    // priority queue solution
     int minMeetingRooms(vector<Interval>& intervals)
     {
         sort(intervals.begin(),
@@ -42,5 +43,26 @@ class MeetingRooms2 {
             q.push(i.end);
         }
         return q.size();
+    }
+
+    // two array solution
+    int minMeetingRooms(vector<Interval>& intervals)
+    {
+        vector<int> start, end;
+        for(const auto& i : intervals) {
+            start.push_back(i.start);
+            end.push_back(i.end);
+        }
+        sort(start.begin(), start.end());
+        sort(end.begin(), end.end());
+        int minRooms = 0;
+        int endpos = 0;
+        for(int i = 0; i < start.size(); ++i) {
+            if(start[i] < end[endpos])
+                ++minRooms;
+            else
+                ++endpos;
+        }
+        return minRooms;
     }
 };

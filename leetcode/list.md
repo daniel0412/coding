@@ -164,6 +164,7 @@
  | Combination Sum IV                                     | Medium     | dp (different from I/II/III)                                | :v: :eyes:          |
  | Continuous Subarray Sum                                | Medium     | hash map/(a-c)%b==0/cornercase                              | :v: :eyes:          |
  | Maximum Subarray                                       | Easy       | dp/think about divide & conqure                             | :v:                 |
+ | Maximum Sum of 3 Non-overlapping Subarrays             | Hard       | presum, fix middle subarray, dp to cache left/right max     | :eyes: :v:          |
  | Minimum Size Subarray Sum                              | Medium     | two pointer find range, then reduce range, analyze why O(n) | :eyes: :v:          |
  | Maximum Size Subarray Sum Equals k                     | Medium     | hash map/idea                                               | :v: :eyes:          |
  | Subarray Sum Equals k                                  | Medium     | hash map/idea                                               | :v: :eyes:          |
@@ -203,7 +204,7 @@
  | Insert Interval                                        | Hard       | think about it twice                                        | :v: :eyes:          |
  | Encode/Decode Tiny Url                                 | Medium     | rand()/unordered_map                                        | :v: :eyes:          |
  | Decode Ways                                            | Medium     | recursion(slow)/dp(cornor cases)                            | :v: :eyes:          |
- | Decode Ways II                                         | Medium     | with * decoded as 1-9                           | :v: :eyes:          |
+ | Decode Ways II                                         | Medium     | with * decoded as 1-9                                       | :v: :eyes:          |
  | Simplify Path                                          | Medium     | last char not being '/' case                                | :v:                 |
  | Wildcard Matching                                      | Hard       | greedy two pointer: mark * matchign start pos               | :v: :eyes:          |
  | Regular Expression Matching                            | Hard       | hard&slow recursion/fast dp!!!                              | :v: :eyes:          |
@@ -247,7 +248,7 @@
  | Lowest Common Ancestor of a Binary Tree                | Medium     | recursion                                                   | :v: :eyes:          |
  | Lowest Common Ancestor of a Binary Search Tree         | Easy       | use bst property                                            | :v:                 |
  | Meeting Rooms                                          | Easy       | easy/customized sorting lambda                              | :v:                 |
- | Meeting Rooms II                                       | Medium     | greedy ideas                                                | :eyes: :v:          |
+ | Meeting Rooms II                                       | Medium     | 1. greedy ideas using pq; 2. sweep line with two arrays     | :eyes: :v:          |
  | Maximum Length of Pair Chains                          | Medium     | sort by ending time then greedy                             | :eyes: :v:          |
  | Course Schedule I                                      | Medium     | dfs/bfs(tricker, use degree)                                | :v:                 |
  | Course Schedule II                                     | Medium     | dfs/bfs(tricker), path tracking                             | :v: :eyes:          |
