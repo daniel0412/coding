@@ -170,6 +170,8 @@
  | Subarray Sum Equals k                                  | Medium     | hash map/idea                                               | :v: :eyes:          |
  | Subarray Prod Less Than k                              | Medium     | idea                                                        | :eyes: :v:          |
  | Contiguous Array                                       | Medium     | hash map/presum idea/store mod                              | :v: :eyes:          |
+ | Permutation                                            | Medium     | 1) dfs (different from subset) 2) swap recursion            | :eyes: :v:          |
+ | Permutation II (with duplication)                      | Medium     | 1) dfs (with de-deuplication) 2) swap with deduplication    | :eyes: :v:          |
  | Valid Parentheses                                      | Easy       | stack/non-stack counter solution                            | :v:                 |
  | Generate Parentheses                                   | Medium     | n-1 -> n                                                    | :v: :eyes:          |
  | Remove Invalid Parentheses                             | Hard       | count num to remove, then dfs                               | :v: :eyes:          |
