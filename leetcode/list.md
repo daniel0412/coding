@@ -174,8 +174,8 @@
  | Permutation II (with duplication)                      | Medium     | 1) dfs (with de-deuplication) 2) swap with deduplication    | :eyes: :v:          |
  | Valid Parentheses                                      | Easy       | stack/non-stack counter solution                            | :v:                 |
  | Generate Parentheses                                   | Medium     | n-1 -> n                                                    | :v: :eyes:          |
- | Remove Invalid Parentheses                             | Hard       | count num to remove, then dfs                               | :v: :eyes:          |
- | Remove Invalid Parentheses (return one valid solution) | Hard       | 1.two loops 2. one loop                                     | :v: :eyes:          |
+ | Remove Invalid Parentheses                             | Hard       | count num to remove, then dfs                               | :eyes: :v:          |
+ | Remove Invalid Parentheses (return one valid solution) | Hard       | 1.two loops 2. one loop                                     | :eyes: :v:          |
  | Divide Two Integers                                    | Medium     | hash map/prefix sum                                         | :v: :eyes:          |
  | Sparse Matrix Multiplication                           | Medium     | avoid multiplication when possible                          | :lock:              |
  | Roman to Integer                                       | Easy       | add then minus two if voliate                               | :v: :eyes:          |

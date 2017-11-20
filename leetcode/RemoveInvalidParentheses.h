@@ -24,7 +24,15 @@ class RemoveInvalidParentheses {
     vector<string> removeInvalidParentheses(string s)
     {
         int left = 0, right = 0, pair = 0;
-        // cout number of left/right parenthese to remove
+        getRemoveCnt(s, left, right);
+        vector<string> res;
+        dfs(s, 0, left, right, pair, "", res);
+        return res;
+    }
+
+  private:
+    void getRemoveCnt(const string& s, int& left, int& right)
+    {
         for(auto& c : s) {
             if(c == '(') {
                 ++left;
@@ -38,35 +46,36 @@ class RemoveInvalidParentheses {
                 }
             }
         }
-        unordered_set<string> res;
-        dfs(s, 0, left, right, pair, "", res);
-        return vector<string>(res.begin(), res.end());
     }
-
-  private:
     void dfs(const string& s,
              int start,
              int left,
              int right,
              int pair,
              string path,
-             unordered_set<string>& res)
+             vector<string>& res)
     {
         if(left < 0 || right < 0 || pair < 0)
             return;
         if(start == s.size()) {
             if(left == 0 && right == 0 && pair == 0) {
-                res.insert(path);
+                res.emplace_back(path);
             }
             return;
         }
         char c = s[start];
 
         if(c == '(') {
-            // deduplication
-            if(start == 0 || c != s[start-1]) {
-                for(int i = start; i < s.size() && c==s[i]; ++i) {
-                    dfs(s, i+1, left - 1 - i + start, right, pair, path, res);
+            // deduplication: remove 1 to num of consecutive '('s
+            if(start == 0 || c != s[start - 1]) {
+                for(int i = start; i < s.size() && c == s[i]; ++i) {
+                    dfs(s,
+                        i + 1,
+                        left - 1 - i + start,
+                        right,
+                        pair,
+                        path,
+                        res);
                 }
             }
             path.push_back(c);
@@ -74,13 +83,18 @@ class RemoveInvalidParentheses {
         }
         else if(c == ')') {
             // deduplication
-            if(start == 0 || c != s[start-1]) {
-                for(int i = start; i < s.size() && c==s[i]; ++i) {
-                    dfs(s, i+1, left, right - 1 - i + start, pair, path, res);
+            if(start == 0 || c != s[start - 1]) {
+                for(int i = start; i < s.size() && c == s[i]; ++i) {
+                    dfs(s,
+                        i + 1,
+                        left,
+                        right - 1 - i + start,
+                        pair,
+                        path,
+                        res);
                 }
             }
 
-            //dfs(s, start + 1, left, right - 1, pair, path, res);
             path.push_back(c);
             dfs(s, start + 1, left, right, pair - 1, path, res);
         }

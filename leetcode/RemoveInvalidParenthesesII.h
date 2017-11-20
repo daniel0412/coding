@@ -73,6 +73,5 @@ class RemoveInvalidParenthesesII {
         }
         return res;
     }
-
   private:
 };

@@ -21,18 +21,20 @@ using namespace std;
 
 class Permutation {
   public:
-      vector<vector<int>> permute(vector<int>& nums) {
-          vector<vector<int>> res;
-          if(nums.empty()) return res;
-          // sol 1) swap recursion
-          //swapPermutateImpl(nums, 0, res);
-          
-          // sol 2) dfs recursion
-          vector<bool> used(nums.size(), false);
-          vector<int> path;
-          dfsImpl(nums, path, used, res);
-          return res;
-      }
+    vector<vector<int> > permute(vector<int>& nums)
+    {
+        vector<vector<int> > res;
+        if(nums.empty())
+            return res;
+        // sol 1) swap recursion
+        // swapPermutateImpl(nums, 0, res);
+
+        // sol 2) dfs recursion
+        vector<bool> used(nums.size(), false);
+        vector<int> path;
+        dfsImpl(nums, path, used, res);
+        return res;
+    }
 
   private:
     void swapPermutateImpl(vector<int>& nums,
@@ -60,13 +62,13 @@ class Permutation {
             return;
         }
         for(int i = 0; i < nums.size(); ++i) {
-            if(used[i]) continue;
+            if(used[i])
+                continue;
             used[i] = true;
             path.emplace_back(nums[i]);
             dfsImpl(nums, path, used, res);
             path.pop_back();
             used[i] = false;
         }
-
     }
 };
