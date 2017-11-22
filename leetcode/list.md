@@ -109,7 +109,6 @@
  | Game of Life                                           | Medium     | track state, note state changes cell value             | :eyes: :v:        |
  | Flip Game                                              | Easy       |                                                        |                   |
  | Flip Game II                                           | Medium     |                                                        |                   |
- | Serialize and Deserialize Binary Tree                  | Hard       |                                                        |                   |
  | Max Consecutive Ones                                   | Easy       |                                                        | :v:               |
  | Max Consecutive Ones  II                               | Medium     | idea                                                   | :eyes: :v:        |
  | Binary Tree Longest Consecutive Sequence               | Medium     | dfs                                                    | :lock:            |
@@ -267,7 +266,7 @@
  | First Bad Version                                      | Easy       |                                                             |                     |
  | Walls and Gates                                        | Medium     | start from gates see how far it goes                        | :v:                 |
  | Binary Tree Paths                                      | Easy       | dfs                                                         | :v:                 |
- | Inorder Successor in BST                               | Medium     | BST property, track last larger node                        | :lock: :eyes:       |
+ | Inorder Successor in BST                               | Medium     | BST property, track last larger node                        | :eyes: :lock:       |
  | Binary Tree Vertical Order Traversal                   | Medium     | map/inorder recursion/queue iteration                       | :eyes: :lock:       |
  | Serialize and Deserialize Binary Tree                  | Hard       |                                                             |                     |
  | Increasing Triplet Subsequence                         | Medium     | think hard, tricky                                          | :v: :eyes:          |
@@ -338,9 +337,19 @@
  | Surrounded Region                           | Medium     | from edge to dfs mark reachable cell                    | :eyes: :v:    |
 
 ## Linked Lists
- | Reverse Linked List | Easy | 1. iterative 2. recursive | :eyes: :v:    |
+
+ | Problems                   | Difficulty | Techniques                |
+ | :------------------------- | :---:      | :----                     |
+ | Reverse Linked List        | Easy       | 1. iterative 2. recursive |
 
 
+## Tree Basics
+
+ | Problems                                | Difficulty | Techniques          |
+ | :-------------------------              | :---:      | :----               |
+ | Binary Tree PreOrder Travesal/Iterator  | Medium     | iterative/recursive |
+ | Binary Tree InOrder Travesal/Iterator   | Medium     | iterative/recursive |
+ | Binary Tree PostOrder Travesal/Iterator | Hard       | iterative/recursive |
 
  
  

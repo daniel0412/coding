@@ -25,6 +25,7 @@ class DiameterBinaryTree {
     {
         int maxNode = 0;
         helper(root, maxNode);
+        // diameter is the length of edges, thus -1
         return maxNode > 1 ? maxNode - 1 : 0;
     }
 
@@ -36,6 +37,7 @@ class DiameterBinaryTree {
         }
         int leftMaxNode = helper(root->left, maxNode);
         int rightMaxNode = helper(root->right, maxNode);
+        // max number of nodes
         int sumNode = leftMaxNode + rightMaxNode + 1;
         maxNode = (sumNode > maxNode) ? sumNode : maxNode;
         return 1 + max(leftMaxNode, rightMaxNode);
