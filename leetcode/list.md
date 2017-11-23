@@ -268,7 +268,6 @@
  | Binary Tree Paths                                      | Easy       | dfs                                                         | :v:                 |
  | Inorder Successor in BST                               | Medium     | BST property, track last larger node                        | :eyes: :lock:       |
  | Binary Tree Vertical Order Traversal                   | Medium     | map/inorder recursion/queue iteration                       | :eyes: :lock:       |
- | Serialize and Deserialize Binary Tree                  | Hard       |                                                             |                     |
  | Increasing Triplet Subsequence                         | Medium     | think hard, tricky                                          | :v: :eyes:          |
  | Hamming Distance                                       | Easy       | clear right most left 1                                     | :eyes:   :v:        |
  | Total Hamming Distance                                 | Medium     | vertical 1s, combination                                    | :eyes: :v:          |
@@ -345,11 +344,13 @@
 
 ## Tree Basics
 
- | Problems                                | Difficulty | Techniques          |
- | :-------------------------              | :---:      | :----               |
- | Binary Tree PreOrder Travesal/Iterator  | Medium     | iterative/recursive |
- | Binary Tree InOrder Travesal/Iterator   | Medium     | iterative/recursive |
- | Binary Tree PostOrder Travesal/Iterator | Hard       | iterative/recursive |
+ | Problems                                    | Difficulty | Techniques                                      |
+ | :-------------------------                  | :---:      | :----                                           |
+ | Binary Tree PreOrder Travesal/Iterator      | Medium     | iterative/recursive                             |
+ | Binary Tree InOrder Travesal/Iterator       | Medium     | iterative/recursive                             |
+ | Binary Tree PostOrder Travesal/Iterator     | Hard       | iterative/recursive                             |
+ | Binary Tree Serialization/Deserialization   | Medium     | preorder-recursion/level-order iteration        |
+ | BST Serialization/Deserialization (compact) | Medium     | preorder-recursion, but no placeholder for null |
 
  
  
