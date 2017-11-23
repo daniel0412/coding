@@ -283,7 +283,6 @@
  | Maximum Binary Tree                         | Medium     | recursion/iterative (think this)                        | :eyes: :v:    |
  | Print Binary Tree                           | Medium     | find matrix size, then populate                         | :eyes: :v:    |
  | Find Mode in BST                            | Medium     | BST inorder is sorted                                   | :eyes: :v:    |
- | Find Duplicate Subtrees                     | Medium     | serialize each subtree                                  | :eyes: :v:    |
  | Add One Row to Tree                         | Medium     | recursion/iterative                                     | :v:           |
  | Find Bottom Left Tree Value                 | Medium     | inorder travesal                                        | :v:           |
  | Most Frequent Subtree Sum                   | Medium     | postorder travesal to capture subtree sum               | :v:           |
@@ -344,13 +343,14 @@
 
 ## Tree Basics
 
- | Problems                                    | Difficulty | Techniques                                      |
- | :-------------------------                  | :---:      | :----                                           |
- | Binary Tree PreOrder Travesal/Iterator      | Medium     | iterative/recursive                             |
- | Binary Tree InOrder Travesal/Iterator       | Medium     | iterative/recursive                             |
- | Binary Tree PostOrder Travesal/Iterator     | Hard       | iterative/recursive                             |
- | Binary Tree Serialization/Deserialization   | Medium     | preorder-recursion/level-order iteration        |
- | BST Serialization/Deserialization (compact) | Medium     | preorder-recursion, but no placeholder for null |
+ | Problems                                    | Difficulty | Techniques                                         |
+ | :-------------------------                  | :---:      | :----                                              |
+ | Binary Tree PreOrder Travesal/Iterator      | Medium     | iterative/recursive                                |
+ | Binary Tree InOrder Travesal/Iterator       | Medium     | iterative/recursive                                |
+ | Binary Tree PostOrder Travesal/Iterator     | Hard       | iterative/recursive                                |
+ | Binary Tree Serialization/Deserialization   | Medium     | preorder-recursion/level-order iteration           |
+ | BST Serialization/Deserialization (compact) | Medium     | preorder-recursion with min/max threshold          |
+ | Find Duplicate Subtrees                     | Medium     | serialize to deduplicate, make sure serialize once |
 
  
  

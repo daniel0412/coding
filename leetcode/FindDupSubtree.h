@@ -23,25 +23,24 @@ class FindDupSubtree {
   public:
     vector<TreeNode*> findDuplicateSubtrees(TreeNode* root)
     {
-        unordered_map<string, vector<TreeNode*> > m;
-        postOrder(root, m);
+        unordered_map<string, int> m;
         vector<TreeNode*> res;
-        for(const auto& kv : m) {
-            res.insert(res.end(), kv.second.begin(), kv.second.end());
-        }
+        dfs(root, m, res);
         return res;
     }
 
   private:
-    string postOrder(TreeNode* root,
-                     unordered_map<string, vector<TreeNode*> >& m)
+    string dfs(TreeNode* root,
+               unordered_map<string, int>& m,
+               vector<TreeNode*>& res)
     {
         if(root == nullptr)
-            return "()";
-        stringstream ss;
-        ss << "(" << postOrder(root->left, m) << ","
-           << postOrder(root->right, m) << "," << root->val;
-        m[ss.str()].push_back(root);
-        return ss.str();
+            return ",";
+        string path = to_string(root->val) + "," + dfs(root->left, m, res) +
+            dfs(root->right, m, res);
+        if(m[path]++ == 1) {
+            res.emplace_back(root);
+        }
+        return path;
     }
 };
