@@ -46,7 +46,6 @@
  | Valid Parentheses                                      | Easy       |                                                        |                   |
  | Moving Average From Data Stream                        | Easy       | queue                                                  | :lock:            |
  | Generate Parentheses                                   | Medium     |                                                        |                   |
- | Next Permutation                                       | Medium     | reverse order check                                    | :eyes:   :v:      |
  | Pow(x, n)                                              | Medium     |                                                        |                   |
  | Spiral Matrix                                          | Medium     |                                                        |                   |
  | License Key Formatting                                 | Medium     | string operation                                       | :v:               |
@@ -169,8 +168,6 @@
  | Subarray Sum Equals k                                  | Medium     | hash map/idea                                               | :v: :eyes:          |
  | Subarray Prod Less Than k                              | Medium     | idea                                                        | :eyes: :v:          |
  | Contiguous Array                                       | Medium     | hash map/presum idea/store mod                              | :v: :eyes:          |
- | Permutation                                            | Medium     | 1) dfs (different from subset) 2) swap recursion            | :eyes: :v:          |
- | Permutation II (with duplication)                      | Medium     | 1) dfs (with de-deuplication) 2) swap with deduplication    | :eyes: :v:          |
  | Valid Parentheses                                      | Easy       | stack/non-stack counter solution                            | :v:                 |
  | Generate Parentheses                                   | Medium     | n-1 -> n                                                    | :v: :eyes:          |
  | Remove Invalid Parentheses                             | Hard       | count num to remove, then dfs                               | :eyes: :v:          |
@@ -211,8 +208,6 @@
  | Regular Expression Matching                            | Hard       | hard&slow recursion/fast dp!!!                              | :v: :eyes:          |
  | Text Justification                                     | Hard       | just deal with string corner case                           | :v:                 |
  | Expression Add Operators                               | Hard       | tricy dfs: get first val, then (op, val) pair               | :v: :eyes:          |
- | Subsets                                                | Medium     | recursion -> think about iterative                          | :v:       :eyes:    |
- | Subsets II                                             | Medium     | recursion/deduplication                                     | :v: :eyes:          |
  | Increasing Subsequence                                 | Medium     | dfs/set to deduplicate                                      | :v:          :eyes: |
  | Word Ladder                                            | Medium     | (double) bfs                                                | :eyes: :v:          |
  | Word Ladder II                                         | Hard       | (double) bfs                                                | :eyes: :v:          |
@@ -333,6 +328,7 @@
  | Convert BST to Double Linked List           | Medium     | think about the recursion                               | :eyes: :v:    |
  | Balanced Binary Tree                        | Easy       | 1. top-down 2. buttom up                                | :eyes: :v:    |
  | Surrounded Region                           | Medium     | from edge to dfs mark reachable cell                    | :eyes: :v:    |
+ | Minimum Path Sum                            | Medium     | 2d dp with 1d store, initial value!                     | :eyes: :v:    |
 
 ## Linked Lists
 
@@ -342,7 +338,6 @@
 
 
 ## Tree Basics
-
  | Problems                                    | Difficulty | Techniques                                         |
  | :-------------------------                  | :---:      | :----                                              |
  | Binary Tree PreOrder Travesal/Iterator      | Medium     | iterative/recursive                                |
@@ -352,6 +347,18 @@
  | BST Serialization/Deserialization (compact) | Medium     | preorder-recursion with min/max threshold          |
  | Find Duplicate Subtrees                     | Medium     | serialize to deduplicate, make sure serialize once |
  | Find Leaves of Binary Tree                  | Medium     | bottom up to count the height                      |
+ | Binary Tree Maximum Path Sum                | Hard       | how to calculate a path sum                        |
+ | Path Sum I/II/III                           | Medium     | III needs more attention                           |
+
+## Classic Backtracing
+
+ | Problems                          | Difficulty | Techniques                                               |
+ | :-------------------------        | :---:      | :----                                                    |
+ | Subsets                           | Medium     | recursion -> think about iterative                       |
+ | Subsets II                        | Medium     | recursion/deduplication                                  |
+ | Permutation                       | Medium     | 1) dfs (different from subset) 2) swap recursion         |
+ | Permutation II (with duplication) | Medium     | 1) dfs (with de-deuplication) 2) swap with deduplication |
+ | Next Permutation                  | Medium     | reverse order check                                      |
 
  
  
