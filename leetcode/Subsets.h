@@ -42,4 +42,19 @@ class Subsets {
             path.pop_back();
         }
     }
+
+    void dfsHelper(const vector<int>& nums,
+                   int start,
+                   vector<int>& path,
+                   vector<vector<int> >& res)
+    {
+        if(start == nums.size()) {
+            res.emplace_back(path);
+            return;
+        }
+        dfsHelper(nums, start + 1, path, res);
+        path.push_back(nums[start]);
+        dfsHelper(nums, start + 1, path, res);
+        path.pop_back();
+    }
 };

@@ -45,4 +45,28 @@ class Subset2 {
             path.pop_back();
         }
     }
+
+    void dfsHelper(const vector<int>& nums,
+                   int start,
+                   vector<int>& path,
+                   vector<vector<int> >& res)
+    {
+        if(start == nums.size()) {
+            res.emplace_back(path);
+            return;
+        }
+        dfsHelper(nums, start + 1, path, res);
+
+        if(start == 0 || nums[start] != nums[start - 1]) {
+            int i = 0;
+            while(i + 1 < nums.size() && nums[i] == nums[i + 1])
+                ++i;
+            int cnt = i - start + 1;
+            for(int j = 0; j < cnt; ++j) {
+                path.push_back(nums[start]);
+                dfsHelper(nums, start + j + 1, path, res);
+            }
+            path.resize(path.size() - cnt);
+        }
+    }
 };

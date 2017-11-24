@@ -351,6 +351,7 @@
  | Binary Tree Serialization/Deserialization   | Medium     | preorder-recursion/level-order iteration           |
  | BST Serialization/Deserialization (compact) | Medium     | preorder-recursion with min/max threshold          |
  | Find Duplicate Subtrees                     | Medium     | serialize to deduplicate, make sure serialize once |
+ | Find Leaves of Binary Tree                  | Medium     | bottom up to count the height                      |
 
  
  
