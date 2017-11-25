@@ -349,6 +349,7 @@
  | Find Leaves of Binary Tree                  | Medium     | bottom up to count the height                      |
  | Binary Tree Maximum Path Sum                | Hard       | how to calculate a path sum                        |
  | Path Sum I/II/III                           | Medium     | III needs more attention                           |
+ | Sum of Root to Leave Number                 | Medium     | each deeper level, x10                             |
 
 ## Classic Backtracing
 
@@ -360,6 +361,10 @@
  | Permutation II (with duplication) | Medium     | 1) dfs (with de-deuplication) 2) swap with deduplication |
  | Next Permutation                  | Medium     | reverse order check                                      |
 
- 
+## Dinamic Programming
+ | Problems                   | Difficulty | Techniques   |
+ | :------------------------- | :---:      | :----        |
+ | Triangle                   | Medium     | bottom up dp |
+
  
 
