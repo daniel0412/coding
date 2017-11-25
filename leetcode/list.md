@@ -117,7 +117,6 @@
  | Max Sum of Rectangle No Greater Thank K                | Hard       | idea: max sum of sub rectangle + lower bound  of diff  | :eyes: :v:        |
  | Number of Islands II                                   | Hard       |                                                        |                   |
  | Range Sum Query 2D – Mutable                           | Hard       |                                                        |                   |
- | Best Time to Buy and Sell Stock with Cooldown          | Medium     |                                                        |                   |
  | Minimum Height Trees                                   | Medium     |                                                        |                   |
  | Burst Balloons                                         | Hard       |                                                        |                   |
  | Super Ugly Number                                      | Medium     |                                                        |                   |
@@ -217,7 +216,9 @@
  | Binary Tree Level Order Traversal                      | Easy       |                                                             |                     |
  | Populating Next Right Pointers in Each Node            | Medium     |                                                             |                     |
  | Populating Next Right Pointers in Each Node II         | Hard       |                                                             |                     |
- | Best Time to Buy and Sell Stock                        | Easy       |                                                             |                     |
+ | Best Time to Buy and Sell Stock I/II                   | Easy       | greedy                                                      |                     |
+ | Best Time to Buy and Sell Stock III/IV                 | Hard       | local/global dp, sooo hard                                  |                     |
+ | Best Time to Buy and Sell Stock with Cooldown          | Medium     |                                                             |                     |
  | Longest Consecutive Sequence                           | Hard       | think differently  (linear solution)                        | :eyes: :v:          |
  | LRU Cache                                              | Hard       |                                                             |                     |
  | One Edit Distance                                      | Medium     | 3 cases, and combine for concise code                       | :v:                 |
