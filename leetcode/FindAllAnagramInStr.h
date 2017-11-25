@@ -46,7 +46,7 @@ class FindAllAnagramInStr {
     vector<int> twoCacheImpl(string s, string p)
     {
         if(s.size() < p.size())
-            return false;
+            return {};
         unordered_map<char, int> sm, pm;
         for(auto c : p) {
             ++pm[c];

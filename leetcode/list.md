@@ -50,7 +50,6 @@
  | Spiral Matrix                                          | Medium     |                                                        |                   |
  | License Key Formatting                                 | Medium     | string operation                                       | :v:               |
  | Plus One                                               | Easy       |                                                        |                   |
- | Clone Graph                                            | Medium     |                                                        |                   |
  | Word Break II                                          | Hard       | dp/back tracking/prunning                              | :v: :eyes:        |
  | Word Break                                             | Medium     | dp                                                     | :v: :eyes:        |
  | Min Stack                                              | Easy       |                                                        |                   |
@@ -79,7 +78,6 @@
  | Meeting Rooms                                          | Easy       |                                                        | :v: :lock:        |
  | Binary Tree Paths                                      | Easy       |                                                        |                   |
  | 3Sum Smaller                                           | Medium     |                                                        |                   |
- | Graph Valid Tree                                       | Medium     |                                                        |                   |
  | Alien Dictionary                                       | Hard       |                                                        |                   |
  | Closest Binary Search Tree Value                       | Easy       | BST                                                    | :eyes: :lock:     |
  | Closest Binary Search Tree Value II                    | Hard       | heap/BST                                               | :eyes: :lock:     |
@@ -250,8 +248,6 @@
  | Course Schedule III                                    | Medium     | greedy/replace the course taking longest time               | :eyes:  :v:         |
  | Minimu Height Trees                                    | Medium     | bf timeout, use graph degree                                | :eyes: :v:          |
  | Alien Dictionary                                       | Hard       | order is DAG edges (topological sort)                       | :lock: :eyes:       |
- | Clone Graph                                            | Medium     |                                                             |                     |
- | Graph Valid Tree                                       | Medium     | dfs/bfs/union find                                          | :lock: :eyes:       |
  | Diameter of Binary Tree                                | Medium     | what is needed to compute the path                          | :v:                 |
  | Paint House II                                         | Hard       | dp->no dp storage needed                                    | :lock: :eyes:       |
  | H-Index                                                | Medium     |                                                             |                     |
@@ -348,6 +344,12 @@
  | Binary Tree Maximum Path Sum                | Hard       | how to calculate a path sum                        |
  | Path Sum I/II/III                           | Medium     | III needs more attention                           |
  | Sum of Root to Leave Number                 | Medium     | each deeper level, x10                             |
+
+## Graph
+ | Problems                   | Difficulty | Techniques            |
+ | :------------------------- | :---:      | :----                 |
+ | Clone Graph                | Medium     | dfs/bfs (avoid cycle) |
+ | Graph Valid Tree           | Medium     | dfs/bfs/union find    |
 
 ## Classic Backtracing
 
