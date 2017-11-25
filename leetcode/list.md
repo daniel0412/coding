@@ -195,7 +195,6 @@
  | Reverse Nodes in k-Group                               | Hard       |                                                             |                     |
  | Implement strStr()                                     | Easy       |                                                             |                     |
  | Count and Say                                          | Easy       | iterative/recursive/deduction                               | :v:                 |
- | Group Anagrams                                         | Medium     | hash map/sort string                                        | :v:                 |
  | Pow(x, n)                                              | Medium     |                                                             |                     |
  | Sqrt(x)                                                | Medium     |                                                             |                     |
  | Merge Intervals                                        | Medium     | customized sorting + max(end1, end2) when merge             | :v:                 |
@@ -311,7 +310,6 @@
  | Max Width of Binary Tree                    | Medium     | BFS with queue (which stores node and index)            | :eyes: :v:    |
  | Majority Element                            | Easy       | cancel out                                              | :v:           |
  | Majority Element II                         | Medium     | extend to n/k case                                      | :eyes: :v:    |
- | Find All Anagrams in String                 | Easy       | sliding window                                          | :eyes: :v:    |
  | Permuation in String                        | Medium     | ideas same as sliding window                            | :v:           |
  | Smallest Range                              | Medium     | same ideas as minimum window string                     | :eyes: :v:    |
  | Maximal Gap                                 | Medium     | bucket sort idea, find bucket size and number of bucket | :eyes: :v:    |
@@ -366,5 +364,12 @@
  | :------------------------- | :---:      | :----        |
  | Triangle                   | Medium     | bottom up dp |
 
- 
+## String
+ | Problems                    | Difficulty | Techniques                          |
+ | :-------------------------  | :---:      | :----                               |
+ | Valid Anagrams              | Easy       | sort/map                            |
+ | Group Anagrams              | Medium     | hash map/sort string                |
+ | Find All Anagrams in String | Easy       | sliding window + map to track count |
+
+
 

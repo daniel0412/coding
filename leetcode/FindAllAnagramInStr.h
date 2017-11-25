@@ -23,6 +23,8 @@ class FindAllAnagramInStr {
   public:
     vector<int> findAnagrams(string s, string p)
     {
+        if(s.size() < p.size())
+            return {};
         unordered_map<char, int> m;
         for(auto c : p)
             ++m[c];
@@ -41,4 +43,41 @@ class FindAllAnagramInStr {
     }
 
   private:
+    vector<int> twoCacheImpl(string s, string p)
+    {
+        if(s.size() < p.size())
+            return false;
+        unordered_map<char, int> sm, pm;
+        for(auto c : p) {
+            ++pm[c];
+        }
+        vector<int> res;
+        int left = 0, right = 0;
+        while(right < s.size()) {
+            if(pm.find(s[right]) == pm.end()) {
+                ++right;
+                left = right;
+                sm.clear();
+                continue;
+            }
+            ++sm[s[right++]];
+            if(right - left == p.size()) {
+                if(compMap(pm, sm)) {
+                    res.push_back(left);
+                }
+                --sm[s[left++]];
+            }
+        }
+        return res;
+    }
+
+    bool compMap(unordered_map<char, int>& bench,
+                 unordered_map<char, int>& test)
+    {
+        for(auto& kv : bench) {
+            if(test[kv.first] != kv.second)
+                return false;
+        }
+        return true;
+    }
 };
