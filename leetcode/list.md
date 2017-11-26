@@ -374,12 +374,14 @@
  | Find All Anagrams in String | Easy       | sliding window + map to track count |
 
 ## Array
- | Problems                          | Difficulty | Techniques                                                      |
- | :-------------------------        | :---:      | :----                                                           |
- | Sparse Vector Multiplication      | Medium     | pair store, 1. two pointer 2. binary search 3. divide & conqure |
- | Sparse Matrix Multiplication      | Medium     | avoid multiplication when possible                              |
- | Rotate Array                      | Easy       | think at lease 3 ways                                           |
- | Search in Rotated Sorted Array    | Medium     | decide which part is sorted, then choose direction              |
- | Search in Rotated Sorted Array II | Medium     | only start/end equal affects it, how to break this              |
+ | Problems                            | Difficulty | Techniques                                                      |
+ | :-------------------------          | :---:      | :----                                                           |
+ | Sparse Vector Multiplication        | Medium     | pair store, 1. two pointer 2. binary search 3. divide & conqure |
+ | Sparse Matrix Multiplication        | Medium     | avoid multiplication when possible                              |
+ | Rotate Array                        | Easy       | think at lease 3 ways                                           |
+ | Search in Rotated Sorted Array      | Medium     | decide which part is sorted, then choose direction              |
+ | Search in Rotated Sorted Array II   | Medium     | only start/end equal affects it, how to break this              |
+ | Find Min in Rotated Sorted Array    | Medium     | early stop if sorted                                            |
+ | Find Min in Rotated Sorted Array II | Medium     | how to break start/mid/end are equal                            |
 
 
