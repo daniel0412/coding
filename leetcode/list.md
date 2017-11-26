@@ -170,7 +170,6 @@
  | Remove Invalid Parentheses                             | Hard       | count num to remove, then dfs                               | :eyes: :v:          |
  | Remove Invalid Parentheses (return one valid solution) | Hard       | 1.two loops 2. one loop                                     | :eyes: :v:          |
  | Divide Two Integers                                    | Medium     | hash map/prefix sum                                         | :v: :eyes:          |
- | Sparse Matrix Multiplication                           | Medium     | avoid multiplication when possible                          | :lock:              |
  | Roman to Integer                                       | Easy       | add then minus two if voliate                               | :v: :eyes:          |
  | Integer to Roman                                       | Medium     | find separating points, then all adding                     | :v: :eyes:          |
  | Integer to English Words                               | Hard       | list all special cases + convert hundreds                   | :v: :eyes:          |
@@ -374,5 +373,10 @@
  | Group Anagrams              | Medium     | hash map/sort string                |
  | Find All Anagrams in String | Easy       | sliding window + map to track count |
 
+## Array
+ | Problems                     | Difficulty | Techniques                                                      |
+ | :-------------------------   | :---:      | :----                                                           |
+ | Sparse Vector Multiplication | Medium     | pair store, 1. two pointer 2. binary search 3. divide & conqure |
+ | Sparse Matrix Multiplication | Medium     | avoid multiplication when possible                              |
 
 

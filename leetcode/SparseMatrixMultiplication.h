@@ -29,7 +29,7 @@ class SparseMatrixMultiplication {
               for(int j = 0; j < n; ++j) {
                   if(A[i][j])
                       for(int k = 0; k < q; ++k) {
-                          if(B[k][j]) res[i][k] += A[i][j] * B[k][j];
+                          if(B[k][j]) res[i][k] += A[i][j] * B[j][k];
                       }
                   }
               }
