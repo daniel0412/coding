@@ -19,17 +19,17 @@
 
 using namespace std;
 
-class SearchInRotatedSortedArray {
+class SearchInRotatedSortedArrayII {
   public:
-    int search(vector<int>& nums, int target)
+    bool search(vector<int>& nums, int target)
     {
         if(nums.empty())
-            return -1;
+            return false;
         int s = 0, e = nums.size() - 1;
         while(s <= e) {
             int m = s + (e - s) / 2;
             if(nums[m] == target)
-                return m;
+                return true;
             else {
                 // m->e is sorted
                 if(nums[m] < nums[e]) {
@@ -40,8 +40,8 @@ class SearchInRotatedSortedArray {
                         e = m - 1;
                     }
                 }
-                else {
-                    // s->m is sorted
+                // s->m is sorted
+                else if(nums[m] > nums[e]) {
                     if(target < nums[m] && target >= nums[s]) {
                         e = m - 1;
                     }
@@ -49,9 +49,13 @@ class SearchInRotatedSortedArray {
                         s = m + 1;
                     }
                 }
+                // not sure which side is sorted
+                else {
+                    --e;
+                }
             }
         }
-        return -1;
+        return false;
     }
 
   private:

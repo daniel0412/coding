@@ -183,7 +183,6 @@
  | Read N Characters Given Read4 II – Call multiple times | Hard       | buffer/read-write pos tracker                               | :lock: :eyes:       |
  | Remove Duplicates from Sorted Array                    | Easy       | two pointer                                                 | :v:                 |
  | Remove Duplicates from Sorted Array II                 | Medium     | two pointer + condition                                     | :v:                 |
- | Search in Rotated Sorted Array                         | Medium     | binary search, think which direction to go                  | :v: :eyes:          |
  | Merge Sorted Array                                     | Easy       | two pointer                                                 | :v:                 |
  | Sort Colors                                            | Medium     | two pointer/two side to middle                              | :v: :eyes:          |
  | Product of Array Except Self                           | Medium     | left->right, then right->left                               | :v:                 |
@@ -215,10 +214,6 @@
  | Binary Tree Level Order Traversal                      | Easy       |                                                             |                     |
  | Populating Next Right Pointers in Each Node            | Medium     |                                                             |                     |
  | Populating Next Right Pointers in Each Node II         | Hard       |                                                             |                     |
- | Best Time to Buy and Sell Stock I/II                   | Easy       | greedy                                                      |                     |
- | Best Time to Buy and Sell Stock III/IV                 | Hard       | local/global dp, sooo hard                                  |                     |
- | Best Time to Buy and Sell Stock with Cooldown          | Medium     |                                                             |                     |
- | Best Time to Buy and Sell Stock with Transaction Fee   | Medium     | current state depends on previous state sell/hold           |                     |
  | Longest Consecutive Sequence                           | Hard       | think differently  (linear solution)                        | :eyes: :v:          |
  | LRU Cache                                              | Hard       |                                                             |                     |
  | One Edit Distance                                      | Medium     | 3 cases, and combine for concise code                       | :v:                 |
@@ -362,10 +357,14 @@
  | Permutation II (with duplication) | Medium     | 1) dfs (with de-deuplication) 2) swap with deduplication |
  | Next Permutation                  | Medium     | reverse order check                                      |
 
-## Dinamic Programming
+## Dynamic Programming/Greedy
  | Problems                   | Difficulty | Techniques   |
  | :------------------------- | :---:      | :----        |
  | Triangle                   | Medium     | bottom up dp |
+ | Best Time to Buy and Sell Stock I/II                   | Easy       | greedy                                                      |                     |
+ | Best Time to Buy and Sell Stock III/IV                 | Hard       | local/global dp, sooo hard                                  |                     |
+ | Best Time to Buy and Sell Stock with Cooldown          | Medium     |                                                             |                     |
+ | Best Time to Buy and Sell Stock with Transaction Fee   | Medium     | current state depends on previous state sell/hold           |                     |
 
 ## String
  | Problems                    | Difficulty | Techniques                          |
@@ -375,10 +374,12 @@
  | Find All Anagrams in String | Easy       | sliding window + map to track count |
 
 ## Array
- | Problems                     | Difficulty | Techniques                                                      |
- | :-------------------------   | :---:      | :----                                                           |
- | Sparse Vector Multiplication | Medium     | pair store, 1. two pointer 2. binary search 3. divide & conqure |
- | Sparse Matrix Multiplication | Medium     | avoid multiplication when possible                              |
- | Rotate Array                 | Easy       | think at lease 3 ways                                           |
+ | Problems                          | Difficulty | Techniques                                                      |
+ | :-------------------------        | :---:      | :----                                                           |
+ | Sparse Vector Multiplication      | Medium     | pair store, 1. two pointer 2. binary search 3. divide & conqure |
+ | Sparse Matrix Multiplication      | Medium     | avoid multiplication when possible                              |
+ | Rotate Array                      | Easy       | think at lease 3 ways                                           |
+ | Search in Rotated Sorted Array    | Medium     | decide which part is sorted, then choose direction              |
+ | Search in Rotated Sorted Array II | Medium     | only start/end equal affects it, how to break this              |
 
 
