@@ -379,5 +379,6 @@
  | :-------------------------   | :---:      | :----                                                           |
  | Sparse Vector Multiplication | Medium     | pair store, 1. two pointer 2. binary search 3. divide & conqure |
  | Sparse Matrix Multiplication | Medium     | avoid multiplication when possible                              |
+ | Rotate Array                 | Easy       | think at lease 3 ways                                           |
 
 
