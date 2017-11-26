@@ -218,6 +218,7 @@
  | Best Time to Buy and Sell Stock I/II                   | Easy       | greedy                                                      |                     |
  | Best Time to Buy and Sell Stock III/IV                 | Hard       | local/global dp, sooo hard                                  |                     |
  | Best Time to Buy and Sell Stock with Cooldown          | Medium     |                                                             |                     |
+ | Best Time to Buy and Sell Stock with Transaction Fee   | Medium     | current state depends on previous state sell/hold           |                     |
  | Longest Consecutive Sequence                           | Hard       | think differently  (linear solution)                        | :eyes: :v:          |
  | LRU Cache                                              | Hard       |                                                             |                     |
  | One Edit Distance                                      | Medium     | 3 cases, and combine for concise code                       | :v:                 |
