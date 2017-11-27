@@ -48,6 +48,7 @@ class MaximumBinaryTree {
 
     TreeNode* iterative(const vector<int>& nums)
     {
+        // works as a stack
         vector<TreeNode*> nodes;
         for(auto n : nums) {
             TreeNode* cur = new TreeNode(n);

@@ -34,4 +34,30 @@ class ValidBST {
         return recursiveImpl(root->left, minVal, root->val) &&
             recursiveImpl(root->right, root->val, maxVal);
     }
+
+    bool iterativeImpl(TreeNode* root)
+    {
+        if(root == nullptr)
+            return true;
+        stack<TreeNode*> s;
+        TreeNode* cur = root;
+        while(cur) {
+            s.emplace(cur);
+            cur = cur->left;
+        }
+        long long prev = numeric_limits<long long>::min();
+        while(!s.empty()) {
+            cur = s.top();
+            s.pop();
+            if(prev >= cur->val)
+                return false;
+            prev = cur->val;
+            cur = cur->right;
+            while(cur) {
+                s.emplace(cur);
+                cur = cur->left;
+            }
+        }
+        return true;
+    }
 };

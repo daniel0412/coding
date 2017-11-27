@@ -175,4 +175,46 @@ class MinWinStr {
         return minStr.size() <= s.size() ? minStr : "";
     }
 
+    string slidingWindowImpl(string s, string t)
+    {
+        int sn = s.size(), tn = t.size();
+        if(tn > sn)
+            return "";
+        unordered_map<char, int> m;
+        for(auto c : t)
+            ++m[c];
+        int left = 0, right = 0, cnt = tn;
+        int minLen = numeric_limits<int>::max();
+        string minStr;
+        while(right < sn) {
+            if(m.find(s[right]) == m.end()) {
+                ++right;
+                continue;
+            }
+            else {
+                if(m[s[right++]]-- > 0) {
+                    --cnt;
+                }
+                if(cnt == 0) {
+                    while(1) {
+                        if(m.find(s[left]) == m.end()) {
+                            ++left;
+                        }
+                        else if(m[s[left]] < 0) {
+                            ++m[s[left++]];
+                        }
+                        else {
+                            break;
+                        }
+                    }
+                    if(right - left < minLen) {
+                        minLen = min(minLen, right - left);
+                        minStr = s.substr(left, right - left);
+                    }
+                    ++m[s[left++]];
+                    ++cnt;
+                }
+            }
+            return minStr;
+        }
 };

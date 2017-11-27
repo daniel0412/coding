@@ -76,7 +76,6 @@
  | Group Shifted Strings                                  | Easy       |                                                        |                   |
  | Meeting Rooms II                                       | Medium     | sort/heap                                              | :v: :eyes: :lock: |
  | Meeting Rooms                                          | Easy       |                                                        | :v: :lock:        |
- | Binary Tree Paths                                      | Easy       |                                                        |                   |
  | 3Sum Smaller                                           | Medium     |                                                        |                   |
  | Alien Dictionary                                       | Hard       |                                                        |                   |
  | Closest Binary Search Tree Value                       | Easy       | BST                                                    | :eyes: :lock:     |
@@ -153,10 +152,8 @@
  | Split Array into Consecutive Sequence                  | Medium     | array sorted, greedy idea                                   | :eyes: :v:          |
  | Split Array With Equal Sums                            | Medium     | cache sum + split strategy                                  | :eyes: :lock:       |
  | Split Array Largest Sum                                | Hard       | find range, then binary search /dp                          | :eyes:  :v:         |
- | Minimum Window Substring                               | Hard       | hash map/idea(ci qu fa)                                     | :v: :eyes:          |
  | Rearrange String K Distance Apart                      | Hard       | hash/heap/rearrange task w/o reorder                        | :lock: :eyes:       |
  | Task Scheduler                                         | Medium     | find formular + heap solution                               | :eyes: :v:          |
- | Combination Sum IV                                     | Medium     | dp (different from I/II/III)                                | :v: :eyes:          |
  | Continuous Subarray Sum                                | Medium     | hash map/(a-c)%b==0/cornercase                              | :v: :eyes:          |
  | Maximum Subarray                                       | Easy       | dp/think about divide & conqure                             | :v:                 |
  | Maximum Sum of 3 Non-overlapping Subarrays             | Hard       | presum, fix middle subarray, dp to cache left/right max     | :eyes: :v:          |
@@ -164,7 +161,6 @@
  | Maximum Size Subarray Sum Equals k                     | Medium     | hash map/idea                                               | :v: :eyes:          |
  | Subarray Sum Equals k                                  | Medium     | hash map/idea                                               | :v: :eyes:          |
  | Subarray Prod Less Than k                              | Medium     | idea                                                        | :eyes: :v:          |
- | Contiguous Array                                       | Medium     | hash map/presum idea/store mod                              | :v: :eyes:          |
  | Valid Parentheses                                      | Easy       | stack/non-stack counter solution                            | :v:                 |
  | Generate Parentheses                                   | Medium     | n-1 -> n                                                    | :v: :eyes:          |
  | Remove Invalid Parentheses                             | Hard       | count num to remove, then dfs                               | :eyes: :v:          |
@@ -184,7 +180,6 @@
  | Remove Duplicates from Sorted Array                    | Easy       | two pointer                                                 | :v:                 |
  | Remove Duplicates from Sorted Array II                 | Medium     | two pointer + condition                                     | :v:                 |
  | Merge Sorted Array                                     | Easy       | two pointer                                                 | :v:                 |
- | Sort Colors                                            | Medium     | two pointer/two side to middle                              | :v: :eyes:          |
  | Product of Array Except Self                           | Medium     | left->right, then right->left                               | :v:                 |
  | Merge k Sorted Lists                                   | Hard       | min heap                                                    | :v:                 |
  | Reverse Nodes in k-Group                               | Hard       |                                                             |                     |
@@ -195,8 +190,6 @@
  | Merge Intervals                                        | Medium     | customized sorting + max(end1, end2) when merge             | :v:                 |
  | Insert Interval                                        | Hard       | think about it twice                                        | :v: :eyes:          |
  | Encode/Decode Tiny Url                                 | Medium     | rand()/unordered_map                                        | :v: :eyes:          |
- | Decode Ways                                            | Medium     | recursion(slow)/dp(cornor cases)                            | :v: :eyes:          |
- | Decode Ways II                                         | Medium     | with * decoded as 1-9                                       | :v: :eyes:          |
  | Simplify Path                                          | Medium     | last char not being '/' case                                | :v:                 |
  | Wildcard Matching                                      | Hard       | greedy two pointer: mark * matchign start pos               | :v: :eyes:          |
  | Regular Expression Matching                            | Hard       | hard&slow recursion/fast dp!!!                              | :v: :eyes:          |
@@ -251,12 +244,9 @@
  | Find the Celebrity                                     | Medium     | a knows b, a is not candidate; otherwise a is candidate     | :eyes::lock:        |
  | First Bad Version                                      | Easy       |                                                             |                     |
  | Walls and Gates                                        | Medium     | start from gates see how far it goes                        | :v:                 |
- | Binary Tree Paths                                      | Easy       | dfs                                                         | :v:                 |
  | Inorder Successor in BST                               | Medium     | BST property, track last larger node                        | :eyes: :lock:       |
  | Binary Tree Vertical Order Traversal                   | Medium     | map/inorder recursion/queue iteration                       | :eyes: :lock:       |
  | Increasing Triplet Subsequence                         | Medium     | think hard, tricky                                          | :v: :eyes:          |
- | Hamming Distance                                       | Easy       | clear right most left 1                                     | :eyes:   :v:        |
- | Total Hamming Distance                                 | Medium     | vertical 1s, combination                                    | :eyes: :v:          |
  | Random Pick Index                                      | Medium     | reservoir sampling                                          | :eyes: :v:          |
  | Design Tic Tac Toe                                     | Medium     | extra space to keep track of current status                 | :eyes: :lock:       |
  | Restore IP Address                                     | Medium     | recursion                                                   | :eyes: :v:          |
@@ -266,7 +256,6 @@
  | Problems                                    | Difficulty | Techniques                                              | Status        |
  | :-------------------------                  | :---:      | :----                                                   | :---:         |
  | Delete a Node in BST                        | Medium     | analyze 3 situations                                    | :eyes: :v:    |
- | Maximum Binary Tree                         | Medium     | recursion/iterative (think this)                        | :eyes: :v:    |
  | Print Binary Tree                           | Medium     | find matrix size, then populate                         | :eyes: :v:    |
  | Find Mode in BST                            | Medium     | BST inorder is sorted                                   | :eyes: :v:    |
  | Add One Row to Tree                         | Medium     | recursion/iterative                                     | :v:           |
@@ -340,6 +329,8 @@
  | Binary Tree Maximum Path Sum                | Hard       | how to calculate a path sum                        |
  | Path Sum I/II/III                           | Medium     | III needs more attention                           |
  | Sum of Root to Leave Number                 | Medium     | each deeper level, x10                             |
+ | Binary Tree Paths                           | Easy       | dfs                                                |
+ | Maximum Binary Tree                         | Medium     | recursion/iterative (think this)                   |
 
 ## Graph
  | Problems                   | Difficulty | Techniques            |
@@ -356,22 +347,27 @@
  | Permutation                       | Medium     | 1) dfs (different from subset) 2) swap recursion         |
  | Permutation II (with duplication) | Medium     | 1) dfs (with de-deuplication) 2) swap with deduplication |
  | Next Permutation                  | Medium     | reverse order check                                      |
+ | Combination Sum I/II/III          | Medium     | dfs+backtracing                                          |
+ | Combination Sum IV                | Medium     | dp (different from I/II/III)                             |
 
 ## Dynamic Programming/Greedy
- | Problems                   | Difficulty | Techniques   |
- | :------------------------- | :---:      | :----        |
- | Triangle                   | Medium     | bottom up dp |
- | Best Time to Buy and Sell Stock I/II                   | Easy       | greedy                                                      |                     |
- | Best Time to Buy and Sell Stock III/IV                 | Hard       | local/global dp, sooo hard                                  |                     |
- | Best Time to Buy and Sell Stock with Cooldown          | Medium     |                                                             |                     |
- | Best Time to Buy and Sell Stock with Transaction Fee   | Medium     | current state depends on previous state sell/hold           |                     |
+ | Problems                                             | Difficulty | Techniques                                        |
+ | :-------------------------                           | :---:      | :----                                             |
+ | Triangle                                             | Medium     | bottom up dp                                      |
+ | Decode Ways                                          | Medium     | recursion(slow)/dp(cornor cases)                  |
+ | Decode Ways II                                       | Medium     | with * decoded as 1-9                             |
+ | Best Time to Buy and Sell Stock I/II                 | Easy       | greedy                                            |  |
+ | Best Time to Buy and Sell Stock III/IV               | Hard       | local/global dp, sooo hard                        |  |
+ | Best Time to Buy and Sell Stock with Cooldown        | Medium     |                                                   |  |
+ | Best Time to Buy and Sell Stock with Transaction Fee | Medium     | current state depends on previous state sell/hold |  |
 
 ## String
- | Problems                    | Difficulty | Techniques                          |
- | :-------------------------  | :---:      | :----                               |
- | Valid Anagrams              | Easy       | sort/map                            |
- | Group Anagrams              | Medium     | hash map/sort string                |
- | Find All Anagrams in String | Easy       | sliding window + map to track count |
+ | Problems                    | Difficulty | Techniques                                   |
+ | :-------------------------  | :---:      | :----                                        |
+ | Valid Anagrams              | Easy       | sort/map                                     |
+ | Group Anagrams              | Medium     | hash map/sort string                         |
+ | Find All Anagrams in String | Easy       | sliding window template + map to track count |
+ | Minimum Window Substring    | Hard       | sliding window template + map/count to track |
 
 ## Array
  | Problems                            | Difficulty | Techniques                                                      |
@@ -383,5 +379,13 @@
  | Search in Rotated Sorted Array II   | Medium     | only start/end equal affects it, how to break this              |
  | Find Min in Rotated Sorted Array    | Medium     | early stop if sorted                                            |
  | Find Min in Rotated Sorted Array II | Medium     | how to break start/mid/end are equal                            |
+ | Sort Colors                         | Medium     | two pointer/two side to middle                                  |
+ | Contiguous Array                    | Medium     | hash map/presum idea/store mod                                  |
+
+## Bits Manipulation
+ | Problems                   | Difficulty | Techniques               |
+ | :------------------------- | :---:      | :----                    |
+ | Hamming Distance           | Easy       | clear right most left 1  |
+ | Total Hamming Distance     | Medium     | vertical 1s, combination |
 
 
