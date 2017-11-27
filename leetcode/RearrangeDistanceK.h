@@ -42,23 +42,6 @@ class RearrangeDistanceK {
               q.push({kv.second, kv.first});
           }
 
-          // fill the res string from the max heap
-          /* this part is wrong
-          const char DEFAULT_CHAR = '0';
-          int len = str.size();
-          string res(len, DEFAULT_CHAR);
-
-          while(!q.empty()) {
-              pair<int, char> p = q.top();
-              int startId = res.find_first_of(DEFAULT_CHAR);
-              for(int i = 0; i < p.first; ++i) {
-                  int nextId = startId + i * k;
-                  if(nextId >= len) return "";
-                  res[nextId] = p.second;
-              }
-              q.pop();
-          }
-          */
           int len = str.size();
           string res;
           while(!q.empty()) {

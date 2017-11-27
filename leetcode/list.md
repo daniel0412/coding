@@ -26,7 +26,6 @@
  | Expression Add Operators                               | Hard       |                                                        |                   |
  | Populating Next Right Pointers in Each Node II         | Hard       | iteration                                              | :v: :eyes:        |
  | Populating Next Right Pointers in Each Node            | Medium     | iteration                                              | :v:               |
- | Merge k Sorted Lists                                   | Hard       | heap                                                   | :v:               |
  | Insert Interval                                        | Hard       | corner cases                                           | :v:               |
  | Merge Intervals                                        | Medium     |                                                        | :v:               |
  | Word Squares                                           | Hard       | dfs/trie                                               | :warning: :lock:  |
@@ -141,14 +140,6 @@
  | Problems                                               | Difficulty | Related Problems                                            | Status              |
  | :-------------------------                             | :---:      | :----                                                       | :---:               |
  | Move Zeroes                                            | Easy       | array/swap                                                  | :v:                 |
- | Two Sum                                                | Easy       | hashmap/two pointer                                         | :v: :eyes:          |
- | Two Sum II – Input array is sorted                     | Easy       | two pointer to squeeze                                      | :v:                 |
- | Two Sum III – Data structure design                    | Easy       | hashmap/multiset                                            | :v:                 |
- | Two Sum in BST                                         | Easy       | inorder to form sorted array, two pointer                   | :eyes: :v:          |
- | 3Sum                                                   | Medium     | two pointer/de-duplicate                                    | :v: :eyes:          |
- | 3Sum Closest                                           | Medium     | two pointer/de-dupicate                                     | :v:                 |
- | 3Sum Smaller                                           | Medium     | two pointer                                                 | :v:                 |
- | Target Sum                                             | Medium     | recursion                                                   | :v:                 |
  | Split Array into Consecutive Sequence                  | Medium     | array sorted, greedy idea                                   | :eyes: :v:          |
  | Split Array With Equal Sums                            | Medium     | cache sum + split strategy                                  | :eyes: :lock:       |
  | Split Array Largest Sum                                | Hard       | find range, then binary search /dp                          | :eyes:  :v:         |
@@ -161,10 +152,6 @@
  | Maximum Size Subarray Sum Equals k                     | Medium     | hash map/idea                                               | :v: :eyes:          |
  | Subarray Sum Equals k                                  | Medium     | hash map/idea                                               | :v: :eyes:          |
  | Subarray Prod Less Than k                              | Medium     | idea                                                        | :eyes: :v:          |
- | Valid Parentheses                                      | Easy       | stack/non-stack counter solution                            | :v:                 |
- | Generate Parentheses                                   | Medium     | n-1 -> n                                                    | :v: :eyes:          |
- | Remove Invalid Parentheses                             | Hard       | count num to remove, then dfs                               | :eyes: :v:          |
- | Remove Invalid Parentheses (return one valid solution) | Hard       | 1.two loops 2. one loop                                     | :eyes: :v:          |
  | Divide Two Integers                                    | Medium     | hash map/prefix sum                                         | :v: :eyes:          |
  | Roman to Integer                                       | Easy       | add then minus two if voliate                               | :v: :eyes:          |
  | Integer to Roman                                       | Medium     | find separating points, then all adding                     | :v: :eyes:          |
@@ -180,8 +167,8 @@
  | Remove Duplicates from Sorted Array                    | Easy       | two pointer                                                 | :v:                 |
  | Remove Duplicates from Sorted Array II                 | Medium     | two pointer + condition                                     | :v:                 |
  | Merge Sorted Array                                     | Easy       | two pointer                                                 | :v:                 |
- | Product of Array Except Self                           | Medium     | left->right, then right->left                               | :v:                 |
  | Merge k Sorted Lists                                   | Hard       | min heap                                                    | :v:                 |
+ | Product of Array Except Self                           | Medium     | left->right, then right->left                               | :v:                 |
  | Reverse Nodes in k-Group                               | Hard       |                                                             |                     |
  | Implement strStr()                                     | Easy       |                                                             |                     |
  | Count and Say                                          | Easy       | iterative/recursive/deduction                               | :v:                 |
@@ -298,13 +285,10 @@
  | Elimination Game                            | Medium     |                                                         | :eyes: :v:    |
  | Top K Frequent Words                        | Medium     | think about how to define comparator                    | :v:           |
  | Top K Frequent Element                      | Medium     | 1. map+heap 2. bucket sort                              | :eyes: :v:    |
- | Partition Equal Subset Sum                  | Medium     | recursion timout, dp to the rescue                      | :eyes: :v:    |
- | Partition to k Equal Sum Subset             | Medium     | dfs recursion                                           | :eyes: :v:    |
  | Equal Tree Partition                        | Medium     | node sum + corner case                                  | :eyes: :v:    |
  | Partition List                              | Medium     | two pointers                                            | :v:           |
  | Palindrom Partition                         | Medium     |                                                         | :eyes: :v:    |
  | Palindrom Partition II                      | Hard       | 1. dp 2. two-sided extending                            | :eyes: :v:    |
- | Convert BST to Double Linked List           | Medium     | think about the recursion                               | :eyes: :v:    |
  | Balanced Binary Tree                        | Easy       | 1. top-down 2. buttom up                                | :eyes: :v:    |
  | Surrounded Region                           | Medium     | from edge to dfs mark reachable cell                    | :eyes: :v:    |
  | Minimum Path Sum                            | Medium     | 2d dp with 1d store, initial value!                     | :eyes: :v:    |
@@ -331,6 +315,8 @@
  | Sum of Root to Leave Number                 | Medium     | each deeper level, x10                             |
  | Binary Tree Paths                           | Easy       | dfs                                                |
  | Maximum Binary Tree                         | Medium     | recursion/iterative (think this)                   |
+ | Convert Sorted Array/List to BST            | Medium     | concise coding                                     |
+ | Convert BST to Double Linked List           | Medium     | think about the recursion                          |
 
 ## Graph
  | Problems                   | Difficulty | Techniques            |
@@ -339,6 +325,44 @@
  | Graph Valid Tree           | Medium     | dfs/bfs/union find    |
 
 ## Classic Backtracing
+
+### common points
+- code skeletons for backtracing
+```cpp
+// recursively call dfs twice w/o current element
+// but deduplication is a bit tricker
+void dfs(nums, id, path, res){
+    // do not include
+    dfs(nums, id+1, path, res);
+    // do include
+    path.push_back(nums[id]);
+    dfs(nums, id+1, path, res);
+    path.pop_back();
+}
+// better loop skeleton to add deduplication
+// current loop include the element
+// next loop pop back to backtrace previous state where the element is not included
+// next loop 
+void dfs(nums, id, path, res) {
+    for(int i = id; i < nums.size(); ++i) {
+        path.push_back(nums[i]);
+        dfs(nums, i+1, path, res);
+        path.pop_back();
+    }
+}
+
+// deduplicate
+void dfs(nums, id, path, res) {
+    for(int i = id; i < nums.size(); ++i) {
+        // obviouse, in the following case, the element is included in the previous stack frame
+        if(i > id && nums[i] == nums[i-1]) continue;
+        path.push_back(nums[i]);
+        dfs(nums, i+1, path, res);
+        path.pop_back();
+    }
+}
+```
+
 
  | Problems                          | Difficulty | Techniques                                               |
  | :-------------------------        | :---:      | :----                                                    |
@@ -349,6 +373,9 @@
  | Next Permutation                  | Medium     | reverse order check                                      |
  | Combination Sum I/II/III          | Medium     | dfs+backtracing                                          |
  | Combination Sum IV                | Medium     | dp (different from I/II/III)                             |
+ | Partition Equal Subset Sum        | Medium     | recursion timout, dp to the rescue                       |
+ | Partition to k Equal Sum Subset   | Medium     | dfs recursion                                            |
+
 
 ## Dynamic Programming/Greedy
  | Problems                                             | Difficulty | Techniques                                        |
@@ -362,12 +389,17 @@
  | Best Time to Buy and Sell Stock with Transaction Fee | Medium     | current state depends on previous state sell/hold |  |
 
 ## String
- | Problems                    | Difficulty | Techniques                                   |
- | :-------------------------  | :---:      | :----                                        |
- | Valid Anagrams              | Easy       | sort/map                                     |
- | Group Anagrams              | Medium     | hash map/sort string                         |
- | Find All Anagrams in String | Easy       | sliding window template + map to track count |
- | Minimum Window Substring    | Hard       | sliding window template + map/count to track |
+ | Problems                                               | Difficulty | Techniques                                   |
+ | :-------------------------                             | :---:      | :----                                        |
+ | Valid Anagrams                                         | Easy       | sort/map                                     |
+ | Group Anagrams                                         | Medium     | hash map/sort string                         |
+ | Find All Anagrams in String                            | Easy       | sliding window template + map to track count |
+ | Minimum Window Substring                               | Hard       | sliding window template + map/count to track |
+ | Generate Parentheses                                   | Medium     | n-1 -> n                                     |
+ | Valid Parentheses                                      | Easy       | stack/non-stack counter solution             |
+ | Remove Invalid Parentheses                             | Hard       | count num to remove, then dfs                |
+ | Remove Invalid Parentheses (return one valid solution) | Hard       | 1.two loops 2. one loop                      |
+
 
 ## Array
  | Problems                            | Difficulty | Techniques                                                      |
@@ -381,6 +413,15 @@
  | Find Min in Rotated Sorted Array II | Medium     | how to break start/mid/end are equal                            |
  | Sort Colors                         | Medium     | two pointer/two side to middle                                  |
  | Contiguous Array                    | Medium     | hash map/presum idea/store mod                                  |
+ | Two Sum                             | Easy       | hashmap/two pointer                                             |
+ | Two Sum II – Input array is sorted  | Easy       | two pointer to squeeze                                          |
+ | Two Sum III – Data structure design | Easy       | hashmap/multiset                                                |
+ | Two Sum in BST                      | Easy       | inorder to form sorted array, two pointer                       |
+ | 3Sum                                | Medium     | two pointer/de-duplicate                                        |
+ | 3Sum Closest                        | Medium     | two pointer/de-dupicate                                         |
+ | 3Sum Smaller                        | Medium     | two pointer                                                     |
+ | Target Sum                          | Medium     | recursion                                                       |
+
 
 ## Bits Manipulation
  | Problems                   | Difficulty | Techniques               |

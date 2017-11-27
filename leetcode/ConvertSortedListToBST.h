@@ -21,48 +21,26 @@ using namespace std;
 
 class ConvertSortedListToBST {
   public:
-    TreeNode* sortedListToBST(ListNode* head) { return recursiveImpl(head); }
+    TreeNode* sortedListToBST(ListNode* head) { return recursiveImpl(head, nullptr); }
 
   private:
-    TreeNode* recursiveImpl(ListNode* head)
+    TreeNode* recursiveImpl(ListNode* head, ListNode* tail)
     {
-        if(head == nullptr)
+        if(head == tail)
             return nullptr;
-        ListNode *first = nullptr, *mid = nullptr, *second = nullptr;
-        getMid(head, first, mid, second);
-        delete mid;
+        if(head->next == tail) {
+            TreeNode* root = new TreeNode(head->val);
+            return root;
+        }
+        ListNode *mid = head, *tmp = head;
+        // attention to this stopping criteria
+        while(tmp != tail && tmp->next != tail) {
+            mid = mid->next;
+            tmp = tmp->next->next;
+        }
         TreeNode* root = new TreeNode(mid->val);
-        root->left = recursiveImpl(first);
-        root->right = recursiveImpl(second);
+        root->left = recursiveImpl(head, mid);
+        root->right = recursiveImpl(mid->next, tail);
         return root;
-    }
-
-    void getMid(ListNode* head,
-                ListNode*& first,
-                ListNode*& mid,
-                ListNode*& second)
-    {
-        if(head == nullptr)
-            return;
-        if(head->next == nullptr) {
-            mid = head;
-            return;
-        }
-        if(head->next->next == nullptr) {
-            first = nullptr;
-            mid = head;
-            second = head->next;
-            return;
-        }
-        ListNode *slow = head, *fast = head->next;
-        while(fast->next && fast->next->next) {
-            slow = slow->next;
-            fast = fast->next->next;
-        }
-        first = head;
-        mid = slow->next;
-        second = slow->next->next;
-        slow->next = nullptr;
-        return;
     }
 };
