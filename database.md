@@ -5,3 +5,7 @@ NoSQL is a collection of data represented in the form of
 - document store
 - wide column store
 - graph database
+
+
+
+### Consistent Hashing
