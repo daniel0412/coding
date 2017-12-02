@@ -77,8 +77,6 @@
  | Meeting Rooms                                          | Easy       |                                                        | :v: :lock:        |
  | 3Sum Smaller                                           | Medium     |                                                        |                   |
  | Alien Dictionary                                       | Hard       |                                                        |                   |
- | Closest Binary Search Tree Value                       | Easy       | BST                                                    | :eyes: :lock:     |
- | Closest Binary Search Tree Value II                    | Hard       | heap/BST                                               | :eyes: :lock:     |
  | Search a 2D Matrix                                     | Medium     | binary search, location conversion                     | :v:               |
  | Search a 2D Matrix II                                  | Medium     | find correct starting location                         | :v: :eyes:        |
  | Kth Largest Element in an Array                        | Medium     | quick select/heap                                      | :v: :eyes:        |
@@ -317,6 +315,8 @@
  | Maximum Binary Tree                         | Medium     | recursion/iterative (think this)                   |
  | Convert Sorted Array/List to BST            | Medium     | concise coding                                     |
  | Convert BST to Double Linked List           | Medium     | think about the recursion                          |
+ | Closest Binary Search Tree Value            | Easy       | BST                                                |
+ | Closest Binary Search Tree Value II         | Hard       | heap/BST                                           |
 
 ## Graph
  | Problems                   | Difficulty | Techniques            |
