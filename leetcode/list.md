@@ -190,7 +190,6 @@
  | Binary Tree Level Order Traversal                      | Easy       |                                                             |                     |
  | Populating Next Right Pointers in Each Node            | Medium     |                                                             |                     |
  | Populating Next Right Pointers in Each Node II         | Hard       |                                                             |                     |
- | Longest Consecutive Sequence                           | Hard       | think differently  (linear solution)                        | :eyes: :v:          |
  | LRU Cache                                              | Hard       |                                                             |                     |
  | One Edit Distance                                      | Medium     | 3 cases, and combine for concise code                       | :v:                 |
  | Edit Distance                                          | Hard       | 2-dim dp                                                    | :v:  :eyes:         |
@@ -288,6 +287,7 @@
  | Balanced Binary Tree                        | Easy       | 1. top-down 2. buttom up                                | :eyes: :v:    |
  | Surrounded Region                           | Medium     | from edge to dfs mark reachable cell                    | :eyes: :v:    |
  | Minimum Path Sum                            | Medium     | 2d dp with 1d store, initial value!                     | :eyes: :v:    |
+ | Longest Line of Consecutive Ones in Matrix  | Medium     | 3-dim dp/dfs                                            | :lock:        |
 
 ## Linked Lists
 
@@ -342,7 +342,7 @@ void dfs(nums, id, path, res){
 // better loop skeleton to add deduplication
 // current loop include the element
 // next loop pop back to backtrace previous state where the element is not included
-// next loop 
+// next loop
 void dfs(nums, id, path, res) {
     for(int i = id; i < nums.size(); ++i) {
         path.push_back(nums[i]);
@@ -421,6 +421,7 @@ void dfs(nums, id, path, res) {
  | 3Sum Closest                        | Medium     | two pointer/de-dupicate                                         |
  | 3Sum Smaller                        | Medium     | two pointer                                                     |
  | Target Sum                          | Medium     | recursion                                                       |
+ | Longest Consecutive Sequence        | Hard       | think differently  (linear solution)                            |
 
 
 ## Bits Manipulation
