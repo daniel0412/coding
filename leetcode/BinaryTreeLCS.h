@@ -50,28 +50,26 @@ class BinaryTreeLCS {
   public:
     int longestConsecutive(TreeNode* root)
     {
+        if(root == nullptr)
+            return 0;
         int maxLen = 0;
-        recursiveImpl(nullptr, root, maxLen, 0);
-        return maxLen;
+        return helper(root, maxLen, 0, root->val);
     }
 
   private:
-    void recursiveImpl(TreeNode* parent,
-                       TreeNode* child,
-                       int& maxLen,
-                       int curLen)
+    void helper(TreeNode* root, int& maxLen, int curLen, int target)
     {
-        if(child == nullptr) {
+        if(root == nullptr)
             return;
-        }
-        if(parent == nullptr || (child->val - 1 != parent->val)) {
-            curLen = 1;
-        }
-        else {
+        if(root->val == target) {
             ++curLen;
         }
-        maxLen = maxLen > curLen ? maxLen : curLen;
-        recursiveImpl(child, child->left, maxLen, curLen);
-        recursiveImpl(child, child->right, maxLen, curLen);
+        else {
+            curLen = 1;
+        }
+        maxLen = max(maxLen, curLen);
+        target = root->val + 1;
+        helper(root->left, maxLen, curLen, target);
+        helper(root->right, maxLen, curLen, target);
     }
 };

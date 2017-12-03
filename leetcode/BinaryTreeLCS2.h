@@ -22,42 +22,42 @@ class BinaryTreeLCS2 {
   public:
     int longestConsecutive(TreeNode* root)
     {
-        d_len = 0;
-        recursiveImpl(root);
-        return d_len;
+        int maxLen = 0;
+        recursiveImpl(root, maxLen);
+        return maxLen;
     }
 
   private:
-    int d_len;
-    pair<int, int> recursiveImpl(TreeNode* parent)
+    pair<int, int> recursiveImpl(TreeNode* root, int& maxLen)
     {
-        pair<int, int> cPair = make_pair(0, 0);
-        if(parent == nullptr)
-            return cPair;
+        if(root == nullptr)
+            return {0, 0};
 
-        pair<int, int> lPair = make_pair(0, 0);
-        pair<int, int> rPair = make_pair(0, 0);
-        cPair.first = 1;
-        cPair.second = 1;
-
-        if(parent->left) {
-            lPair = recursiveImpl(parent->left);
-            if(parent->left->val == parent->val + 1) {
-                cPair.first = max(cPair.first, lPair.first + 1);
+        int inc = 0, dec = 0;
+        // calculate left subtree length of increasing/decreasing path
+        if(root->left) {
+            auto lPair = recursiveImpl(root->left);
+            if(root->left->val == root->val + 1) {
+                inc = max(inc, lPair.first);
             }
-            else if(parent->left->val == parent->val - 1) {
-                cPair.second = max(cPair.second, lPair.second + 1);
+            else if(root->left->val == root->val - 1) {
+                dec = max(dec, lPair.second);
             }
         }
-        if(parent->right) {
-            rPair = recursiveImpl(parent->right);
-            if(parent->right->val == parent->val + 1) {
-                cPair.first = max(cPair.first, rPair.first + 1);
+
+        // right subtree length of increasing/decreasing path
+        if(root->right) {
+            auto rPair = recursiveImpl(root->right);
+            if(root->right->val == root->val + 1) {
+                inc = max(inc, rPair.first);
             }
-            else if(parent->right->val == parent->val - 1) {
-                cPair.second = max(cPair.second, rPair.second + 1);
+            else if(root->right->val == root->val - 1) {
+                dec = max(dec, rPair.second);
             }
         }
-        d_len = max(d_len, cPair.first + cPair.second - 1);
+        // update max length
+        maxLen = max(maxLen, inc + dec + 1);
+        // return from current node, to left/right max length of  inc/dec path
+        return {inc, dec};
     }
 };

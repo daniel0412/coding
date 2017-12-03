@@ -104,8 +104,6 @@
  | Flip Game II                                           | Medium     |                                                        |                   |
  | Max Consecutive Ones                                   | Easy       |                                                        | :v:               |
  | Max Consecutive Ones  II                               | Medium     | idea                                                   | :eyes: :v:        |
- | Binary Tree Longest Consecutive Sequence               | Medium     | dfs                                                    | :lock:            |
- | Binary Tree Longest Consecutive Sequence II            | Medium     | dfs                                                    | :lock:            |
  | Longest Increasing Path in a Matrix                    | Hard       | dfs + memorization to prun                             | :eyes: :v:        |
  | Longest Increasing Subsequence                         | Medium     | construct array, then binary search to replace         | :eyes: :v:        |
  | Number of Longest Increasing Subsequence               | Medium     |                                                        | :eyes: :v:        |
@@ -317,6 +315,8 @@
  | Convert BST to Double Linked List           | Medium     | think about the recursion                          |
  | Closest Binary Search Tree Value            | Easy       | BST                                                |
  | Closest Binary Search Tree Value II         | Hard       | heap/BST                                           |
+ | Binary Tree Longest Consecutive Sequence    | Medium     | top-down to count, and track max length            |
+ | Binary Tree Longest Consecutive Sequence II | Medium     | bottom-up to count left/right max inc/dec length   |
 
 ## Graph
  | Problems                   | Difficulty | Techniques            |
