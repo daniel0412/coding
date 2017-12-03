@@ -53,8 +53,6 @@
  | Word Break                                             | Medium     | dp                                                     | :v: :eyes:        |
  | Min Stack                                              | Easy       |                                                        |                   |
  | Read N Characters Given Read4 II – Call multiple times | Hard       |                                                        |                   |
- | Longest Substring with At Most Two Distinct Characters | Hard       |                                                        |                   |
- | Longest Substring with At Most K Distinct Characters   | Hard       | hashmap                                                | :v:   :lock:      |
  | Repeated Substring Pattern                             | Easy       |                                                        | :eyes: :v:        |
  | Heaters                                                | Easy       | upper/lower bound                                      | :eyes: :v:        |
  | Find Peak Element                                      | Medium     |                                                        |                   |
@@ -395,6 +393,9 @@ void dfs(nums, id, path, res) {
  | Group Anagrams                                         | Medium     | hash map/sort string                         |
  | Find All Anagrams in String                            | Easy       | sliding window template + map to track count |
  | Minimum Window Substring                               | Hard       | sliding window template + map/count to track |
+ | Longest subsring without repeating chars               | Medium     | sliding window template + map to index       |
+ | Longest Substring with At Most Two Distinct Characters | Hard       |                                              |
+ | Longest Substring with At Most K Distinct Characters   | Hard       | hashmap                                      |
  | Generate Parentheses                                   | Medium     | n-1 -> n                                     |
  | Valid Parentheses                                      | Easy       | stack/non-stack counter solution             |
  | Remove Invalid Parentheses                             | Hard       | count num to remove, then dfs                |
