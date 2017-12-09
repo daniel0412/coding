@@ -33,6 +33,7 @@ class LongestSubstrWithoutRepeatingChars {
                 start = m[c];
             }
             m[c] = end;
+            // compute max length every loop to avoid when end = s.size() case
             maxLen = max(maxLen, end - start);
             ++end;
         }

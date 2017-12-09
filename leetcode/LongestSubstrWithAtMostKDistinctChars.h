@@ -23,30 +23,28 @@ using namespace std;
 
 class LongestSubstrWithAtMostKDistinctChars {
   public:
+
     int lengthOfLongestSubstringKDistinct(string s, int k)
     {
-        int sLen = s.length();
-        if(sLen <= k)
-            return sLen;
-        unordered_map<char, int> mymap;
-        int start = 0, end = 0, maxLen = 0;
-        for(int i = 0; i < sLen;) {
-            if(mymap.size() < k || mymap.find(s[i]) != mymap.end()) {
-                ++mymap[s[i]];
-                end = i;
-                ++i;
-            }
-            else {
-                auto iter = mymap.find(s[start]);
+        int slen = s.size();
+        if(slen <= k)
+            return slen;
+        int maxLen = 0;
+        int start = 0, end = 0;
+        // store char->max index up to now map
+        unordered_map<char, int> m;
+        while(end < s.size()) {
+            m[s[end]] = end;
+            // make sure the map size is no greater than k
+            while(m.size() > k) {
+                // find the first char from start that we can remove from the
+                // map
+                if(m[s[start]] == start)
+                    m.erase(s[start]);
                 ++start;
-                if(--(iter->second) == 0) {
-                    mymap.erase(iter);
-                    end = i;
-                    ++i;
-                }
             }
-            int curLen = end - start + 1;
-            maxLen = max(maxLen, curLen);
+            ++end;
+            maxLen = max(maxLen, end - start);
         }
         return maxLen;
     }

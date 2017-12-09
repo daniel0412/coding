@@ -387,19 +387,18 @@ void dfs(nums, id, path, res) {
  | Best Time to Buy and Sell Stock with Transaction Fee | Medium     | current state depends on previous state sell/hold |  |
 
 ## String
- | Problems                                               | Difficulty | Techniques                                   |
- | :-------------------------                             | :---:      | :----                                        |
- | Valid Anagrams                                         | Easy       | sort/map                                     |
- | Group Anagrams                                         | Medium     | hash map/sort string                         |
- | Find All Anagrams in String                            | Easy       | sliding window template + map to track count |
- | Minimum Window Substring                               | Hard       | sliding window template + map/count to track |
- | Longest subsring without repeating chars               | Medium     | sliding window template + map to index       |
- | Longest Substring with At Most Two Distinct Characters | Hard       |                                              |
- | Longest Substring with At Most K Distinct Characters   | Hard       | hashmap                                      |
- | Generate Parentheses                                   | Medium     | n-1 -> n                                     |
- | Valid Parentheses                                      | Easy       | stack/non-stack counter solution             |
- | Remove Invalid Parentheses                             | Hard       | count num to remove, then dfs                |
- | Remove Invalid Parentheses (return one valid solution) | Hard       | 1.two loops 2. one loop                      |
+ | Problems                                               | Difficulty | Techniques                                       |
+ | :-------------------------                             | :---:      | :----                                            |
+ | Valid Anagrams                                         | Easy       | sort/map                                         |
+ | Group Anagrams                                         | Medium     | hash map/sort string                             |
+ | Find All Anagrams in String                            | Easy       | sliding window template + map to track count     |
+ | Minimum Window Substring                               | Hard       | sliding window template + map/count to track     |
+ | Longest subsring without repeating chars               | Medium     | sliding window template + map to index           |
+ | Longest Substring with At Most K Distinct Characters   | Hard       | sliding window template + map to rightmost index |
+ | Generate Parentheses                                   | Medium     | n-1 -> n                                         |
+ | Valid Parentheses                                      | Easy       | stack/non-stack counter solution                 |
+ | Remove Invalid Parentheses                             | Hard       | count num to remove, then dfs                    |
+ | Remove Invalid Parentheses (return one valid solution) | Hard       | 1.two loops 2. one loop                          |
 
 
 ## Array
