@@ -321,6 +321,8 @@
  | :------------------------- | :---:      | :----                 |
  | Clone Graph                | Medium     | dfs/bfs (avoid cycle) |
  | Graph Valid Tree           | Medium     | dfs/bfs/union find    |
+ | Merge Accounts             | Medium     | bfs/union find        |
+ | Redundant Connection       | Medium     | union find            |
 
 ## Classic Backtracing
 
