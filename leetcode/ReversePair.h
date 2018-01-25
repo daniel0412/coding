@@ -35,39 +35,28 @@ class ReversePair {
   public:
     int reversePairs(vector<int>& nums)
     {
-        if(nums.empty())
+        if(nums.size() < 2)
             return 0;
-        return countImpl(nums, 0, nums.size() - 1);
+        return mergeCount(nums, 0, nums.size() - 1);
     }
 
   private:
-    int countImpl(vector<int>& nums, int start, int end)
+    int mergeCount(vector<int>& nums, int left, int right)
     {
-        int res = 0;
-        if(start < end) {
-            int mid = start + ((end - start) / 2);
-            res = countImpl(nums, start, mid) + countImpl(nums, mid + 1, end) +
-                mergeCount(nums, start, mid, end);
-        }
-        return res;
-    }
+        if(left == right)
+            return 0;
+        int mid = left + (right - left) / 2;
+        int cnt = 0;
+        cnt = mergeCount(nums, left, mid) + mergeCount(nums, mid + 1, right);
 
-    int mergeCount(vector<int>& nums, int start, int mid, int end)
-    {
-        int totalCount = 0;
-        int leftId = start, rightId = mid + 1;
-
-        while(leftId <= mid && rightId <= end) {
-            long long numLong1 = nums[leftId], numLong2 = nums[rightId];
-            if(numLong1 > 2 * numLong2) {
-                totalCount += (mid - leftId + 1);
-                ++rightId;
-            }
-            else {
-                ++leftId;
-            }
+        for(int i = left, j = mid + 1; i <= mid; ++i) {
+            // here use division to avoid int x 2 overflow
+            while(j <= right && nums[i] / 2 > nums[j])
+                ++j;
+            cnt += (j - mid - 1);
         }
-        sort(nums.begin() + start, nums.begin() + end + 1);
-        return totalCount;
+        // make sure the merged interval are sorted
+        sort(nums.begin() + left, nums.begin() + right + 1);
+        return cnt;
     }
 };

@@ -17,6 +17,8 @@
  | Problems                                               | Difficulty | Techniques                                             | Status            |
  | :-------------------------                             | :---:      | :----                                                  | :---:             |
  | Reverse Pair                                           | Hard       | divide and conqure(slow)                               | :v: :eyes:        |
+ | Count of Range Sum                                     | Hard       | 1. multiset/bounds 2. merge sort and count             | :v: :eyes:        |
+ | Count of Smaller Numbers After Self                    | Hard       | binary search/lower bound                              | :v: :eyes:        |
  | Median of Two Sorted Arrays                            | Hard       | binary search                                          | :v:        :eyes: |
  | Find Median from Data Stream                           | Hard       | heap                                                   | :v:               |
  | Sort Transformed Array                                 | Medium     | quadratic function, dist from optimal                  | :eyes: :v:        |
@@ -71,8 +73,6 @@
  | Strobogrammatic Number II                              | Medium     | backtracking                                           | :v: :lock:        |
  | Strobogrammatic Number III                             | Hard       | combination/backtracking                               | :v: :lock: :eyes: |
  | Group Shifted Strings                                  | Easy       |                                                        |                   |
- | Meeting Rooms II                                       | Medium     | sort/heap                                              | :v: :eyes: :lock: |
- | Meeting Rooms                                          | Easy       |                                                        | :v: :lock:        |
  | 3Sum Smaller                                           | Medium     |                                                        |                   |
  | Alien Dictionary                                       | Hard       |                                                        |                   |
  | Search a 2D Matrix                                     | Medium     | binary search, location conversion                     | :v:               |
@@ -88,7 +88,8 @@
  | Logger Rater Limitter                                  | Easy       | map                                                    | :v:               |
  | Paint Fence                                            | Easy       |                                                        |                   |
  | Perfect Squares                                        | Medium     |                                                        |                   |
- | Wiggle Sort                                            | Medium     |                                                        |                   |
+ | Wiggle Sort                                            | Medium     | equal sign, 1) sort then switch; 2) compare + switch   |                   |
+ | Wiggle Sort II                                         | Medium     | no equal sign, 1) sort then pick; 2)                   |                   |
  | Peeking Iterator                                       | Medium     | subtyping                                              | :v: :eyes:        |
  | Flatten Nested List Iterator                           | Medium     | use stack to track begin/end, hasNext promote pointers | :eyes: :v:        |
  | Flatten 2D Vector                                      | Medium     | track row, col index                                   | :v:               |
@@ -113,16 +114,13 @@
  | Burst Balloons                                         | Hard       |                                                        |                   |
  | Super Ugly Number                                      | Medium     |                                                        |                   |
  | Binary Tree Vertical Order Traversal                   | Medium     | tree traversal                                         | :lock:            |
- | Count of Smaller Numbers After Self                    | Hard       | binary search/lower bound                              | :v: :eyes:        |
  | Remove Duplicate Letters                               | Hard       | map/stack                                              | :v: :eyes:        |
  | Best Meeting Point                                     | Medium     | consider one dimensional case                          | :eyes: :v:        |
  | Shortest Distance from All Buildings                   | Hard       | bfs, shortest dist + accessible from all buildings     | :eyes: :v:        |
  | Maximum Product of Word Lengths                        | Medium     |                                                        |                   |
  | Friend Cycle                                           | Medium     | union find (var to track count, when union reduce one) | :eyes: :v:        |
  | Number of Connected Components in an Undirected Graph  | Medium     | union find/dfs(vector with diff vals to track state    | :eyes: :lock:     |
- | Wiggle Sort II                                         | Medium     |                                                        |                   |
  | Power of Three                                         | Easy       |                                                        |                   |
- | Count of Range Sum                                     | Hard       | multiset/bounds                                        | :v: :eyes:        |
  | Patching Array                                         | Hard       | greedily expand [0, sum) range                         | :eyes: :v:        |
  | Verify Preorder Serialization of a Binary Tree         | Medium     |                                                        |                   |
  | Reconstruct Itinerary                                  | Medium     |                                                        |                   |
@@ -199,14 +197,6 @@
  | Maximal Rectangle                                      | Hard       | find width(histogram)/height                                | :eyes: :v:          |
  | Largest Rectangle in Histogram                         | Hard       | stack idea important                                        | :eyes: :v:          |
  | Reverse Linked List                                    | Easy       |                                                             | :v:                 |
- | Valid Palindrome                                       | Easy       |                                                             |                     |
- | Palindrome Linked List                                 | Easy       | stack/reverselist/two pointer                               | :v: :eyes:          |
- | Palindrome Permutation                                 | Easy       |                                                             |                     |
- | Palindromic Substrings                                 | Medium     | dp, str end to front, double-sided expansion faster         | :eyes: :v:          |
- | Longest Palindromic Sub sequence                       | Medium     | dp, back to front, find how to transfer states              | :eyes: :v:          |
- | Longest Palindromic Sub string                         | Medium     | dp, but double-sided expansion is faster                    | :eyes: :v:          |
- | Shortest Palindrome                                    | Hard       |                                                             |                     |
- | Palindrome Pairs                                       | Hard       |                                                             |                     |
  | Lowest Common Ancestor of a Binary Tree                | Medium     | recursion                                                   | :v: :eyes:          |
  | Lowest Common Ancestor of a Binary Search Tree         | Easy       | use bst property                                            | :v:                 |
  | Meeting Rooms                                          | Easy       | easy/customized sorting lambda                              | :v:                 |
@@ -262,6 +252,7 @@
  | Next Greater Element I                      | Easy       | O(n) with stack                                         | :eyes: :v:    |
  | Next Greater Element II                     | Medium     | cycular array + stack                                   | :eyes: :v:    |
  | Next Greater Element III                    | Medium     | digits comp, think!!                                    | :eyes: :v:    |
+ | Next Closest Time                           | Medium     | ways to formulate next cloest time, min to hour         | :eyes:        |
  | Longest Word in Dictionary through Deleting | Medium     |                                                         | :v:           |
  | Relative Ranks                              | Easy       | customized sorting                                      | :v:           |
  | Detect Capitals                             | Easy       |                                                         | :v:           |
@@ -401,6 +392,22 @@ void dfs(nums, id, path, res) {
  | Valid Parentheses                                      | Easy       | stack/non-stack counter solution                 |
  | Remove Invalid Parentheses                             | Hard       | count num to remove, then dfs                    |
  | Remove Invalid Parentheses (return one valid solution) | Hard       | 1.two loops 2. one loop                          |
+
+
+### Palindromic Problems
+- check `if size(s) < 2`, return `true`
+
+ | :-------------------------       | :---:  | :----                                               |
+ | Valid Palindrome                 | Easy   | transform()/tolower()/isalnum()                     |
+ | Valid Palindrome II              | Easy   | at most remove 1 char                               |
+ | Palindrome Linked List           | Easy   | stack to store 1st half/reverse 2nd half            |
+ | Palindrome Permutation           | Easy   |                                                     |
+ | Palindrome Permutation II        | Medium | how to permutate a string                                                    |
+ | Palindromic Substrings           | Medium | dp, str end to front, double-sided expansion faster |
+ | Longest Palindromic Sub sequence | Medium | dp, back to front, find how to transfer states      |
+ | Longest Palindromic Sub string   | Medium | dp, but double-sided expansion is faster            |
+ | Shortest Palindrome              | Hard   |                                                     |
+ | Palindrome Pairs                 | Hard   |                                                     |
 
 
 ## Array

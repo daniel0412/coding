@@ -46,6 +46,8 @@ class MeetingRooms2 {
     }
 
     // two array solution
+    // 0  5  15 (start array)
+    // 10 20 30 (end array)
     int minMeetingRooms(vector<Interval>& intervals)
     {
         vector<int> start, end;

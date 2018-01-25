@@ -37,6 +37,7 @@ class CountOfRangeSum {
         multiset<long long> sums;
         int count = 0;
         long long curSum = 0;
+        // this is important to include single element range
         sums.insert(0);
 
         for(int i = 0; i < nums.size(); ++i) {

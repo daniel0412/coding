@@ -33,10 +33,10 @@ class SmallNumberAfterSelf {
   public:
     vector<int> countSmall(vector<int>& nums)
     {
+        // track results
         vector<int> d_count(nums.size(), 0);
+        // track current sorted elements after current elements
         vector<int> d_ordered;
-        if(nums.size() <= 1)
-            return d_count;
         for(int i = nums.size() - 1; i >= 0; --i) {
             int val = nums[i];
             int start = 0, end = d_ordered.size() - 1, mid = 0;

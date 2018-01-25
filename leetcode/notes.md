@@ -105,6 +105,12 @@ find_last_not_of(' ')
     // or use the labmda function definition with decltype
     ```
 
+- allgorithms
+```cpp
+bool isalnum(c);
+transform(src.begin(), src.end(), dst.begin(), ::tolower);
+```
+
 #### good coding ways to format string
 ```cpp
 // turn a vecotr into ',' separated string

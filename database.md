@@ -8,4 +8,3 @@ NoSQL is a collection of data represented in the form of
 
 
 
-### Consistent Hashing
