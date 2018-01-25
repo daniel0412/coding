@@ -49,5 +49,37 @@ class CountOfRangeSum {
         return count;
     }
 
+    int countRangeSum(vector<int>& nums, int lower, int upper)
+    {
+        vector<long long> sums(nums.size() + 1, 0);
+        for(int i = 0; i < nums.size(); ++i) {
+            sums[i + 1] = sums[i] + nums[i];
+        }
+        return mergeCount(sums, lower, upper, 0, sums.size() - 1);
+    }
+
+    int mergeCount(vector<int>& sums,
+                   const int lower,
+                   const int upper,
+                   int left,
+                   int right)
+    {
+        if(right == left)
+            return 0;
+        int cnt = 0, mid = left + (right - left) / 2;
+        for(int i = left; i <= mid; ++i) {
+            int j = mid + 1, k = mid + 1;
+            while(j <= right && sums[j] - sums[i] <= upper)
+                ++j;
+            while(k <= right && sums[k] - sums[i] < lower)
+                ++k;
+            cnt += (j - k);
+        }
+        inplace_merge(sums.begin() + left,
+                      sums.begin() + mid + 1,
+                      sums.begin() + right + 1);
+        return cnt;
+    }
+
   private:
 };

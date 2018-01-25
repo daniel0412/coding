@@ -56,7 +56,11 @@ class ReversePair {
             cnt += (j - mid - 1);
         }
         // make sure the merged interval are sorted
-        sort(nums.begin() + left, nums.begin() + right + 1);
+        // sort(nums.begin() + left, nums.begin() + right + 1);
+        // just merge since both left/right arrays are sorted already
+        inplace_merge(nums.begin() + left,
+                      nums.begin() + mid + 1,
+                      nums.begin() + right + 1);
         return cnt;
     }
 };
