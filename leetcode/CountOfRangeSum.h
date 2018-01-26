@@ -66,7 +66,9 @@ class CountOfRangeSum {
     {
         if(right == left)
             return 0;
-        int cnt = 0, mid = left + (right - left) / 2;
+        int mid = left + (right - left) / 2;
+        int cnt = mergeCount(sums, lower, upper, left, mid) +
+            mergeCount(sums, lower, upper, mid + 1, right);
         for(int i = left; i <= mid; ++i) {
             int j = mid + 1, k = mid + 1;
             while(j <= right && sums[j] - sums[i] <= upper)

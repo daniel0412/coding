@@ -19,6 +19,7 @@
  | Reverse Pair                                           | Hard       | divide and conqure(slow)                               | :v: :eyes:        |
  | Count of Range Sum                                     | Hard       | 1. multiset/bounds 2. merge sort and count             | :v: :eyes:        |
  | Count of Smaller Numbers After Self                    | Hard       | binary search/lower bound                              | :v: :eyes:        |
+ | Queue Reconstruction by Height                         | Meidum     | idea: sort by height and then by order                 | :eyes:            |
  | Median of Two Sorted Arrays                            | Hard       | binary search                                          | :v:        :eyes: |
  | Find Median from Data Stream                           | Hard       | heap                                                   | :v:               |
  | Sort Transformed Array                                 | Medium     | quadratic function, dist from optimal                  | :eyes: :v:        |
