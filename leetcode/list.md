@@ -88,7 +88,7 @@
  | H-Index                                                | Medium     |                                                        |                   |
  | Logger Rater Limitter                                  | Easy       | map                                                    | :v:               |
  | Paint Fence                                            | Easy       |                                                        |                   |
- | Perfect Squares                                        | Medium     |                                                        |                   |
+ | Perfect Squares                                        | Medium     | dynamic programming from 1 to t                        |                   |
  | Wiggle Sort                                            | Medium     | equal sign, 1) sort then switch; 2) compare + switch   |                   |
  | Wiggle Sort II                                         | Medium     | no equal sign, 1) sort then pick; 2)                   |                   |
  | Peeking Iterator                                       | Medium     | subtyping                                              | :v: :eyes:        |
