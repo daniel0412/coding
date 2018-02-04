@@ -54,7 +54,6 @@
  | Read N Characters Given Read4 II – Call multiple times | Hard       |                                                        |                   |
  | Repeated Substring Pattern                             | Easy       |                                                        | :eyes: :v:        |
  | Heaters                                                | Easy       | upper/lower bound                                      | :eyes: :v:        |
- | Find Peak Element                                      | Medium     |                                                        |                   |
  | Fraction to Recurring Decimal                          | Medium     | hashmap/sstream/overflow                               | :v:               |
  | Number of Islands                                      | Medium     |                                                        |                   |
  | Word Search II                                         | Hard       |                                                        |                   |
@@ -436,4 +435,8 @@ void dfs(nums, id, path, res) {
  | Hamming Distance           | Easy       | clear right most left 1  |
  | Total Hamming Distance     | Medium     | vertical 1s, combination |
 
+
+## Binary Search
+ | Problems          | Difficulty | Techniques                        |
+ | Find Peak Element | Medium     | how to move to the next iteration |
 
