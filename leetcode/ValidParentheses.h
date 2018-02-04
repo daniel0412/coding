@@ -49,5 +49,30 @@ class ValidParentheses {
           }
           return mystack.empty();
       }
-  private:
+
+      bool isValid2(string s)
+      {
+          if(s.size() % 2)
+              return false;
+          stack<char> st;
+          unordered_map<char, char> mp;
+          mp[')'] = '(';
+          mp[']'] = '[';
+          mp['}'] = '{';
+
+          for(auto c : s) {
+              if(c == '(' || c == '[' || c == '{') {
+                  st.push(c);
+              }
+              else if(c == ')' || c == ']' || c == '}') {
+                  if(st.empty() || mp[c] != st.top())
+                      return false;
+                  st.pop();
+              }
+          }
+	  // return empty or not
+          return st.empty();
+      }
+
+    private:
 };

@@ -24,8 +24,6 @@
  | Find Median from Data Stream                           | Hard       | heap                                                   | :v:               |
  | Sort Transformed Array                                 | Medium     | quadratic function, dist from optimal                  | :eyes: :v:        |
  | SlidingWindowMedian                                    | Hard       | multiset                                               | :v:               |
- | Wildcard Matching                                      | Hard       | two pointer                                            | :v:               |
- | Regular Expression Matching                            | Hard       |                                                        |                   |
  | Expression Add Operators                               | Hard       |                                                        |                   |
  | Populating Next Right Pointers in Each Node II         | Hard       | iteration                                              | :v: :eyes:        |
  | Populating Next Right Pointers in Each Node            | Medium     | iteration                                              | :v:               |
@@ -45,9 +43,7 @@
  | 01 Matrix                                              | Medium     | dfs(TLE)/bfs/two pass idea(fastest)                    | :eyes: :v:        |
  | Lonely Pixel I                                         | Medium     | 2-D vector                                             | :lock:            |
  | Lonely Pixel II                                        | Medium     |                                                        | :eyes: :lock:     |
- | Valid Parentheses                                      | Easy       |                                                        |                   |
  | Moving Average From Data Stream                        | Easy       | queue                                                  | :lock:            |
- | Generate Parentheses                                   | Medium     |                                                        |                   |
  | Pow(x, n)                                              | Medium     |                                                        |                   |
  | Spiral Matrix                                          | Medium     |                                                        |                   |
  | License Key Formatting                                 | Medium     | string operation                                       | :v:               |
@@ -61,7 +57,6 @@
  | Find Peak Element                                      | Medium     |                                                        |                   |
  | Fraction to Recurring Decimal                          | Medium     | hashmap/sstream/overflow                               | :v:               |
  | Number of Islands                                      | Medium     |                                                        |                   |
- | Implement Trie (Prefix Tree)                           | Medium     |                                                        |                   |
  | Word Search II                                         | Hard       |                                                        |                   |
  | The Skyline Problem                                    | Hard       |                                                        |                   |
  | Basic Calculator                                       | Hard       |                                                        |                   |
@@ -175,14 +170,14 @@
  | Wildcard Matching                                      | Hard       | greedy two pointer: mark * matchign start pos               | :v: :eyes:          |
  | Regular Expression Matching                            | Hard       | hard&slow recursion/fast dp!!!                              | :v: :eyes:          |
  | Text Justification                                     | Hard       | just deal with string corner case                           | :v:                 |
+ | Implement Trie (Prefix Tree)                           | Medium     |                                                             | :v:                 |
+ | Add and Search Word – Data structure design            | Medium     | followup with star sign                                     | :v:                 |
  | Expression Add Operators                               | Hard       | tricy dfs: get first val, then (op, val) pair               | :v: :eyes:          |
  | Increasing Subsequence                                 | Medium     | dfs/set to deduplicate                                      | :v:          :eyes: |
  | Word Ladder                                            | Medium     | (double) bfs                                                | :eyes: :v:          |
  | Word Ladder II                                         | Hard       | (double) bfs                                                | :eyes: :v:          |
  | Word Break                                             | Medium     | dp(fast)/recursion(timeout)                                 |                     |
  | Word Search                                            | Medium     | dfs                                                         | :v: :eyes:          |
- | Implement Trie (Prefix Tree)                           | Medium     |                                                             |                     |
- | Add and Search Word – Data structure design            | Medium     |                                                             |                     |
  | Sum of Left Leaves                                     | Easy       | recursion/iterative                                         | :v: :eyes:          |
  | Validate Binary Search Tree                            | Medium     | track min/max for eachsubtree, beter than inorder traversal | :eyes:  :v:         |
  | Binary Tree Level Order Traversal                      | Easy       |                                                             |                     |
@@ -390,8 +385,8 @@ void dfs(nums, id, path, res) {
  | Minimum Window Substring                               | Hard       | sliding window template + map/count to track     |
  | Longest subsring without repeating chars               | Medium     | sliding window template + map to index           |
  | Longest Substring with At Most K Distinct Characters   | Hard       | sliding window template + map to rightmost index |
- | Generate Parentheses                                   | Medium     | n-1 -> n                                         |
  | Valid Parentheses                                      | Easy       | stack/non-stack counter solution                 |
+ | Generate Parentheses                                   | Medium     | n-1 -> n                                         |
  | Remove Invalid Parentheses                             | Hard       | count num to remove, then dfs                    |
  | Remove Invalid Parentheses (return one valid solution) | Hard       | 1.two loops 2. one loop                          |
 
