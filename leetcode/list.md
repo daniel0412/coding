@@ -386,7 +386,7 @@ void dfs(nums, id, path, res) {
  | Longest subsring without repeating chars               | Medium     | sliding window template + map to index           |
  | Longest Substring with At Most K Distinct Characters   | Hard       | sliding window template + map to rightmost index |
  | Valid Parentheses                                      | Easy       | stack/non-stack counter solution                 |
- | Generate Parentheses                                   | Medium     | n-1 -> n                                         |
+ | Generate Parentheses                                   | Medium     | dfs to print parenthsis                          |
  | Remove Invalid Parentheses                             | Hard       | count num to remove, then dfs                    |
  | Remove Invalid Parentheses (return one valid solution) | Hard       | 1.two loops 2. one loop                          |
 
