@@ -43,34 +43,38 @@ class KthSmallestInSortedMatrix {
       }
 
       // binary search solution, time complexity O(2*n*log(max-min))
-      int binarySearchImpl(const vector<vector<int>>& matrix, int k) {
-          int n = matrix.size();
-          int low = matrix[0][0], high = matrix[n-1][n-1];
-          while(low < high) {
-              int mid = low + (high-low)/2;
-              if(numNoGreaterThanMidLessThanK(matrix, mid, k)) {
-                  low = mid + 1;
-              }else {
-                  high = mid;
+
+      using vv = vector<vector<int> >;
+      int kthSmallest(vector<vector<int> >& matrix, int k)
+      {
+          int s = matrix[0][0], e = matrix.back().back();
+          while(s < e) {
+              int m = s + (e - s) / 2;
+              int cnt = countLessAndEqual(matrix, k, m);
+              if(cnt < k) {
+                  s = m + 1;
+              }
+              else {
+                  e = m;
               }
           }
-          return low;
+          return e;
       }
 
-  private:
-      bool numNoGreaterThanMidLessThanK(const vector<vector<int>>& matrix, const int val, const int k) {
-          int n = matrix.size();
-          int i = n-1, j = 0;
-          int res = 0;
-          while(i >= 0 && j < n) {
-              if(matrix[i][j] > val) {
-                  --i;
-              }else {
-                  res += i + 1;
-                  if(res >= k) return false;
-                  ++j;
+      int countLessAndEqual(const vv& matrix, int k, int val)
+      {
+          int nRows = matrix.size(), nCols = matrix[0].size();
+          int row = nRows - 1, col = 0;
+          int cnt = 0;
+          while(row >= 0 && col < nCols) {
+              if(matrix[row][col] <= val) {
+                  cnt += (row + 1);
+                  ++col;
+              }
+              else {
+                  --row;
               }
           }
-          return true;
+          return cnt;
       }
 };

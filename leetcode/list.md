@@ -63,18 +63,16 @@
  | Missing Ranges                                         | Medium     | same as above                                          | :v:               |
  | Power of Two                                           | Easy       |                                                        |                   |
  | Sliding Window Maximum                                 | Hard       |                                                        |                   |
- | Diagonal Traversal                                     | Medium     | own impl so slow: how to deal with bounary univasally  | :v:               |
  | Strobogrammatic Number                                 | Easy       | hashmap                                                | :v: :lock:        |
  | Strobogrammatic Number II                              | Medium     | backtracking                                           | :v: :lock:        |
  | Strobogrammatic Number III                             | Hard       | combination/backtracking                               | :v: :lock: :eyes: |
  | Group Shifted Strings                                  | Easy       |                                                        |                   |
  | 3Sum Smaller                                           | Medium     |                                                        |                   |
  | Alien Dictionary                                       | Hard       |                                                        |                   |
- | Search a 2D Matrix                                     | Medium     | binary search, location conversion                     | :v:               |
- | Search a 2D Matrix II                                  | Medium     | find correct starting location                         | :v: :eyes:        |
  | Kth Largest Element in an Array                        | Medium     | quick select/heap                                      | :v: :eyes:        |
- | Kth Smallest Element in a BST                          | Medium     | iterative/recursive, make sure return type             | :eyes: :v:        |
- | Kth Smallest Element in a sorted matrix                | Medium     | 1. heap 2. binary search for the answer + cnt          | :eyes: :v:        |
+ | Kth Smallest Element in a BST                          | Medium     | iterative/recursive                                    | :eyes: :v:        |
+ | Kth Smallest Element in a sorted matrix                | Medium     | 1. heap 2. value (not index) binary search+ cnt        | :eyes: :v:        |
+ | Kth Smallest Element in Multiplication Table | Hard | same as sorted matrix | :v: |
  | Find K Closest Elements                                | Medium     |                                                        | :v:               |
  | Find K Pairs with Smallest Sum                         | Medium     | heap idea                                              | :eyes: :v:        |
  | Find Kth Smallest Pair Distance                        | Hard       | find dist boundary, and then binary search             | :eyes: :v:        |
@@ -437,6 +435,10 @@ void dfs(nums, id, path, res) {
 
 
 ## Binary Search
- | Problems          | Difficulty | Techniques                        |
- | Find Peak Element | Medium     | how to move to the next iteration |
+ | Problems              | Difficulty | Techniques                         |
+ | Find Peak Element     | Medium     | how to move to the next iteration  |
+ | Search a 2D Matrix    | Medium     | binary search, location conversion |
+ | Search a 2D Matrix II | Medium     | find correct starting location     |
 
+ | Problems           | Difficulty | Techniques                          |
+ | Diagonal Traversal | Medium     | flip directions when meets boundary |

@@ -21,19 +21,28 @@ using namespace std;
 
 class KthSmallestElementInBST {
   public:
-    int kthSmallest(TreeNode* root, int k) { return helper(root, k)->val; }
+    int kthSmallest(TreeNode* root, int k)
+    {
+        int res;
+        inorderRecursiveImpl(root, k, res);
+        return res;
+    }
+
 
   private:
-    TreeNode* helper(TreeNode* root, int& k)
+    void inorderRecursiveImpl(TreeNode* root, int& k, int& res)
     {
+        if(k < 0)
+            return;
         if(root == nullptr)
-            return root;
-        TreeNode* leftNode = helper(root->left, k);
-        if(leftNode)
-            return leftNode;
-        if(--k == 0)
-            return root;
-        return helper(root->right, k);
+            return;
+        inorderRecursiveImpl(root->left, k, res);
+        --k;
+        if(k == 0) {
+            res = root->val;
+            return;
+        }
+        inorderRecursiveImpl(root->right, k, res);
     }
 
     int iterativeImpl(TreeNode* root, const int k)
@@ -50,10 +59,40 @@ class KthSmallestElementInBST {
             --k;
             TreeNode* candidate = cur->right;
             while(candidate) {
-                s.emplace(candidate);
+           s.emplace(candidate);
                 candidate = candidate->left;
             }
         }
         return cur ? cur->val : numeric_limits<int>::min();
+    }
+
+
+    int inorderIterativeImpl(TreeNode* root, int k)
+    {
+        stack<TreeNode*> ss;
+        ss.push(root);
+        TreeNode* curNode = root;
+
+        while(curNode->left) {
+            curNode = curNode->left;
+            ss.push(curNode);
+        }
+
+        while(!ss.empty()) {
+            curNode = ss.top();
+            ss.pop();
+            --k;
+            if(k == 0)
+                return curNode->val;
+            if(curNode->right) {
+                curNode = curNode->right;
+                ss.push(curNode);
+                while(curNode->left) {
+                    curNode = curNode->left;
+                    ss.push(curNode);
+                }
+            }
+        }
+        return -1;
     }
 };
