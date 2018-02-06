@@ -21,9 +21,10 @@ using namespace std;
 
 class GraphValidTree {
   public:
-    bool validTree(int n, vector<pair<int, int> >& edges) {
+    bool validTree(int n, vector<pair<int, int> >& edges)
+    {
         return unionfind(n, edges);
-        //return dfs(n, edges);
+        // return dfs(n, edges);
     }
 
   private:
@@ -59,6 +60,7 @@ class GraphValidTree {
         }
         return true;
     }
+
     bool bfs(int n, const vector<pair<int, int> >& edges)
     {
         unordered_set<int> visited;
@@ -83,22 +85,114 @@ class GraphValidTree {
         }
         return visited.size() == n;
     }
+
     bool unionfind(int n, const vector<pair<int, int> >& edges)
     {
         vector<int> roots(n, -1);
         for(const auto& p : edges) {
             int root1 = findRoot(roots, p.first);
             int root2 = findRoot(roots, p.second);
+            // make sure no cycle is formed
             if(root1 == root2)
                 return false;
             roots[root1] = root2;
         }
-        return true;
+
+        // make sure only one connected component
+        return edges.size() + 1 = n;
     }
+
     int findRoot(vector<int>& roots, int i)
     {
         while(roots[i] != -1)
             i = roots[i];
+        return i;
+    }
+
+
+    // second time implementation
+    bool validTree(int n, vector<pair<int, int> >& edges)
+    {
+        vector<bool> v(n, false);
+        unordered_map<int, vector<int> > m;
+        for(const auto& e : edges) {
+            m[e.first] = e.second;
+            m[e.second] = e.first;
+        }
+        if(!dfs(0, v, m, -1))
+            return false;
+        for(auto vi : v) {
+            if(!vi)
+                return false;
+        }
+        return true;
+    }
+
+    bool dfs(int i,
+             vector<bool>& v,
+             unordered_map<int, vector<int> >& m,
+             int pre)
+    {
+        if(i == pre)
+            return true;
+        if(v[i])
+            return false;
+        for(auto id : m[i]) {
+            v[id] = true;
+            if(!dfs(id, v, m i))
+                return false;
+        }
+        return true;
+    }
+
+    bool bfs(int n, const vector<pair<int, int> >& edges)
+    {
+        vector<unordered_set<int> > g;
+        unordered_set<int> v;
+        for(const auto& e : edges) {
+            g[e.first].insert(e.second);
+            g[e.second].insert(e.first);
+        }
+        queue<int> q;
+        q.push(0);
+        while(!q.empty()) {
+            int id = q.front();
+            q.pop();
+            v.insert(id);
+            for(auto i : g[id]) {
+                if(v.count(i))
+                    return false;
+                q.push(i);
+                g[i].erase(id);
+            }
+        }
+        return v.size() == n;
+    }
+
+    // union find
+    bool uf(int n, vector<pair<int, int> >& edges)
+    {
+        vector<int> p(n, 0);
+        for(int i = 0; i < n; ++i)
+            p[i] = i;
+        int cnt = n;
+        for(const auto& e : edges) {
+            int x = getp(e.first, p);
+            int y = getp(e.second, p);
+            if(x == y)
+                return false;
+            --cnt;
+            p[x] = y;
+        }
+        return cnt == 1;
+    }
+
+    int getp(int i, vector<int>& p)
+    {
+        while(i != p[i]) {
+            p[i] = p[p[i]];
+            i = p[i];
+        }
         return i;
     }
 };

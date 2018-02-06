@@ -113,7 +113,6 @@
  | Shortest Distance from All Buildings                   | Hard       | bfs, shortest dist + accessible from all buildings     | :eyes: :v:        |
  | Maximum Product of Word Lengths                        | Medium     |                                                        |                   |
  | Friend Cycle                                           | Medium     | union find (var to track count, when union reduce one) | :eyes: :v:        |
- | Number of Connected Components in an Undirected Graph  | Medium     | union find/dfs(vector with diff vals to track state    | :eyes: :lock:     |
  | Power of Three                                         | Easy       |                                                        |                   |
  | Patching Array                                         | Hard       | greedily expand [0, sum) range                         | :eyes: :v:        |
  | Verify Preorder Serialization of a Binary Tree         | Medium     |                                                        |                   |
@@ -302,12 +301,14 @@
  | Binary Tree Longest Consecutive Sequence II | Medium     | bottom-up to count left/right max inc/dec length   |
 
 ## Graph
- | Problems                   | Difficulty | Techniques            |
- | :------------------------- | :---:      | :----                 |
- | Clone Graph                | Medium     | dfs/bfs (avoid cycle) |
- | Graph Valid Tree           | Medium     | dfs/bfs/union find    |
- | Merge Accounts             | Medium     | bfs/union find        |
- | Redundant Connection       | Medium     | union find            |
+- for `undirected` graph, when `dfs` to traverse the graph, need to pass `pre` to distinguish `0-1` and `1-0` cycle
+ | Problems                                              | Difficulty | Techniques                                          |
+ | :-------------------------                            | :---:      | :----                                               |
+ | Graph Valid Tree                                      | Medium     | dfs/bfs/union find                                  |
+ | Number of Connected Components in an Undirected Graph | Medium     | union find/dfs(vector with diff vals to track state |
+ | Clone Graph                                           | Medium     | dfs/bfs (avoid cycle)                               |
+ | Merge Accounts                                        | Medium     | bfs/union find                                      |
+ | Redundant Connection                                  | Medium     | union find                                          |
 
 ## Classic Backtracing
 
