@@ -32,8 +32,10 @@ class FindKthSmallestPairDist {
         high = nums.back() - nums.front();
         // ATTENTION: cannot use normal binary search to return when coutn
         // equals, has to
-        // gradually reduce high, untill low == high to return low
-        while(low <= high) {
+        // gradually increase low, untill low == high to return low
+        // because when count > k, does not mean the distance is not the k-th
+        // smallest
+        while(low < high) {
             int mid = low + (high - low) / 2;
             if(countPairs(nums, mid) < k) {
                 low = mid + 1;
@@ -51,9 +53,11 @@ class FindKthSmallestPairDist {
     {
         int res = 0;
         for(int i = 0; i < (int) nums.size(); ++i) {
-            res += nums.upper_bound(
-                       nums.begin() + i, nums.end(), nums[i] + dist) -
-                (nums.begin() + i) - 1;
+            res +=
+                (distance(nums.begin() + i,
+                          upper_bound(
+                              nums.begin() + i, nums.end(), nums[i] + dist)) -
+                 1); // minus 1 to get the count
         }
         return res;
     }

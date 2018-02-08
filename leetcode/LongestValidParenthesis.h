@@ -29,7 +29,9 @@ class LongestValidParenthesis {
                   maxCnt = max(maxCnt, right - left);
                   left = right + 1;
               }
-          }
+          }else {
+
+	  }
 
 	  }
       }

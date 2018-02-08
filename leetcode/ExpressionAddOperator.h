@@ -24,6 +24,7 @@ class ExpressionAddOperator {
     vector<string> addOperators(string num, int target)
     {
         vector<string> res;
+	// attention to overflow
         long cv;
         string path;
         // find the first operator value, the following can use recursion
@@ -72,16 +73,14 @@ class ExpressionAddOperator {
                 res,
                 path + "-" + cur,
                 cv - curVal,
-                curVal,
+                -curVal,
                 '-');
             dfs(num,
                 i + 1,
                 target,
                 res,
                 path + "*" + cur,
-                ((op == '+') ? cv - preVal + preVal * curVal :
-                               (op == '-' ? cv + preVal - preVal * curVal :
-                                            preVal * curVal)),
+                cv - preVal + preVal * curVal,
                 preVal * curVal,
                 op);  // this op is always the latest non-'*' operator
         }

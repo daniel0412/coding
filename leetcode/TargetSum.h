@@ -23,24 +23,42 @@ class TargetSum {
   public:
     int findTargetSumWays(vector<int>& nums, int S)
     {
-        if(nums.empty())
-            return S == 0;
-        return recursiveImpl(nums, S, 0);
+        int cnt = 0;
+        dfs(nums, S, 0, cnt);
+        return cnt;
     }
 
-  private:
-    int recursiveImpl(const vector<int>& nums, int target, int i)
+    void dfs(const vector<int>& nums, int target, int i, int& cnt)
     {
-        int len = nums.size();
-        if(i == len - 1) {
-            int cnt = 0;
-            cnt += (target == nums[i]);
-            cnt += (target == -nums[i]);
-            return cnt;
+        if(i == nums.size()) {
+            if(target == 0)
+                ++cnt;
+            return;
         }
-        else {
-            return recursiveImpl(nums, target - nums[i], i + 1) +
-                recursiveImpl(nums, target + nums[i], i + 1);
-        }
+        dfs(nums, target + nums[i], i + 1, cnt);
+        dfs(nums, target - nums[i], i + 1, cnt);
+    }
+
+    // use dp to cache number of path
+    int findTargetSumWays(vector<int>& nums, int S)
+    {
+        // dp: cache at index i, the number of paths such that with given sum,
+        // target can be achieved
+        vector<unordered_map<int, int> > dp(nums.size());
+        return dfs(nums, S, 0, dp);
+    }
+    int dfs(const vector<int>& nums,
+            int target,
+            int i,
+            vector<unordered_map<int, int> >& dp)
+    {
+        if(i == nums.size())
+            return target == 0;
+        if(dp[i].count(target))
+            return dp[i][target];
+        int cnt1 = dfs(nums, target + nums[i], i + 1, dp);
+        int cnt2 = dfs(nums, target - nums[i], i + 1, dp);
+        dp[i][target] = cnt1 + cnt2;
+        return dp[i][target];
     }
 };

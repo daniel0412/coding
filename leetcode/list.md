@@ -24,7 +24,6 @@
  | Find Median from Data Stream                           | Hard       | heap                                                   | :v:               |
  | Sort Transformed Array                                 | Medium     | quadratic function, dist from optimal                  | :eyes: :v:        |
  | SlidingWindowMedian                                    | Hard       | multiset                                               | :v:               |
- | Expression Add Operators                               | Hard       |                                                        |                   |
  | Populating Next Right Pointers in Each Node II         | Hard       | iteration                                              | :v: :eyes:        |
  | Populating Next Right Pointers in Each Node            | Medium     | iteration                                              | :v:               |
  | Insert Interval                                        | Hard       | corner cases                                           | :v:               |
@@ -58,7 +57,6 @@
  | Number of Islands                                      | Medium     |                                                        |                   |
  | Word Search II                                         | Hard       |                                                        |                   |
  | The Skyline Problem                                    | Hard       |                                                        |                   |
- | Basic Calculator                                       | Hard       |                                                        |                   |
  | Summary Ranges                                         | Medium     | stringstream/array/size_t                              | :v:               |
  | Missing Ranges                                         | Medium     | same as above                                          | :v:               |
  | Power of Two                                           | Easy       |                                                        |                   |
@@ -69,13 +67,6 @@
  | Group Shifted Strings                                  | Easy       |                                                        |                   |
  | 3Sum Smaller                                           | Medium     |                                                        |                   |
  | Alien Dictionary                                       | Hard       |                                                        |                   |
- | Kth Largest Element in an Array                        | Medium     | quick select/heap                                      | :v: :eyes:        |
- | Kth Smallest Element in a BST                          | Medium     | iterative/recursive                                    | :eyes: :v:        |
- | Kth Smallest Element in a sorted matrix                | Medium     | 1. heap 2. value (not index) binary search+ cnt        | :eyes: :v:        |
- | Kth Smallest Element in Multiplication Table | Hard | same as sorted matrix | :v: |
- | Find K Closest Elements                                | Medium     |                                                        | :v:               |
- | Find K Pairs with Smallest Sum                         | Medium     | heap idea                                              | :eyes: :v:        |
- | Find Kth Smallest Pair Distance                        | Hard       | find dist boundary, and then binary search             | :eyes: :v:        |
  | Encode and Decode Strings                              | Medium     |                                                        |                   |
  | H-Index                                                | Medium     |                                                        |                   |
  | Logger Rater Limitter                                  | Easy       | map                                                    | :v:               |
@@ -104,7 +95,6 @@
  | Max Sum of Rectangle No Greater Thank K                | Hard       | idea: max sum of sub rectangle + lower bound  of diff  | :eyes: :v:        |
  | Number of Islands II                                   | Hard       |                                                        |                   |
  | Range Sum Query 2D – Mutable                           | Hard       |                                                        |                   |
- | Minimum Height Trees                                   | Medium     |                                                        |                   |
  | Burst Balloons                                         | Hard       |                                                        |                   |
  | Super Ugly Number                                      | Medium     |                                                        |                   |
  | Binary Tree Vertical Order Traversal                   | Medium     | tree traversal                                         | :lock:            |
@@ -130,13 +120,6 @@
  | Split Array Largest Sum                                | Hard       | find range, then binary search /dp                          | :eyes:  :v:         |
  | Rearrange String K Distance Apart                      | Hard       | hash/heap/rearrange task w/o reorder                        | :lock: :eyes:       |
  | Task Scheduler                                         | Medium     | find formular + heap solution                               | :eyes: :v:          |
- | Continuous Subarray Sum                                | Medium     | hash map/(a-c)%b==0/cornercase                              | :v: :eyes:          |
- | Maximum Subarray                                       | Easy       | dp/think about divide & conqure                             | :v:                 |
- | Maximum Sum of 3 Non-overlapping Subarrays             | Hard       | presum, fix middle subarray, dp to cache left/right max     | :eyes: :v:          |
- | Minimum Size Subarray Sum                              | Medium     | two pointer find range, then reduce range, analyze why O(n) | :eyes: :v:          |
- | Maximum Size Subarray Sum Equals k                     | Medium     | hash map/idea                                               | :v: :eyes:          |
- | Subarray Sum Equals k                                  | Medium     | hash map/idea                                               | :v: :eyes:          |
- | Subarray Prod Less Than k                              | Medium     | idea                                                        | :eyes: :v:          |
  | Divide Two Integers                                    | Medium     | hash map/prefix sum                                         | :v: :eyes:          |
  | Roman to Integer                                       | Easy       | add then minus two if voliate                               | :v: :eyes:          |
  | Integer to Roman                                       | Medium     | find separating points, then all adding                     | :v: :eyes:          |
@@ -168,7 +151,6 @@
  | Text Justification                                     | Hard       | just deal with string corner case                           | :v:                 |
  | Implement Trie (Prefix Tree)                           | Medium     |                                                             | :v:                 |
  | Add and Search Word – Data structure design            | Medium     | followup with star sign                                     | :v:                 |
- | Expression Add Operators                               | Hard       | tricy dfs: get first val, then (op, val) pair               | :v: :eyes:          |
  | Increasing Subsequence                                 | Medium     | dfs/set to deduplicate                                      | :v:          :eyes: |
  | Word Ladder                                            | Medium     | (double) bfs                                                | :eyes: :v:          |
  | Word Ladder II                                         | Hard       | (double) bfs                                                | :eyes: :v:          |
@@ -249,7 +231,6 @@
  | Longest Word in Dictionary through Deleting | Medium     |                                                         | :v:           |
  | Relative Ranks                              | Easy       | customized sorting                                      | :v:           |
  | Detect Capitals                             | Easy       |                                                         | :v:           |
- | Shortest Unsorted Continuous Subarray       | Easy       | find the disordered index boundary                      | :eyes: :v:    |
  | Maximum Swap                                | Medium     | locate max after non-decreasing seq                     | :eyes: :v:    |
  | Flatten Binary Tree                         | Medium     | recursion, think about iterative                        | :eyes: :v:    |
  | Max Width of Binary Tree                    | Medium     | BFS with queue (which stores node and index)            | :eyes: :v:    |
@@ -302,13 +283,15 @@
 
 ## Graph
 - for `undirected` graph, when `dfs` to traverse the graph, need to pass `pre` to distinguish `0-1` and `1-0` cycle
+
  | Problems                                              | Difficulty | Techniques                                          |
  | :-------------------------                            | :---:      | :----                                               |
  | Graph Valid Tree                                      | Medium     | dfs/bfs/union find                                  |
  | Number of Connected Components in an Undirected Graph | Medium     | union find/dfs(vector with diff vals to track state |
+ | Minimum Height Trees                                  | Medium     | use degrees, start from leaf node                   |
  | Clone Graph                                           | Medium     | dfs/bfs (avoid cycle)                               |
  | Merge Accounts                                        | Medium     | bfs/union find                                      |
- | Redundant Connection                                  | Medium     | union find                                          |
+ | Redundant Connection                                  | Medium     | union find: first same parent edge                  |
 
 ## Classic Backtracing
 
@@ -387,45 +370,72 @@ void dfs(nums, id, path, res) {
  | Generate Parentheses                                   | Medium     | dfs to print parenthsis                          |
  | Remove Invalid Parentheses                             | Hard       | count num to remove, then dfs                    |
  | Remove Invalid Parentheses (return one valid solution) | Hard       | 1.two loops 2. one loop                          |
+ | Different Ways to add parentheses                      | Medium     | divide and conqure                               |
+ | Expression Add Operators                               | Hard       | get first val, then (op, val) pair dfs           |
+ | Basic Calculator                                       | Hard       | stack to store both prev sum as well as sign     |
+ | Basic Calculator II                                    | Hard       | include dividsion and multiplication             |
 
 
 ### Palindromic Problems
 - check `if size(s) < 2`, return `true`
 
- | :-------------------------       | :---:  | :----                                               |
- | Valid Palindrome                 | Easy   | transform()/tolower()/isalnum()                     |
- | Valid Palindrome II              | Easy   | at most remove 1 char                               |
- | Palindrome Linked List           | Easy   | stack to store 1st half/reverse 2nd half            |
- | Palindrome Permutation           | Easy   |                                                     |
- | Palindrome Permutation II        | Medium | how to permutate a string                                                    |
- | Palindromic Substrings           | Medium | dp, str end to front, double-sided expansion faster |
- | Longest Palindromic Sub sequence | Medium | dp, back to front, find how to transfer states      |
- | Longest Palindromic Sub string   | Medium | dp, but double-sided expansion is faster            |
- | Shortest Palindrome              | Hard   |                                                     |
- | Palindrome Pairs                 | Hard   |                                                     |
+ | Problems                         | Difficulty | Techniques                                          |
+ | :-------------------------       | :---:      | :----                                               |
+ | Valid Palindrome                 | Easy       | transform()/tolower()/isalnum()                     |
+ | Valid Palindrome II              | Easy       | at most remove 1 char                               |
+ | Palindrome Linked List           | Easy       | stack to store 1st half/reverse 2nd half            |
+ | Palindrome Permutation           | Easy       |                                                     |
+ | Palindrome Permutation II        | Medium     | how to permutate a string                           |
+ | Palindromic Substrings           | Medium     | dp, str end to front, double-sided expansion faster |
+ | Longest Palindromic Sub sequence | Medium     | dp, back to front, find how to transfer states      |
+ | Longest Palindromic Sub string   | Medium     | dp, but double-sided expansion is faster            |
+ | Shortest Palindrome              | Hard       |                                                     |
+ | Palindrome Pairs                 | Hard       |                                                     |
 
 
 ## Array
- | Problems                            | Difficulty | Techniques                                                      |
- | :-------------------------          | :---:      | :----                                                           |
- | Sparse Vector Multiplication        | Medium     | pair store, 1. two pointer 2. binary search 3. divide & conqure |
- | Sparse Matrix Multiplication        | Medium     | avoid multiplication when possible                              |
- | Rotate Array                        | Easy       | think at lease 3 ways                                           |
- | Search in Rotated Sorted Array      | Medium     | decide which part is sorted, then choose direction              |
- | Search in Rotated Sorted Array II   | Medium     | only start/end equal affects it, how to break this              |
- | Find Min in Rotated Sorted Array    | Medium     | early stop if sorted                                            |
- | Find Min in Rotated Sorted Array II | Medium     | how to break start/mid/end are equal                            |
- | Sort Colors                         | Medium     | two pointer/two side to middle                                  |
- | Contiguous Array                    | Medium     | hash map/presum idea/store mod                                  |
- | Two Sum                             | Easy       | hashmap/two pointer                                             |
- | Two Sum II – Input array is sorted  | Easy       | two pointer to squeeze                                          |
- | Two Sum III – Data structure design | Easy       | hashmap/multiset                                                |
- | Two Sum in BST                      | Easy       | inorder to form sorted array, two pointer                       |
- | 3Sum                                | Medium     | two pointer/de-duplicate                                        |
- | 3Sum Closest                        | Medium     | two pointer/de-dupicate                                         |
- | 3Sum Smaller                        | Medium     | two pointer                                                     |
- | Target Sum                          | Medium     | recursion                                                       |
- | Longest Consecutive Sequence        | Hard       | think differently  (linear solution)                            |
+ | Problems                                   | Difficulty   | Techniques                                                      |
+ | :-------------------------                 | :---:        | :----                                                           |
+ | Sparse Vector Multiplication               | Medium       | pair store, 1. two pointer 2. binary search 3. divide & conqure |
+ | Sparse Matrix Multiplication               | Medium       | avoid multiplication when possible                              |
+ | Rotate Array                               | Easy         | think at lease 3 ways                                           |
+ | Search in Rotated Sorted Array             | Medium       | decide which part is sorted, then choose direction              |
+ | Search in Rotated Sorted Array II          | Medium       | only start/end equal affects it, how to break this              |
+ | Find Min in Rotated Sorted Array           | Medium       | early stop if sorted                                            |
+ | Find Min in Rotated Sorted Array II        | Medium       | how to break start/mid/end are equal                            |
+ | Sort Colors                                | Medium       | two pointer/two side to middle                                  |
+ | Contiguous Array                           | Medium       | hash map/presum idea/store mod                                  |
+ | Two Sum                                    | Easy         | hashmap/two pointer                                             |
+ | Two Sum II – Input array is sorted         | Easy         | two pointer to squeeze                                          |
+ | Two Sum III – Data structure design        | Easy         | hashmap/multiset                                                |
+ | Two Sum in BST                             | Easy         | inorder to form sorted array, two pointer                       |
+ | 3Sum                                       | Medium       | two pointer/de-duplicate                                        |
+ | 3Sum Closest                               | Medium       | two pointer/de-dupicate                                         |
+ | 3Sum Smaller                               | Medium       | two pointer                                                     |
+ | Target Sum                                 | Medium       | 1. recursion 2. dp to cache                                     |
+ | Continuous Subarray Sum                    | Medium       | hash map/(a-c)%b==0/cornercase                                  |
+ | Maximum Subarray                           | Easy         | dp/think about divide & conqure                                 |
+ | Maximum Sum of 3 Non-overlapping Subarrays | Hard         | presum, fix middle subarray, dp to cache left/right max         |
+ | Minimum Size Subarray Sum                  | Medium       | two pointer find range, then reduce range, analyze why O(n)     |
+ | Maximum Size Subarray Sum Equals k         | Medium       | hash map/idea                                                   |
+ | Subarray Sum Equals k                      | Medium       | hash map/idea, initialization issue                             |
+ | Subarray Prod Less Than k                  | Medium       | idea                                                            |
+ | Longest Consecutive Sequence               | Hard         | think differently  (linear solution)                            |
+ | Shortest Unsorted Continuous Subarray      | :eyes:  Easy | find the disordered index boundary                              |
+
+## Kth problem
+- when locating `k`-th, binary first find the solution boundary, and then do binary search in the solution space might help
+- in such cases `<k` definitely can move solution; `>=k' is not enough to return the result
+
+ | Problems                                     | Difficulty | Techniques                                      |
+ | :-------------------------                   | :---:      | :----                                           |
+ | Kth Largest Element in an Array              | Medium     | quick select/heap                               |
+ | Kth Smallest Element in a BST                | Medium     | iterative/recursive                             |
+ | Kth Smallest Element in a sorted matrix      | Medium     | 1. heap 2. value (not index) binary search+ cnt |
+ | Kth Smallest Element in Multiplication Table | Hard       | same as sorted matrix                           |
+ | Find K Closest Elements                      | Medium     |                                                 |
+ | Find K Pairs with Smallest Sum               | Medium     | heap idea                                       |
+ | Find Kth Smallest Pair Distance              | Hard       | find dist boundary, and then binary search      |
 
 
 ## Bits Manipulation
@@ -436,10 +446,9 @@ void dfs(nums, id, path, res) {
 
 
 ## Binary Search
- | Problems              | Difficulty | Techniques                         |
- | Find Peak Element     | Medium     | how to move to the next iteration  |
- | Search a 2D Matrix    | Medium     | binary search, location conversion |
- | Search a 2D Matrix II | Medium     | find correct starting location     |
-
- | Problems           | Difficulty | Techniques                          |
+ | Problems                   | Difficulty | Techniques                         |
+ | :------------------------- | :---:      | :----                              |
+ | Find Peak Element          | Medium     | how to move to the next iteration  |
+ | Search a 2D Matrix         | Medium     | binary search, location conversion |
+ | Search a 2D Matrix II      | Medium     | find correct starting location     |
  | Diagonal Traversal | Medium     | flip directions when meets boundary |

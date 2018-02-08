@@ -23,35 +23,39 @@ class TwoSum {
   public:
     // ATTENTION: the array is not sorted
     // sorting will corrupt the index order
-    vector<int> twoSum(vector<int>& nums, int target)
+
+    // two passes
+    vector<int> twoSumImpl1(vector<int>& nums, int target)
     {
-        vector<int> res;
-        if(nums.size() < 2)
-            return res;
-
-        unordered_map<int, vector<int>> valToIndexListMap;
+        unordered_map<int, int> m;
+        // for the same value, index will be overwritten
         for(int i = 0; i < nums.size(); ++i) {
-            valToIndexListMap[nums[i]].push_back(i);
+            m[nums[i]] = i;
         }
-
-        for(int firstId = 0; firstId < nums.size(); ++firstId) {
-            unordered_map<int, vector<int> >::iterator iter =
-                valToIndexListMap.find(target - nums[firstId]);
-            if(iter != valToIndexListMap.end()) {
-                for(auto secondId : iter->second) {
-                    if(secondId == firstId) {
-                        continue;
-                    }
-                    else {
-                        res.push_back(firstId);
-                        res.push_back(secondId);
-                        return res;
-                    }
-                }
+        for(int i = 0; i < nums.size(); ++i) {
+            int diff = target - nums[i];
+            if(m.count(diff) && m[diff] != i) {
+                return {i, m[diff]};
             }
         }
-        return res;
+        return {};
     }
 
-  private:
-};
+    // one pass
+    vector<int> twoSumImpl1(vector<int>& nums, int target)
+    {
+        unordered_map<int, int> m;
+        for(int i = 0; i < nums.size(); ++i) {
+            int diff = target - nums[i];
+            if(m.count(diff) && m[diff] != i) {
+                return {m[diff], i};
+                res.push_back(m[diff]);
+                res.push_back(i);
+                break;
+            }
+            m[nums[i]] = i;
+        }
+        return res;
+
+      private:
+    };
