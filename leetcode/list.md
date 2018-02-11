@@ -23,7 +23,6 @@
  | Median of Two Sorted Arrays                            | Hard       | binary search                                          | :v:        :eyes: |
  | Find Median from Data Stream                           | Hard       | heap                                                   | :v:               |
  | Sort Transformed Array                                 | Medium     | quadratic function, dist from optimal                  | :eyes: :v:        |
- | SlidingWindowMedian                                    | Hard       | multiset                                               | :v:               |
  | Populating Next Right Pointers in Each Node II         | Hard       | iteration                                              | :v: :eyes:        |
  | Populating Next Right Pointers in Each Node            | Medium     | iteration                                              | :v:               |
  | Insert Interval                                        | Hard       | corner cases                                           | :v:               |
@@ -60,6 +59,7 @@
  | Summary Ranges                                         | Medium     | stringstream/array/size_t                              | :v:               |
  | Missing Ranges                                         | Medium     | same as above                                          | :v:               |
  | Power of Two                                           | Easy       |                                                        |                   |
+ | Sliding Window Median                                    | Hard       | multiset                                               | :v:               |
  | Sliding Window Maximum                                 | Hard       |                                                        |                   |
  | Strobogrammatic Number                                 | Easy       | hashmap                                                | :v: :lock:        |
  | Strobogrammatic Number II                              | Medium     | backtracking                                           | :v: :lock:        |
@@ -356,25 +356,25 @@ void dfs(nums, id, path, res) {
  | Best Time to Buy and Sell Stock with Transaction Fee | Medium     | current state depends on previous state sell/hold |  |
 
 ## String
- | Problems                                               | Difficulty | Techniques                                       |
- | :-------------------------                             | :---:      | :----                                            |
- | Valid Anagrams                                         | Easy       | sort/map                                         |
- | Group Anagrams                                         | Medium     | hash map/sort string                             |
- | Find All Anagrams in String                            | Easy       | sliding window template + map to track count     |
- | Minimum Window Substring                               | Hard       | sliding window template + map/count to track     |
- | Longest subsring without repeating chars               | Medium     | sliding window template + map to index           |
- | Longest Substring with At Most K Distinct Characters   | Hard       | sliding window template + map to rightmost index |
- | Valid Parentheses                                      | Easy       | stack/non-stack counter solution                 |
- | Generate Parentheses                                   | Medium     | dfs to print parenthsis                          |
- | Remove Invalid Parentheses                             | Hard       | count num to remove, then dfs                    |
- | Remove Invalid Parentheses (return one valid solution) | Hard       | 1.two loops 2. one loop                          |
- | Different Ways to add parentheses                      | Medium     | divide and conqure                               |
- | Expression Add Operators                               | Hard       | get first val, then (op, val) pair dfs           |
- | Basic Calculator                                       | Hard       | stack to store both prev sum as well as sign     |
- | Basic Calculator II                                    | Hard       | include dividsion and multiplication             |
- | Longest Uncommon Subsequence I                         | Easy       |                                                  |
- | Longest Uncommon Subsequence II                        | Medium     |                                                  |
-
+ | Problems                                               | Difficulty  | Techniques                                       |
+ | :-------------------------                             | :---:       | :----                                            |
+ | Valid Anagrams                                         | Easy        | sort/map                                         |
+ | Group Anagrams                                         | Medium      | hash map/sort string                             |
+ | Find All Anagrams in String                            | Easy        | sliding window template + map to track count     |
+ | Minimum Window Substring                               | :eyes: Hard | sliding window template + map/count to track     |
+ | Minimum Window Subsequence                             | :eyes: Hard | diff from above, keep order, bruteforce, dp      |
+ | Longest subsring without repeating chars               | Medium      | sliding window template + map to index           |
+ | Longest Substring with At Most K Distinct Characters   | Hard        | sliding window template + map to rightmost index |
+ | Valid Parentheses                                      | Easy        | stack/non-stack counter solution                 |
+ | Generate Parentheses                                   | Medium      | dfs to print parenthsis                          |
+ | Remove Invalid Parentheses                             | Hard        | count num to remove, then dfs                    |
+ | Remove Invalid Parentheses (return one valid solution) | Hard        | 1.two loops 2. one loop                          |
+ | Different Ways to add parentheses                      | Medium      | divide and conqure                               |
+ | Expression Add Operators                               | Hard        | get first val, then (op, val) pair dfs           |
+ | Basic Calculator                                       | Hard        | stack to store both prev sum as well as sign     |
+ | Basic Calculator II                                    | Hard        | include dividsion and multiplication             |
+ | Longest Uncommon Subsequence I                         | Easy        |                                                  |
+ | Longest Uncommon Subsequence II                        | Medium      | utility function to check sub sequence           |
 
 ### Palindromic Problems
 - check `if size(s) < 2`, return `true`
