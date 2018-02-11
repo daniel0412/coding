@@ -89,8 +89,6 @@
  | Max Consecutive Ones                                   | Easy       |                                                        | :v:               |
  | Max Consecutive Ones  II                               | Medium     | idea                                                   | :eyes: :v:        |
  | Longest Increasing Path in a Matrix                    | Hard       | dfs + memorization to prun                             | :eyes: :v:        |
- | Longest Increasing Subsequence                         | Medium     | construct array, then binary search to replace         | :eyes: :v:        |
- | Number of Longest Increasing Subsequence               | Medium     |                                                        | :eyes: :v:        |
  | Smallest Rectangle Enclosing Black Pixels              | Hard       | 1. brute force  2. four directions binary search idea  | :eyes: :lock:     |
  | Max Sum of Rectangle No Greater Thank K                | Hard       | idea: max sum of sub rectangle + lower bound  of diff  | :eyes: :v:        |
  | Number of Islands II                                   | Hard       |                                                        |                   |
@@ -260,26 +258,26 @@
 
 
 ## Tree Basics
- | Problems                                    | Difficulty | Techniques                                         |
- | :-------------------------                  | :---:      | :----                                              |
- | Binary Tree PreOrder Travesal/Iterator      | Medium     | iterative/recursive                                |
- | Binary Tree InOrder Travesal/Iterator       | Medium     | iterative/recursive                                |
- | Binary Tree PostOrder Travesal/Iterator     | Hard       | iterative/recursive                                |
- | Binary Tree Serialization/Deserialization   | Medium     | preorder-recursion/level-order iteration           |
- | BST Serialization/Deserialization (compact) | Medium     | preorder-recursion with min/max threshold          |
- | Find Duplicate Subtrees                     | Medium     | serialize to deduplicate, make sure serialize once |
- | Find Leaves of Binary Tree                  | Medium     | bottom up to count the height                      |
- | Binary Tree Maximum Path Sum                | Hard       | how to calculate a path sum                        |
- | Path Sum I/II/III                           | Medium     | III needs more attention                           |
- | Sum of Root to Leave Number                 | Medium     | each deeper level, x10                             |
- | Binary Tree Paths                           | Easy       | dfs                                                |
- | Maximum Binary Tree                         | Medium     | recursion/iterative (think this)                   |
- | Convert Sorted Array/List to BST            | Medium     | concise coding                                     |
- | Convert BST to Double Linked List           | Medium     | think about the recursion                          |
- | Closest Binary Search Tree Value            | Easy       | BST                                                |
- | Closest Binary Search Tree Value II         | Hard       | heap/BST                                           |
- | Binary Tree Longest Consecutive Sequence    | Medium     | top-down to count, and track max length            |
- | Binary Tree Longest Consecutive Sequence II | Medium     | bottom-up to count left/right max inc/dec length   |
+ | Problems                                    | Difficulty | Techniques                                           |
+ | :-------------------------                  | :---:      | :----                                                |
+ | Binary Tree PreOrder Travesal/Iterator      | Medium     | iterative/recursive                                  |
+ | Binary Tree InOrder Travesal/Iterator       | Medium     | iterative/recursive                                  |
+ | Binary Tree PostOrder Travesal/Iterator     | Hard       | iterative/recursive                                  |
+ | Binary Tree Serialization/Deserialization   | Medium     | preorder-recursion/level-order iteration             |
+ | BST Serialization/Deserialization (compact) | Medium     | preorder-recursion with min/max threshold            |
+ | Find Duplicate Subtrees                     | Medium     | serialize to deduplicate, make sure serialize once   |
+ | Find Leaves of Binary Tree                  | Medium     | bottom up to count the height                        |
+ | Binary Tree Maximum Path Sum                | Hard       | how to calculate a path sum                          |
+ | Path Sum I/II/III                           | Medium     | III needs more attention                             |
+ | Sum of Root to Leave Number                 | Medium     | each deeper level, x10                               |
+ | Binary Tree Paths                           | Easy       | dfs                                                  |
+ | Maximum Binary Tree                         | Medium     | recursion/iterative (think this)                     |
+ | Convert Sorted Array/List to BST            | Medium     | concise coding                                       |
+ | Convert BST to Double Linked List           | Medium     | think about the recursion                            |
+ | Closest Binary Search Tree Value            | Easy       | BST                                                  |
+ | Closest Binary Search Tree Value II         | Hard       | heap/BST                                             |
+ | Binary Tree Longest Consecutive Sequence    | Medium     | top-down or bottom-up to count, and track max length |
+ | Binary Tree Longest Consecutive Sequence II | Medium     | bottom-up to count left/right max inc/dec length     |
 
 ## Graph
 - for `undirected` graph, when `dfs` to traverse the graph, need to pass `pre` to distinguish `0-1` and `1-0` cycle
@@ -394,34 +392,39 @@ void dfs(nums, id, path, res) {
 
 
 ## Array
- | Problems                                   | Difficulty   | Techniques                                                      |
- | :-------------------------                 | :---:        | :----                                                           |
- | Sparse Vector Multiplication               | Medium       | pair store, 1. two pointer 2. binary search 3. divide & conqure |
- | Sparse Matrix Multiplication               | Medium       | avoid multiplication when possible                              |
- | Rotate Array                               | Easy         | think at lease 3 ways                                           |
- | Search in Rotated Sorted Array             | Medium       | decide which part is sorted, then choose direction              |
- | Search in Rotated Sorted Array II          | Medium       | only start/end equal affects it, how to break this              |
- | Find Min in Rotated Sorted Array           | Medium       | early stop if sorted                                            |
- | Find Min in Rotated Sorted Array II        | Medium       | how to break start/mid/end are equal                            |
- | Sort Colors                                | Medium       | two pointer/two side to middle                                  |
- | Contiguous Array                           | Medium       | hash map/presum idea/store mod                                  |
- | Two Sum                                    | Easy         | hashmap/two pointer                                             |
- | Two Sum II – Input array is sorted         | Easy         | two pointer to squeeze                                          |
- | Two Sum III – Data structure design        | Easy         | hashmap/multiset                                                |
- | Two Sum in BST                             | Easy         | inorder to form sorted array, two pointer                       |
- | 3Sum                                       | Medium       | two pointer/de-duplicate                                        |
- | 3Sum Closest                               | Medium       | two pointer/de-dupicate                                         |
- | 3Sum Smaller                               | Medium       | two pointer                                                     |
- | Target Sum                                 | Medium       | 1. recursion 2. dp to cache                                     |
- | Continuous Subarray Sum                    | Medium       | hash map/(a-c)%b==0/cornercase                                  |
- | Maximum Subarray                           | Easy         | dp/think about divide & conqure                                 |
- | Maximum Sum of 3 Non-overlapping Subarrays | Hard         | presum, fix middle subarray, dp to cache left/right max         |
- | Minimum Size Subarray Sum                  | Medium       | two pointer find range, then reduce range, analyze why O(n)     |
- | Maximum Size Subarray Sum Equals k         | Medium       | hash map/idea                                                   |
- | Subarray Sum Equals k                      | Medium       | hash map/idea, initialization issue                             |
- | Subarray Prod Less Than k                  | Medium       | idea                                                            |
- | Longest Consecutive Sequence               | Hard         | think differently  (linear solution)                            |
- | Shortest Unsorted Continuous Subarray      | :eyes:  Easy | find the disordered index boundary                              |
+ | Problems                                   | Difficulty    | Techniques                                                          |
+ | :-------------------------                 | :---:         | :----                                                               |
+ | Sparse Vector Multiplication               | Medium        | pair store, 1. two pointer 2. binary search 3. divide & conqure     |
+ | Sparse Matrix Multiplication               | Medium        | avoid multiplication when possible                                  |
+ | Rotate Array                               | Easy          | think at lease 3 ways                                               |
+ | Search in Rotated Sorted Array             | Medium        | decide which part is sorted, then choose direction                  |
+ | Search in Rotated Sorted Array II          | Medium        | only start/end equal affects it, how to break this                  |
+ | Find Min in Rotated Sorted Array           | Medium        | early stop if sorted                                                |
+ | Find Min in Rotated Sorted Array II        | Medium        | how to break start/mid/end are equal                                |
+ | Sort Colors                                | Medium        | two pointer/two side to middle                                      |
+ | Contiguous Array                           | Medium        | hash map/presum idea/store mod                                      |
+ | Two Sum                                    | Easy          | hashmap/two pointer                                                 |
+ | Two Sum II – Input array is sorted         | Easy          | two pointer to squeeze                                              |
+ | Two Sum III – Data structure design        | Easy          | hashmap/multiset                                                    |
+ | Two Sum in BST                             | Easy          | inorder to form sorted array, two pointer                           |
+ | 3Sum                                       | Medium        | two pointer/de-duplicate                                            |
+ | 3Sum Closest                               | Medium        | two pointer/de-dupicate                                             |
+ | 3Sum Smaller                               | Medium        | two pointer                                                         |
+ | Target Sum                                 | Medium        | 1. recursion 2. dp to cache                                         |
+ | Continuous Subarray Sum                    | Medium        | hash map/(a-c)%b==0/cornercase                                      |
+ | Maximum Subarray                           | Easy          | dp/think about divide & conqure                                     |
+ | Maximum Averate Subarray                   | Easy          | equals to find maximum sum of fixed size                            |
+ | Maximum Averate Subarray II                | :eyes: Hard   | binary search in solution space + O(n) existence check              |
+ | Maximum Sum of 3 Non-overlapping Subarrays | :eyes: Hard   | presum, fix middle subarray, dp to cache left/right max             |
+ | Minimum Size Subarray Sum                  | Medium        | two pointer find range, then reduce range, analyze why O(n)         |
+ | Maximum Size Subarray Sum Equals k         | Medium        | hash map/idea                                                       |
+ | Subarray Sum Equals k                      | Medium        | hash map/idea, initialization issue                                 |
+ | Subarray Prod Less Than k                  | Medium        | idea                                                                |
+ | Shortest Unsorted Continuous Subarray      | :eyes:  Easy  | find the disordered index boundary                                  |
+ | Longest Consecutive Sequence               | Hard          | think differently  (linear solution)                                |
+ | Longest Continuous Increasing Subsequence  | Easy          | basic array operation                                               |
+ | Longest Increasing Subsequence             | :eyes: Medium | 1. dp O(n^2) 2. put/replace the constructed array using lower bound |
+ | Number of Longest Increasing Subsequence   | :eyes: Medium | dp to record maxlen up to i, another vec to record count            |
 
 ## Kth problem
 - when locating `k`-th, binary first find the solution boundary, and then do binary search in the solution space might help

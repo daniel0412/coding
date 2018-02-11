@@ -48,6 +48,7 @@ using namespace std;
 
 class BinaryTreeLCS {
   public:
+    // count from top down
     int longestConsecutive(TreeNode* root)
     {
         if(root == nullptr)
@@ -71,5 +72,35 @@ class BinaryTreeLCS {
         target = root->val + 1;
         helper(root->left, maxLen, curLen, target);
         helper(root->right, maxLen, curLen, target);
+    }
+
+    // count from bottom up
+    int longestConsecutive(TreeNode* root)
+    {
+        if(root == nullptr)
+            return 0;
+        int nmax = 1;
+        dfs(root, nmax);
+        return nmax;
+    }
+
+    int dfs(TreeNode* root, int& nmax)
+    {
+        int numl = 0, numr = 0, target = root->val + 1;
+        int num = 1;
+        if(root->left) {
+            numl = dfs(root->left, nmax);
+            if(target == root->left->val) {
+                num = max(num, 1 + numl);
+            }
+        }
+        if(root->right) {
+            numr = dfs(root->right, nmax);
+            if(target == root->right->val) {
+                num = max(num, 1 + numr);
+            }
+        }
+        nmax = max(nmax, num);
+        return num;
     }
 };

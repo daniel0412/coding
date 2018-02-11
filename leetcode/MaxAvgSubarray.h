@@ -23,14 +23,13 @@ class MaxAvgSubarray {
   public:
     double findMaxAverage(vector<int>& nums, int k)
     {
-        long long sum = 0;
-        for(int i = 0; i < k; ++i) {
-            sum += nums[i];
-        }
+        if(nums.size() < k)
+            return 0;
+        long long sum = accumulate(nums.begin(), nums.begin() + k, 0);
         long long maxSum = sum;
         for(int i = k; i < nums.size(); ++i) {
+            sum -= nums[i - k];
             sum += nums[i];
-            sum -= nums[i-k];
             maxSum = max(maxSum, sum);
         }
         return maxSum * 1.0 / k;

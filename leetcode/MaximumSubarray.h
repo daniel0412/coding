@@ -22,9 +22,8 @@ using namespace std;
 class MaximumSubarray {
   public:
       int maxSubArray(vector<int>& nums) {
-          int maxSum = INT_MIN;
-          if(nums.empty()) return maxSum;
-          int prevSum = INT_MIN;
+          int maxSum = nums.front();
+          int prevSum = 0;
           for(size_t i = 0; i < nums.size(); ++i) {
               prevSum = prevSum > 0 ? prevSum + nums[i] : nums[i];
               maxSum = max(maxSum, prevSum);

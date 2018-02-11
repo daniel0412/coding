@@ -77,6 +77,10 @@ auto comp = [](const pair<int, int>& a, const pair<int, int>& b) {
 priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(comp))> heap(comp);
 ```
 
+#### numeric_limits
+- `numeric_limits<T>::min()` returns negative value for `T=int`, for positive value for `float` or `double`
+- use '`numeric_limits<double>::lowest()` if needed
+
 #### level order travesal of binary tree
 - use dfs and tracking parameter
 - use bfs with queue

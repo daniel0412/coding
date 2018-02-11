@@ -21,6 +21,7 @@ using namespace std;
 
 class LongestIncreasingSubseq {
   public:
+    // O(n*lgn) implementation with constructing the matrix
     int lengthOfLIS(vector<int>& nums)
     {
         vector<int> res;
@@ -32,6 +33,27 @@ class LongestIncreasingSubseq {
                 *iter = n;
         }
         return res.size();
+    }
+
+
+    // O(n^2) dp implementation
+    int dp(vector<int>& nums)
+    {
+        if(nums.size() < 2)
+            return nums.size();
+        int maxlen = 1;
+        vector<int> dp(nums.size(), 1);
+        for(int i = 1; i < nums.size(); ++i) {
+            for(int j = 0; j < i; ++j) {
+                if(nums[j] < nums[i]) {
+                    if(dp[i] < dp[j] + 1) {
+                        dp = dp[j] + 1;
+                    }
+                }
+                maxlen = max(maxlen, dp[i]);
+            }
+        }
+        return maxlen
     }
 
 
