@@ -372,6 +372,8 @@ void dfs(nums, id, path, res) {
  | Expression Add Operators                               | Hard       | get first val, then (op, val) pair dfs           |
  | Basic Calculator                                       | Hard       | stack to store both prev sum as well as sign     |
  | Basic Calculator II                                    | Hard       | include dividsion and multiplication             |
+ | Longest Uncommon Subsequence I                         | Easy       |                                                  |
+ | Longest Uncommon Subsequence II                        | Medium     |                                                  |
 
 
 ### Palindromic Problems
