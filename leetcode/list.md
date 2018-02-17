@@ -352,10 +352,12 @@ void dfs(nums, id, path, res) {
  | Triangle                                             | Medium     | bottom up dp                                      |
  | Decode Ways                                          | Medium     | recursion(slow)/dp(cornor cases)                  |
  | Decode Ways II                                       | Medium     | with * decoded as 1-9                             |
- | Best Time to Buy and Sell Stock I/II                 | Easy       | greedy                                            |  |
- | Best Time to Buy and Sell Stock III/IV               | Hard       | local/global dp, sooo hard                        |  |
- | Best Time to Buy and Sell Stock with Cooldown        | Medium     |                                                   |  |
- | Best Time to Buy and Sell Stock with Transaction Fee | Medium     | current state depends on previous state sell/hold |  |
+ | Best Time to Buy and Sell Stock I/II                 | Easy       | greedy                                            |
+ | Best Time to Buy and Sell Stock III/IV               | Hard       | local/global dp, sooo hard                        |
+ | Best Time to Buy and Sell Stock with Cooldown        | Medium     |                                                   |
+ | Best Time to Buy and Sell Stock with Transaction Fee | Medium     | current state depends on previous state sell/hold |
+ | Guess Number Higher or Less                          | Hard       | mini-max dp                                       |
+ | Predict the Winner                                   | Hard       | mini-max dp                                       |
 
 ## String
  | Problems                                               | Difficulty  | Techniques                                       |
