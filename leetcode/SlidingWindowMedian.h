@@ -21,6 +21,42 @@ using namespace std;
 
 class SlidingWindowMedian {
   public:
+    // one multiset implementation
+    vector<double> medianSlidingWindow(vector<int>& nums, int k)
+    {
+        vector<int> res;
+        multiset<int> ms(nums.begin(),
+                         nums.begin() + k);  // with first k elements
+        auto midIter = next(nums.begin(), k / 2);
+        bool isodd = k % 2;
+        int i = k;
+        while(1) {
+            if(isodd) {
+                res.push_back(*midIter);
+            }
+            else {
+                // incase overflow
+                res.push_back((*midIer)/2.0+ *prev(midIter, 1) / 2.0);
+            }
+            if(i == nums.size())
+                break;
+
+            // insert next element, if equals to existing element, it will
+            // insert right after the equivalent element
+            ms.insert(nums[i]);
+            // here, only <, no equal, due to reason mentioned above
+            if(nums[i] < *midIter)
+                --midIter;
+            if(nums[i - k] <= *midIter)
+                ++midIter;
+            // pass an iterator, since erase will remove all same elements
+            ms.erase(ms.lower_bound(nums[i - k]));
+            ++i;
+        }
+        return res;
+    }
+
+    // following is two multiset implementation
     vector<double> medianSlidingWindow(vector<int>& nums, int k)
     {
         vector<double> res;
@@ -71,7 +107,8 @@ class SlidingWindowMedian {
         auto rightIter = d_rightSet.find(n);
         if(rightIter != d_rightSet.end()) {
             d_rightSet.erase(rightIter);
-        }else{
+        }
+        else {
             d_leftSet.erase(d_leftSet.find(n));
         }
     }
@@ -86,14 +123,18 @@ class SlidingWindowMedian {
         }
     }
 
-    void printSets() {
+    void printSets()
+    {
         cout << "========================" << endl;
-        cout << "> lsize: " << d_leftSet.size() << ", rsize: " << d_rightSet.size() << endl;
+        cout << "> lsize: " << d_leftSet.size()
+             << ", rsize: " << d_rightSet.size() << endl;
         cout << "> leftset:  ";
-        for(auto d : d_leftSet) cout << d << ",";
+        for(auto d : d_leftSet)
+            cout << d << ",";
         cout << endl;
         cout << "> leftset:  ";
-        for(auto d : d_rightSet) cout << d << ",";
+        for(auto d : d_rightSet)
+            cout << d << ",";
         cout << endl;
         cout << "========================" << endl;
     }
