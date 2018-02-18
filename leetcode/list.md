@@ -101,7 +101,7 @@
  | Maximum Product of Word Lengths                        | Medium      |                                                        |                   |
  | Friend Cycle                                           | Medium      | union find (var to track count, when union reduce one) | :eyes: :v:        |
  | Patching Array                                         | Hard        | greedily expand [0, sum) range                         | :eyes: :v:        |
- | Verify Preorder Serialization of a Binary Tree         | Medium      |                                                        |                   |
+ | Verify Preorder Serialization of a Binary Tree         | Medium      | stack to squash subtree/use in and out degree          |                   |
  | Reconstruct Itinerary                                  | Medium      |                                                        |                   |
  | Remove K Digits                                        | Medium      | idea                                                   | :eyes: :v:        |
  | Create Maximum Number                                  | Hard        | max num from one array/merge/try  all combinations     | :eyes: :eyes: :v: |
@@ -220,7 +220,7 @@
  | K Inverse Pair Array                        | Hard       | dp formula                                              | :eyes: :v:    |
  | Single Element in Sorted Array              | Medium     | O(lgn) binary search, but how                           | :eyes: :v:    |
  | Number of Boomerangs                        | Easy       | brute force                                             | :v:           |
- | Numbers Disappeared in Array                | Easy       | no extra space, use array itself                        | :v:           |
+ | Numbers Disappeared in Array                | Easy       | no extra space, use array itself, switch or mark        | :v:           |
  | First Missing Positive                      | Hard       | use array itself and index to store value               | :v:           |
  | Next Greater Element I                      | Easy       | O(n) with stack                                         | :eyes: :v:    |
  | Next Greater Element II                     | Medium     | cycular array + stack                                   | :eyes: :v:    |
