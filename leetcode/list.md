@@ -58,7 +58,6 @@
  | The Skyline Problem                                    | Hard        |                                                        |                   |
  | Summary Ranges                                         | Medium      | stringstream/array/size_t                              | :v:               |
  | Missing Ranges                                         | Medium      | same as above                                          | :v:               |
- | Power of Two                                           | Easy        |                                                        |                   |
  | Sliding Window Median                                  | :eyes: Hard | use multiset and movd midIter accordingly              | :v:               |
  | Sliding Window Maximum                                 | Hard        |                                                        |                   |
  | Strobogrammatic Number                                 | Easy        | hashmap                                                | :v: :lock:        |
@@ -101,7 +100,6 @@
  | Shortest Distance from All Buildings                   | Hard        | bfs, shortest dist + accessible from all buildings     | :eyes: :v:        |
  | Maximum Product of Word Lengths                        | Medium      |                                                        |                   |
  | Friend Cycle                                           | Medium      | union find (var to track count, when union reduce one) | :eyes: :v:        |
- | Power of Three                                         | Easy        |                                                        |                   |
  | Patching Array                                         | Hard        | greedily expand [0, sum) range                         | :eyes: :v:        |
  | Verify Preorder Serialization of a Binary Tree         | Medium      |                                                        |                   |
  | Reconstruct Itinerary                                  | Medium      |                                                        |                   |
@@ -448,10 +446,13 @@ void dfs(nums, id, path, res) {
 
 
 ## Bits Manipulation
- | Problems                   | Difficulty | Techniques               |
- | :------------------------- | :---:      | :----                    |
- | Hamming Distance           | Easy       | clear right most left 1  |
- | Total Hamming Distance     | Medium     | vertical 1s, combination |
+ | Problems                   | Difficulty | Techniques                                           |
+ | :------------------------- | :---:      | :----                                                |
+ | Hamming Distance           | Easy       | clear right most left 1                              |
+ | Total Hamming Distance     | Medium     | vertical 1s, combination                             |
+ | Power of Two               | Easy       | only one non-zero bit, minus 1 check or rotate check |
+ | Power of Three             | Easy       | logarithm                                            |
+ | Power of Four              | Easy       | power of 2, and minus 1 dividable by 3               |
 
 
 ## Binary Search

@@ -27,7 +27,7 @@ class PredictWinner {
             return false;
         vector<vector<int> > dp(nums.size(), vector<int>(nums.size(), -1));
         dpimpl(nums, 0, nums.size() - 1, dp);
-        return dp[0][nums.size() - 1] > 0;
+        return dp[0][nums.size() - 1] >= 0;
     }
 
     int dpimpl(const vector<int>& nums, int s, int e, vector<vector<int> >& dp)
