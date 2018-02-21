@@ -23,14 +23,14 @@ class PatchingArray {
   public:
     int minPatches(vector<int>& nums, int n)
     {
-        long long res = 0, curSum = 1;
-        int i = 0;
-        while(curSum <= n) {
-            if(i < nums.size() && nums[i] <= curSum) {
-                curSum += nums[i++];
+        long long miss = 1;
+        int res = 0, i = 0;
+        while(miss <= n) {
+            if(i < nums.size() && nums[i] <= miss) {
+                miss += nums[i++];
             }
             else {
-                curSum = curSum << 1;
+                miss = curSum << 1;
                 ++res;
             }
         }

@@ -29,11 +29,27 @@ class VerifyPreOrderSerialization {
         int id = 0;
         string tmp = getNext(preorder, id);
         while(!tmp.empty()) {
-            if(tmp == "#" && s.size() >= 2 && s.top() == "#") {
-                s.pop();
-                s.pop();
-            }
             s.emplace(tmp);
+            if(tmp == "#") {
+                // make sure the top three elements are subtree that can be
+                // squashed
+                while(s.size() >= 3) {
+                    string a = s.top();
+                    s.pop();
+                    string b = s.top();
+                    s.pop();
+                    string c = s.top();
+                    s.pop();
+                    if(a == "#" && b == "#" && c != "#")
+                        s.emplace(tmp);
+                    else {
+                        s.emplace(c);
+                        s.emplace(b);
+                        s.emplace(a);
+                        break;
+                    }
+                }
+            }
         }
         return s.size() == 1 && s.top() == "#";
     }
@@ -54,12 +70,15 @@ class VerifyPreOrderSerialization {
         int id = 0;
         string tmp = getNext(preorder, id);
         while(!tmp.empty()) {
+            if(diff >= 0)
+                return false;
             if(tmp == "#") {
                 diff += 1;
             }
             else {
                 diff -= 1;
             }
+            tmp = getNext(preorder, id);
         }
         return diff == 0;
     }

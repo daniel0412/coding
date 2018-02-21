@@ -50,6 +50,7 @@ class CreateMaxNum {
                 */
             res.push_back(d);
         }
+        // in case more than k digits are left
         res.resize(k);
         return res;
     }
