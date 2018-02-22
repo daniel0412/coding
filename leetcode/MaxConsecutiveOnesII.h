@@ -26,6 +26,7 @@ class MaxConsecutiveOnesII {
         int left = 0, cnt = 0, right = 0;
         // if we can flip k times
         int k = 1;
+        // sliding window like implementation
         queue<int> q;
         while(right < nums.size()) {
             if(nums[right] == 0) {

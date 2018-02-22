@@ -77,4 +77,27 @@ class RelativeRanks {
             res[v[2].first] = "Bronze Medal";
         return res;
     }
+
+    vector<string> justTrackIndex(const vector<int>& nums)
+    {
+        int len = nums.size();
+        vector<int> ids(len, 0);
+        for(int i = 0; i < len; ++i) {
+            ids[i] = i;
+        }
+        sort(ids.begin(),
+             ids.end(),
+             [&nums](int a, int b) { return nums[a] > nums[b]; });
+        vector<string> res(len);
+        if(len > 0)
+            res[ids[0]] = "Gold Medal";
+        if(len > 1)
+            res[ids[1]] = "Silver Medal";
+        if(len > 2)
+            res[ids[2]] = "Bronze Medal";
+        for(int i = 3; i < len; ++i) {
+            res[ids[i]] = to_string(i + 1);
+        }
+        return res;
+    }
 };

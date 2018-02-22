@@ -46,62 +46,50 @@ class SmallestRectangleEnclosingBlackPixels {
     }
 
     // binary search to find boundaries
-    int binarysearch(const vector<vector<char> >& image,
-                     const int x,
-                     const int y)
+    int minAreaImpl(const vector<vector<char> >& image, int x, int y)
     {
-        int up = decreasingBinarySearchImpl(image, 0, x, true);
-        int down =
-            increasingBinarySearchImpl(image, x, image.size() - 1, true);
-        int left = decreasingBinarySearchImpl(image, 0, y, false);
+        int nrows = image.size(), ncols = image[0].size();
+        int up = binarysearchimpl(image, 0, x, 0, ncols - 1, false, true);
+        int down = binarysearchimpl(image, x, nrows - 1, true, true);
+        int left = binarysearchimpl(image, 0, y, up, down, false, false);
         int right =
-            increasingBinarySearchImpl(image, y, image[0].size() - 1, false);
-        return (right - left + 1) * (down - u + 1);
+            binarysearchimpl(image, y, ncols - 1, up, down, true, false);
+        return (right - left + 1) * (down - up + 1);
     }
 
-    int increasingBinarySearchImpl(const vector<vector<char> >& image,
-                                   int minB,
-                                   int maxB,
-                                   bool vertical)
-    {
-        while(minB < maxB) {
-            int k = 0;
-            int midB = minB + (maxB - minB) / 2;
-            int boundary = vertical ? image.size() : image[0].size();
-            while(k < boundary &&
-                  (vertical ? image[midB][k] : image[k][midB]) != '1') {
-                ++k;
-            }
-            if(k < boundary) {
-                minB = midB;
-            }
-            else {
-                maxB = midB - 1;
-            }
-        }
-        return minB;
-    }
 
-    int decreasingBinarySearchImpl(const vector<vector<char> >& image,
-                                   int minB,
-                                   int maxB,
-                                   bool vertical)
+    int binarysearchimpl(const vector<vector<char> >& image,
+                         int start,
+                         int end,
+                         int low,
+                         int high,
+                         bool inc,
+                         bool vdir)
     {
-        while(minB < maxB) {
-            int k = 0;
-            int midB = minB + (maxB - minB) / 2;
-            int boundary = vertical ? image.size() : image[0].size();
-            while(k < boundary &&
-                  (vertical ? image[midB][k] : image[k][midB]) != '1') {
+        int k = low;
+        while(start <= end) {
+            int mid = start + (end - start) / 2;
+            while(k <= high &&
+                  (vdir ? image[mid][k] == '0' : image[k][mid] == '0')) {
                 ++k;
             }
-            if(k < boundary) {
-                maxB = midB;
+            if(k > high) {  // not found
+                if(inc) {
+                    end = mid - 1;
+                }
+                else {
+                    start = mid + 1;
+                }
             }
-            else {
-                minB = midB + 1;
+            else {  // found
+                if(inc) {
+                    start = mid;
+                }
+                else {
+                    end = mid;
+                }
             }
         }
-        return maxB;
+        return inc ? start : end;
     }
 };

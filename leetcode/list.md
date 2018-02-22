@@ -20,6 +20,7 @@
  | Count of Range Sum                                     | Hard        | 1. multiset/bounds 2. merge sort and count               | :v: :eyes:        |
  | Count of Smaller Numbers After Self                    | Hard        | binary search/lower bound                                | :v: :eyes:        |
  | Queue Reconstruction by Height                         | Meidum      | idea: sort by height and then by order                   | :eyes:            |
+ | Sequence Reconstruction                                | Meidum      | record ele->id, and track prev ele idex from given seqs  | :eyes:            |
  | Median of Two Sorted Arrays                            | Hard        | binary search                                            | :v:        :eyes: |
  | Find Median from Data Stream                           | Hard        | heap                                                     | :v:               |
  | Sort Transformed Array                                 | Medium      | quadratic function, dist from optimal                    | :eyes: :v:        |
@@ -84,9 +85,9 @@
  | Generalized Abbreviation                               | Medium      | dfs                                                      | :lock:            |
  | Game of Life                                           | Medium      | track state, note state changes cell value               | :eyes: :v:        |
  | Flip Game                                              | Easy        |                                                          |                   |
- | Flip Game II                                           | Medium      |                                                          |                   |
+ | Flip Game II                                           | Medium      | both player try to win, player1 flip, and player2 fails  |                   |
  | Max Consecutive Ones                                   | Easy        |                                                          | :v:               |
- | Max Consecutive Ones  II                               | Medium      | idea                                                     | :eyes: :v:        |
+ | Max Consecutive Ones  II                               | Medium      | idea similar to sliding windwo, track loc of zeros       | :eyes: :v:        |
  | Longest Increasing Path in a Matrix                    | Hard        | dfs + memorization to prun                               | :eyes: :v:        |
  | Smallest Rectangle Enclosing Black Pixels              | Hard        | 1. brute force  2. four directions binary search idea    | :eyes: :lock:     |
  | Max Sum of Rectangle No Greater Thank K                | Hard        | idea: max sum of sub rectangle + lower bound  of diff    | :eyes: :v:        |
@@ -337,7 +338,8 @@ void dfs(nums, id, path, res) {
  | Subsets II                        | Medium     | recursion/deduplication                                                  |
  | Permutation                       | Medium     | 1) dfs with visited indication (different from subset) 2) swap recursion |
  | Permutation II (with duplication) | Medium     | 1) dfs (with de-deuplication) 2) swap with deduplication                 |
- | Next Permutation                  | Medium     | reverse order check                                                      |
+ | Next Permutation                  | Medium     | same with finding next greater number                                    |
+ | Find Permutation                  | Medium     | inc order, than reverse des sequences                                    |
  | Combination Sum I/II/III          | Medium     | dfs+backtracing                                                          |
  | Combination Sum IV                | Medium     | dp (different from I/II/III)                                             |
  | Partition Equal Subset Sum        | Medium     | recursion timout, dp to the rescue                                       |
@@ -388,7 +390,7 @@ void dfs(nums, id, path, res) {
  | Valid Palindrome II              | Easy       | at most remove 1 char                               |
  | Palindrome Linked List           | Easy       | stack to store 1st half/reverse 2nd half            |
  | Palindrome Permutation           | Easy       |                                                     |
- | Palindrome Permutation II        | Medium     | how to permutate a string                           |
+ | Palindrome Permutation II        | Medium     | find half, then know how to do permutation          |
  | Palindromic Substrings           | Medium     | dp, str end to front, double-sided expansion faster |
  | Longest Palindromic Sub sequence | Medium     | dp, back to front, find how to transfer states      |
  | Longest Palindromic Sub string   | Medium     | dp, but double-sided expansion is faster            |
@@ -430,6 +432,7 @@ void dfs(nums, id, path, res) {
  | Longest Continuous Increasing Subsequence  | Easy          | basic array operation                                               |
  | Longest Increasing Subsequence             | :eyes: Medium | 1. dp O(n^2) 2. put/replace the constructed array using lower bound |
  | Number of Longest Increasing Subsequence   | :eyes: Medium | dp to record maxlen up to i, another vec to record count            |
+ | Russian Doll Envelopes                     | Hard          | sort by first dim, and then find LIS                                |
 
 ## Kth problem
 - when locating `k`-th, binary first find the solution boundary, and then do binary search in the solution space might help
