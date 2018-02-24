@@ -113,7 +113,6 @@
  | Problems                                               | Difficulty | Related Problems                                            | Status              |
  | :-------------------------                             | :---:      | :----                                                       | :---:               |
  | Move Zeroes                                            | Easy       | array/swap                                                  | :v:                 |
- | Split Array into Consecutive Sequence                  | Medium     | array sorted, greedy idea                                   | :eyes: :v:          |
  | Split Array With Equal Sums                            | Medium     | cache sum + split strategy                                  | :eyes: :lock:       |
  | Split Array Largest Sum                                | Hard       | find range, then binary search /dp                          | :eyes:  :v:         |
  | Rearrange String K Distance Apart                      | Hard       | hash/heap/rearrange task w/o reorder                        | :lock: :eyes:       |
@@ -332,18 +331,20 @@ void dfs(nums, id, path, res) {
 ```
 
 
- | Problems                          | Difficulty | Techniques                                                               |
- | :-------------------------        | :---:      | :----                                                                    |
- | Subsets                           | Medium     | recursion -> think about iterative                                       |
- | Subsets II                        | Medium     | recursion/deduplication                                                  |
- | Permutation                       | Medium     | 1) dfs with visited indication (different from subset) 2) swap recursion |
- | Permutation II (with duplication) | Medium     | 1) dfs (with de-deuplication) 2) swap with deduplication                 |
- | Next Permutation                  | Medium     | same with finding next greater number                                    |
- | Find Permutation                  | Medium     | inc order, than reverse des sequences                                    |
- | Combination Sum I/II/III          | Medium     | dfs+backtracing                                                          |
- | Combination Sum IV                | Medium     | dp (different from I/II/III)                                             |
- | Partition Equal Subset Sum        | Medium     | recursion timout, dp to the rescue                                       |
- | Partition to k Equal Sum Subset   | Medium     | dfs recursion                                                            |
+ | Problems                          | Difficulty | Techniques                                                                      |
+ | :-------------------------        | :---:      | :----                                                                           |
+ | Subsets                           | Medium     | recursion -> think about iterative                                              |
+ | Subsets II                        | Medium     | recursion/deduplication                                                         |
+ | Permutation                       | Medium     | 1) dfs with visited indication (different from subset) 2) swap recursion        |
+ | Permutation II (with duplication) | Medium     | 1) dfs (with de-deuplication) 2) swap with deduplication                        |
+ | Next Permutation                  | Medium     | same with finding next greater number                                           |
+ | Find Permutation                  | Medium     | inc order, than reverse des sequences                                           |
+ | Beautiful Arrangement             | Medium     | permutations and validate 1) dfs backtracking and validate 2) swap and validate |
+ | Beautiful ArrangementII           | Medium     | rather than dfs/swap, enumerate distinct diffs, and stop when k is reached      |
+ | Combination Sum I/II/III          | Medium     | dfs+backtracing                                                                 |
+ | Combination Sum IV                | Medium     | dp (different from I/II/III)                                                    |
+ | Partition Equal Subset Sum        | Medium     | recursion timout, dp to the rescue                                              |
+ | Partition to k Equal Sum Subset   | Medium     | dfs recursion                                                                   |
 
 
 ## Dynamic Programming/Greedy
@@ -428,10 +429,12 @@ void dfs(nums, id, path, res) {
  | Subarray Sum Equals k                      | Medium        | hash map/idea, initialization issue                                 |
  | Subarray Prod Less Than k                  | Medium        | idea                                                                |
  | Shortest Unsorted Continuous Subarray      | :eyes:  Easy  | find the disordered index boundary                                  |
+ | Split Array into Consecutive Sequence      | :eyes: Medium        | array sorted, greedy idea                                           |
  | Longest Consecutive Sequence               | Hard          | think differently  (linear solution)                                |
  | Longest Continuous Increasing Subsequence  | Easy          | basic array operation                                               |
  | Longest Increasing Subsequence             | :eyes: Medium | 1. dp O(n^2) 2. put/replace the constructed array using lower bound |
  | Number of Longest Increasing Subsequence   | :eyes: Medium | dp to record maxlen up to i, another vec to record count            |
+ | Non-decreasing Array | :eyes: Easy | find patterns to modify the number depends on three numbers  |
  | Russian Doll Envelopes                     | Hard          | sort by first dim, and then find LIS                                |
 
 ## Kth problem

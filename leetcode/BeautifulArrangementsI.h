@@ -47,4 +47,31 @@ class BeautifulArrangementsI {
         }
         return res;
     }
+
+
+    // dfs implementation: try to put 1-N to each locaton and validate
+    int countArrangement(int N)
+    {
+        vector<bool> visited(N + 1, false);
+        int cnt = 0;
+        dfs(N, 1, cnt, visited);
+        return cnt;
+    }
+
+    void dfs(const int n, int i, int& cnt, vector<bool>& visited)
+    {
+        if(i > n) {
+            ++cnt;
+            return;
+        }
+        for(int x = 1; x <= n; ++x) {
+            if(visited[x])
+                continue;
+            if(x % i == 0 || i % x == 0) {
+                visited[x] = true;
+                dfs(n, i + 1, cnt, visited);
+                visited[x] = false;
+            }
+        }
+    }
 };
