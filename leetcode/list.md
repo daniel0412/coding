@@ -381,6 +381,7 @@ void dfs(nums, id, path, res) {
  | Basic Calculator II                                    | Hard        | include dividsion and multiplication             |
  | Longest Uncommon Subsequence I                         | Easy        |                                                  |
  | Longest Uncommon Subsequence II                        | Medium      | utility function to check sub sequence           |
+ | Delete Operation for Two Strings                       | Medium      | longest common subsequence problem               |
 
 ### Palindromic Problems
 - check `if size(s) < 2`, return `true`
@@ -429,12 +430,12 @@ void dfs(nums, id, path, res) {
  | Subarray Sum Equals k                      | Medium        | hash map/idea, initialization issue                                 |
  | Subarray Prod Less Than k                  | Medium        | idea                                                                |
  | Shortest Unsorted Continuous Subarray      | :eyes:  Easy  | find the disordered index boundary                                  |
- | Split Array into Consecutive Sequence      | :eyes: Medium        | array sorted, greedy idea                                           |
+ | Split Array into Consecutive Sequence      | :eyes: Medium | array sorted, greedy idea                                           |
  | Longest Consecutive Sequence               | Hard          | think differently  (linear solution)                                |
  | Longest Continuous Increasing Subsequence  | Easy          | basic array operation                                               |
  | Longest Increasing Subsequence             | :eyes: Medium | 1. dp O(n^2) 2. put/replace the constructed array using lower bound |
  | Number of Longest Increasing Subsequence   | :eyes: Medium | dp to record maxlen up to i, another vec to record count            |
- | Non-decreasing Array | :eyes: Easy | find patterns to modify the number depends on three numbers  |
+ | Non-decreasing Array                       | :eyes: Easy   | find patterns to modify the number depends on three numbers         |
  | Russian Doll Envelopes                     | Hard          | sort by first dim, and then find LIS                                |
 
 ## Kth problem
