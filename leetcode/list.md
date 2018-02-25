@@ -362,26 +362,27 @@ void dfs(nums, id, path, res) {
  | Ones and Zeros                                       | Hard       | dp                                                |
 
 ## String
- | Problems                                               | Difficulty  | Techniques                                       |
- | :-------------------------                             | :---:       | :----                                            |
- | Valid Anagrams                                         | Easy        | sort/map                                         |
- | Group Anagrams                                         | Medium      | hash map/sort string                             |
- | Find All Anagrams in String                            | Easy        | sliding window template + map to track count     |
- | Minimum Window Substring                               | :eyes: Hard | sliding window template + map/count to track     |
- | Minimum Window Subsequence                             | :eyes: Hard | diff from above, keep order, bruteforce, dp      |
- | Longest subsring without repeating chars               | Medium      | sliding window template + map to index           |
- | Longest Substring with At Most K Distinct Characters   | Hard        | sliding window template + map to rightmost index |
- | Valid Parentheses                                      | Easy        | stack/non-stack counter solution                 |
- | Generate Parentheses                                   | Medium      | dfs to print parenthsis                          |
- | Remove Invalid Parentheses                             | Hard        | count num to remove, then dfs                    |
- | Remove Invalid Parentheses (return one valid solution) | Hard        | 1.two loops 2. one loop                          |
- | Different Ways to add parentheses                      | Medium      | divide and conqure                               |
- | Expression Add Operators                               | Hard        | get first val, then (op, val) pair dfs           |
- | Basic Calculator                                       | Hard        | stack to store both prev sum as well as sign     |
- | Basic Calculator II                                    | Hard        | include dividsion and multiplication             |
- | Longest Uncommon Subsequence I                         | Easy        |                                                  |
- | Longest Uncommon Subsequence II                        | Medium      | utility function to check sub sequence           |
- | Delete Operation for Two Strings                       | Medium      | longest common subsequence problem               |
+ | Problems                                               | Difficulty  | Techniques                                        |
+ | :-------------------------                             | :---:       | :----                                             |
+ | Valid Anagrams                                         | Easy        | sort/map                                          |
+ | Group Anagrams                                         | Medium      | hash map/sort string                              |
+ | Find All Anagrams in String                            | Easy        | sliding window template + map to track count      |
+ | Minimum Window Substring                               | :eyes: Hard | sliding window template + map/count to track      |
+ | Minimum Window Subsequence                             | :eyes: Hard | diff from above, keep order, bruteforce, dp       |
+ | Longest subsring without repeating chars               | Medium      | sliding window template + map to index            |
+ | Longest Substring with At Most K Distinct Characters   | Hard        | sliding window template + map to rightmost index  |
+ | Valid Parentheses                                      | Easy        | stack/non-stack counter solution                  |
+ | Generate Parentheses                                   | Medium      | dfs to print parenthsis                           |
+ | Remove Invalid Parentheses                             | Hard        | count num to remove, then dfs                     |
+ | Remove Invalid Parentheses (return one valid solution) | Hard        | 1.two loops 2. one loop                           |
+ | Different Ways to add parentheses                      | Medium      | divide and conqure                                |
+ | Expression Add Operators                               | Hard        | get first val, then (op, val) pair dfs            |
+ | Basic Calculator                                       | Hard        | stack to store both prev sum as well as sign      |
+ | Basic Calculator II                                    | Hard        | include dividsion and multiplication              |
+ | Longest Uncommon Subsequence I                         | Easy        |                                                   |
+ | Longest Uncommon Subsequence II                        | Medium      | utility function to check sub sequence            |
+ | Delete Operation for Two Strings                       | Medium      | longest common subsequence problem, diff from LIS |
+ | Decode String                                          | Medium      | like iterator of iterator, use stack              |
 
 ### Palindromic Problems
 - check `if size(s) < 2`, return `true`
