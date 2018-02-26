@@ -75,11 +75,7 @@
  | Perfect Rectangle                                      | Hard        | find criteria to define perfect rectangle                | :eyes:            |
  | Wiggle Sort                                            | Medium      | equal sign, 1) sort then switch; 2) compare + switch     |                   |
  | Wiggle Sort II                                         | Medium      | no equal sign, 1) sort then pick; 2)                     |                   |
- | Peeking Iterator                                       | Medium      | subtyping                                                | :v: :eyes:        |
- | Flatten Nested List Iterator                           | Medium      | use stack to track begin/end, hasNext promote pointers   | :eyes: :v:        |
  | Flatten 2D Vector                                      | Medium      | track row, col index                                     | :v:               |
- | Zigzag Iterator                                        | Medium      |                                                          |                   |
- | Binary Search Tree Iterator                            | Medium      | inorder iterative impl                                   | :v:               |
  | Unique Word Abbreviation                               | Easy        | pass                                                     | :lock:            |
  | Valid Word Abbreviation                                | Easy        |                                                          | :lock:            |
  | Generalized Abbreviation                               | Medium      | dfs                                                      | :lock:            |
@@ -382,7 +378,7 @@ void dfs(nums, id, path, res) {
  | Longest Uncommon Subsequence I                         | Easy        |                                                   |
  | Longest Uncommon Subsequence II                        | Medium      | utility function to check sub sequence            |
  | Delete Operation for Two Strings                       | Medium      | longest common subsequence problem, diff from LIS |
- | Decode String                                          | Medium      | like iterator of iterator, use stack              |
+ | Decode String                                          | Medium      | like iterator of iterator, stack + one loop       |
 
 ### Palindromic Problems
 - check `if size(s) < 2`, return `true`
@@ -462,6 +458,15 @@ void dfs(nums, id, path, res) {
  | Power of Two               | Easy       | only one non-zero bit, minus 1 check or rotate check |
  | Power of Three             | Easy       | logarithm                                            |
  | Power of Four              | Easy       | power of 2, and minus 1 dividable by 3               |
+
+## Iterator
+  | Problems                     | Difficulty    | Techniques                                    |
+  | :-------------------------   | :---:         | :----                                         |
+  | Peeking Iterator             | Medium        | store peeked value and isPeek flag            |
+  | Flatten Nested List Iterator | :eyes: Medium | use stack to track,  hasNext promote pointers |
+  | Zigzag Iterator              | Medium        |                                               |
+  | Binary Search Tree Iterator  | Medium        | inorder iterative impl                        |
+
 
 
 ## Binary Search
