@@ -460,12 +460,12 @@ void dfs(nums, id, path, res) {
  | Power of Four              | Easy       | power of 2, and minus 1 dividable by 3               |
 
 ## Iterator
-  | Problems                     | Difficulty    | Techniques                                    |
-  | :-------------------------   | :---:         | :----                                         |
-  | Peeking Iterator             | Medium        | store peeked value and isPeek flag            |
-  | Flatten Nested List Iterator | :eyes: Medium | use stack to track,  hasNext promote pointers |
-  | Zigzag Iterator              | Medium        |                                               |
-  | Binary Search Tree Iterator  | Medium        | inorder iterative impl                        |
+  | Problems                     | Difficulty    | Techniques                                                |
+  | :-------------------------   | :---:         | :----                                                     |
+  | Peeking Iterator             | Medium        | store peeked value and isPeek flag                        |
+  | Flatten Nested List Iterator | :eyes: Medium | use stack to track,  hasNext promote pointers             |
+  | Zigzag Iterator              | :eyes: Medium        | extend to k array, use queue to record begin/end iterator |
+  | Binary Search Tree Iterator  | Medium        | inorder iterative impl                                    |
 
 
 
