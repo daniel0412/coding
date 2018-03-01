@@ -1,10 +1,12 @@
 ## Status
-| Icon                     | Meaning           |
-| :---:                    | :-----            |
-| :v:                      | passed            |
-| :lock: | locked problem    |
-| :warning:                | truely hard       |
-| :eyes:                   | worth second look |
+| Icon      | Meaning           |
+| :---:     | :-----            |
+| :v:       | passed            |
+| :lock:    | locked problem    |
+| :warning: | truely hard       |
+| :eyes:    | worth second look |
+| :sob:     | Hard              |
+| :sweat:   | Medium            | jK:w
 
 ## Solved problems not in Google list
  | Problems                    | Difficulty | Techniques                  | Status            |
@@ -99,8 +101,6 @@
  | Patching Array                                         | Hard        | greedily expand [0, sum) range                           | :eyes: :v:        |
  | Verify Preorder Serialization of a Binary Tree         | Medium      | stack to squash subtree/use in and out degree            |                   |
  | Reconstruct Itinerary                                  | Medium      |                                                          |                   |
- | Remove K Digits                                        | Medium      | simpler issue than create maximum number                 | :eyes: :v:        |
- | Create Maximum Number                                  | Hard        | choose 0-k form one array, then merge, vector comparison | :eyes: :eyes: :v: |
  | Design Phone Directory                                 | Medium      | keep track of recycled and used                          | :v:               |
  | Maximum Vacation Days                                  | Hard        | dp                                                       |                   |
  | Predict The Winner                                     | Medium      | recursive + dp                                           |                   |
@@ -218,9 +218,8 @@
  | Number of Boomerangs                        | Easy       | brute force                                             | :v:           |
  | Numbers Disappeared in Array                | Easy       | no extra space, use array itself, switch or mark        | :v:           |
  | First Missing Positive                      | Hard       | use array itself and index to store value               | :v:           |
- | Next Greater Element I                      | Easy       | O(n) with stack                                         | :eyes: :v:    |
+ | Next Greater Element I                      | Easy       | one loop to find all next greater element with stack    | :eyes: :v:    |
  | Next Greater Element II                     | Medium     | cycular array + stack                                   | :eyes: :v:    |
- | Next Greater Element III                    | Medium     | digits comp, think!!                                    | :eyes: :v:    |
  | Next Closest Time                           | Medium     | ways to formulate next cloest time, min to hour         | :eyes:        |
  | Longest Word in Dictionary through Deleting | Medium     |                                                         | :v:           |
  | Relative Ranks                              | Easy       | customized sorting                                      | :v:           |
@@ -333,7 +332,6 @@ void dfs(nums, id, path, res) {
  | Subsets II                        | Medium     | recursion/deduplication                                                         |
  | Permutation                       | Medium     | 1) dfs with visited indication (different from subset) 2) swap recursion        |
  | Permutation II (with duplication) | Medium     | 1) dfs (with de-deuplication) 2) swap with deduplication                        |
- | Next Permutation                  | Medium     | same with finding next greater number                                           |
  | Find Permutation                  | Medium     | inc order, than reverse des sequences                                           |
  | Beautiful Arrangement             | Medium     | permutations and validate 1) dfs backtracking and validate 2) swap and validate |
  | Beautiful ArrangementII           | Medium     | rather than dfs/swap, enumerate distinct diffs, and stop when k is reached      |
@@ -358,27 +356,28 @@ void dfs(nums, id, path, res) {
  | Ones and Zeros                                       | Hard       | dp                                                |
 
 ## String
- | Problems                                               | Difficulty  | Techniques                                        |
- | :-------------------------                             | :---:       | :----                                             |
- | Valid Anagrams                                         | Easy        | sort/map                                          |
- | Group Anagrams                                         | Medium      | hash map/sort string                              |
- | Find All Anagrams in String                            | Easy        | sliding window template + map to track count      |
- | Minimum Window Substring                               | :eyes: Hard | sliding window template + map/count to track      |
- | Minimum Window Subsequence                             | :eyes: Hard | diff from above, keep order, bruteforce, dp       |
- | Longest subsring without repeating chars               | Medium      | sliding window template + map to index            |
- | Longest Substring with At Most K Distinct Characters   | Hard        | sliding window template + map to rightmost index  |
- | Valid Parentheses                                      | Easy        | stack/non-stack counter solution                  |
- | Generate Parentheses                                   | Medium      | dfs to print parenthsis                           |
- | Remove Invalid Parentheses                             | Hard        | count num to remove, then dfs                     |
- | Remove Invalid Parentheses (return one valid solution) | Hard        | 1.two loops 2. one loop                           |
- | Different Ways to add parentheses                      | Medium      | divide and conqure                                |
- | Expression Add Operators                               | Hard        | get first val, then (op, val) pair dfs            |
- | Basic Calculator                                       | Hard        | stack to store both prev sum as well as sign      |
- | Basic Calculator II                                    | Hard        | include dividsion and multiplication              |
- | Longest Uncommon Subsequence I                         | Easy        |                                                   |
- | Longest Uncommon Subsequence II                        | Medium      | utility function to check sub sequence            |
- | Delete Operation for Two Strings                       | Medium      | longest common subsequence problem, diff from LIS |
- | Decode String                                          | Medium      | like iterator of iterator, stack + one loop       |
+ | Problems                                               | Difficulty  | Techniques                                                    |
+ | :-------------------------                             | :---:       | :----                                                         |
+ | Valid Anagrams                                         | Easy        | sort/map                                                      |
+ | Group Anagrams                                         | Medium      | hash map/sort string                                          |
+ | Find All Anagrams in String                            | Easy        | sliding window template + map to track count                  |
+ | Minimum Window Substring                               | :eyes: Hard | sliding window template + map/count to track                  |
+ | Minimum Window Subsequence                             | :eyes: Hard | diff from above, keep order, bruteforce, dp                   |
+ | Longest subsring without repeating chars               | Medium      | sliding window template + map to index                        |
+ | Longest Substring with At Most K Distinct Characters   | Hard        | sliding window template + map to rightmost index              |
+ | Valid Parentheses                                      | Easy        | stack/non-stack counter solution                              |
+ | Generate Parentheses                                   | Medium      | dfs to print parenthsis                                       |
+ | Remove Invalid Parentheses                             | Hard        | count num to remove, then dfs                                 |
+ | Remove Invalid Parentheses (return one valid solution) | Hard        | 1.two loops 2. one loop                                       |
+ | Different Ways to add parentheses                      | Medium      | divide and conqure                                            |
+ | Expression Add Operators                               | Hard        | get first val, then (op, val) pair dfs                        |
+ | Basic Calculator                                       | Hard        | parenthesis only, recursive with O(n) or iterative with stack |
+ | Basic Calculator II                                    | Hard        | only +-\*/, agg only with higher ops                          |
+ | Basic Calculator III                                   | Hard        | support parenthesis and all four ops                          |
+ | Longest Uncommon Subsequence I                         | Easy        |                                                               |
+ | Longest Uncommon Subsequence II                        | Medium      | utility function to check sub sequence                        |
+ | Delete Operation for Two Strings                       | Medium      | longest common subsequence problem, diff from LIS             |
+ | Decode String                                          | Medium      | like iterator of iterator, stack + one loop                   |
 
 ### Palindromic Problems
 - check `if size(s) < 2`, return `true`
@@ -470,9 +469,19 @@ void dfs(nums, id, path, res) {
 
 
 ## Binary Search
- | Problems                   | Difficulty | Techniques                         |
- | :------------------------- | :---:      | :----                              |
- | Find Peak Element          | Medium     | how to move to the next iteration  |
- | Search a 2D Matrix         | Medium     | binary search, location conversion |
- | Search a 2D Matrix II      | Medium     | find correct starting location     |
- | Diagonal Traversal | Medium     | flip directions when meets boundary |
+ | Problems                   | Difficulty | Techniques                          |
+ | :------------------------- | :---:      | :----                               |
+ | Find Peak Element          | Medium     | how to move to the next iteration   |
+ | Search a 2D Matrix         | Medium     | binary search, location conversion  |
+ | Search a 2D Matrix II      | Medium     | find correct starting location      |
+ | Diagonal Traversal         | Medium     | flip directions when meets boundary |
+
+
+## Number Formulation
+ | Problems                   | Difficulty     | Techniques                                               |
+ | :------------------------- | :---:          | :----                                                    |
+ | Remove K Digits            | :eyes: :sweat: | try to maintain increasing digits order                  |
+ | Create Maximum Number      | :eyes: :sob:   | choose 0-k form one array, then merge, vector comparison |
+ | Next Greater Element III   | :sweat:        | digits comp, think!!                                     |
+ | Next Permutation           | :sweat:        | same with finding next greater number                    |
+

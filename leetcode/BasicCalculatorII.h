@@ -23,50 +23,43 @@ class BasicCalculatorII {
   public:
     int calculate(string s)
     {
-        int res = 0, sign = 1;
-        stack<int> st;
-        int i = 0, slen = s.size();
-        while(i < slen) {
+        stack<int> mystack;
+        int i = 0, len = s.size();
+        char op = ' ';
+        while(i < len) {
             char c = s[i];
-            if(c == '+') {
-                sign = 1;
+            if(c == ' ') {
+                ++i;
+                continue;
             }
-            else if(c == '-') {
-                sign = -1;
+            else if(!isdigit(c)) {
+                ++i;
+                op = c;
             }
-            else if(c == '/') {
-                sign = 2;
-            }
-            else if(c == '*') {
-                sign = 3;
-            }
-            else if(isdigit(c)) {
-                int num = 0;
-                while(i < slen && isdigit(s[i])) {
-                    num = num * 10 + s[i] - '0';
+            else {
+                int start = i;
+                while(i < len && isdigit(s[i]))
                     ++i;
+                int t = stoi(s.substr(start, i - start));
+                if(op == '+')
+                    mystack.push(t);
+                else if(op == '-')
+                    mystack.push(-t);
+                else if(op == '*') {
+                    mystack.top() *= t;
                 }
-                --i;
-                if(sign == 1 || sign == -1) {
-                    st.push(sign * num);
+                else if(op == '/') {
+                    mystack.top() /= t;
                 }
                 else {
-                    int tmp = 0;
-                    if(sign == 2) {
-                        tmp = st.top() * num;
-                    }
-                    else {
-                        tmp = st.top() / num;
-                    }
-                    s.pop();
-                    s.push(tmp);
+                    mystack.push(t);
                 }
             }
-            ++i;
         }
-        while(!st.empty()) {
-            res += st.top();
-            st.pop();
+        int res = 0;
+        while(!mystack.empty()) {
+            res += mystack.top();
+            mystack.pop();
         }
         return res;
     }

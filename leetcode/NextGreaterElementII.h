@@ -35,6 +35,8 @@ class NextGreaterElementII {
                 res[s.top()] = x;
                 s.pop();
             }
+            // only need to find next greater element for the first n in cyclar
+            // array
             if(i < n) {
                 s.push(i);
             }

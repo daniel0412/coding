@@ -39,6 +39,7 @@ class NextGreaterElementIII {
             }
         }
         sort(s.begin() + i, s.end());
+        // must check to make sure the next element is within range of int
         long long res = stoll(s);
         return res > INT_MAX ? -1 : res;
     }

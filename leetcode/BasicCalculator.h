@@ -63,6 +63,34 @@ class BasicCalculator {
         }
         return res;
     }
+    int dfs(const string& s, int& i)
+    {
+        int sign = 1;
+        int res = 0;
+        while(i < s.size()) {
+            if(s[i] == ' ') {
+                ++i;
+                continue;
+            }
+            else if(s[i] == '(') {
+                res += (sign * dfs(s, ++i));
+            }
+            else if(s[i] == ')') {
+                ++i;
+                return res;
+            }
+            else if(isdigit(s[i])) {
+                int tt = i;
+                while(i < s.size() && isdigit(s[i]))
+                    ++i;
+                res += (sign * stoi(s.substr(tt, i - tt)));
+            }
+            else {
+                sign = s[i++] == '+' ? 1 : -1;
+            }
+        }
+        return res;
+    }
 
   private:
 };

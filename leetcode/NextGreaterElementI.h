@@ -26,6 +26,7 @@ class NextGreaterElementI {
         unordered_map<int, int> m;
         stack<int> s;
         vector<int> res;
+        // loop over nums to find all next greater element
         for(auto d : nums) {
             while(!s.empty() && d > s.top()) {
                 m[s.top()] = d;
