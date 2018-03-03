@@ -33,7 +33,8 @@ class NumOfIslandII {
         for(const auto& p : positions) {
             ++nums;
             int id = p.first * n + p.second;
-            // before union, mark root as itself, to distinguish it from water -1
+            // before union, mark root as itself, to distinguish it from water
+            // -1
             roots[id] = id;
             // for each sourronding position, if belong to diff islands, unite
             for(const auto& d : dirs) {
@@ -63,5 +64,43 @@ class NumOfIslandII {
             id = roots[id];
         }
         return id;
+    }
+
+
+    vector<int> impl(int m, int n, vector<pair<int, int> >& pos)
+    {
+        vector<int> res;
+        int cnt = 0;
+        // initialized as -1, i.e., not '1' cell
+        vector<int> roots(m * n, -1);
+        vector<pair<int, int> > dirs = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+        for(const auto& p : pos) {
+            int id = p.first * n + p.second;
+            roots[id] = id;
+            ++cnt;
+            for(auto& d : dirs) {
+                int x = p.first + d.first, y = p.second + d.second;
+                int newid = x * n + y;
+                if(x < 0 || y < 0 || x >= m || y >= n || roots[newid] == -1)
+                    continue;
+                int newr = getroot(roots, newid);
+                if(id != newr) {
+                    --cnt;
+                    root[id] = newr;
+                    id = newr;
+                }
+            }
+            res.push_back(cnt);
+        }
+        return res;
+    }
+
+    int getroot(vector<int>& roots, int i)
+    {
+        while(roots[i] != i) {
+            roots[i] = roots[root[i]];
+            i = roots[i];
+        }
+        return i;
     }
 };

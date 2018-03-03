@@ -157,8 +157,10 @@
  | One Edit Distance                                      | Medium     | 3 cases, and combine for concise code                       | :v:                 |
  | Edit Distance                                          | Hard       | 2-dim dp                                                    | :v:  :eyes:         |
  | Excel Sheet Column Title                               | Easy       | mod/division                                                | :v:                 |
- | Nnumber of Islands                                      | Medium     | dfs/marking                                                 | :v:                 |
+ | Nnumber of Islands                                     | Medium     | dfs/marking                                                 | :v:                 |
  | Number of Islands II                                   | Medium     | union find + pass compression                               | :lock: :eyes:       |
+ | Nnumber of Distinct Islands                            | Medium     | use vector of pairs to store normalized island              | :v:                 |
+ | Number of Distinct Islands II                          | Medium     | how to represent intrinct island                            | :lock: :eyes:       |
  | Island Perimeter                                       | Easy       | just loop, no need to use dfs                               |                     |
  | The Skyline Problem                                    | Hard       | start/end points/mulitset erase                             | :eyes: :v:          |
  | Maximal Square                                         | Medium     | dp/find len of sides                                        | :eyes: :v:          |
@@ -497,3 +499,9 @@ void dfs(nums, id, path, res) {
  | :-------------------------                  | :---:      | :----                  |
  | Insert Delete GetRandom O(1)                | Medium     | combine map and vector |
  | Insert Delete GetRandom O(1) with duplicate | Medium     | combine map and set    |
+
+## Island Problems
+- `pair<int,int>` comparison is defined in stl as `p1.first < p2.first || (!(p1.first > p2.first) && p1.second < p2.second)`
+- 'vecotr<int>` comparison is defined to compare each element, if all the same, the one with shorter length is smaller
+- transform an image, is to transform all the points in the image (rotate 90/180/270 degrees, leftright/updown reflect)
+- given point `(x,y)`, all transforms can results in 8 different representations, pick one as its intrinsic representation
