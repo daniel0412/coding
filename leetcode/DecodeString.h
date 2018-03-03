@@ -67,5 +67,33 @@ class DecodeString {
         return "";
     }
 
+    string dfs(const string& s, int& i, int cnt)
+    {
+        string res("");
+        int nextCnt = 1; // count for the next recursive []
+        while(i < s.size()) {
+            if(isdigit(s[i])) {
+                int start = i;
+                while(i < s.size() && isdigit(s[i]))
+                    ++i;
+                nextCnt = stoi(s.substr(start, i - start));
+            }
+            else if(s[i] == '[') {
+                res += dfs(s, ++i, nextCnt);
+            }
+            else if(s[i] == ']') {
+                ++i;
+                string t = res;
+                while(--cnt > 0)
+                    res += t;
+                return res;
+            }
+            else {
+                res.push_back(s[i++]);
+            }
+        }
+        return res;
+    }
+
   private:
 };

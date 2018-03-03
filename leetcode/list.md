@@ -56,7 +56,6 @@
  | Repeated Substring Pattern                             | Easy        |                                                          | :eyes: :v:        |
  | Heaters                                                | Easy        | upper/lower bound                                        | :eyes: :v:        |
  | Fraction to Recurring Decimal                          | Medium      | hashmap/sstream/overflow                                 | :v:               |
- | Number of Islands                                      | Medium      |                                                          |                   |
  | Word Search II                                         | Hard        |                                                          |                   |
  | The Skyline Problem                                    | Hard        |                                                          |                   |
  | Summary Ranges                                         | Medium      | stringstream/array/size_t                                | :v:               |
@@ -89,7 +88,6 @@
  | Longest Increasing Path in a Matrix                    | Hard        | dfs + memorization to prun                               | :eyes: :v:        |
  | Smallest Rectangle Enclosing Black Pixels              | Hard        | 1. brute force  2. four directions binary search idea    | :eyes: :lock:     |
  | Max Sum of Rectangle No Greater Thank K                | Hard        | idea: max sum of sub rectangle + lower bound  of diff    | :eyes: :v:        |
- | Number of Islands II                                   | Hard        |                                                          |                   |
  | Range Sum Query 2D – Mutable                           | Hard        |                                                          |                   |
  | Burst Balloons                                         | Hard        |                                                          |                   |
  | Super Ugly Number                                      | Medium      |                                                          |                   |
@@ -159,8 +157,9 @@
  | One Edit Distance                                      | Medium     | 3 cases, and combine for concise code                       | :v:                 |
  | Edit Distance                                          | Hard       | 2-dim dp                                                    | :v:  :eyes:         |
  | Excel Sheet Column Title                               | Easy       | mod/division                                                | :v:                 |
- | Number of Islands                                      | Medium     | dfs/marking                                                 | :v:                 |
+ | Nnumber of Islands                                      | Medium     | dfs/marking                                                 | :v:                 |
  | Number of Islands II                                   | Medium     | union find + pass compression                               | :lock: :eyes:       |
+ | Island Perimeter                                       | Easy       | just loop, no need to use dfs                               |                     |
  | The Skyline Problem                                    | Hard       | start/end points/mulitset erase                             | :eyes: :v:          |
  | Maximal Square                                         | Medium     | dp/find len of sides                                        | :eyes: :v:          |
  | Maximal Rectangle                                      | Hard       | find width(histogram)/height                                | :eyes: :v:          |
@@ -371,13 +370,20 @@ void dfs(nums, id, path, res) {
  | Remove Invalid Parentheses (return one valid solution) | Hard        | 1.two loops 2. one loop                                       |
  | Different Ways to add parentheses                      | Medium      | divide and conqure                                            |
  | Expression Add Operators                               | Hard        | get first val, then (op, val) pair dfs                        |
- | Basic Calculator                                       | Hard        | parenthesis only, recursive with O(n) or iterative with stack |
- | Basic Calculator II                                    | Hard        | only +-\*/, agg only with higher ops                          |
- | Basic Calculator III                                   | Hard        | support parenthesis and all four ops                          |
  | Longest Uncommon Subsequence I                         | Easy        |                                                               |
  | Longest Uncommon Subsequence II                        | Medium      | utility function to check sub sequence                        |
  | Delete Operation for Two Strings                       | Medium      | longest common subsequence problem, diff from LIS             |
- | Decode String                                          | Medium      | like iterator of iterator, stack + one loop                   |
+
+## Recursion
+- easy to identify recursive subproblems
+- as go into the next recursive call, the index grows, thus `O(n)` time complexity
+
+ | Problems                   | Difficulty | Techniques                                                    |
+ | :------------------------- | :---:      | :----                                                         |
+ | Basic Calculator           | Hard       | parenthesis only, recursive with O(n) or iterative with stack |
+ | Basic Calculator II        | Hard       | only +-\*/, agg only with higher ops                          |
+ | Basic Calculator III       | Hard       | support parenthesis and all four ops                          |
+ | Decode String              | Medium     | like iterator of iterator, stack + one loop                   |
 
 ### Palindromic Problems
 - check `if size(s) < 2`, return `true`
@@ -485,3 +491,9 @@ void dfs(nums, id, path, res) {
  | Next Greater Element III   | :sweat:        | digits comp, think!!                                     |
  | Next Permutation           | :sweat:        | same with finding next greater number                    |
 
+
+## Data Structure Design
+ | Problems                                    | Difficulty | Techniques             |
+ | :-------------------------                  | :---:      | :----                  |
+ | Insert Delete GetRandom O(1)                | Medium     | combine map and vector |
+ | Insert Delete GetRandom O(1) with duplicate | Medium     | combine map and set    |
