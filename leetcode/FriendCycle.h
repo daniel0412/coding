@@ -35,6 +35,7 @@ class FriendCycle {
                     int rootj = findRoot(roots, j);
                     if(rooti != rootj) {
                         --res;
+                        // ATTENTION: here to merge, use rooti/rootj, rather than i/j
                         roots[rooti] = rootj;
                     }
                 }

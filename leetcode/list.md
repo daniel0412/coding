@@ -88,7 +88,6 @@
  | Longest Increasing Path in a Matrix                    | Hard        | dfs + memorization to prun                               | :eyes: :v:        |
  | Smallest Rectangle Enclosing Black Pixels              | Hard        | 1. brute force  2. four directions binary search idea    | :eyes: :lock:     |
  | Max Sum of Rectangle No Greater Thank K                | Hard        | idea: max sum of sub rectangle + lower bound  of diff    | :eyes: :v:        |
- | Range Sum Query 2D – Mutable                           | Hard        |                                                          |                   |
  | Burst Balloons                                         | Hard        |                                                          |                   |
  | Super Ugly Number                                      | Medium      |                                                          |                   |
  | Binary Tree Vertical Order Traversal                   | Medium      | tree traversal                                           | :lock:            |
@@ -157,11 +156,6 @@
  | One Edit Distance                                      | Medium     | 3 cases, and combine for concise code                       | :v:                 |
  | Edit Distance                                          | Hard       | 2-dim dp                                                    | :v:  :eyes:         |
  | Excel Sheet Column Title                               | Easy       | mod/division                                                | :v:                 |
- | Nnumber of Islands                                     | Medium     | dfs/marking                                                 | :v:                 |
- | Number of Islands II                                   | Medium     | union find + pass compression                               | :lock: :eyes:       |
- | Nnumber of Distinct Islands                            | Medium     | use vector of pairs to store normalized island              | :v:                 |
- | Number of Distinct Islands II                          | Medium     | how to represent intrinct island                            | :lock: :eyes:       |
- | Island Perimeter                                       | Easy       | just loop, no need to use dfs                               |                     |
  | The Skyline Problem                                    | Hard       | start/end points/mulitset erase                             | :eyes: :v:          |
  | Maximal Square                                         | Medium     | dp/find len of sides                                        | :eyes: :v:          |
  | Maximal Rectangle                                      | Hard       | find width(histogram)/height                                | :eyes: :v:          |
@@ -505,3 +499,20 @@ void dfs(nums, id, path, res) {
 - 'vecotr<int>` comparison is defined to compare each element, if all the same, the one with shorter length is smaller
 - transform an image, is to transform all the points in the image (rotate 90/180/270 degrees, leftright/updown reflect)
 - given point `(x,y)`, all transforms can results in 8 different representations, pick one as its intrinsic representation
+
+ | Problems                      | Difficulty     | Techniques                                     |
+ | :-------------------------    | :---:          | :----                                          |
+ | Nnumber of Islands            | :v:            | dfs/marking                                    |
+ | Number of Islands II          | :eyes: :sweet: | union find + pass compression                  |
+ | Nnumber of Distinct Islands   | :eyes: :sweet: | use vector of pairs to store normalized island |
+ | Number of Distinct Islands II | :eyes: :sob:   | how to represent intrinct island               |
+ | Island Perimeter              | :v:            | just loop, no need to use dfs                  |
+
+
+## Range Sum
+
+ | Problems                     | Difficulty | Techniques |
+ | :-------------------------   | :---:      | :----      |
+ | Range Sum Query 2D – Mutable | Hard       |            |
+ | Range Sum Query 1D – Mutable | Hard       |            |
+
