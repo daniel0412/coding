@@ -181,8 +181,48 @@ while(num) {
 
 rather than thinking to do dfs for each `room` cell, we can use reverse engineer to start from `gate` to do dfs
 
+### reservoir sampling
+given online stream of numbers, make sure probably for each number gets selected is the same.
 
-### lower/upper bound coding
+idea: keep the first number, then with probability `1/i` to select the `i-th` number
+
+## Templates
+### Union Find
+To count number of unions
+```cpp
+int numOfUnions(const vector<vector<int>>& M) {
+    int n = M.size();
+    int cnt = n; // initial counts
+    vector<int> roots(n); // track initial root
+    for(int i = 0; i < n; ++i) roots[i] = i;
+
+    for(int i = 0; i < n; ++i) {
+        for(int j = i+1; j < n; ++j) {
+            if(M[i][j]) {
+                int ri = getroot(roots, i);
+                int rj = getroot(roots, j);
+                // merge when roots not same
+                if(ri != rj) {
+                    // reduce count when merge
+                    --cnt;
+                    // ATTENTION: update root's root, ri/rj, not i/j
+                    roots[ri] = roots[rj];
+                }
+            }
+        }
+        return cnt;
+    }
+
+int getroot(vector<int>& roots, int i) {
+    while(roots[i] != i) {
+        // assign grandparent root as its parent root
+        roots[i] = roots[roots[i]];
+        i = roots[i];
+    }
+    return i;
+}
+```
+
 #### lower bound
 - definition: given `val`, the first element `>= val`
 
@@ -248,7 +288,6 @@ int partition(vector<int>& nums, int left, int right)
 }
 ```
 
-### reservoir sampling
-given online stream of numbers, make sure probably for each number gets selected is the same.
+### segment tree
+- refer to `mutable range sum` for the array implementation
 
-idea: keep the first number, then with probability `1/i` to select the `i-th` number
