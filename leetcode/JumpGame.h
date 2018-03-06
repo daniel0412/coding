@@ -34,15 +34,16 @@ class JumpGame {
   public:
     bool canJump(vector<int>& nums)
     {
-        int maxId = 0;
+        int maxId = 0, n = nums.size();
         for(int i = 0; i < nums.size(); ++i) {
             if(i > maxId || maxId >= nums.size() - 1)
                 break;
             int id = i + nums[i];
             maxId = maxId > id ? maxId : id;
         }
-        return maxId >= nums.size() - 1;
+        return maxId >= n - 1;
     }
 
-  private:
-};
+private:
+}
+;

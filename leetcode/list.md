@@ -29,7 +29,6 @@
  | Populating Next Right Pointers in Each Node II         | Hard        | iteration                                                | :v: :eyes:        |
  | Populating Next Right Pointers in Each Node            | Medium      | iteration                                                | :v:               |
  | Insert Interval                                        | Hard        | corner cases                                             | :v:               |
- | Merge Intervals                                        | Medium      |                                                          | :v:               |
  | Word Squares                                           | Hard        | dfs/trie                                                 | :warning: :lock:  |
  | Valid Word Square                                      | Easy        | brute force                                              | :lock:            |
  | Trapping Rain Water                                    | Hard        |                                                          |                   |
@@ -103,88 +102,89 @@
  | Predict The Winner                                     | Medium      | recursive + dp                                           |                   |
 
 ## Facebook(79)
- | Problems                                               | Difficulty | Related Problems                                            | Status              |
- | :-------------------------                             | :---:      | :----                                                       | :---:               |
- | Move Zeroes                                            | Easy       | array/swap                                                  | :v:                 |
- | Split Array With Equal Sums                            | Medium     | cache sum + split strategy                                  | :eyes: :lock:       |
- | Split Array Largest Sum                                | Hard       | find range, then binary search /dp                          | :eyes:  :v:         |
- | Rearrange String K Distance Apart                      | Hard       | hash/heap/rearrange task w/o reorder                        | :lock: :eyes:       |
- | Task Scheduler                                         | Medium     | find formular + heap solution                               | :eyes: :v:          |
- | Divide Two Integers                                    | Medium     | hash map/prefix sum                                         | :v: :eyes:          |
- | Roman to Integer                                       | Easy       | add then minus two if voliate                               | :v: :eyes:          |
- | Integer to Roman                                       | Medium     | find separating points, then all adding                     | :v: :eyes:          |
- | Integer to English Words                               | Hard       | list all special cases + convert hundreds                   | :v: :eyes:          |
- | Multiply Strings                                       | Medium     | string addition/accumulate+reverse/quicker sol              | :v: :eyes:          |
- | Reverse String                                         | Easy       |                                                             | :v:                 |
- | Reverse StringII                                       | Easy       |                                                             | :v:                 |
- | Magical String                                         | Medium     | think about how to generate it                              | :eyes: :v:          |
- | Add Binary                                             | Easy       | bit by bit                                                  | :v:                 |
- | Letter Combinations of a Phone Number                  | Medium     | dfs                                                         | :v:                 |
- | Read N Characters Given Read4                          | Easy       | so concise                                                  | :lock: :eyes:       |
- | Read N Characters Given Read4 II – Call multiple times | Hard       | buffer/read-write pos tracker                               | :lock: :eyes:       |
- | Remove Duplicates from Sorted Array                    | Easy       | two pointer                                                 | :v:                 |
- | Remove Duplicates from Sorted Array II                 | Medium     | two pointer + condition                                     | :v:                 |
- | Remove Duplicate Letters                               | Hard       | map/stack                                                   | :v: :eyes:          |
- | Merge Sorted Array                                     | Easy       | two pointer                                                 | :v:                 |
- | Merge k Sorted Lists                                   | Hard       | min heap                                                    | :v:                 |
- | Product of Array Except Self                           | Medium     | left->right, then right->left                               | :v:                 |
- | Reverse Nodes in k-Group                               | Hard       |                                                             |                     |
- | Implement strStr()                                     | Easy       |                                                             |                     |
- | Count and Say                                          | Easy       | iterative/recursive/deduction                               | :v:                 |
- | Pow(x, n)                                              | Medium     |                                                             |                     |
- | Sqrt(x)                                                | Medium     |                                                             |                     |
- | Merge Intervals                                        | Medium     | customized sorting + max(end1, end2) when merge             | :v:                 |
- | Insert Interval                                        | Hard       | think about it twice                                        | :v: :eyes:          |
- | Encode/Decode Tiny Url                                 | Medium     | rand()/unordered_map                                        | :v: :eyes:          |
- | Simplify Path                                          | Medium     | last char not being '/' case                                | :v:                 |
- | Wildcard Matching                                      | Hard       | greedy two pointer: mark * matchign start pos               | :v: :eyes:          |
- | Regular Expression Matching                            | Hard       | hard&slow recursion/fast dp!!!                              | :v: :eyes:          |
- | Text Justification                                     | Hard       | just deal with string corner case                           | :v:                 |
- | Implement Trie (Prefix Tree)                           | Medium     |                                                             | :v:                 |
- | Add and Search Word – Data structure design            | Medium     | followup with star sign                                     | :v:                 |
- | Increasing Subsequence                                 | Medium     | dfs/set to deduplicate                                      | :v:          :eyes: |
- | Word Ladder                                            | Medium     | (double) bfs                                                | :eyes: :v:          |
- | Word Ladder II                                         | Hard       | (double) bfs                                                | :eyes: :v:          |
- | Word Break                                             | Medium     | dp(fast)/recursion(timeout)                                 |                     |
- | Word Search                                            | Medium     | dfs                                                         | :v: :eyes:          |
- | Sum of Left Leaves                                     | Easy       | recursion/iterative                                         | :v: :eyes:          |
- | Validate Binary Search Tree                            | Medium     | track min/max for eachsubtree, beter than inorder traversal | :eyes:  :v:         |
- | Binary Tree Level Order Traversal                      | Easy       |                                                             |                     |
- | Populating Next Right Pointers in Each Node            | Medium     |                                                             |                     |
- | Populating Next Right Pointers in Each Node II         | Hard       |                                                             |                     |
- | LRU Cache                                              | Hard       |                                                             |                     |
- | One Edit Distance                                      | Medium     | 3 cases, and combine for concise code                       | :v:                 |
- | Edit Distance                                          | Hard       | 2-dim dp                                                    | :v:  :eyes:         |
- | Excel Sheet Column Title                               | Easy       | mod/division                                                | :v:                 |
- | The Skyline Problem                                    | Hard       | start/end points/mulitset erase                             | :eyes: :v:          |
- | Maximal Square                                         | Medium     | dp/find len of sides                                        | :eyes: :v:          |
- | Maximal Rectangle                                      | Hard       | find width(histogram)/height                                | :eyes: :v:          |
- | Largest Rectangle in Histogram                         | Hard       | stack idea important                                        | :eyes: :v:          |
- | Reverse Linked List                                    | Easy       |                                                             | :v:                 |
- | Lowest Common Ancestor of a Binary Tree                | Medium     | recursion                                                   | :v: :eyes:          |
- | Lowest Common Ancestor of a Binary Search Tree         | Easy       | use bst property                                            | :v:                 |
- | Meeting Rooms                                          | Easy       | easy/customized sorting lambda                              | :v:                 |
- | Meeting Rooms II                                       | Medium     | 1. greedy ideas using pq; 2. sweep line with two arrays     | :eyes: :v:          |
- | Maximum Length of Pair Chains                          | Medium     | sort by ending time then greedy                             | :eyes: :v:          |
- | Course Schedule I                                      | Medium     | dfs/bfs(tricker, use degree)                                | :v:                 |
- | Course Schedule II                                     | Medium     | dfs/bfs(tricker), path tracking                             | :v: :eyes:          |
- | Course Schedule III                                    | Medium     | greedy/replace the course taking longest time               | :eyes:  :v:         |
- | Minimu Height Trees                                    | Medium     | bf timeout, use graph degree                                | :eyes: :v:          |
- | Alien Dictionary                                       | Hard       | order is DAG edges (topological sort)                       | :lock: :eyes:       |
- | Diameter of Binary Tree                                | Medium     | what is needed to compute the path                          | :v:                 |
- | Paint House II                                         | Hard       | dp->no dp storage needed                                    | :lock: :eyes:       |
- | H-Index                                                | Medium     |                                                             |                     |
- | H-Index II                                             | Medium     |                                                             |                     |
- | Find the Celebrity                                     | Medium     | a knows b, a is not candidate; otherwise a is candidate     | :eyes::lock:        |
- | First Bad Version                                      | Easy       |                                                             |                     |
- | Walls and Gates                                        | Medium     | start from gates see how far it goes                        | :v:                 |
- | Inorder Successor in BST                               | Medium     | BST property, track last larger node                        | :eyes: :lock:       |
- | Binary Tree Vertical Order Traversal                   | Medium     | map/inorder recursion/queue iteration                       | :eyes: :lock:       |
- | Increasing Triplet Subsequence                         | Medium     | think hard, tricky                                          | :v: :eyes:          |
- | Random Pick Index                                      | Medium     | reservoir sampling                                          | :eyes: :v:          |
- | Design Tic Tac Toe                                     | Medium     | extra space to keep track of current status                 | :eyes: :lock:       |
- | Restore IP Address                                     | Medium     | recursion                                                   | :eyes: :v:          |
- | Intersection of Two Arrays I/II                        | Easy       | check follow up questions                                   | :eyes: :v:          |
+ | Problems                                               | Difficulty     | Related Problems                                            | Status              |
+ | :-------------------------                             | :---:          | :----                                                       | :---:               |
+ | Move Zeroes                                            | Easy           | array/swap                                                  | :v:                 |
+ | Split Array With Equal Sums                            | Medium         | cache sum + split strategy                                  | :eyes: :lock:       |
+ | Split Array Largest Sum                                | Hard           | find range, then binary search /dp                          | :eyes:  :v:         |
+ | Rearrange String K Distance Apart                      | Hard           | hash/heap/rearrange task w/o reorder                        | :lock: :eyes:       |
+ | Task Scheduler                                         | Medium         | find formular + heap solution                               | :eyes: :v:          |
+ | Divide Two Integers                                    | Medium         | hash map/prefix sum                                         | :v: :eyes:          |
+ | Roman to Integer                                       | Easy           | add then minus two if voliate                               | :v: :eyes:          |
+ | Integer to Roman                                       | Medium         | find separating points, then all adding                     | :v: :eyes:          |
+ | Integer to English Words                               | Hard           | list all special cases + convert hundreds                   | :v: :eyes:          |
+ | Multiply Strings                                       | Medium         | string addition/accumulate+reverse/quicker sol              | :v: :eyes:          |
+ | Reverse String                                         | Easy           |                                                             | :v:                 |
+ | Reverse StringII                                       | Easy           |                                                             | :v:                 |
+ | Magical String                                         | Medium         | think about how to generate it                              | :eyes: :v:          |
+ | Add Binary                                             | Easy           | bit by bit                                                  | :v:                 |
+ | Letter Combinations of a Phone Number                  | Medium         | dfs                                                         | :v:                 |
+ | Read N Characters Given Read4                          | Easy           | so concise                                                  | :lock: :eyes:       |
+ | Read N Characters Given Read4 II – Call multiple times | Hard           | buffer/read-write pos tracker                               | :lock: :eyes:       |
+ | Remove Duplicates from Sorted Array                    | Easy           | two pointer                                                 | :v:                 |
+ | Remove Duplicates from Sorted Array II                 | Medium         | two pointer + condition                                     | :v:                 |
+ | Remove Duplicate Letters                               | Hard           | map/stack                                                   | :v: :eyes:          |
+ | Merge Sorted Array                                     | Easy           | two pointer                                                 | :v:                 |
+ | Merge k Sorted Lists                                   | Hard           | min heap                                                    | :v:                 |
+ | Product of Array Except Self                           | Medium         | left->right, then right->left                               | :v:                 |
+ | Reverse Nodes in k-Group                               | Hard           |                                                             |                     |
+ | Implement strStr()                                     | Easy           |                                                             |                     |
+ | Count and Say                                          | Easy           | iterative/recursive/deduction                               | :v:                 |
+ | Pow(x, n)                                              | Medium         |                                                             |                     |
+ | Sqrt(x)                                                | Medium         |                                                             |                     |
+ | Merge Intervals                                        | Medium         | customized sorting + max(end1, end2) when merge             | :v:                 |
+ | Insert Interval                                        | Hard           | think about it twice                                        | :v: :eyes:          |
+ | Add Bold Tags in String                                | :sweat: :eyes: | greedy to extend matched index, can also use merge interval | |
+ | Encode/Decode Tiny Url                                 | Medium         | rand()/unordered_map                                        | :v: :eyes:          |
+ | Simplify Path                                          | Medium         | last char not being '/' case                                | :v:                 |
+ | Wildcard Matching                                      | Hard           | greedy two pointer: mark * matchign start pos               | :v: :eyes:          |
+ | Regular Expression Matching                            | Hard           | hard&slow recursion/fast dp!!!                              | :v: :eyes:          |
+ | Text Justification                                     | Hard           | just deal with string corner case                           | :v:                 |
+ | Implement Trie (Prefix Tree)                           | Medium         |                                                             | :v:                 |
+ | Add and Search Word – Data structure design            | Medium         | followup with star sign                                     | :v:                 |
+ | Increasing Subsequence                                 | Medium         | dfs/set to deduplicate                                      | :v:          :eyes: |
+ | Word Ladder                                            | Medium         | (double) bfs                                                | :eyes: :v:          |
+ | Word Ladder II                                         | Hard           | (double) bfs                                                | :eyes: :v:          |
+ | Word Break                                             | Medium         | dp(fast)/recursion(timeout)                                 |                     |
+ | Word Search                                            | Medium         | dfs                                                         | :v: :eyes:          |
+ | Sum of Left Leaves                                     | Easy           | recursion/iterative                                         | :v: :eyes:          |
+ | Validate Binary Search Tree                            | Medium         | track min/max for eachsubtree, beter than inorder traversal | :eyes:  :v:         |
+ | Binary Tree Level Order Traversal                      | Easy           |                                                             |                     |
+ | Populating Next Right Pointers in Each Node            | Medium         |                                                             |                     |
+ | Populating Next Right Pointers in Each Node II         | Hard           |                                                             |                     |
+ | LRU Cache                                              | Hard           |                                                             |                     |
+ | One Edit Distance                                      | Medium         | 3 cases, and combine for concise code                       | :v:                 |
+ | Edit Distance                                          | Hard           | 2-dim dp                                                    | :v:  :eyes:         |
+ | Excel Sheet Column Title                               | Easy           | mod/division                                                | :v:                 |
+ | The Skyline Problem                                    | Hard           | start/end points/mulitset erase                             | :eyes: :v:          |
+ | Maximal Square                                         | Medium         | dp/find len of sides                                        | :eyes: :v:          |
+ | Maximal Rectangle                                      | Hard           | find width(histogram)/height                                | :eyes: :v:          |
+ | Largest Rectangle in Histogram                         | Hard           | stack idea important                                        | :eyes: :v:          |
+ | Reverse Linked List                                    | Easy           |                                                             | :v:                 |
+ | Lowest Common Ancestor of a Binary Tree                | Medium         | recursion                                                   | :v: :eyes:          |
+ | Lowest Common Ancestor of a Binary Search Tree         | Easy           | use bst property                                            | :v:                 |
+ | Meeting Rooms                                          | Easy           | easy/customized sorting lambda                              | :v:                 |
+ | Meeting Rooms II                                       | Medium         | 1. greedy ideas using pq; 2. sweep line with two arrays     | :eyes: :v:          |
+ | Maximum Length of Pair Chains                          | Medium         | sort by ending time then greedy                             | :eyes: :v:          |
+ | Course Schedule I                                      | Medium         | dfs/bfs(tricker, use degree)                                | :v:                 |
+ | Course Schedule II                                     | Medium         | dfs/bfs(tricker), path tracking                             | :v: :eyes:          |
+ | Course Schedule III                                    | Medium         | greedy/replace the course taking longest time               | :eyes:  :v:         |
+ | Minimu Height Trees                                    | Medium         | bf timeout, use graph degree                                | :eyes: :v:          |
+ | Alien Dictionary                                       | Hard           | order is DAG edges (topological sort)                       | :lock: :eyes:       |
+ | Diameter of Binary Tree                                | Medium         | what is needed to compute the path                          | :v:                 |
+ | Paint House II                                         | Hard           | dp->no dp storage needed                                    | :lock: :eyes:       |
+ | H-Index                                                | Medium         |                                                             |                     |
+ | H-Index II                                             | Medium         |                                                             |                     |
+ | Find the Celebrity                                     | Medium         | a knows b, a is not candidate; otherwise a is candidate     | :eyes::lock:        |
+ | First Bad Version                                      | Easy           |                                                             |                     |
+ | Walls and Gates                                        | Medium         | start from gates see how far it goes                        | :v:                 |
+ | Inorder Successor in BST                               | Medium         | BST property, track last larger node                        | :eyes: :lock:       |
+ | Binary Tree Vertical Order Traversal                   | Medium         | map/inorder recursion/queue iteration                       | :eyes: :lock:       |
+ | Increasing Triplet Subsequence                         | Medium         | think hard, tricky                                          | :v: :eyes:          |
+ | Random Pick Index                                      | Medium         | reservoir sampling                                          | :eyes: :v:          |
+ | Design Tic Tac Toe                                     | Medium         | extra space to keep track of current status                 | :eyes: :lock:       |
+ | Restore IP Address                                     | Medium         | recursion                                                   | :eyes: :v:          |
+ | Intersection of Two Arrays I/II                        | Easy           | check follow up questions                                   | :eyes: :v:          |
 
 ## Other Leetcode
  | Problems                                    | Difficulty | Techniques                                              | Status        |
@@ -337,18 +337,22 @@ void dfs(nums, id, path, res) {
 
 
 ## Dynamic Programming/Greedy
- | Problems                                             | Difficulty | Techniques                                        |
- | :-------------------------                           | :---:      | :----                                             |
- | Triangle                                             | Medium     | bottom up dp                                      |
- | Decode Ways                                          | Medium     | recursion(slow)/dp(cornor cases)                  |
- | Decode Ways II                                       | Medium     | with * decoded as 1-9                             |
- | Best Time to Buy and Sell Stock I/II                 | Easy       | greedy                                            |
- | Best Time to Buy and Sell Stock III/IV               | Hard       | local/global dp, sooo hard                        |
- | Best Time to Buy and Sell Stock with Cooldown        | Medium     |                                                   |
- | Best Time to Buy and Sell Stock with Transaction Fee | Medium     | current state depends on previous state sell/hold |
- | Guess Number Higher or Less                          | Hard       | mini-max dp                                       |
- | Predict the Winner                                   | Hard       | mini-max dp                                       |
- | Ones and Zeros                                       | Hard       | dp                                                |
+ | Problems                                             | Difficulty     | Techniques                                        |
+ | :-------------------------                           | :---:          | :----                                             |
+ | Triangle                                             | Medium         | bottom up dp                                      |
+ | Decode Ways                                          | Medium         | recursion(slow)/dp(cornor cases)                  |
+ | Decode Ways II                                       | Medium         | with * decoded as 1-9                             |
+ | Best Time to Buy and Sell Stock I/II                 | Easy           | greedy                                            |
+ | Best Time to Buy and Sell Stock III/IV               | Hard           | local/global dp, sooo hard                        |
+ | Best Time to Buy and Sell Stock with Cooldown        | Medium         |                                                   |
+ | Best Time to Buy and Sell Stock with Transaction Fee | Medium         | current state depends on previous state sell/hold |
+ | Guess Number Higher or Less                          | Hard           | mini-max dp                                       |
+ | Predict the Winner                                   | Hard           | mini-max dp                                       |
+ | Ones and Zeros                                       | Hard           | dp                                                |
+ | Coin Change                                          | :eyes: :sweat: | loop over all amount and then all coins           |
+ | Coin Change II                                       | :eyes: :sweat: | loop over all coins, then all amount              |
+ | Coin Path                                            | :eyes: :sob:   | dp, and reconstruct path                          |
+ | Gas Station                                          | :sweat: :eyes: |                                                   |
 
 ## String
  | Problems                                               | Difficulty  | Techniques                                                    |

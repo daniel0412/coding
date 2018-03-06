@@ -25,31 +25,26 @@ class SummaryRanges {
     vector<string> summaryRanges(vector<int>& nums)
     {
         vector<string> res;
-        if(nums.size() == 0) return res;
+        if(nums.size() == 0)
+            return res;
 
-        int start = 0;
-        stringstream ss;
 
-        for(int i = 0; i < nums.size() - 1;) {
-            while(nums[i] + 1 == nums[i + 1]) {
-                ++i;
+        int l = nums.front(), r = nums.front();
+        for(int i = 1; i < nums.size(); ++i) {
+            if(r + 1 != nums[i]) {
+                res.emplace_back(formstr(l, r));
+                l = nums[i];
             }
-            ss << nums[start];
-            if(i > start) {
-                ss << "->";
-                ss << nums[i];
-            }
-            res.push_back(ss.str());
-            ss.clear();
-            ss.str("");
-            ++i;
-            start = i;
+            r = nums[i];
         }
-        if(start == nums.size() - 1) {
-            ss << nums[start];
-            res.push_back(ss.str());
-        }
+        // deal with the last one
+        res.emplace_back(formstr(l, r));
         return res;
+    }
+
+    string formstr(int l, int r)
+    {
+        return l == r ? to_string(l) : to_string(l) + "->" + to_string(r);
     }
 
   private:

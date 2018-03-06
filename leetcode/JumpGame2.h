@@ -38,7 +38,9 @@ class JumpGame2 {
         int curId = 0, prevId = 0, i = 0;
         int numJumps = 0;
         while(curId < nums.size() - 1) {
+            // get currently, the furthest index we can jump to
             prevId = curId;
+            // extend the furthest index we can jump to
             while(i <= prevId) {
                 int tmpId = i + nums[i];
                 curId = curId > tmpId ? curId : tmpId;
