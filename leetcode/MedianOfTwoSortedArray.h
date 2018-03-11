@@ -17,11 +17,16 @@ class MedianOfTwoSortedArray {
   public:
     double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2)
     {
-        int len1 = nums1.size(), len2 = nums2.size();
-        int mid = (len1 + len2) / 2 + 1;
+        int len1 = nums1.size(), len2 = nums2.size(), sum = len1 + len2;
 
-        if((len1 + len2) % 2 == 1)
+        // mid: the mid-th smallest element of the combined array, not the
+        // index
+        int mid = sum / 2 + 1;
+
+        // array size is odd, median is the middle one
+        if(sum % 2)
             return findKth(nums1, 0, len1, nums2, 0, len2, mid);
+        // array size is even, median is the average of the middle two numbers
         else
             return (findKth(nums1, 0, len1, nums2, 0, len2, mid) +
                     findKth(nums1, 0, len1, nums2, 0, len2, mid - 1)) /
@@ -44,6 +49,9 @@ class MedianOfTwoSortedArray {
             return nums1[start1 + k - 1];
         if(k == 1)
             return min(nums1[start1], nums2[start2]);
+
+        // ATTENTION: each call only eliminate at most k/2 number
+        // different from normal binary search
         int n1 = min(len1, k / 2), n2 = min(len2, k / 2);
         if(nums1[start1 + n1 - 1] < nums2[start2 + n2 - 1]) {
             return findKth(

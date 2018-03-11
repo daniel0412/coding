@@ -24,24 +24,31 @@ class FriendCycle {
     int findCircleNum(vector<vector<int> >& M)
     {
         int n = M.size();
-        // initialize each user as its own union
-        // so there are n individual unions initially
+        // initially assume there are n friend cycles, i.e., each user form
+        // his/her own cycle
         int res = n;
+        // roots vector to indicate which friend cycle each user belongs to
         vector<int> roots(n);
-        for(int i = 0; i < n; ++i)
+
+        // initialize roots vector such that each user forms his/her own cycle
+        for(size_t i = 0; i < n; ++i)
             roots[i] = i;
 
-        // loop over all friendship information, and merge union if two people are friends
-        // since friendship is bidirectional, only need to loop the upper triangle of the square
-        for(int i = 0; i < n; ++i) {
-            for(int j = i+1; j < n; ++j) {
+        // loop over all friendship information, and merge friend cycle if two
+        // people are friends
+        // since friendship is bidirectional, only need to loop the upper
+        // triangle of the square
+        for(size_t i = 0; i < n; ++i) {
+            for(size_t j = i + 1; j < n; ++j) {
                 // merge when i and j are friends
                 if(M[i][j]) {
-                    // find the root union i and j belongs to
+                    // find the friend cycle i and j belongs to respective
                     int rooti = findRoot(roots, i);
                     int rootj = findRoot(roots, j);
-                    // if currently they belong to different region, merge the root union
-                    // and decrese the number of unions
+                    // if i and j do not fall into the same friend cycle, merge
+                    // the two cycles
+                    // at the same time, decrease the number of friend cycles
+                    // by 1
                     if(rooti != rootj) {
                         --res;
                         roots[rooti] = rootj;
@@ -53,8 +60,10 @@ class FriendCycle {
     }
 
   private:
+    // findRoot function finds which friend cycle the given user belongs to
     int findRoot(vector<int>& roots, int i)
     {
+        // trace which frined cycle i belongs to
         while(roots[i] != i) {
             roots[i] = roots[roots[i]];
             i = roots[i];

@@ -23,7 +23,7 @@ class LongestWordChain {
   public:
     int longestchain(const vector<string>& words)
     {
-        // put all words into an unordered_set for quick word  exitence check
+        // put all words into an unordered_set for quick word exitence check
         unordered_set<string> s;
         for(auto& w : words) {
             s.insert(w);
@@ -31,16 +31,19 @@ class LongestWordChain {
 
         // this keeps track of the maximal length of the word chain
         int maxlen = 0;
-        // use an unordered map to memorize the longest chain starting from the
-        // given word
+        // use an unordered map to memorize the length of the longest chain
+        // staring from the key word
         // to avoid duplicate calculation when performing dfs
         unordered_map<string, int> m;
 
         // loop over each word to find out the chain length starting from that
         // word
-        for(const auto& w : words) {
-            // only if the word length is greater than the current maxlen, we
-            // check its length
+        for(auto& w : words) {
+            // calculate the length of the longest chain starting from word w
+            // only if the
+            // word length is greater than the current max chain length
+            // because for a starting word, whose length is smaller than the
+            // current max chain length, we cannot find a longer word chain
             if(w.size() > maxlen) {
                 // always keep updating the maximal length
                 maxlen = max(maxlen, dfs(w, s, m));
@@ -56,7 +59,7 @@ class LongestWordChain {
         // keep track of the max length of the chain satring from the
         // 'startWord'
         int maxcnt = 0;
-        for(int i = 0; i < startWord.size(); ++i) {
+        for(size_t i = 0; i < startWord.size(); ++i) {
             // remove the ith char, and find the next word to try
             string nextWord = startWord.substr(0, i) + startWord.substr(i + 1);
             // if the next word does not exist in the dict, just continue to

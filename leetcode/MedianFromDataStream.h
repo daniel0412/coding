@@ -20,6 +20,8 @@ class MedianFromDataStream {
   public:
     MedianFromDataStream() {}
 
+    // always make sure that size of leftMax heap is greater than that of the
+    // rightMin heap
     void addNum(int num)
     {
         if(d_leftMaxHeap.size() <= d_rightMinHeap.size()) {
@@ -54,9 +56,7 @@ class MedianFromDataStream {
     }
 
   private:
-     priority_queue<int, vector<int>, less<int> > d_leftMaxHeap;
-     priority_queue<int, vector<int>, greater<int> > d_rightMinHeap;
-     //static function<bool(int, int)> d_less;
-     //priority_queue<int, vector<int>, decltype(d_less) > d_leftMaxHeap(d_less);
-
+    // ways to use std less/greater function
+    priority_queue<int, vector<int>, less<int> > d_leftMaxHeap;
+    priority_queue<int, vector<int>, greater<int> > d_rightMinHeap;
 };

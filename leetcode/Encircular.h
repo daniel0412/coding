@@ -23,8 +23,8 @@ class Encircular {
   public:
     bool doesCircyleExist(const string& s)
     {
-        // use x, y to record number of steps the robot take along horizontal
-        // and vertical lines
+        // use x, y to track number of steps the robot take along horizontal
+        // and vertical axis
         int x = 0, y = 0;
         // value of dir can be 0, 1, 2, 3, representing east, north, west, and
         // south, assume the initial direction is east
@@ -55,7 +55,7 @@ class Encircular {
                 }
             }
         }
-        // only whne both x and y equals to 0, meaning robot goes back to the
+        // only when both x and y equals to 0, meaning robot goes back to the
         // origin
         return (x == 0) && (y == 0);
     }

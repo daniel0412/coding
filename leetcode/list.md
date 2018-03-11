@@ -16,90 +16,90 @@
  | Nested List Weight Sum II   | Medium     | recursion with states       | :v: :eyes: :lock: |
 
 ## Google(90)
- | Problems                                               | Difficulty  | Techniques                                               | Status            |
- | :-------------------------                             | :---:       | :----                                                    | :---:             |
- | Reverse Pair                                           | Hard        | divide and conqure(slow)                                 | :v: :eyes:        |
- | Count of Range Sum                                     | Hard        | 1. multiset/bounds 2. merge sort and count               | :v: :eyes:        |
- | Count of Smaller Numbers After Self                    | Hard        | binary search/lower bound                                | :v: :eyes:        |
- | Queue Reconstruction by Height                         | Meidum      | idea: sort by height and then by order                   | :eyes:            |
- | Sequence Reconstruction                                | Meidum      | record ele->id, and track prev ele idex from given seqs  | :eyes:            |
- | Median of Two Sorted Arrays                            | Hard        | binary search                                            | :v:        :eyes: |
- | Find Median from Data Stream                           | Hard        | heap                                                     | :v:               |
- | Sort Transformed Array                                 | Medium      | quadratic function, dist from optimal                    | :eyes: :v:        |
- | Populating Next Right Pointers in Each Node II         | Hard        | iteration                                                | :v: :eyes:        |
- | Populating Next Right Pointers in Each Node            | Medium      | iteration                                                | :v:               |
- | Insert Interval                                        | Hard        | corner cases                                             | :v:               |
- | Word Squares                                           | Hard        | dfs/trie                                                 | :warning: :lock:  |
- | Valid Word Square                                      | Easy        | brute force                                              | :lock:            |
- | Trapping Rain Water                                    | Hard        |                                                          |                   |
- | LRU Cache                                              | Hard        | double linked list/map                                   | :v: :eyes:        |
- | LFU Cache                                              | Hard        | double linked list/map                                   | :v: :eyes:        |
- | Letter Combinations of a Phone Number                  | Medium      |                                                          |                   |
- | Longest Absolute File Path                             | Medium      | stack/two pointer                                        | :v:               |
- | Walls and Gates                                        | Medium      | dfs/bfs/reverse engineer                                 | :v: :eyes: :lock: |
- | The Maze                                               | Medium      | dfs                                                      | :eyes: :lock:     |
- | The Maze II                                            | Medium      | dfs(mark/recover visited)                                | :eyes: :lock:     |
- | The Maze III                                           | Hard        |                                                          |                   |
- | 01 Matrix                                              | Medium      | dfs(TLE)/bfs/two pass idea(fastest)                      | :eyes: :v:        |
- | Lonely Pixel I                                         | Medium      | 2-D vector                                               | :lock:            |
- | Lonely Pixel II                                        | Medium      |                                                          | :eyes: :lock:     |
- | Moving Average From Data Stream                        | Easy        | queue                                                    | :lock:            |
- | Pow(x, n)                                              | Medium      |                                                          |                   |
- | Spiral Matrix                                          | Medium      |                                                          |                   |
- | License Key Formatting                                 | Medium      | string operation                                         | :v:               |
- | Plus One                                               | Easy        |                                                          |                   |
- | Word Break II                                          | Hard        | dp/back tracking/prunning                                | :v: :eyes:        |
- | Word Break                                             | Medium      | dp                                                       | :v: :eyes:        |
- | Min Stack                                              | Easy        |                                                          |                   |
- | Read N Characters Given Read4 II – Call multiple times | Hard        |                                                          |                   |
- | Repeated Substring Pattern                             | Easy        |                                                          | :eyes: :v:        |
- | Heaters                                                | Easy        | upper/lower bound                                        | :eyes: :v:        |
- | Fraction to Recurring Decimal                          | Medium      | hashmap/sstream/overflow                                 | :v:               |
- | Word Search II                                         | Hard        |                                                          |                   |
- | The Skyline Problem                                    | Hard        |                                                          |                   |
- | Summary Ranges                                         | Medium      | stringstream/array/size_t                                | :v:               |
- | Missing Ranges                                         | Medium      | same as above                                            | :v:               |
- | Sliding Window Median                                  | :eyes: Hard | use multiset and movd midIter accordingly                | :v:               |
- | Sliding Window Maximum                                 | Hard        |                                                          |                   |
- | Strobogrammatic Number                                 | Easy        | hashmap                                                  | :v: :lock:        |
- | Strobogrammatic Number II                              | Medium      | backtracking                                             | :v: :lock:        |
- | Strobogrammatic Number III                             | Hard        | combination/backtracking                                 | :v: :lock: :eyes: |
- | Group Shifted Strings                                  | Easy        |                                                          |                   |
- | 3Sum Smaller                                           | Medium      |                                                          |                   |
- | Alien Dictionary                                       | Hard        |                                                          |                   |
- | Encode and Decode Strings                              | Medium      |                                                          |                   |
- | H-Index                                                | Medium      |                                                          |                   |
- | Logger Rater Limitter                                  | Easy        | map                                                      | :v:               |
- | Paint Fence                                            | Easy        |                                                          |                   |
- | Perfect Squares                                        | Medium      | dynamic programming from 1 to t                          |                   |
- | Perfect Rectangle                                      | Hard        | find criteria to define perfect rectangle                | :eyes:            |
- | Wiggle Sort                                            | Medium      | equal sign, 1) sort then switch; 2) compare + switch     |                   |
- | Wiggle Sort II                                         | Medium      | no equal sign, 1) sort then pick; 2)                     |                   |
- | Flatten 2D Vector                                      | Medium      | track row, col index                                     | :v:               |
- | Unique Word Abbreviation                               | Easy        | pass                                                     | :lock:            |
- | Valid Word Abbreviation                                | Easy        |                                                          | :lock:            |
- | Generalized Abbreviation                               | Medium      | dfs                                                      | :lock:            |
- | Game of Life                                           | Medium      | track state, note state changes cell value               | :eyes: :v:        |
- | Flip Game                                              | Easy        |                                                          |                   |
- | Flip Game II                                           | Medium      | both player try to win, player1 flip, and player2 fails  |                   |
- | Max Consecutive Ones                                   | Easy        |                                                          | :v:               |
- | Max Consecutive Ones  II                               | Medium      | idea similar to sliding windwo, track loc of zeros       | :eyes: :v:        |
- | Longest Increasing Path in a Matrix                    | Hard        | dfs + memorization to prun                               | :eyes: :v:        |
- | Smallest Rectangle Enclosing Black Pixels              | Hard        | 1. brute force  2. four directions binary search idea    | :eyes: :lock:     |
- | Max Sum of Rectangle No Greater Thank K                | Hard        | idea: max sum of sub rectangle + lower bound  of diff    | :eyes: :v:        |
- | Burst Balloons                                         | Hard        |                                                          |                   |
- | Super Ugly Number                                      | Medium      |                                                          |                   |
- | Binary Tree Vertical Order Traversal                   | Medium      | tree traversal                                           | :lock:            |
- | Best Meeting Point                                     | Medium      | consider one dimensional case                            | :eyes: :v:        |
- | Shortest Distance from All Buildings                   | Hard        | bfs, shortest dist + accessible from all buildings       | :eyes: :v:        |
- | Maximum Product of Word Lengths                        | Medium      |                                                          |                   |
- | Friend Cycle                                           | Medium      | union find (var to track count, when union reduce one)   | :eyes: :v:        |
- | Patching Array                                         | Hard        | greedily expand [0, sum) range                           | :eyes: :v:        |
- | Verify Preorder Serialization of a Binary Tree         | Medium      | stack to squash subtree/use in and out degree            |                   |
- | Reconstruct Itinerary                                  | Medium      |                                                          |                   |
- | Design Phone Directory                                 | Medium      | keep track of recycled and used                          | :v:               |
- | Maximum Vacation Days                                  | Hard        | dp                                                       |                   |
- | Predict The Winner                                     | Medium      | recursive + dp                                           |                   |
+ | Problems                                               | Difficulty   | Techniques                                                       | Status            |
+ | :-------------------------                             | :---:        | :----                                                            | :---:             |
+ | Reverse Pair                                           | Hard         | divide and conqure(slow)                                         | :v: :eyes:        |
+ | Count of Range Sum                                     | Hard         | 1. multiset/bounds 2. merge sort and count                       | :v: :eyes:        |
+ | Count of Smaller Numbers After Self                    | Hard         | binary search/lower bound                                        | :v: :eyes:        |
+ | Queue Reconstruction by Height                         | Meidum       | idea: sort by height and then by order                           | :eyes:            |
+ | Sequence Reconstruction                                | Meidum       | record ele->id, and track prev ele idex from given seqs          | :eyes:            |
+ | Sort Transformed Array                                 | Medium       | quadratic function, dist from optimal                            | :eyes: :v:        |
+ | Populating Next Right Pointers in Each Node II         | Hard         | iteration                                                        | :v: :eyes:        |
+ | Populating Next Right Pointers in Each Node            | Medium       | iteration                                                        | :v:               |
+ | Insert Interval                                        | Hard         | corner cases                                                     | :v:               |
+ | Word Squares                                           | Hard         | dfs/trie                                                         | :warning: :lock:  |
+ | Valid Word Square                                      | Easy         | brute force                                                      | :lock:            |
+ | Trapping Rain Water                                    | Hard         |                                                                  |                   |
+ | LRU Cache                                              | Hard         | double linked list/map                                           | :v: :eyes:        |
+ | LFU Cache                                              | Hard         | double linked list/map                                           | :v: :eyes:        |
+ | Letter Combinations of a Phone Number                  | Medium       |                                                                  |                   |
+ | Longest Absolute File Path                             | Medium       | stack/two pointer                                                | :v:               |
+ | Walls and Gates                                        | Medium       | dfs/bfs/reverse engineer                                         | :v: :eyes: :lock: |
+ | The Maze                                               | Medium       | dfs                                                              | :eyes: :lock:     |
+ | The Maze II                                            | Medium       | dfs(mark/recover visited)                                        | :eyes: :lock:     |
+ | The Maze III                                           | Hard         |                                                                  |                   |
+ | 01 Matrix                                              | Medium       | dfs(TLE)/bfs/two pass idea(fastest)                              | :eyes: :v:        |
+ | Lonely Pixel I                                         | Medium       | 2-D vector                                                       | :lock:            |
+ | Lonely Pixel II                                        | Medium       |                                                                  | :eyes: :lock:     |
+ | Moving Average From Data Stream                        | Easy         | queue                                                            | :lock:            |
+ | Pow(x, n)                                              | Medium       |                                                                  |                   |
+ | Spiral Matrix                                          | Medium       |                                                                  |                   |
+ | License Key Formatting                                 | Medium       | string operation                                                 | :v:               |
+ | Plus One                                               | Easy         |                                                                  |                   |
+ | Word Break II                                          | Hard         | dp/back tracking/prunning                                        | :v: :eyes:        |
+ | Word Break                                             | Medium       | dp                                                               | :v: :eyes:        |
+ | Min Stack                                              | Easy         |                                                                  |                   |
+ | Read N Characters Given Read4 II – Call multiple times | Hard         |                                                                  |                   |
+ | Repeated Substring Pattern                             | Easy         |                                                                  | :eyes: :v:        |
+ | Heaters                                                | Easy         | upper/lower bound                                                | :eyes: :v:        |
+ | Fraction to Recurring Decimal                          | Medium       | hashmap/sstream/overflow                                         | :v:               |
+ | Word Search II                                         | Hard         |                                                                  |                   |
+ | The Skyline Problem                                    | Hard         |                                                                  |                   |
+ | Summary Ranges                                         | Medium       | stringstream/array/size_t                                        | :v:               |
+ | Missing Ranges                                         | Medium       | same as above                                                    | :v:               |
+ | Median of Two Sorted Arrays                            | :eyes::sob:  | find kth smallest, eliminate k/2 each binary search              | :v:        :eyes: |
+ | Find Median from Data Stream                           | :eyes::sob:  | min/max heap for right/left array, balance the size of two heaps | :v:               |
+ | Sliding Window Median                                  | :eyes: :sob: | use multiset and movd midIter accordingly                        | :v:               |
+ | Sliding Window Maximum                                 | Hard         |                                                                  |                   |
+ | Strobogrammatic Number                                 | Easy         | hashmap                                                          | :v: :lock:        |
+ | Strobogrammatic Number II                              | Medium       | backtracking                                                     | :v: :lock:        |
+ | Strobogrammatic Number III                             | Hard         | combination/backtracking                                         | :v: :lock: :eyes: |
+ | Group Shifted Strings                                  | Easy         |                                                                  |                   |
+ | 3Sum Smaller                                           | Medium       |                                                                  |                   |
+ | Alien Dictionary                                       | Hard         |                                                                  |                   |
+ | Encode and Decode Strings                              | Medium       |                                                                  |                   |
+ | H-Index                                                | Medium       |                                                                  |                   |
+ | Logger Rater Limitter                                  | Easy         | map                                                              | :v:               |
+ | Paint Fence                                            | Easy         |                                                                  |                   |
+ | Perfect Squares                                        | Medium       | dynamic programming from 1 to t                                  |                   |
+ | Perfect Rectangle                                      | Hard         | find criteria to define perfect rectangle                        | :eyes:            |
+ | Wiggle Sort                                            | Medium       | equal sign, 1) sort then switch; 2) compare + switch             |                   |
+ | Wiggle Sort II                                         | Medium       | no equal sign, 1) sort then pick; 2)                             |                   |
+ | Flatten 2D Vector                                      | Medium       | track row, col index                                             | :v:               |
+ | Unique Word Abbreviation                               | Easy         | pass                                                             | :lock:            |
+ | Valid Word Abbreviation                                | Easy         |                                                                  | :lock:            |
+ | Generalized Abbreviation                               | Medium       | dfs                                                              | :lock:            |
+ | Game of Life                                           | Medium       | track state, note state changes cell value                       | :eyes: :v:        |
+ | Flip Game                                              | Easy         |                                                                  |                   |
+ | Flip Game II                                           | Medium       | both player try to win, player1 flip, and player2 fails          |                   |
+ | Max Consecutive Ones                                   | Easy         |                                                                  | :v:               |
+ | Max Consecutive Ones  II                               | Medium       | idea similar to sliding windwo, track loc of zeros               | :eyes: :v:        |
+ | Longest Increasing Path in a Matrix                    | Hard         | dfs + memorization to prun                                       | :eyes: :v:        |
+ | Smallest Rectangle Enclosing Black Pixels              | Hard         | 1. brute force  2. four directions binary search idea            | :eyes: :lock:     |
+ | Max Sum of Rectangle No Greater Thank K                | Hard         | idea: max sum of sub rectangle + lower bound  of diff            | :eyes: :v:        |
+ | Burst Balloons                                         | Hard         |                                                                  |                   |
+ | Super Ugly Number                                      | Medium       |                                                                  |                   |
+ | Binary Tree Vertical Order Traversal                   | Medium       | tree traversal                                                   | :lock:            |
+ | Best Meeting Point                                     | Medium       | consider one dimensional case                                    | :eyes: :v:        |
+ | Shortest Distance from All Buildings                   | Hard         | bfs, shortest dist + accessible from all buildings               | :eyes: :v:        |
+ | Maximum Product of Word Lengths                        | Medium       |                                                                  |                   |
+ | Friend Cycle                                           | Medium       | union find (var to track count, when union reduce one)           | :eyes: :v:        |
+ | Patching Array                                         | Hard         | greedily expand [0, sum) range                                   | :eyes: :v:        |
+ | Verify Preorder Serialization of a Binary Tree         | Medium       | stack to squash subtree/use in and out degree                    |                   |
+ | Reconstruct Itinerary                                  | Medium       |                                                                  |                   |
+ | Design Phone Directory                                 | Medium       | keep track of recycled and used                                  | :v:               |
+ | Maximum Vacation Days                                  | Hard         | dp                                                               |                   |
+ | Predict The Winner                                     | Medium       | recursive + dp                                                   |                   |
 
 ## Facebook(79)
  | Problems                                               | Difficulty     | Related Problems                                            | Status              |

@@ -26,12 +26,12 @@ class LoadBalancer {
     struct Cluster {
         Cluster(int loads, int machines) : d_loads(loads), d_machines(machines)
         {
-            d_avgLoads = d_loads / d_machiens;
+            d_avgLoads = d_loads / d_machines;
         }
         void increaseMachineByOne()
         {
             ++d_machines;
-            d_avgLoads = d_loads / d_machiens;
+            d_avgLoads = d_loads / d_machines;
         }
         int d_loads;
         int d_machines;
@@ -54,12 +54,14 @@ class LoadBalancer {
         // information into
         // max heap, sorted by average loads
         prioirty_queue<Cluster, vector<Cluster>, decltype(comp)> pq(comp);
-        for(int i = 0; i < n; ++i) {
+        for(size_t i = 0; i < n; ++i) {
             pq.emplace(Cluster(loads[i], 1));
         }
         B -= n;
 
-        // always add one machien to the top cluster in the max heap
+        // before the machine resources are used up,
+        // always add one machine to the top cluster in the max heap, which has
+        // the largest load
         while(B-- > 0) {
             auto tmp = pq.top();
             pq.pop();
