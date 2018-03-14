@@ -24,10 +24,7 @@ class LongestWordChain {
     int longestchain(const vector<string>& words)
     {
         // put all words into an unordered_set for quick word exitence check
-        unordered_set<string> s;
-        for(auto& w : words) {
-            s.insert(w);
-        }
+        unordered_set<string> s(words.begin(), words.end());
 
         // this keeps track of the maximal length of the word chain
         int maxlen = 0;
@@ -52,7 +49,7 @@ class LongestWordChain {
         return maxlen;
     }
 
-    int dfs(string startWord,
+    int dfs(const string& startWord,
             const unordered_set<string>& s,
             unordered_map<string, int>& m)
     {
