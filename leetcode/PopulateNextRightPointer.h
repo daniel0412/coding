@@ -49,7 +49,9 @@ class PopulateNextRightPointer {
     void iterativeImpl(TreeLinkNode* root)
     {
         TreeLinkNode *leftMost = root, *cur = root;
+        // leftmost tracks the starting node of each level
         while(leftMost) {
+            // populate the next for the next level
             while(cur) {
                 if(cur->left)
                     cur->left->next = cur->right;

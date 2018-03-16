@@ -34,12 +34,16 @@ class PopulateNextRightPointer2 {
   private:
     void iterativeImpl(TreeLinkNode* root)
     {
-        TreeLinkNode *leftMost = root, *cur = root, *curLeft = nullptr;
+        TreeLinkNode *leftMost = root, *cur = nullptr, *curLeft = nullptr;
+        // leftmost is the starting node for each level
         while(leftMost) {
-            // unstage leftMost
+            // cur starts from leftmost node
+            cur = leftMost;
+            // initialize leftmost and left node currently dealt with
             leftMost = nullptr;
             curLeft = nullptr;
 
+            // each level, from left to right, and connect the child level
             while(cur) {
                 if(cur->left) {
                     if(!leftMost)
@@ -65,7 +69,35 @@ class PopulateNextRightPointer2 {
                 }
                 cur = cur->next;
             }
-            cur = leftMost;
+        }
+    }
+
+
+    void implWithQueue(TreeLinkNode* root)
+    {
+        if(root == nullptr)
+            return;
+        queue<TreeLinkNode*> q;
+        q.push(root);
+        q.push(nullptr);
+        while(!q.empty()) {
+            if(q.front() == nullptr) {
+                q.pop();
+                continue;
+            }
+            else {
+                TreeLinkNode* c = q.front();
+                while(c != nullptr) {
+                    q.pop();
+                    c->next = q.front();
+                    if(c->left)
+                        q.push(c->left);
+                    if(c->right)
+                        q.push(c->right);
+                    c = q.front();
+                }
+                q.push(nullptr);
+            }
         }
     }
 };

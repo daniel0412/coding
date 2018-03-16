@@ -187,8 +187,21 @@ given online stream of numbers, make sure probably for each number gets selected
 idea: keep the first number, then with probability `1/i` to select the `i-th` number
 
 ## Templates
+### Topological Sort
+#### cycle detection/find orders
+- dfs: store in adjacency matrix, and maintain `visited` vector to indicate if `visited in path` or `path found`
+- bfs: store in-degree inforatmion, start from zero in-degree
+- union find: can be applied to undirected graph, also can process streamed input
+```cpp 
+// dfs
+```
+
+```cpp 
+// bfs
+```
+
 ### Union Find
-To count number of unions
+To count number of unions, cycle detection, can applied to undirected group only, but can process streaming input
 ```cpp
 int numOfUnions(const vector<vector<int>>& M) {
     int n = M.size();

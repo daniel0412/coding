@@ -40,5 +40,35 @@ class PredictWinner {
         return dp[s][e];
     }
 
-  private:
-};
+
+    // recursive implementation
+    bool PredictTheWinner(vector<int>& nums)
+    {
+        // TODO: why empty, player 1 wins
+        if(nums.empty())
+            return true;
+        return canWin(nums, 0, nums.size() - 1, 1, 0, 0);
+    }
+
+    // this canwin function does not care about who is the player
+    // only care if the passed in player can win or not
+    bool canWin(const vector<int>& nums, int si, int ei, int p, int s1, int s2)
+    {
+        if(p == 1) {
+            // player 1 wins if greater and equal
+            if(si == ei)
+                return s1 + nums[si] >= s2;
+            return !canWin(nums, si + 1, ei, 2, s1 + nums[si], s2) ||
+                !canWin(nums, si, ei - 1, 2, s1 + nums[ei], s2);
+        }
+        else {
+            // player 2 wins only if greater ?????
+            if(si == ei)
+                return s1 < s2 + nums[si];
+            return !canWin(nums, si + 1, ei, 1, s1, s2 + nums[si]) ||
+                !canWin(nums, si, ei - 1, 1, s1, s2 + nums[ei]);
+        }
+    }
+private:
+}
+;
