@@ -509,11 +509,10 @@ void dfs(nums, id, path, res) {
 
 
 ## Range Sum
-
- | Problems                     | Difficulty | Techniques |
- | :-------------------------   | :---:      | :----      |
- | Range Sum Query 2D – Mutable | :sob:       |            |
- | Range Sum Query 1D – Mutable | :sob:       |            |
+ | Problems                     | Difficulty   | Techniques             |
+ | :-------------------------   | :---:        | :----                  |
+ | Range Sum Query 2D – Mutable | :eyes: :sob: | 2d binary indexed tree |
+ | Range Sum Query 1D – Mutable | :eyes: :sob: | 1d binary indexed tree |
 
 ## Sampling
  | Problems                                    | Difficulty     | Techniques             |

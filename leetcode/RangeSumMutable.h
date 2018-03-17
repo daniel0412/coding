@@ -86,3 +86,49 @@ class NumArray {
     vector<int> d_nums;
     vector<int> d_st;  // segment tree
 };
+
+
+// Binary Indexed Tree implementation (BIT)
+class NumArray {
+  public:
+    NumArray(vector<int> nums)
+        : d_nums(nums.size(), 0), d_tree(nums.size() + 1, 0)
+    {
+        int n = nums.size();
+        for(int i = 1; i <= n; ++i) {
+            d_tree[i] += nums[i - 1];
+            d_nums[i - 1] = nums[i - 1];
+            int nextId = i + (i & (i ^ (i - 1)));
+            if(nextId <= n) {
+                d_tree[nextId] += d_tree[i];
+            }
+        }
+    }
+
+    void update(int i, int val)
+    {
+        int diff = val - d_nums[i];
+        d_nums[i] = val;
+        ++i;
+        while(i < d_tree.size()) {
+            d_tree[i] += diff;
+            i += i & (i ^ (i - 1));
+        }
+    }
+
+    int sumRange(int i, int j) { return getSum(j) - getSum(i - 1); }
+
+    int getSum(int i)
+    {
+        ++i;
+        int sum = 0;
+        while(i > 0) {
+            sum += d_tree[i];
+            i = i - (i & (i ^ (i - 1)));
+        }
+        return sum;
+    }
+
+    vector<int> d_tree;
+    vector<int> d_nums;
+};

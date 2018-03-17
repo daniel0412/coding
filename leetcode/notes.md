@@ -304,3 +304,5 @@ int partition(vector<int>& nums, int left, int right)
 ### segment tree
 - refer to `mutable range sum` for the array implementation
 
+### binay indexed tree
+
