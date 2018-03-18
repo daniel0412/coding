@@ -23,53 +23,64 @@ class CloneGraph {
   public:
     UndirectedGraphNode* cloneGraph(UndirectedGraphNode* node)
     {
+        // corner case, exclude
         if(node == nullptr)
             return nullptr;
-        unordered_map<int, UndirectedGraphNode*> m;
-        m[node->label] = new UndirectedGraphNode(node->label);
-        dfs(node, m);
-        return m[node->label];
+
+        return bfs(node);
+
+        // unordered_map<int, UndirectedGraphNode*> m;
+        // return dfs(m, node);
     }
 
   private:
-    void dfs(UndirectedGraphNode* node,
-             unordered_map<int, UndirectedGraphNode*>& m)
+    UndirectedGraphNode* dfs(unordered_map<int, UndirectedGraphNode*>& m,
+                             UndirectedGraphNode* cur)
     {
-        for(const auto ptr : node->neighbors) {
-            if(m.find(ptr->label) == m.end()) {
-                m[ptr->label] = new UndirectedGraphNode(ptr->label);
-                m[node->label]->neighbors.emplace_back(m[ptr->label]);
-                dfs(ptr, m);
-            }
-            else {
-                m[node->label]->neighbors.emplace_back(m[ptr->label]);
-            }
+        // termination criteria
+        if(m.count(cur->label)) {
+            return m[cur->label];
         }
+
+        // not found in map, create new node
+        m[cur->label] = new UndirectedGraphNode(cur->label);
+
+        // construct all neighbors
+        for(auto& n : cur->neighbors) {
+            // recursively construct children nodes
+            m[cur->label]->neighbors.push_back(dfs(m, n));
+        }
+        return m[cur->label];
     }
 
-    void bfs(UndirectedGraphNode* node)
+    UndirectedGraphNode* bfs(UndirectedGraphNode* node)
     {
-        if(node == nullptr)
-            return node;
-        unordered_map<int, UndirectedGraphNode*> m;
-        unordered_set<int> v;
+        // queue to store the current level
         queue<UndirectedGraphNode*> q;
         q.push(node);
+        // store the label->new node mapping
+        unordered_map<int, UndirectedGraphNode*> m;
         m[node->label] = new UndirectedGraphNode(node->label);
+
+        // store all the processed nodes to de-duplicate
+        unordered_set<int> v;
+        v.insert(node->label);
+
         while(!q.empty()) {
             UndirectedGraphNode* cur = q.front();
             q.pop();
-            // this check is to remove double link between two nodes
-            if(v.count(cur->label))
-                continue;
-            v.insert(cur->label);
-            for(const auto ptr : cur->neighbors) {
+            for(const auto& ptr : cur->neighbors) {
+                // create new node when not found in the map
                 if(m.find(ptr->label) == m.end()) {
                     m[ptr->label] = new UndirectedGraphNode(ptr->label);
                 }
+                // construct the neighbors
                 m[cur->label]->neighbors.push_back(m[ptr->label]);
-                if(v.count(ptr->label) == 0)
+                // build up the queue only when not processed before
+                if(v.count(ptr->label) == 0) {
                     q.push(ptr);
+                    v.insert(ptr->label);
+                }
             }
         }
         return m[node->label];

@@ -41,85 +41,112 @@ struct Interval {
 
 class InsertIntervals {
   public:
-
-      // easy to understand
+    // THIS IS MOST EFFICIENT ALGORITHM, USE THIS IN INTERVIEW
     vector<Interval> insert(vector<Interval>& intervals, Interval newInterval)
     {
-        if(intervals.emtpy() || intervals.back().end < newInterval.start) {
-            intervals.emplace_back(newInterval);
-            return intervals;
-        }
-        if(intervals.front().start < newInterval.end) {
-            intervals.insert(intervals.begin(), newInterval);
-            return intervals;
-        }
-        vector<Interval> res;
-        bool inserted = false;
-        for(auto& i : intervals) {
-            if(!inserted) {
-                if(newInterval.start <= intervals[i].start) {
-                    if(!res.empty() && res.back().end >= newInterval.start) {
-                        res.back().end = max(res.back().end, newInterval.end);
-                    }
-                    else {
-                        res.emplace_back(newInterval);
-                    }
-                    inserted = true;
-                }
-            }
-            if(!res.empty() && res.back().end >= intervals[i].start) {
-                res.back().end = max(res.back().end, intervals[i].end);
-            }
+        vector<Interval> res(intervals);
+        int numOverlapped = 0, i = 0;
+        for(; i < intervals.size(); ++i) {
+            // if already passed, break the loop
+            if(newInterval.end < intervals[i].start)
+                break;
+            // if havn't find overlapped, just skip
+            else if(newInterval.start > intervals[i].end)
+                continue;
+            // within overlap range, find the new interval start/end
+            // accumulate number of overlapped intervals for insertion
             else {
-                res.emplace_back(intervals[i]);
+                newInterval.start = min(newInterval.start, intervals[i].start);
+                newInterval.end = max(newInterval.end, intervals[i].end);
+                ++numOverlapped;
             }
         }
-        // deal with case that newInterval is not merged yet
-        if(!inserted) {
-            if(res.back().end >= newInterval.start) {
-                res.back().end = max(res.back().end, newInterval.end);
-            }
-            else {
-                res.emplace_back(newInterval);
-            }
-        }
+        // if overlap found, should remove all the overlapeed intervals
+        if(numOverlapped > 0)
+            res.erase(res.begin() + i - numOverlapped, res.begin() + i);
+        // in any case, insert the new interval
+        res.insert(res.begin() + i - numOverlapped, newInterval);
         return res;
     }
-    // private:
-    vector<Interval> insert(vector<Interval>& intervals, Interval newInterval)
-    {
-        vector<Interval> res;
-        auto iter = intervals.begin();
-        while(iter != intervals.end()) {
-            if(iter->end < newInterval.start) {
-                res.emplace_back(*iter);
-                ++iter;
-            }
-            else {
-                break;
-            }
-        }
-        if(iter == intervals.end()) {
-            res.emplace_back(newInterval);
-            return res;
-        }
-        if(newInterval.end < iter->start) {
-            res.emplace_back(newInterval);
-            res.insert(res.end(), iter, intervals.end());
-        }
-        else {
-            res.emplace_back(min(iter->start, newInterval.start),
-                             max(iter->end, newInterval.end));
-            while(++iter != intervals.end()) {
-                if(iter->start <= res.back().end) {
-                    res.back().end = max(res.back().end, iter->end);
+
+// easy to understand
+vector<Interval> insert(vector<Interval>& intervals, Interval newInterval)
+{
+    if(intervals.emtpy() || intervals.back().end < newInterval.start) {
+        intervals.emplace_back(newInterval);
+        return intervals;
+    }
+    if(intervals.front().start < newInterval.end) {
+        intervals.insert(intervals.begin(), newInterval);
+        return intervals;
+    }
+    vector<Interval> res;
+    bool inserted = false;
+    for(auto& i : intervals) {
+        if(!inserted) {
+            if(newInterval.start <= intervals[i].start) {
+                if(!res.empty() && res.back().end >= newInterval.start) {
+                    res.back().end = max(res.back().end, newInterval.end);
                 }
                 else {
-                    res.emplace_back(*iter);
+                    res.emplace_back(newInterval);
                 }
+                inserted = true;
             }
         }
+        if(!res.empty() && res.back().end >= intervals[i].start) {
+            res.back().end = max(res.back().end, intervals[i].end);
+        }
+        else {
+            res.emplace_back(intervals[i]);
+        }
+    }
+    // deal with case that newInterval is not merged yet
+    if(!inserted) {
+        if(res.back().end >= newInterval.start) {
+            res.back().end = max(res.back().end, newInterval.end);
+        }
+        else {
+            res.emplace_back(newInterval);
+        }
+    }
+    return res;
+}
+// private:
+vector<Interval> insert(vector<Interval>& intervals, Interval newInterval)
+{
+    vector<Interval> res;
+    auto iter = intervals.begin();
+    while(iter != intervals.end()) {
+        if(iter->end < newInterval.start) {
+            res.emplace_back(*iter);
+            ++iter;
+        }
+        else {
+            break;
+        }
+    }
+    if(iter == intervals.end()) {
+        res.emplace_back(newInterval);
         return res;
     }
-
-};
+    if(newInterval.end < iter->start) {
+        res.emplace_back(newInterval);
+        res.insert(res.end(), iter, intervals.end());
+    }
+    else {
+        res.emplace_back(min(iter->start, newInterval.start),
+                         max(iter->end, newInterval.end));
+        while(++iter != intervals.end()) {
+            if(iter->start <= res.back().end) {
+                res.back().end = max(res.back().end, iter->end);
+            }
+            else {
+                res.emplace_back(*iter);
+            }
+        }
+    }
+    return res;
+}
+}
+;

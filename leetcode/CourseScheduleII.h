@@ -37,34 +37,37 @@ class CourseScheduleII {
         vector<int> visited(numCourses, 0);
         vector<int> res;
         for(int i = 0; i < numCourses; ++i) {
-            vector<int> orders;
-            if(!dfsImpl(graph, visited, orders, i))
-                return vector<int>();
-            vector<int>::const_reverse_iterator iter = orders.rbegin();
-            for(; iter != orders.rend(); ++iter) {
-                res.push_back(*iter);
-            }
+            // already visited
+            if(visited[i] == 1)
+                continue;
+            if(hasCycle(graph, visited, res, i))
+                return {};
         }
         return res;
     }
 
-    bool dfsImpl(const vector<vector<int> >& graph,
-                 vector<int>& visited,
-                 vector<int>& orders,
-                 int i)
+    bool hasCycle(const vector<vector<int> >& graph,
+                  vector<int>& visited,
+                  vector<int>& res,
+                  int i)
     {
-        if(visited[i] == -1)
-            return false;
-        if(visited[i] == 1)
-            return true;
+        // mark as in the current path
         visited[i] = -1;
-        orders.push_back(i);
         for(auto d : graph[i]) {
-            if(!dfsImpl(graph, visited, orders, d))
-                return false;
+            // if dependency already visited, skip
+            if(visited[d] == 1)
+                continue;
+            // if already in the current path, cycle detected
+            if(visited[d] == -1)
+                return true;
+            if(hasCycle(graph, visited, orders, d))
+                return true;
         }
+        // dependency check finished, mark done
         visited[i] = 1;
-        return true;
+        // all dependency for i is checked, can push i
+        orders.push_back(i);
+        return false;
     }
 
     vector<int> bfs(int numCourses, vector<pair<int, int> >& prerequisites)
@@ -87,8 +90,7 @@ class CourseScheduleII {
             q.pop();
             res.push_back(node);
             for(auto d : graph[node]) {
-                --degrees[d];
-                if(degrees[d] == 0)
+                if(--degrees[d] == 0)
                     q.push(d);
             }
         }

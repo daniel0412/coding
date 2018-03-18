@@ -26,7 +26,6 @@
  | Sort Transformed Array                                 | :sweat:        | two pointer from side to middle                         | :eyes: :v:        |
  | Populating Next Right Pointers in Each Node II         | :eyes: :sob:   | level order easy, const space hard                      |                   |
  | Populating Next Right Pointers in Each Node            | :eyes: :sweat: | see above, every level, track start, prev node          |                   |
- | Insert Interval                                        | :sob:          | corner cases                                            | :v:               |
  | Word Squares                                           | :sob:          | dfs/trie                                                | :warning: :lock:  |
  | Valid Word Square                                      | Easy           | brute force                                             | :lock:            |
  | Trapping Rain Water                                    | :sob:          |                                                         |                   |
@@ -106,81 +105,76 @@
  | Problems                                               | Difficulty     | Related Problems                                            | Status              |
  | :-------------------------                             | :---:          | :----                                                       | :---:               |
  | Move Zeroes                                            | Easy           | array/swap                                                  | :v:                 |
- | Split Array With Equal Sums                            | :sweat:         | cache sum + split strategy                                  | :eyes: :lock:       |
- | Split Array Largest Sum                                | :sob:           | find range, then binary search /dp                          | :eyes:  :v:         |
- | Rearrange String K Distance Apart                      | :sob:           | hash/heap/rearrange task w/o reorder                        | :lock: :eyes:       |
- | Task Scheduler                                         | :sweat:         | find formular + heap solution                               | :eyes: :v:          |
- | Divide Two Integers                                    | :sweat:         | hash map/prefix sum                                         | :v: :eyes:          |
+ | Split Array With Equal Sums                            | :sweat:        | cache sum + split strategy                                  | :eyes: :lock:       |
+ | Split Array Largest Sum                                | :sob:          | find range, then binary search /dp                          | :eyes:  :v:         |
+ | Rearrange String K Distance Apart                      | :sob:          | hash/heap/rearrange task w/o reorder                        | :lock: :eyes:       |
+ | Task Scheduler                                         | :sweat:        | find formular + heap solution                               | :eyes: :v:          |
+ | Divide Two Integers                                    | :sweat:        | hash map/prefix sum                                         | :v: :eyes:          |
  | Roman to Integer                                       | Easy           | add then minus two if voliate                               | :v: :eyes:          |
- | Integer to Roman                                       | :sweat:         | find separating points, then all adding                     | :v: :eyes:          |
- | Integer to English Words                               | :sob:           | list all special cases + convert hundreds                   | :v: :eyes:          |
- | Multiply Strings                                       | :sweat:         | string addition/accumulate+reverse/quicker sol              | :v: :eyes:          |
+ | Integer to Roman                                       | :sweat:        | find separating points, then all adding                     | :v: :eyes:          |
+ | Integer to English Words                               | :sob:          | list all special cases + convert hundreds                   | :v: :eyes:          |
+ | Multiply Strings                                       | :sweat:        | string addition/accumulate+reverse/quicker sol              | :v: :eyes:          |
  | Reverse String                                         | Easy           |                                                             | :v:                 |
  | Reverse StringII                                       | Easy           |                                                             | :v:                 |
- | Magical String                                         | :sweat:         | think about how to generate it                              | :eyes: :v:          |
+ | Magical String                                         | :sweat:        | think about how to generate it                              | :eyes: :v:          |
  | Add Binary                                             | Easy           | bit by bit                                                  | :v:                 |
- | Letter Combinations of a Phone Number                  | :sweat:         | dfs                                                         | :v:                 |
+ | Letter Combinations of a Phone Number                  | :sweat:        | dfs                                                         | :v:                 |
  | Read N Characters Given Read4                          | Easy           | so concise                                                  | :lock: :eyes:       |
- | Read N Characters Given Read4 II – Call multiple times | :sob:           | buffer/read-write pos tracker                               | :lock: :eyes:       |
+ | Read N Characters Given Read4 II – Call multiple times | :sob:          | buffer/read-write pos tracker                               | :lock: :eyes:       |
  | Remove Duplicates from Sorted Array                    | Easy           | two pointer                                                 | :v:                 |
- | Remove Duplicates from Sorted Array II                 | :sweat:         | two pointer + condition                                     | :v:                 |
- | Remove Duplicate Letters                               | :sob:           | map/stack                                                   | :v: :eyes:          |
+ | Remove Duplicates from Sorted Array II                 | :sweat:        | two pointer + condition                                     | :v:                 |
+ | Remove Duplicate Letters                               | :sob:          | map/stack                                                   | :v: :eyes:          |
  | Merge Sorted Array                                     | Easy           | two pointer                                                 | :v:                 |
- | Merge k Sorted Lists                                   | :sob:           | min heap                                                    | :v:                 |
- | Product of Array Except Self                           | :sweat:         | left->right, then right->left                               | :v:                 |
- | Reverse Nodes in k-Group                               | :sob:           |                                                             |                     |
+ | Merge k Sorted Lists                                   | :sob:          | min heap                                                    | :v:                 |
+ | Product of Array Except Self                           | :sweat:        | left->right, then right->left                               | :v:                 |
+ | Reverse Nodes in k-Group                               | :sob:          |                                                             |                     |
  | Implement strStr()                                     | Easy           |                                                             |                     |
  | Count and Say                                          | Easy           | iterative/recursive/deduction                               | :v:                 |
- | Pow(x, n)                                              | :sweat:         |                                                             |                     |
- | Sqrt(x)                                                | :sweat:         |                                                             |                     |
- | Merge Intervals                                        | :sweat:         | customized sorting + max(end1, end2) when merge             | :v:                 |
- | Insert Interval                                        | :sob:           | think about it twice                                        | :v: :eyes:          |
- | Add Bold Tags in String                                | :sweat: :eyes: | greedy to extend matched index, can also use merge interval | |
- | Encode/Decode Tiny Url                                 | :sweat:         | rand()/unordered_map                                        | :v: :eyes:          |
- | Simplify Path                                          | :sweat:         | last char not being '/' case                                | :v:                 |
- | Wildcard Matching                                      | :sob:           | greedy two pointer: mark * matchign start pos               | :v: :eyes:          |
- | Regular Expression Matching                            | :sob:           | hard&slow recursion/fast dp!!!                              | :v: :eyes:          |
- | Text Justification                                     | :sob:           | just deal with string corner case                           | :v:                 |
- | Implement Trie (Prefix Tree)                           | :sweat:         |                                                             | :v:                 |
- | Add and Search Word – Data structure design            | :sweat:         | followup with star sign                                     | :v:                 |
- | Increasing Subsequence                                 | :sweat:         | dfs/set to deduplicate                                      | :v:          :eyes: |
- | Word Ladder                                            | :sweat:         | (double) bfs                                                | :eyes: :v:          |
- | Word Ladder II                                         | :sob:           | (double) bfs                                                | :eyes: :v:          |
- | Word Break                                             | :sweat:         | dp(fast)/recursion(timeout)                                 |                     |
- | Word Search                                            | :sweat:         | dfs                                                         | :v: :eyes:          |
+ | Pow(x, n)                                              | :sweat:        |                                                             |                     |
+ | Sqrt(x)                                                | :sweat:        |                                                             |                     |
+ | Add Bold Tags in String                                | :sweat: :eyes: | greedy to extend matched index, can also use merge interval |                     |
+ | Encode/Decode Tiny Url                                 | :sweat:        | rand()/unordered_map                                        | :v: :eyes:          |
+ | Simplify Path                                          | :sweat:        | last char not being '/' case                                | :v:                 |
+ | Wildcard Matching                                      | :sob:          | greedy two pointer: mark * matchign start pos               | :v: :eyes:          |
+ | Regular Expression Matching                            | :sob:          | hard&slow recursion/fast dp!!!                              | :v: :eyes:          |
+ | Text Justification                                     | :sob:          | just deal with string corner case                           | :v:                 |
+ | Implement Trie (Prefix Tree)                           | :sweat:        |                                                             | :v:                 |
+ | Add and Search Word – Data structure design            | :sweat:        | followup with star sign                                     | :v:                 |
+ | Increasing Subsequence                                 | :sweat:        | dfs/set to deduplicate                                      | :v:          :eyes: |
+ | Word Ladder                                            | :sweat:        | (double) bfs                                                | :eyes: :v:          |
+ | Word Ladder II                                         | :sob:          | (double) bfs                                                | :eyes: :v:          |
+ | Word Break                                             | :sweat:        | dp(fast)/recursion(timeout)                                 |                     |
+ | Word Search                                            | :sweat:        | dfs                                                         | :v: :eyes:          |
  | Sum of Left Leaves                                     | Easy           | recursion/iterative                                         | :v: :eyes:          |
- | Validate Binary Search Tree                            | :sweat:         | track min/max for eachsubtree, beter than inorder traversal | :eyes:  :v:         |
+ | Validate Binary Search Tree                            | :sweat:        | track min/max for eachsubtree, beter than inorder traversal | :eyes:  :v:         |
  | Binary Tree Level Order Traversal                      | Easy           |                                                             |                     |
- | LRU Cache                                              | :sob:           |                                                             |                     |
- | One Edit Distance                                      | :sweat:         | 3 cases, and combine for concise code                       | :v:                 |
- | Edit Distance                                          | :sob:           | 2-dim dp                                                    | :v:  :eyes:         |
+ | LRU Cache                                              | :sob:          |                                                             |                     |
+ | One Edit Distance                                      | :sweat:        | 3 cases, and combine for concise code                       | :v:                 |
+ | Edit Distance                                          | :sob:          | 2-dim dp                                                    | :v:  :eyes:         |
  | Excel Sheet Column Title                               | Easy           | mod/division                                                | :v:                 |
- | The Skyline Problem                                    | :sob:           | start/end points/mulitset erase                             | :eyes: :v:          |
- | Maximal Square                                         | :sweat:         | dp/find len of sides                                        | :eyes: :v:          |
- | Maximal Rectangle                                      | :sob:           | find width(histogram)/height                                | :eyes: :v:          |
- | Largest Rectangle in Histogram                         | :sob:           | stack idea important                                        | :eyes: :v:          |
+ | The Skyline Problem                                    | :sob:          | start/end points/mulitset erase                             | :eyes: :v:          |
+ | Maximal Square                                         | :sweat:        | dp/find len of sides                                        | :eyes: :v:          |
+ | Maximal Rectangle                                      | :sob:          | find width(histogram)/height                                | :eyes: :v:          |
+ | Largest Rectangle in Histogram                         | :sob:          | stack idea important                                        | :eyes: :v:          |
  | Reverse Linked List                                    | Easy           |                                                             | :v:                 |
- | Lowest Common Ancestor of a Binary Tree                | :sweat:         | recursion                                                   | :v: :eyes:          |
+ | Lowest Common Ancestor of a Binary Tree                | :sweat:        | recursion                                                   | :v: :eyes:          |
  | Lowest Common Ancestor of a Binary Search Tree         | Easy           | use bst property                                            | :v:                 |
  | Meeting Rooms                                          | Easy           | easy/customized sorting lambda                              | :v:                 |
- | Meeting Rooms II                                       | :sweat:         | 1. greedy ideas using pq; 2. sweep line with two arrays     | :eyes: :v:          |
- | Maximum Length of Pair Chains                          | :sweat:         | sort by ending time then greedy                             | :eyes: :v:          |
- | Course Schedule I                                      | :sweat:         | dfs/bfs(tricker, use degree)                                | :v:                 |
- | Course Schedule II                                     | :sweat:         | dfs/bfs(tricker), path tracking                             | :v: :eyes:          |
- | Course Schedule III                                    | :sweat:         | greedy/replace the course taking longest time               | :eyes:  :v:         |
- | Minimu Height Trees                                    | :sweat:         | bf timeout, use graph degree                                | :eyes: :v:          |
- | Diameter of Binary Tree                                | :sweat:         | what is needed to compute the path                          | :v:                 |
- | Paint House II                                         | :sob:           | dp->no dp storage needed                                    | :lock: :eyes:       |
- | H-Index                                                | :sweat:         |                                                             |                     |
- | H-Index II                                             | :sweat:         |                                                             |                     |
- | Find the Celebrity                                     | :sweat:         | a knows b, a is not candidate; otherwise a is candidate     | :eyes::lock:        |
+ | Meeting Rooms II                                       | :sweat:        | 1. greedy ideas using pq; 2. sweep line with two arrays     | :eyes: :v:          |
+ | Maximum Length of Pair Chains                          | :sweat:        | sort by ending time then greedy                             | :eyes: :v:          |
+ | Minimu Height Trees                                    | :sweat:        | bf timeout, use graph degree                                | :eyes: :v:          |
+ | Diameter of Binary Tree                                | :sweat:        | what is needed to compute the path                          | :v:                 |
+ | Paint House II                                         | :sob:          | dp->no dp storage needed                                    | :lock: :eyes:       |
+ | H-Index                                                | :sweat:        |                                                             |                     |
+ | H-Index II                                             | :sweat:        |                                                             |                     |
+ | Find the Celebrity                                     | :sweat:        | a knows b, a is not candidate; otherwise a is candidate     | :eyes::lock:        |
  | First Bad Version                                      | Easy           |                                                             |                     |
- | Walls and Gates                                        | :sweat:         | start from gates see how far it goes                        | :v:                 |
- | Inorder Successor in BST                               | :sweat:         | BST property, track last larger node                        | :eyes: :lock:       |
- | Binary Tree Vertical Order Traversal                   | :sweat:         | map/inorder recursion/queue iteration                       | :eyes: :lock:       |
- | Increasing Triplet Subsequence                         | :sweat:         | think hard, tricky                                          | :v: :eyes:          |
- | Design Tic Tac Toe                                     | :sweat:         | extra space to keep track of current status                 | :eyes: :lock:       |
- | Restore IP Address                                     | :sweat:         | recursion                                                   | :eyes: :v:          |
+ | Walls and Gates                                        | :sweat:        | start from gates see how far it goes                        | :v:                 |
+ | Inorder Successor in BST                               | :sweat:        | BST property, track last larger node                        | :eyes: :lock:       |
+ | Binary Tree Vertical Order Traversal                   | :sweat:        | map/inorder recursion/queue iteration                       | :eyes: :lock:       |
+ | Increasing Triplet Subsequence                         | :sweat:        | think hard, tricky                                          | :v: :eyes:          |
+ | Design Tic Tac Toe                                     | :sweat:        | extra space to keep track of current status                 | :eyes: :lock:       |
+ | Restore IP Address                                     | :sweat:        | recursion                                                   | :eyes: :v:          |
  | Intersection of Two Arrays I/II                        | Easy           | check follow up questions                                   | :eyes: :v:          |
 
 ## Other Leetcode
@@ -237,6 +231,13 @@
  | Minimum Path Sum                            | :sweat:     | 2d dp with 1d store, initial value!                     | :eyes: :v:    |
  | Longest Line of Consecutive Ones in Matrix  | :sweat:     | 3-dim dp/dfs                                            | :lock:        |
 
+
+## Sorting Algorithms
+ | Problems                   | Difficulty   | Techniques                                         |
+ | :------------------------- | :---:        | :----                                              |
+ | Merge Intervals            | :sweat:      | customized sorting + max(end1, end2) when merge    |
+ | Insert Interval            | :eyes: :sob: | find overlapped intervals first, remove and insert |
+
 ## Linked Lists
 
  | Problems                   | Difficulty | Techniques                |
@@ -247,36 +248,54 @@
 ## Tree Basics
  | Problems                                    | Difficulty | Techniques                                           |
  | :-------------------------                  | :---:      | :----                                                |
- | Binary Tree PreOrder Travesal/Iterator      | :sweat:     | iterative/recursive                                  |
- | Binary Tree InOrder Travesal/Iterator       | :sweat:     | iterative/recursive                                  |
- | Binary Tree PostOrder Travesal/Iterator     | :sob:       | iterative/recursive                                  |
- | Binary Tree Serialization/Deserialization   | :sweat:     | preorder-recursion/level-order iteration             |
- | BST Serialization/Deserialization (compact) | :sweat:     | preorder-recursion with min/max threshold            |
- | Find Duplicate Subtrees                     | :sweat:     | serialize to deduplicate, make sure serialize once   |
- | Find Leaves of Binary Tree                  | :sweat:     | bottom up to count the height                        |
- | Binary Tree Maximum Path Sum                | :sob:       | how to calculate a path sum                          |
- | Path Sum I/II/III                           | :sweat:     | III needs more attention                             |
- | Sum of Root to Leave Number                 | :sweat:     | each deeper level, x10                               |
+ | Binary Tree PreOrder Travesal/Iterator      | :sweat:    | iterative/recursive                                  |
+ | Binary Tree InOrder Travesal/Iterator       | :sweat:    | iterative/recursive                                  |
+ | Binary Tree PostOrder Travesal/Iterator     | :sob:      | iterative/recursive                                  |
+ | Binary Tree Serialization/Deserialization   | :sweat:    | preorder-recursion/level-order iteration             |
+ | BST Serialization/Deserialization (compact) | :sweat:    | preorder-recursion with min/max threshold            |
+ | Find Duplicate Subtrees                     | :sweat:    | serialize to deduplicate, make sure serialize once   |
+ | Find Leaves of Binary Tree                  | :sweat:    | bottom up to count the height                        |
+ | Binary Tree Maximum Path Sum                | :sob:      | how to calculate a path sum                          |
+ | Path Sum I/II/III                           | :sweat:    | III needs more attention                             |
+ | Sum of Root to Leave Number                 | :sweat:    | each deeper level, x10                               |
  | Binary Tree Paths                           | Easy       | dfs                                                  |
- | Maximum Binary Tree                         | :sweat:     | recursion/iterative (think this)                     |
- | Convert Sorted Array/List to BST            | :sweat:     | concise coding                                       |
- | Convert BST to Double Linked List           | :sweat:     | think about the recursion                            |
+ | Maximum Binary Tree                         | :sweat:    | recursion/iterative (think this)                     |
+ | Convert Sorted Array/List to BST            | :sweat:    | concise coding                                       |
+ | Convert BST to Double Linked List           | :sweat:    | think about the recursion                            |
  | Closest Binary Search Tree Value            | Easy       | BST                                                  |
- | Closest Binary Search Tree Value II         | :sob:       | heap/BST                                             |
- | Binary Tree Longest Consecutive Sequence    | :sweat:     | top-down or bottom-up to count, and track max length |
- | Binary Tree Longest Consecutive Sequence II | :sweat:     | bottom-up to count left/right max inc/dec length     |
+ | Closest Binary Search Tree Value II         | :sob:      | heap/BST                                             |
+ | Binary Tree Longest Consecutive Sequence    | :sweat:    | top-down or bottom-up to count, and track max length |
+ | Binary Tree Longest Consecutive Sequence II | :sweat:    | bottom-up to count left/right max inc/dec length     |
 
 ## Graph
-- for `undirected` graph, when `dfs` to traverse the graph, need to pass `pre` to distinguish `0-1` and `1-0` cycle
+- cycle detection
+- number of connected component
+- topological sorting, recover path (for directed graph only)
+### Undirected Graph
+- add two edges for both directions when bulding adjancent list
+- dfs
+    - when building adjacency list, edge should be added for both directions
+    - need to break parent-child link, either by passing `pre` or erase link from `unordered_map<int, unordered_set<int>>`
+- bfs
+    - when building adjacency list, edge should be added for both directions
+    - maintain adjacency list as well as degree vector, but degree vector start from degree 1
+- union find (only for undirected graph)
+### Directed Graph
+- dfs
+- bfs
 
- | Problems                                              | Difficulty | Techniques                                          |
- | :-------------------------                            | :---:      | :----                                               |
- | Graph Valid Tree                                      | :sweat:     | dfs/bfs/union find                                  |
- | Number of Connected Components in an Undirected Graph | :sweat:     | union find/dfs(vector with diff vals to track state |
- | Minimum Height Trees                                  | :sweat:     | use degrees, start from leaf node                   |
- | Clone Graph                                           | :sweat:     | dfs/bfs (avoid cycle)                               |
- | Merge Accounts                                        | :sweat:     | bfs/union find                                      |
- | Redundant Connection                                  | :sweat:     | union find: first same parent edge                  |
+ | Problems                                              | Difficulty     | Techniques                                                                |
+ | :-------------------------                            | :---:          | :----                                                                     |
+ | Graph Valid Tree                                      | :eyes: :sweat: | 1. no cycle; 2. one component; dfs/bfs/union find                         |
+ | Number of Connected Components in an Undirected Graph | :sweat:        | union find/dfs                                                            |
+ | Clone Graph                                           | :sweat:        | clean dfs/bfs (avoid cycle)                                               |
+ | Minimum Height Trees                                  | :sweat:        | use degrees, start from leaf node                                         |
+ | Merge Accounts                                        | :sweat:        | bfs/union find                                                            |
+ | Redundant Connection                                  | :sweat:        | union find: first same parent edge                                        |
+ | Evaluate Division                                     | :sweat:        | union find/dfs                                                            |
+ | Course Schedule I                                     | :sweat:        | dfs(cycle detection, in/out path state)/bfs(tricker, use degree)          |
+ | Course Schedule II                                    | :eyes: :sweat: | dfs(push path when all dependency is checked)/bfs(tricker), path tracking |
+ | Course Schedule III                                   | :sweat:        | greedy/replace longest (not graph)                                        |
 
 ## Classic Backtracing
 

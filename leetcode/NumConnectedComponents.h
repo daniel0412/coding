@@ -23,44 +23,41 @@ class NumConnectedComponents {
   public:
     int countComponents(int n, vector<pair<int, int> >& edges)
     {
+        // return unionfindImpl(n, edges);
         return dfsImpl(n, edges);
     }
 
   private:
-    int dfsImpl(int n, const vector<pair<int, int> >& edges)
+    int dfsImpl(int n, const vector<pair<int, int> >& edges) 
     {
         unordered_map<int, vector<int> > aj;
+        // undirected graph, need to store both directions
         for(const auto& e : edges) {
             aj[e.first].push_back(e.second);
+            aj[e.second].push_back(e.first);
         }
-        vector<int> visited(n, 0);
-        for(const auto& kv : aj) {
-            if(visited[kv.first] == 0) {
-                int num = 0;
-                dfs(aj, kv.first, num, visited);
-                n = n - num + 1;
+        vector<bool> v(n, false);
+        int res = 0;
+        for(int i = 0;  i < n; ++i) {
+            if(!v[i]) {
+                ++res;
+                dfs(aj, v, i);
             }
         }
-        return n;
+        return res;
     }
 
-    void dfs(unordered_map<int, vector<int> >& aj,
-             int start,
-             int& num,
-             vector<int>& visited)
+    void dfs(const unordered_map<int, vector<int>>& aj, vector<bool>& v, int i)
     {
-        if(visited[start] > 0)
-            return;
-        visited[start] = 1;
-        for(auto v : aj[start]) {
-            ++num;
-            if(aj.count(v)) {
-                dfs(aj, v, num, visited);
+        v[i] = true;
+        for(auto j : aj[i]) {
+            if(!v[j]) {
+                dfs(aj, v, j);
             }
         }
-        visited[start] = 2;
     }
 
+    // union find solution
     int unionfindImpl(int n, const vector<pair<int, int> >& edges)
     {
         vector<int> parents(n, 0);
@@ -81,7 +78,9 @@ class NumConnectedComponents {
     int findParent(vector<int>& parents, int i)
     {
         while(parents[i] != i) {
-            parents[i] = findParent(parents, parents[i]);
+            // path compression
+            parents[i] = parents[parents[i]];
+            i = parents[i];
         }
         return parents[i];
     }

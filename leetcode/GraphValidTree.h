@@ -53,6 +53,7 @@ class GraphValidTree {
             return false;
         visited[cur] = true;
         for(auto c : graph[cur]) {
+            // make sure the same edge is only visited once
             if(c != parent)
                 // if true, should continue search
                 if(!dfsImpl(graph, c, cur, visited))
@@ -80,9 +81,11 @@ class GraphValidTree {
                     return false;
                 q.push(d);
                 visited.insert(d);
+                // make sure `c-d`/`d-c` connection are only visited once
                 graph[d].erase(c);
             }
         }
+        // check only one component exists
         return visited.size() == n;
     }
 
@@ -179,11 +182,13 @@ class GraphValidTree {
         for(const auto& e : edges) {
             int x = getp(e.first, p);
             int y = getp(e.second, p);
+            // cycle detection
             if(x == y)
                 return false;
             --cnt;
             p[x] = y;
         }
+        // connected component check
         return cnt == 1;
     }
 
