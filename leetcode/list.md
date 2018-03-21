@@ -540,6 +540,7 @@ void dfs(nums, id, path, res) {
  | Random Pick Index                           | :eyes: :sweat: | reservoir sampling     |
  | Insert Delete GetRandom O(1)                | :sweat:        | combine map and vector |
  | Insert Delete GetRandom O(1) with duplicate | :sweat:        | combine map and set    |
+ | Weighted Random Number                      | :eyes: :sweat: |                        |
 
 ## Topological Sorting
  | Problems                   | Difficulty   | Techniques                            |
