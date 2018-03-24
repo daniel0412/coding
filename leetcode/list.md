@@ -419,42 +419,43 @@ void dfs(nums, id, path, res) {
 
 
 ## Array
- | Problems                                   | Difficulty    | Techniques                                                          |
- | :-------------------------                 | :---:         | :----                                                               |
+ | Problems                                   | Difficulty     | Techniques                                                          |
+ | :-------------------------                 | :---:          | :----                                                               |
  | Sparse Vector Multiplication               | :sweat:        | pair store, 1. two pointer 2. binary search 3. divide & conqure     |
  | Sparse Matrix Multiplication               | :sweat:        | avoid multiplication when possible                                  |
- | Rotate Array                               | Easy          | think at lease 3 ways                                               |
+ | Rotate Array                               | Easy           | think at lease 3 ways                                               |
  | Search in Rotated Sorted Array             | :sweat:        | decide which part is sorted, then choose direction                  |
  | Search in Rotated Sorted Array II          | :sweat:        | only start/end equal affects it, how to break this                  |
  | Find Min in Rotated Sorted Array           | :sweat:        | early stop if sorted                                                |
  | Find Min in Rotated Sorted Array II        | :sweat:        | how to break start/mid/end are equal                                |
  | Sort Colors                                | :sweat:        | two pointer/two side to middle                                      |
  | Contiguous Array                           | :sweat:        | hash map/presum idea/store mod                                      |
- | Two Sum                                    | Easy          | hashmap/two pointer                                                 |
- | Two Sum II – Input array is sorted         | Easy          | two pointer to squeeze                                              |
- | Two Sum III – Data structure design        | Easy          | hashmap/multiset                                                    |
- | Two Sum in BST                             | Easy          | inorder to form sorted array, two pointer                           |
+ | Two Sum                                    | Easy           | hashmap/two pointer                                                 |
+ | Two Sum II – Input array is sorted         | Easy           | two pointer to squeeze                                              |
+ | Two Sum III – Data structure design        | Easy           | hashmap/multiset                                                    |
+ | Two Sum in BST                             | Easy           | inorder to form sorted array, two pointer                           |
  | 3Sum                                       | :sweat:        | two pointer/de-duplicate                                            |
  | 3Sum Closest                               | :sweat:        | two pointer/de-dupicate                                             |
  | 3Sum Smaller                               | :sweat:        | two pointer                                                         |
  | Target Sum                                 | :sweat:        | 1. recursion 2. dp to cache                                         |
  | Continuous Subarray Sum                    | :sweat:        | hash map/(a-c)%b==0/cornercase                                      |
- | Maximum Subarray                           | Easy          | dp/think about divide & conqure                                     |
- | Maximum Averate Subarray                   | Easy          | equals to find maximum sum of fixed size                            |
+ | Maximum Subarray                           | Easy           | dp/think about divide & conqure                                     |
+ | Maximum Averate Subarray                   | Easy           | equals to find maximum sum of fixed size                            |
  | Maximum Averate Subarray II                | :eyes: :sob:   | binary search in solution space + O(n) existence check              |
  | Maximum Sum of 3 Non-overlapping Subarrays | :eyes: :sob:   | presum, fix middle subarray, dp to cache left/right max             |
  | Minimum Size Subarray Sum                  | :sweat:        | two pointer find range, then reduce range, analyze why O(n)         |
  | Maximum Size Subarray Sum Equals k         | :sweat:        | hash map/idea                                                       |
  | Subarray Sum Equals k                      | :sweat:        | hash map/idea, initialization issue                                 |
  | Subarray Prod Less Than k                  | :sweat:        | idea                                                                |
- | Shortest Unsorted Continuous Subarray      | :eyes:  Easy  | find the disordered index boundary                                  |
+ | Shortest Unsorted Continuous Subarray      | :eyes:  Easy   | find the disordered index boundary                                  |
  | Split Array into Consecutive Sequence      | :eyes: :sweat: | array sorted, greedy idea                                           |
  | Longest Consecutive Sequence               | :sob:          | think differently  (linear solution)                                |
- | Longest Continuous Increasing Subsequence  | Easy          | basic array operation                                               |
+ | Longest Continuous Increasing Subsequence  | Easy           | basic array operation                                               |
  | Longest Increasing Subsequence             | :eyes: :sweat: | 1. dp O(n^2) 2. put/replace the constructed array using lower bound |
  | Number of Longest Increasing Subsequence   | :eyes: :sweat: | dp to record maxlen up to i, another vec to record count            |
- | Non-decreasing Array                       | :eyes: Easy   | find patterns to modify the number depends on three numbers         |
+ | Non-decreasing Array                       | :eyes: Easy    | find patterns to modify the number depends on three numbers         |
  | Russian Doll Envelopes                     | :sob:          | sort by first dim, and then find LIS                                |
+ | Maximum Product of Three Numbers           | :v:            | sort and  not sort solution                                         |
 
 ## Kth problem
 - when locating `k`-th, binary first find the solution boundary, and then do binary search in the solution space might help
