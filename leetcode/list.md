@@ -472,23 +472,21 @@ void dfs(nums, id, path, res) {
 
 
 ## Bits Manipulation
- | Problems                   | Difficulty | Techniques                                           |
- | :------------------------- | :---:      | :----                                                |
- | Hamming Distance           | Easy       | clear right most left 1                              |
- | Total Hamming Distance     | :sweat:     | vertical 1s, combination                             |
- | Power of Two               | Easy       | only one non-zero bit, minus 1 check or rotate check |
- | Power of Three             | Easy       | logarithm                                            |
- | Power of Four              | Easy       | power of 2, and minus 1 dividable by 3               |
+ | Problems                   | Difficulty | Techniques                                                                  |
+ | :------------------------- | :---:      | :----                                                                       |
+ | Hamming Distance           | Easy       | clear right most left 1                                                     |
+ | Total Hamming Distance     | :sweat:    | vertical 1s, combination                                                    |
+ | Power of Two               | :v:        | only one non-zero bit, minus 1 check or rotate check                        |
+ | Power of Three             | :eyes:     | logarithm `(log10(n)-log10(3))`, then check if it is integer                |
+ | Power of Four              | :eyes:     | power of 2, and minus 1 dividable by 3, or the only bit on certain position |
 
 ## Iterator
-  | Problems                     | Difficulty    | Techniques                                                |
-  | :-------------------------   | :---:         | :----                                                     |
+  | Problems                     | Difficulty     | Techniques                                                |
+  | :-------------------------   | :---:          | :----                                                     |
   | Peeking Iterator             | :sweat:        | store peeked value and isPeek flag                        |
   | Flatten Nested List Iterator | :eyes: :sweat: | use stack to track,  hasNext promote pointers             |
-  | Zigzag Iterator              | :eyes: :sweat:        | extend to k array, use queue to record begin/end iterator |
+  | Zigzag Iterator              | :eyes: :sweat: | extend to k array, use queue to record begin/end iterator |
   | Binary Search Tree Iterator  | :sweat:        | inorder iterative impl                                    |
-
-
 
 ## Binary Search
  | Problems                   | Difficulty | Techniques                          |
@@ -524,7 +522,7 @@ void dfs(nums, id, path, res) {
  | Number of Islands II          | :eyes: :sweat: | union find + pass compression                  |
  | Nnumber of Distinct Islands   | :eyes: :sweat: | use vector of pairs to store normalized island |
  | Number of Distinct Islands II | :eyes: :sob:   | how to represent intrinct island               |
- | Island Perimeter              | :v:            | just loop, no need to use dfs                  |
+ | Island Perimeter              | :eyes: :v:     | just loop, no need to use dfs                  |
 
 
 ## Range Sum

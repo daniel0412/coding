@@ -21,6 +21,8 @@ using namespace std;
 
 class PowerOfTwo {
   public:
+      // 1) make sure it is positive
+      // 2) bit manipulation
     bool isPowerOfTwo(int n) { return (n > 0) && !(n & (n - 1)); }
 
     bool ispoweroftwo2(int n)

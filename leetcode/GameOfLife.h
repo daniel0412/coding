@@ -36,29 +36,39 @@ class GameOfLife {
             {1, 0},
             {1, 1},
         };
+        // state definition:
+        // 0: dead -> dead
+        // 1: live -> dead
+        // 2: dead -> live
+        // 3: live -> live
         for(int i = 0; i < m; ++i) {
             for(int j = 0; j < n; ++j) {
                 int cnt = 0;
                 for(int d = 0; d < dirs.size(); ++d) {
-                    int x = i + dirs[d].first;
-                    int y = j + dirs[d].second;
-                    // ATTENTION: value of board is changed, but state 2 is
-                    // changed from live cell, state 3 is changed from dead
-                    // cell
-                    if(x >= 0 && x < m && y >= 0 && y < n &&
-                       (board[x][y] == 1 || board[x][y] == 2))
-                        ++cnt;
+                    for(const auto& d : dirs) {
+                        int x = i + d.first, y = j + d.second;
+                        if(x >= 0 && y >= 0 && x < m && y < n &&
+                           board[x][y] % 2)  // current live
+                            ++cnt;
+                    }
+                    if(board[i][j]) {
+                        if(cnt == 2 || cnt == 3)
+                            board[i][j] = 3;
+                    }
+                    else {
+                        if(cnt == 3)
+                            board[i][j] = 2;
+                    }
                 }
-                if(board[i][j] && (cnt < 2 || cnt > 3))
-                    board[i][j] = 2;
-                else if(!board[i][j] && cnt == 3)
-                    board[i][j] = 3;
             }
         }
 
         for(int i = 0; i < m; ++i) {
             for(int j = 0; j < n; ++j) {
-                board[i][j] = board[i][j] % 2;
+                if(board[i][j] == 1)
+                    board[i][j] = 0;
+                else if(board[i][j] == 2 || board[i][j] == 3)
+                    board[i][j] = 1;
             }
         }
     }
