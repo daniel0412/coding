@@ -463,13 +463,13 @@ void dfs(nums, id, path, res) {
 
  | Problems                                     | Difficulty | Techniques                                      |
  | :-------------------------                   | :---:      | :----                                           |
- | Kth Largest Element in an Array              | :sweat:     | quick select/heap                               |
- | Kth Smallest Element in a BST                | :sweat:     | iterative/recursive                             |
- | Kth Smallest Element in a sorted matrix      | :sweat:     | 1. heap 2. value (not index) binary search+ cnt |
- | Kth Smallest Element in Multiplication Table | :sob:       | same as sorted matrix                           |
- | Find K Closest Elements                      | :sweat:     |                                                 |
- | Find K Pairs with Smallest Sum               | :sweat:     | heap idea                                       |
- | Find Kth Smallest Pair Distance              | :sob:       | find dist boundary, and then binary search      |
+ | Kth Largest Element in an Array              | :sweat:    | quick select to narrow search space/heap        |
+ | Kth Smallest Element in a BST                | :sweat:    | iterative/recursive                             |
+ | Kth Smallest Element in a sorted matrix      | :sweat:    | 1. heap 2. value (not index) binary search+ cnt |
+ | Kth Smallest Element in Multiplication Table | :sob:      | same as sorted matrix                           |
+ | Find K Closest Elements                      | :sweat:    |                                                 |
+ | Find K Pairs with Smallest Sum               | :sweat:    | heap idea                                       |
+ | Find Kth Smallest Pair Distance              | :sob:      | find dist boundary, and then binary search      |
 
 
 ## Bits Manipulation

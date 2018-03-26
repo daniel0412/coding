@@ -23,83 +23,86 @@ class KthLargest {
   public:
     int findKthLargest(vector<int>& nums, int k)
     {
-        if(nums.size() < k || k < 1 || nums.size() == 0)
-            return -1;
-         return recursiveImpl(nums, 0, nums.size() - 1, k);
-
+        if(nums.empty())
+            return 0;
+        return iterative(nums, k);
+        // return recursive(nums, 0, nums.size()-1, k);
     }
 
-  private:
-    int recursiveImpl(vector<int>& nums, int start, int end, int k)
+    int partition(vector<int>& v, int s, int e)
     {
-
-        int p = start;
-        for(int i = start; i < end; ++i) {
-            if(nums[i] < nums[end]) {
-                if(i != p) {
-                    swap(nums[i], nums[p]);
-                }
-                ++p;
-            }
-        }
-        swap(nums[p], nums[end]);
-
-        int numLeft = end - p + 1;
-        if(numLeft == k)
-            return nums[p];
-        else if(numLeft > k) {
-            return recursiveImpl(nums, p + 1, end, k);
-        }
-        else {
-            return recursiveImpl(nums, start, p - 1, k - numLeft);
-        }
-    }
-
-    int iterativeImpl(vector<int>& nums, int k)
-    {
-        int left = 0, right = nums.size() - 1;
-        int p = 0;
-        while(left <= right) {
-            p = partition(nums, left, right);
-            int numGreater = right - p + 1;
-            if(numGreater == k)
-                break;
-            else if(numGreater < k) {
-                right = p - 1;
-                k = k - numGreater;
+        int n = e - s + 1;
+        // randomized pivot
+        int p = rand() % n + s;
+        swap(v[p], v[s]);
+        p = s;
+        int i = p + 1, j = e;
+        while(i <= j) {
+            if(v[i] > v[p]) {
+                ++i;
             }
             else {
-                left = p + 1;
+                swap(v[i], v[j--]);
             }
         }
-        return nums[p];
+        swap(v[i - 1], v[p]);
+        return i - 1;
     }
 
-    int partition(vector<int>& nums, int start, int end)
+    int iterative(vector<int>& v, int k)
     {
-        int p = end;
-        int j = start;
-        for(int i = start; i < end; ++i) {
-            if(nums[i] < nums[p]) {
-                if(nums[i] != nums[j]) {
-                    swap(nums[j], nums[i]);
+        int s = 0, e = v.size() - 1;
+        int p = 0;
+        while(s <= e) {
+            p = partition(v, s, e);
+            int n = p - s + 1;
+            if(n == k)
+                break;
+            else if(n > k) {
+                e = p - 1;
+            }
+            else {
+                s = p + 1;
+                k = k - n;
+            }
+        }
+        return v[p];
+    }
+
+    int recursive(vector<int>& v, int s, int e, int k)
+    {
+        if(s == e && k == 1)
+            return v[s];
+        if(s < e) {
+            int p = partition(v, s, e);
+            int cnt = p - s + 1;
+            if(cnt == k)
+                return v[p];
+            else if(cnt > k) {
+                return recursive(v, s, p - 1, k);
+            }
+            else {
+                return recursive(v, p + 1, e, k - cnt);
+            }
+        }
+    }
+
+    int pqimpl(vector<int>& nums, int k)
+    {
+        if(k > nums.size())
+            return 0;
+        priority_queue<int, vector<int>, std::greater<int> > pq;
+        for(auto n : nums) {
+            if(pq.size() < k) {
+                pq.push(n);
+            }
+            else {
+                if(n > pq.top()) {
+                    pq.pop();
+                    pq.push(n);
                 }
-                ++j;
             }
         }
-        swap(nums[j], nums[end]);
-        return j;
+        return pq.top();
     }
-
-    // quick sort implementation practice
-    void quickSort(vector<int>& nums, int left, int right)
-    {
-        if(left < right) {
-            int p = partition(nums, left, right);
-            quickSort(nums, left, p - 1);
-            quickSort(nums, p + 1, right);
-        }
-    }
-
-
 };
