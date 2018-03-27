@@ -296,6 +296,7 @@
  | Course Schedule I                                     | :sweat:        | dfs(cycle detection, in/out path state)/bfs(tricker, use degree)          |
  | Course Schedule II                                    | :eyes: :sweat: | dfs(push path when all dependency is checked)/bfs(tricker), path tracking |
  | Course Schedule III                                   | :sweat:        | greedy/replace longest (not graph)                                        |
+ | Alien Dictionary                                      | :eyes: :sob:   | order is DAG edges (topological sort)                                     |
 
 ## Classic Backtracing
 
@@ -461,16 +462,15 @@ void dfs(nums, id, path, res) {
 - when locating `k`-th, binary first find the solution boundary, and then do binary search in the solution space might help
 - in such cases `<k` definitely can move solution; `>=k' is not enough to return the result
 
- | Problems                                     | Difficulty | Techniques                                      |
- | :-------------------------                   | :---:      | :----                                           |
- | Kth Largest Element in an Array              | :sweat:    | quick select to narrow search space/heap        |
- | Kth Smallest Element in a BST                | :sweat:    | iterative/recursive                             |
- | Kth Smallest Element in a sorted matrix      | :sweat:    | 1. heap 2. value (not index) binary search+ cnt |
- | Kth Smallest Element in Multiplication Table | :sob:      | same as sorted matrix                           |
- | Find K Closest Elements                      | :sweat:    |                                                 |
- | Find K Pairs with Smallest Sum               | :sweat:    | heap idea                                       |
- | Find Kth Smallest Pair Distance              | :sob:      | find dist boundary, and then binary search      |
-
+ | Problems                                     | Difficulty | Techniques                                                 |
+ | :-------------------------                   | :---:      | :----                                                      |
+ | Kth Largest Element in an Array              | :sweat:    | quick select to narrow search space/heap, analyze k vs n/2 |
+ | Kth Smallest Element in a BST                | :sweat:    | iterative/recursive                                        |
+ | Kth Smallest Element in a sorted matrix      | :sweat:    | 1. heap 2. value (not index) binary search+ cnt            |
+ | Kth Smallest Element in Multiplication Table | :sob:      | same as sorted matrix                                      |
+ | Find K Closest Elements                      | :sweat:    |                                                            |
+ | Find K Pairs with Smallest Sum               | :sweat:    | heap idea                                                  |
+ | Find Kth Smallest Pair Distance              | :sob:      | find dist boundary, and then binary search                 |
 
 ## Bits Manipulation
  | Problems                   | Difficulty | Techniques                                                                  |
@@ -533,6 +533,53 @@ void dfs(nums, id, path, res) {
  | Range Sum Query 1D – Mutable | :eyes: :sob: | 1d binary indexed tree |
 
 ## Sampling
+
+### modulo bias with `rand() % n`
+- `rand()` generates uniformly distributed int in the range `[0, RAND_MAX]`
+- `RAND_MAX` is library dependent, but usually equals to `32767`
+- `rand() % n` is not uniformly distributed, if the modulo is non-zero, i.e., `(RAND_MAX+1) % n != 0`
+- it introduces bias toward smaller numbers 
+- the bias is larger if the range `n` is larger
+- to make it uniformly distributed
+
+```cpp
+int method1(int mi, int mx) {
+    int n = mx - mi + 1;
+    double x = RNAD_MAX + 1;
+    return (rand() / x) * n + mi;
+}
+
+int method2(int mi, int mx) {
+    int n = mx - mi + 1;
+    int rlimit = RADN_MAX - RAND_MAX % n;
+
+    // ignore random generated number that exceeds the limit
+    int x = rand();
+    while(true) {
+        if(x < rlimit) break;
+        x = rand();
+    }
+    return x % n + mi;
+}
+```
+
+### reservoir sampling
+given online stream of numbers, make sure probably for each number gets selected is the same.
+idea: keep the first number, then with probability `1/i` to select the `i-th` number
+
+```cpp
+int random(vector<int>& nums) {
+    int x = -1;
+    for(int i = 0; i < nums.size(); ++i) {
+        // 1/(i+1) possibility to replace
+        if(rand() % (i+1) == 0) {
+            x = nums[i];
+        }
+    }
+    return x;
+}
+```
+
  | Problems                                    | Difficulty     | Techniques             |
  | :-------------------------                  | :---:          | :----                  |
  | Linked List Random Node                     | :sweat:        | reservoir sampling     |
@@ -540,8 +587,3 @@ void dfs(nums, id, path, res) {
  | Insert Delete GetRandom O(1)                | :sweat:        | combine map and vector |
  | Insert Delete GetRandom O(1) with duplicate | :sweat:        | combine map and set    |
  | Weighted Random Number                      | :eyes: :sweat: |                        |
-
-## Topological Sorting
- | Problems                   | Difficulty   | Techniques                            |
- | :------------------------- | :---:        | :----                                 |
- | Alien Dictionary           | :eyes: :sob: | order is DAG edges (topological sort) |

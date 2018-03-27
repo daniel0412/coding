@@ -181,11 +181,6 @@ while(num) {
 
 rather than thinking to do dfs for each `room` cell, we can use reverse engineer to start from `gate` to do dfs
 
-### reservoir sampling
-given online stream of numbers, make sure probably for each number gets selected is the same.
-
-idea: keep the first number, then with probability `1/i` to select the `i-th` number
-
 ## Templates
 ### Topological Sort
 #### cycle detection/find orders
