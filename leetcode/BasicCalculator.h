@@ -76,6 +76,7 @@ class BasicCalculator {
                 res += (sign * dfs(s, ++i));
             }
             else if(s[i] == ')') {
+                // donot forget to increase i for the caller function
                 ++i;
                 return res;
             }

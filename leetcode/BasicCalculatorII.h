@@ -21,39 +21,34 @@ using namespace std;
 
 class BasicCalculatorII {
   public:
-    int calculate(string s)
+     int calculate(string s)
     {
         stack<int> mystack;
-        int i = 0, len = s.size();
-        char op = ' ';
-        while(i < len) {
-            char c = s[i];
-            if(c == ' ') {
+        int i = 0, sign = 1;
+        char op = '+';
+        while(i < s.size()) {
+            if(s[i] == ' ') {
                 ++i;
                 continue;
             }
-            else if(!isdigit(c)) {
-                ++i;
-                op = c;
-            }
-            else {
+            else if(isdigit(s[i])) {
                 int start = i;
-                while(i < len && isdigit(s[i]))
+                while(isdigit(s[i]))
                     ++i;
-                int t = stoi(s.substr(start, i - start));
-                if(op == '+')
-                    mystack.push(t);
-                else if(op == '-')
-                    mystack.push(-t);
-                else if(op == '*') {
-                    mystack.top() *= t;
+                int val = sign * stoi(s.substr(start, i - start));
+                if(op == '*') {
+                    val = mystack.top() * val;
+                    mystack.pop();
                 }
                 else if(op == '/') {
-                    mystack.top() /= t;
+                    val = mystack.top() / val;
+                    mystack.pop();
                 }
-                else {
-                    mystack.push(t);
-                }
+                mystack.push(val);
+            }
+            else {
+                op = s[i];
+                sign = s[i++] == '-' ? -1 : 1;
             }
         }
         int res = 0;

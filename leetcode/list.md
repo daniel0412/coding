@@ -395,12 +395,13 @@ void dfs(nums, id, path, res) {
 - easy to identify recursive subproblems
 - as go into the next recursive call, the index grows, thus `O(n)` time complexity
 
- | Problems                   | Difficulty | Techniques                                                    |
- | :------------------------- | :---:      | :----                                                         |
- | Basic Calculator           | :sob:       | parenthesis only, recursive with O(n) or iterative with stack |
- | Basic Calculator II        | :sob:       | only +-\*/, agg only with higher ops                          |
- | Basic Calculator III       | :sob:       | support parenthesis and all four ops                          |
- | Decode String              | :sweat:     | like iterator of iterator, stack + one loop                   |
+ | Problems                         | Difficulty | Techniques                                                    |
+ | :-------------------------       | :---:      | :----                                                         |
+ | Evaluate Reverse Polish Notation | :v:        | stack or recursion                                            |
+ | Basic Calculator                 | :sob:      | parenthesis only, recursive with O(n) or iterative with stack |
+ | Basic Calculator II              | :sob:      | only +-\*/, agg only with higher ops                          |
+ | Basic Calculator III             | :sob:      | support parenthesis and all four ops                          |
+ | Decode String                    | :sweat:    | like iterator of iterator, stack + one loop                   |
 
 ### Palindromic Problems
 - check `if size(s) < 2`, return `true`
@@ -411,12 +412,12 @@ void dfs(nums, id, path, res) {
  | Valid Palindrome II              | Easy       | at most remove 1 char                               |
  | Palindrome Linked List           | Easy       | stack to store 1st half/reverse 2nd half            |
  | Palindrome Permutation           | Easy       |                                                     |
- | Palindrome Permutation II        | :sweat:     | find half, then know how to do permutation          |
- | Palindromic Substrings           | :sweat:     | dp, str end to front, double-sided expansion faster |
- | Longest Palindromic Sub sequence | :sweat:     | dp, back to front, find how to transfer states      |
- | Longest Palindromic Sub string   | :sweat:     | dp, but double-sided expansion is faster            |
- | Shortest Palindrome              | :sob:       |                                                     |
- | Palindrome Pairs                 | :sob:       |                                                     |
+ | Palindrome Permutation II        | :sweat:    | find half, then know how to do permutation          |
+ | Palindromic Substrings           | :sweat:    | dp, str end to front, double-sided expansion faster |
+ | Longest Palindromic Sub sequence | :sweat:    | dp, back to front, find how to transfer states      |
+ | Longest Palindromic Sub string   | :sweat:    | dp, but double-sided expansion is faster            |
+ | Shortest Palindrome              | :sob:      |                                                     |
+ | Palindrome Pairs                 | :sob:      |                                                     |
 
 
 ## Array
