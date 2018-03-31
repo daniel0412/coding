@@ -9,11 +9,12 @@
 | :sweat:   | :sweat:           |
 
 ## Solved problems not in Google list
- | Problems                    | Difficulty | Techniques                  | Status            |
- | :-------------------------  | :---:      | ----:                       | :---:             |
- | Binary Tree Right Side View | :sweat:     | level traversal (dfs/queue) | :v:               |
- | Nested List Weight Sum      | Easy       | recursion                   | :v: :lock:        |
- | Nested List Weight Sum II   | :sweat:     | recursion with states       | :v: :eyes: :lock: |
+ | Problems                    | Difficulty | Techniques                  |
+ | :-------------------------  | :---:      | ----:                       |
+ | Binary Tree Right Side View | :sweat:    | level traversal (dfs/queue) |
+ | Nested List Weight Sum      | :sweat:    | recursion                   |
+ | Nested List Weight Sum II   | :sweat:    | recursion with states       |
+ | Mine Sweeper                | :v:        | normal dfs/bfs              |
 
 ## Google(90)
  | Problems                                               | Difficulty     | Techniques                                              | Status            |
