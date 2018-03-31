@@ -1,4 +1,5 @@
 # Leetcode Preparation
+- [Backtracking](#backtracking)
 - [Graph](#graph)
 - [Sampling](#sampling)
 
@@ -273,42 +274,69 @@
  | Binary Tree Longest Consecutive Sequence II | :sweat:    | bottom-up to count left/right max inc/dec length     |
 
 ## Graph
+### Must-knows
+- traversal: bfs/dfs
+- topological sorting
+- shortest path: Dijkstra/Prim's
+- A`*` algorithm
+
+classical problems
 - cycle detection
 - number of connected component
 - topological sorting, recover path (for directed graph only)
 ### Undirected Graph
-- add two edges for both directions when bulding adjancent list
-- dfs
-    - when building adjacency list, edge should be added for both directions
-    - need to break parent-child link, either by passing `pre` or erase link from `unordered_map<int, unordered_set<int>>`
-- bfs
-    - when building adjacency list, edge should be added for both directions
-    - maintain adjacency list as well as degree vector, but degree vector start from degree 1
+- add edges for both directions when bulding adjancent list
+- remember to break `parent/child` cycle (not a real cycle), erase from data structure, or pass a `pre` variable
+- needs to use `visited` set to avoid multiple traversal
+- bfs: make use of `degree` vector, but start from degree 1
+
+### problems
+- cycle detection
+    - all nodes traversal
+    - dfs/bfs/uf
+- number of connected components
+    - all nodes traversal
+    - dfs/uf
 - union find (only for undirected graph)
+
 ### Directed Graph
-- dfs
-- bfs
+- add edges for only one direction, but dfs/bfs add in the reverse way
+- dfs: most of `directed` graph have multiple connected components, so `visited` would store in/out of path states
+- bfs: make use of `degree` vector, and start from 0 degree
 
- | Problems                                              | Difficulty     | Techniques                                                                |
- | :-------------------------                            | :---:          | :----                                                                     |
- | Graph Valid Tree                                      | :eyes: :sweat: | 1. no cycle; 2. one component; dfs/bfs/union find                         |
- | Number of Connected Components in an Undirected Graph | :sweat:        | union find/dfs                                                            |
- | Clone Graph                                           | :sweat:        | clean dfs/bfs (avoid cycle)                                               |
- | Minimum Height Trees                                  | :sweat:        | use degrees, start from leaf node                                         |
- | Merge Accounts                                        | :sweat:        | bfs/union find                                                            |
- | Redundant Connection                                  | :sweat:        | union find: first same parent edge                                        |
- | Evaluate Division                                     | :sweat:        | union find/dfs                                                            |
- | Course Schedule I                                     | :sweat:        | dfs(cycle detection, in/out path state)/bfs(tricker, use degree)          |
- | Course Schedule II                                    | :eyes: :sweat: | dfs(push path when all dependency is checked)/bfs(tricker), path tracking |
- | Course Schedule III                                   | :sweat:        | greedy/replace longest (not graph)                                        |
- | Alien Dictionary                                      | :eyes: :sob:   | order is DAG edges (topological sort)                                     |
+#### classical problems
+- cycle dectection
+    - dfs/bfs
+- topological sorting
+    - dfs/bfs
+- all path from `src` to `dst`
+    - dfs (w/o caching/memorization) to rack path
+- strongly connected components (SCC)
+    - bfs with two passes, one for origial direction order, one for reversed direction order, starting from the same node
+    - should start from degree 1 node, if there exists degree 0 node, it cannot be SCC
 
-## Classic Backtracing
+ | Problems                                       | Difficulty     | Techniques                                                                |
+ | :-------------------------                     | :---:          | :----                                                                     |
+ | (`undirected`) Graph Valid Tree                | :eyes: :sweat: | 1. no cycle; 2. one component; dfs/bfs/union find                         |
+ | (`undirected`) Number of Connected Components  | :sweat:        | union find/dfs                                                            |
+ | (`undirected`) Clone Graph                     | :sweat:        | clean dfs/bfs (avoid cycle)                                               |
+ | (`undirected`) Minimum Height Trees            | :sweat:        | use degrees, start from leaf node                                         |
+ | Merge Accounts                                 | :sweat:        | bfs/union find                                                            |
+ | Redundant Connection                           | :sweat:        | union find: first same parent edge                                        |
+ | (`undirected`) Evaluate Division               | :sweat:        | union find/dfs                                                            |
+ | (`directed`) Course Schedule I                 | :sweat:        | dfs(cycle detection, in/out path state)/bfs(tricker, use degree)          |
+ | (`directed`) Course Schedule II                | :eyes: :sweat: | dfs(push path when all dependency is checked)/bfs(tricker), path tracking |
+ | (`directed`) Course Schedule III               | :sweat:        | greedy/replace longest (not graph)                                        |
+ | Alien Dictionary                               | :eyes: :sob:   | order is DAG edges (topological sort)                                     |
+ | (`directed`) All Path from Src to Target       | :sweat:        | dfs w/o memorization                                                      |
+ | (`directed`) task with priority and dependency | :sweat:        | bfs with priority queue to break tie                                      |
+
+## Backtracking
 
 ### common points
-- code skeletons for backtracing
+- code skeletons for backtracking
 ```cpp
-// recursively call dfs twice w/o current element
+// recursively call dfs twice w/o current element, no loop
 // but deduplication is a bit tricker
 void dfs(nums, id, path, res){
     // do not include
@@ -320,8 +348,7 @@ void dfs(nums, id, path, res){
 }
 // better loop skeleton to add deduplication
 // current loop include the element
-// next loop pop back to backtrace previous state where the element is not included
-// next loop
+// next loop pop back to backtrack previous state where the element is not included for next loop
 void dfs(nums, id, path, res) {
     for(int i = id; i < nums.size(); ++i) {
         path.push_back(nums[i]);
@@ -333,7 +360,7 @@ void dfs(nums, id, path, res) {
 // deduplicate
 void dfs(nums, id, path, res) {
     for(int i = id; i < nums.size(); ++i) {
-        // obviouse, in the following case, the element is included in the previous stack frame
+        // obvious, in the following case, the element is included in the previous stack frame
         if(i > id && nums[i] == nums[i-1]) continue;
         path.push_back(nums[i]);
         dfs(nums, i+1, path, res);
@@ -554,7 +581,7 @@ void dfs(nums, id, path, res) {
 - `rand()` generates uniformly distributed int in the range `[0, RAND_MAX]`
 - `RAND_MAX` is library dependent, but usually equals to `32767`
 - `rand() % n` is not uniformly distributed, if the modulo is non-zero, i.e., `(RAND_MAX+1) % n != 0`
-- it introduces bias toward smaller numbers 
+- it introduces bias toward smaller numbers
 - the bias is larger if the range `n` is larger
 - to make it uniformly distributed
 

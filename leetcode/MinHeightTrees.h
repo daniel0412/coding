@@ -43,6 +43,7 @@ class MinHeightTrees {
                 q.push(p.first);
             }
         }
+        // stoping criteria
         while(n > 2) {
             int size = q.size();
             n -= size;
@@ -50,6 +51,7 @@ class MinHeightTrees {
                 int t = q.front();
                 q.pop();
                 for(auto i : m[t]) {
+                    // break parent/child cycle
                     m[i].erase(t);
                     if(m[i].size() == 1)
                         q.push(i);

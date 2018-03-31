@@ -28,102 +28,21 @@ class GraphValidTree {
     }
 
   private:
-    bool dfs(int n, const vector<pair<int, int> >& edges)
-    {
-        vector<bool> visited(n, false);
-        vector<vector<int> > graph(n, vector<int>());
-        for(const auto& p : edges) {
-            graph[p.first].push_back(p.second);
-            graph[p.second].push_back(p.first);
-        }
-        if(!dfsImpl(graph, 0, -1, visited))
-            return false;
-        for(auto b : visited) {
-            if(!b)
-                return false;
-        }
-        return true;
-    }
-    bool dfsImpl(const vector<vector<int> >& graph,
-                 int cur,
-                 int parent,
-                 vector<bool>& visited)
-    {
-        if(visited[cur])
-            return false;
-        visited[cur] = true;
-        for(auto c : graph[cur]) {
-            // make sure the same edge is only visited once
-            if(c != parent)
-                // if true, should continue search
-                if(!dfsImpl(graph, c, cur, visited))
-                    return false;
-        }
-        return true;
-    }
-
-    bool bfs(int n, const vector<pair<int, int> >& edges)
-    {
-        unordered_set<int> visited;
-        vector<unordered_set<int> > graph(n, unordered_set<int>());
-        for(const auto& p : edges) {
-            graph[p.first].insert(p.second);
-            graph[p.second].insert(p.first);
-        }
-        queue<int> q;
-        q.push(0);
-        visited.insert(0);
-        while(!q.empty()) {
-            int c = q.front();
-            q.pop();
-            for(auto d : graph[c]) {
-                if(visited.count(d))
-                    return false;
-                q.push(d);
-                visited.insert(d);
-                // make sure `c-d`/`d-c` connection are only visited once
-                graph[d].erase(c);
-            }
-        }
-        // check only one component exists
-        return visited.size() == n;
-    }
-
-    bool unionfind(int n, const vector<pair<int, int> >& edges)
-    {
-        vector<int> roots(n, -1);
-        for(const auto& p : edges) {
-            int root1 = findRoot(roots, p.first);
-            int root2 = findRoot(roots, p.second);
-            // make sure no cycle is formed
-            if(root1 == root2)
-                return false;
-            roots[root1] = root2;
-        }
-
-        // make sure only one connected component
-        return edges.size() + 1 = n;
-    }
-
-    int findRoot(vector<int>& roots, int i)
-    {
-        while(roots[i] != -1)
-            i = roots[i];
-        return i;
-    }
-
-
     // second time implementation
-    bool validTree(int n, vector<pair<int, int> >& edges)
+    bool dfs(int n, vector<pair<int, int> >& edges)
     {
         vector<bool> v(n, false);
         unordered_map<int, vector<int> > m;
+        // add for both directions
         for(const auto& e : edges) {
             m[e.first] = e.second;
             m[e.second] = e.first;
         }
-        if(!dfs(0, v, m, -1))
+        // check cycle
+        if(!dfs_core(0, v, m, -1))
             return false;
+
+        // check only one component
         for(auto vi : v) {
             if(!vi)
                 return false;
@@ -131,18 +50,19 @@ class GraphValidTree {
         return true;
     }
 
-    bool dfs(int i,
+    bool dfs_core(int i,
              vector<bool>& v,
              unordered_map<int, vector<int> >& m,
              int pre)
     {
+        // use pre to break parent/child cycle
         if(i == pre)
             return true;
         if(v[i])
             return false;
         for(auto id : m[i]) {
             v[id] = true;
-            if(!dfs(id, v, m i))
+            if(!dfs_core(id, v, m i))
                 return false;
         }
         return true;
@@ -156,6 +76,7 @@ class GraphValidTree {
             g[e.first].insert(e.second);
             g[e.second].insert(e.first);
         }
+        // start from a random node
         queue<int> q;
         q.push(0);
         while(!q.empty()) {
@@ -163,17 +84,20 @@ class GraphValidTree {
             q.pop();
             v.insert(id);
             for(auto i : g[id]) {
+                // check cycle
                 if(v.count(i))
                     return false;
                 q.push(i);
+                // from id, we accessed i, so remove id from i to break parent-child cycle
                 g[i].erase(id);
             }
         }
+        // check only one component
         return v.size() == n;
     }
 
     // union find
-    bool uf(int n, vector<pair<int, int> >& edges)
+    bool unionfind(int n, vector<pair<int, int> >& edges)
     {
         vector<int> p(n, 0);
         for(int i = 0; i < n; ++i)
