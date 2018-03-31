@@ -1,3 +1,7 @@
+# Leetcode Preparation
+- [Graph](#graph)
+- [Sampling](#sampling)
+
 ## Status
 | Icon      | Meaning           |
 | :---:     | :-----            |
@@ -474,15 +478,6 @@ void dfs(nums, id, path, res) {
  | Find K Pairs with Smallest Sum               | :sweat:    | heap idea                                                  |
  | Find Kth Smallest Pair Distance              | :sob:      | find dist boundary, and then binary search                 |
 
-## Bits Manipulation
- | Problems                   | Difficulty | Techniques                                                                  |
- | :------------------------- | :---:      | :----                                                                       |
- | Hamming Distance           | Easy       | clear right most left 1                                                     |
- | Total Hamming Distance     | :sweat:    | vertical 1s, combination                                                    |
- | Power of Two               | :v:        | only one non-zero bit, minus 1 check or rotate check                        |
- | Power of Three             | :eyes:     | logarithm `(log10(n)-log10(3))`, then check if it is integer                |
- | Power of Four              | :eyes:     | power of 2, and minus 1 dividable by 3, or the only bit on certain position |
-
 ## Iterator
   | Problems                     | Difficulty     | Techniques                                                |
   | :-------------------------   | :---:          | :----                                                     |
@@ -501,6 +496,7 @@ void dfs(nums, id, path, res) {
 
 
 ## Number Formulation
+
  | Problems                   | Difficulty     | Techniques                                               |
  | :------------------------- | :---:          | :----                                                    |
  | Remove K Digits            | :eyes: :sweat: | try to maintain increasing digits order                  |
@@ -508,6 +504,24 @@ void dfs(nums, id, path, res) {
  | Next Greater Element III   | :sweat:        | digits comp, think!!                                     |
  | Next Permutation           | :sweat:        | same with finding next greater number                    |
 
+## Math
+- `prime` number: a `natural number` greater than 1, and cannot be formed by multiplying two smaller natural number
+    - heuristic to check up to `sqrt(n)` + `Sieve of Eratosthenes` to filter
+- `composite` number: all `natural` numbers that are not 1 and not `prime` number
+- 1 is not a `prime` number, nor is it a `composite` number
+
+ | Problems                              | Difficulty | Techniques                                                          |
+ | :-------------------------            | :---:      | :----                                                               |
+ | get next prime/find all prime up to n | :sweat:    | 1. check multiplier to to sqrt(n); 2. exclude number multiple prime |
+
+## Bits Manipulation
+ | Problems                   | Difficulty | Techniques                                                                  |
+ | :------------------------- | :---:      | :----                                                                       |
+ | Hamming Distance           | Easy       | clear right most left 1                                                     |
+ | Total Hamming Distance     | :sweat:    | vertical 1s, combination                                                    |
+ | Power of Two               | :v:        | only one non-zero bit, minus 1 check or rotate check                        |
+ | Power of Three             | :eyes:     | logarithm `(log10(n)-log10(3))`, then check if it is integer                |
+ | Power of Four              | :eyes:     | power of 2, and minus 1 dividable by 3, or the only bit on certain position |
 
 ## Data Structure Design
  | Problems                                    | Difficulty | Techniques             |
