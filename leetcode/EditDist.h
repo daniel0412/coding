@@ -21,6 +21,7 @@ using namespace std;
 
 class EditDist {
   public:
+      // time complexity: O(m*n)
     int minDistance(string word1, string word2) {
         int n1 = word1.size(), n2 = word2.size();
         vector<vector<int>> dp(n1+1, vector<int>(n2+1, 0));
@@ -42,5 +43,22 @@ class EditDist {
         return dp[n1][n2];
     }
 
-  private:
-};
+    // return recursiveImpl(word1, word2, 0, 0);
+    int recursiveImpl(const string& w1, const string& w2, int i1, int i2)
+    {
+        if(i1 == w1.size())
+            return w2.size() - i2;
+        if(i2 == w2.size())
+            return w1.size() - i1;
+        if(w1[i1] == w2[i2])
+            return recursiveImpl(w1, w2, i1 + 1, i2 + 1);
+        return min(min(recursiveImpl(w1, w2, i1 + 1, i2),
+                       recursiveImpl(w1, w2, i1, i2 + 1)),
+                   recursiveImpl(w1, w2, i1 + 1, i2 + 1)) +
+            1;
+    }
+}
+
+private:
+}
+;

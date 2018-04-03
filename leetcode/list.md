@@ -1,5 +1,6 @@
 # Leetcode Preparation
 - [Backtracking](#backtracking)
+- [String](#string)
 - [Graph](#graph)
 - [Sampling](#sampling)
 
@@ -156,7 +157,7 @@
  | Binary Tree Level Order Traversal                      | Easy           |                                                             |                     |
  | LRU Cache                                              | :sob:          |                                                             |                     |
  | One Edit Distance                                      | :sweat:        | 3 cases, and combine for concise code                       | :v:                 |
- | Edit Distance                                          | :sob:          | 2-dim dp                                                    | :v:  :eyes:         |
+ | Edit Distance                                          | :sob:          | 2-dim dp / brute force timeout                              | :v:  :eyes:         |
  | Excel Sheet Column Title                               | Easy           | mod/division                                                | :v:                 |
  | The Skyline Problem                                    | :sob:          | start/end points/mulitset erase                             | :eyes: :v:          |
  | Maximal Square                                         | :sweat:        | dp/find len of sides                                        | :eyes: :v:          |
