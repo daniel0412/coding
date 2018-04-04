@@ -118,7 +118,6 @@
  | Roman to Integer                                       | Easy           | add then minus two if voliate                               | :v: :eyes:          |
  | Integer to Roman                                       | :sweat:        | find separating points, then all adding                     | :v: :eyes:          |
  | Integer to English Words                               | :sob:          | list all special cases + convert hundreds                   | :v: :eyes:          |
- | Multiply Strings                                       | :sweat:        | string addition/accumulate+reverse/quicker sol              | :v: :eyes:          |
  | Reverse String                                         | Easy           |                                                             | :v:                 |
  | Reverse StringII                                       | Easy           |                                                             | :v:                 |
  | Magical String                                         | :sweat:        | think about how to generate it                              | :eyes: :v:          |
@@ -539,6 +538,7 @@ void dfs(nums, id, path, res) {
  | Problems                              | Difficulty | Techniques                                                          |
  | :-------------------------            | :---:      | :----                                                               |
  | get next prime/find all prime up to n | :sweat:    | 1. check multiplier to to sqrt(n); 2. exclude number multiple prime |
+ | Multiply Strings                      | :sweat:    | reverse/quicker sol to add to the right bucket                      |
 
 ## Bits Manipulation
  | Problems                   | Difficulty | Techniques                                                                  |

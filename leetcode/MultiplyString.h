@@ -31,26 +31,32 @@ class MultiplyString {
             return num1.empty() ? num2 : num1;
         }
 
+        // reverse string to facilitate indexing
         reverse(num1.begin(), num1.end());
         reverse(num2.begin(), num2.end());
 
-        vector<int> res (num1.size() + num2.size(), 0);
-        for(size_t i1 = 0; i1 < num1.size(); ++i1) {
-            for(size_t i2 = 0; i2 < num2.size(); ++i2) {
+        // size of result should no larger than n1+n2
+        int n1 = num1.size(), n2 = num2.size();
+        vector<int> res (n1 + n2, 0);
+        for(size_t i1 = 0; i1 < n1; ++i1) {
+            for(size_t i2 = 0; i2 < n2; ++i2) {
+                // put into the right bucket
                 res[i1+i2] += (num1[i1]-'0') * (num2[i2]-'0');
             }
         }
+        // normalize each bucket to be within 0-9
         for(int i = 0; i < res.size(); ++i) {
             if(res[i]>=10) {
                 res[i+1] += res[i]/10;
                 res[i] %= 10;
             }
-            cout << res[i] << endl;
         }
+        // remove all the leading zeros
         int l = res.size() - 1;
         while(l >= 0 && res[l] == 0) {
             --l;
         }
+        // construct the prod string
         string prod;
         while(l >= 0) {
             prod.push_back(res[l--]+'0');
