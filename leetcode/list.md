@@ -36,8 +36,6 @@
  | Word Squares                                           | :sob:          | dfs/trie                                                | :warning: :lock:  |
  | Valid Word Square                                      | Easy           | brute force                                             | :lock:            |
  | Trapping Rain Water                                    | :sob:          |                                                         |                   |
- | LRU Cache                                              | :sob:          | double linked list/map                                  | :v: :eyes:        |
- | LFU Cache                                              | :sob:          | double linked list/map                                  | :v: :eyes:        |
  | Letter Combinations of a Phone Number                  | :sweat:        |                                                         |                   |
  | Longest Absolute File Path                             | :sweat:        | stack/two pointer                                       | :v:               |
  | Walls and Gates                                        | :sweat:        | dfs/bfs/reverse engineer                                | :v: :eyes: :lock: |
@@ -552,8 +550,12 @@ void dfs(nums, id, path, res) {
  | Power of Four              | :eyes:     | power of 2, and minus 1 dividable by 3, or the only bit on certain position |
 
 ## Data Structure Design
- | Problems                                    | Difficulty | Techniques             |
- | :-------------------------                  | :---:      | :----                  |
+- `std::list` is implemented as a `double linked list`, so `prev/next` operation is `O(1)`
+
+ | Problems                   | Difficulty | Techniques                   |
+ | :------------------------- | :---:      | :----                        |
+ | LRU Cache                  | :sob:      | double linked list/map  O(1) |
+ | LFU Cache                  | :sob:      | double linked list/map  O(1) |
 
 ## Island Problems
 - `pair<int,int>` comparison is defined in stl as `p1.first < p2.first || (!(p1.first > p2.first) && p1.second < p2.second)`

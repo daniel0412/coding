@@ -30,6 +30,9 @@ class Subsets {
     }
 
   private:
+    // T(n) = T(n-1) + T(n-2) + ... + T(0) => O(2^n)
+    // each call is O(n)
+    // so in total O(n*2^n)
     void helper(const vector<int>& nums,
                 int start,
                 vector<int>& path,

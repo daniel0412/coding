@@ -19,7 +19,7 @@
 #include <stack>
 #include <sstream>
 #include <iostream>
-#include <unordered_map>
+#include <unordered_iters>
 #include <unordered_set>
 #include <queue>
 #include <functional>
@@ -28,40 +28,53 @@ using namespace std;
 
 class LRUCache {
   public:
-    LRUCache(int capacity) : d_capacity(capacity) {}
+    LRUCache(int capacity) : d_maxCap(capacity) {}
 
     int get(int key)
     {
-        MAPTYPE::iterator iter = d_map.find(key);
-        if(iter == d_map.end())
+        // check if key can be found from cache
+        if(d_iters.count(key)) {
+            auto iter = d_iters[key];
+            // insert in the front of the list
+            d_list.emplace_front(iter->first, iter->second);
+            // erase the old one
+            d_list.erase(iter);
+            // update new location
+            d_iters[key] = d_list.begin();
+            return d_list.begin()->second;
+        }
+        else {
             return -1;
-        d_list.push_front(*(iter->second));
-        d_list.erase(iter->second);
-        d_map[key] = d_list.begin();
-        return d_map[key]->second;
+        }
     }
 
     void put(int key, int value)
     {
-        if(d_map.find(key) != d_map.end()) {
-            d_list.push_front(make_pair(key, value));
-            d_list.erase(d_map[key]);
-            d_map[key] = d_list.begin();
-            return;
+        // if found, and from get(), it already insert into the front
+        if(get(key) != -1) {
+            // just update the value
+            d_list.begin()->second = value;
         }
-        if(d_map.size() >= d_capacity) {
-            d_map.erase(d_list.rbegin()->first);
+        else {
+            // insert in the front
+            d_list.emplace_front(key, value);
+            d_iters[key] = d_list.begin();
+        }
+        // check capacity
+        if(d_iters.size() > d_maxCap) {
+            auto iter = d_list.rbegin();
+            // erase from location map
+            d_iters.erase(iter->first);
+            // erase from cache
             d_list.pop_back();
         }
-        d_list.push_front(make_pair(key, value));
-        d_map[key] = d_list.begin();
     }
 
 
   private:
-    typedef pair<int, int> NODE;
-    typedef unordered_map<int, list<NODE>::iterator> MAPTYPE;
-    MAPTYPE d_map;
+    // double linked list store <key, value> pairs
     list<pair<int, int> > d_list;
-    int d_capacity;
+    // map key-> iterator of where value is stored
+    unordered_iters<int, list<pair<int, int>>::iterator> d_iters;
+    int d_maxCap;
 };
