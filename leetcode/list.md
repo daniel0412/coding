@@ -48,7 +48,8 @@
  | Lonely Pixel II                                        | :sweat:        |                                                         | :eyes: :lock:     |
  | Moving Average From Data Stream                        | Easy           | queue                                                   | :lock:            |
  | Pow(x, n)                                              | :sweat:        |                                                         |                   |
- | Spiral Matrix                                          | :sweat:        |                                                         |                   |
+ | Spiral Matrix                                          | :sweat:        | rectange, take care of center line                      |                   |
+ | Spiral Matrix II                                       | :sweat:        | square, center element                                  |                   |
  | License Key Formatting                                 | :sweat:        | string operation                                        | :v:               |
  | Plus One                                               | Easy           |                                                         |                   |
  | Word Break II                                          | :sob:          | dp/back tracking/prunning                               | :v: :eyes:        |
