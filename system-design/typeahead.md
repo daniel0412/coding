@@ -38,7 +38,7 @@ convert keyword table to prefix table
 | don    | "don't havs", "donald"      |
 
 #### trie
-- trie in memory + serialized trie on disk
+- trie in memory + serialized trie (how?) on disk
     - faster than db: all in memory vs db miss
 - store word count at ending node, but it is too slow
     - top K will be exponential to traversal all nodes
@@ -57,7 +57,7 @@ convert keyword table to prefix table
 
 ### Data collection service db
 - where to store the data
-    - should be enough to just store the log file on hdfs
+    - big table (user, keyword, timestamp) how to store?
 - how often do you aggregate the data to update the tire?
     - realtime impractical: read/write qps ~ 200k, will slow down query
     - once per week: every week, fetch all the log file and aggregate
@@ -80,3 +80,4 @@ convert keyword table to prefix table
 - probablistic logging
     - too much log, and too slow to aggregate
     - log with 1/10,000 probability
+- hyperloglog (????)
