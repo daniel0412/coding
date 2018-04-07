@@ -9,7 +9,10 @@
 - Scale: how to scale? sharding/optimization corner cases
 
 ## Questions
+- [Typeahead System](#typeahead-system)
 - [Rate Limiter](#rate-limiter)
+
+### Typeahead System
 
 ### Rate Limiter
 Given `maxRate`, return if access permit can be obtained. [Ref](http://systemdesigns.blogspot.com/2015/12/rate-limiter.html)
