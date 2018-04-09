@@ -95,9 +95,9 @@ int main() {
 
 ### concepts
 - `join()`
-- 'detach()`
+- `detach()`
 
 ## Synchronization
-### Mutex
-### Condition Variable
-### Sepheremo
+### mutex
+### condition variable
+### sepheremo
