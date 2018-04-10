@@ -35,26 +35,28 @@ class BinaryTreeSerialization {
     // Decodes your encoded data to tree.
     TreeNode* deserialize(string data)
     {
-        if(data.empty())
-            return nullptr;
-        int startId = 0;
-        return helper(data, startId);
+        int curId= 0;
+        return deserializeImpl(data, curId);
     }
 
-   TreeNode* helper(const string& data, int& startId)
+    TreeNode* deserializeImpl(const string& data, int& curId)
     {
-        int endId = startId;
-        while(data[endId] != ',')
-            ++endId;
-        if(startId == endId) {
-            startId = endId + 1;
+        if(curId >= data.size())
+            return nullptr;
+
+        int prevId = curId;
+        while(data[curId] != ',')
+            ++curId;
+
+        if(curId == prevId) {
+            ++curId;
             return nullptr;
         }
-        int val = stoi(data.substr(startId, endId - startId));
+        int val = stoi(data.substr(curId, curId - prevId));
         TreeNode* root = new TreeNode(val);
-        startId = endId + 1;
-        root->left = helper(data, startId);
-        root->right = helper(data, startId);
+        ++curId;
+        root->left = deserializeImpl(data, curId);
+        root->right = deserializeImpl(data, curId);
         return root;
     }
 
@@ -62,8 +64,6 @@ class BinaryTreeSerialization {
    // iterative level by level serialization
     string serialize(TreeNode* root)
     {
-        if(root == nullptr)
-            return "";
         string res;
         queue<TreeNode*> q;
         q.push(root);
@@ -72,7 +72,6 @@ class BinaryTreeSerialization {
             q.pop();
             if(cur == nullptr) {
                 res += ",";
-                continue;
             }
             else {
                 res = res + to_string(cur->val) + ",";
@@ -89,8 +88,9 @@ class BinaryTreeSerialization {
         if(data.empty())
             return root;
         queue<TreeNode*> q;
-        int startId = 0;
-        root = getNextNode(data, startId);
+        int curId = 0;
+        // need to get first root node to start
+        root = getNextNode(data, curId);
         if(root == nullptr)
             return root;
         q.push(root);
@@ -99,8 +99,8 @@ class BinaryTreeSerialization {
             q.pop();
             if(cur == nullptr)
                 continue;
-            cur->left = getNextNode(data, startId);
-            cur->right = getNextNode(data, startId);
+            cur->left = getNextNode(data, curId);
+            cur->right = getNextNode(data, curId);
             if(cur->left)
                 q.push(cur->left);
             if(cur->right)
@@ -109,21 +109,23 @@ class BinaryTreeSerialization {
         return root;
     }
 
-    TreeNode* getNextNode(const string& data, int& startId)
+    TreeNode* getNextNode(const string& data, int& curId)
     {
-        if(startId >= data.size())
+        if(curId >= data.size())
             return nullptr;
-        int endId = startId;
-        while(data[endId] != ',')
-            ++endId;
-
-        if(endId == startId) {
-            ++startId;
+        int prevId = curId;
+        while(data[curId] != ',')
+            ++curId;
+        if(prevId == curId) {
+            ++curId;
             return nullptr;
         }
-        int val = stoi(data.substr(startId, endId - startId));
-        startId = endId + 1;
-        return new TreeNode(val);
+        else {
+            TreeNode* cur =
+                new TreeNode(stoi(data.substr(prevId, curId - prevId)));
+            ++curId;
+            return cur;
+        }
     }
 
   private:

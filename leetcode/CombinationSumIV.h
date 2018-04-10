@@ -24,9 +24,11 @@ class CombinationSumIV {
       int combinationSum4(vector<int>& nums, int target) {
           sort(nums.begin(), nums.end());
           vector<int> dp(target+1, 0);
+          // initialize as 1
           dp[0] = 1;
           for(int i = 1; i <= target; ++i) {
               for(auto v : nums) {
+                  // only greater, cannot equal
                   if(v > i) break;
                   dp[i] += dp[i-v];
               }

@@ -251,26 +251,29 @@
 
 
 ## Tree Basics
- | Problems                                    | Difficulty | Techniques                                           |
- | :-------------------------                  | :---:      | :----                                                |
- | Binary Tree PreOrder Travesal/Iterator      | :sweat:    | iterative/recursive                                  |
- | Binary Tree InOrder Travesal/Iterator       | :sweat:    | iterative/recursive                                  |
- | Binary Tree PostOrder Travesal/Iterator     | :sob:      | iterative/recursive                                  |
- | Binary Tree Serialization/Deserialization   | :sweat:    | preorder-recursion/level-order iteration             |
- | BST Serialization/Deserialization (compact) | :sweat:    | preorder-recursion with min/max threshold            |
- | Find Duplicate Subtrees                     | :sweat:    | serialize to deduplicate, make sure serialize once   |
- | Find Leaves of Binary Tree                  | :sweat:    | bottom up to count the height                        |
- | Binary Tree Maximum Path Sum                | :sob:      | how to calculate a path sum                          |
- | Path Sum I/II/III                           | :sweat:    | III needs more attention                             |
- | Sum of Root to Leave Number                 | :sweat:    | each deeper level, x10                               |
- | Binary Tree Paths                           | Easy       | dfs                                                  |
- | Maximum Binary Tree                         | :sweat:    | recursion/iterative (think this)                     |
- | Convert Sorted Array/List to BST            | :sweat:    | concise coding                                       |
- | Convert BST to Double Linked List           | :sweat:    | think about the recursion                            |
- | Closest Binary Search Tree Value            | Easy       | BST                                                  |
- | Closest Binary Search Tree Value II         | :sob:      | heap/BST                                             |
- | Binary Tree Longest Consecutive Sequence    | :sweat:    | top-down or bottom-up to count, and track max length |
- | Binary Tree Longest Consecutive Sequence II | :sweat:    | bottom-up to count left/right max inc/dec length     |
+- `k-ary` tree: each node has no more than `k` children
+
+ | Problems                                    | Difficulty | Techniques                                                              |
+ | :-------------------------                  | :---:      | :----                                                                   |
+ | Binary Tree PreOrder Travesal/Iterator      | :sweat:    | iterative/recursive                                                     |
+ | Binary Tree InOrder Travesal/Iterator       | :sweat:    | iterative/recursive                                                     |
+ | Binary Tree PostOrder Travesal/Iterator     | :sob:      | iterative/recursive                                                     |
+ | Binary Tree Serialization/Deserialization   | :sweat:    | preorder-recursion/level-order iteration                                |
+ | N-ary Tree Serialization/Deserialization    | :sweat:    | same as binary, need delim to identify number of children for each node |
+ | BST Serialization/Deserialization (compact) | :sweat:    | preorder-recursion with min/max threshold                               |
+ | Find Duplicate Subtrees                     | :sweat:    | serialize to deduplicate, make sure serialize once                      |
+ | Find Leaves of Binary Tree                  | :sweat:    | bottom up to count the height                                           |
+ | Binary Tree Maximum Path Sum                | :sob:      | how to calculate a path sum                                             |
+ | Path Sum I/II/III                           | :sweat:    | III needs more attention                                                |
+ | Sum of Root to Leave Number                 | :sweat:    | each deeper level, x10                                                  |
+ | Binary Tree Paths                           | Easy       | dfs                                                                     |
+ | Maximum Binary Tree                         | :sweat:    | recursion/iterative (think this)                                        |
+ | Convert Sorted Array/List to BST            | :sweat:    | concise coding                                                          |
+ | Convert BST to Double Linked List           | :sweat:    | think about the recursion                                               |
+ | Closest Binary Search Tree Value            | Easy       | BST                                                                     |
+ | Closest Binary Search Tree Value II         | :sob:      | heap/BST                                                                |
+ | Binary Tree Longest Consecutive Sequence    | :sweat:    | top-down or bottom-up to count, and track max length                    |
+ | Binary Tree Longest Consecutive Sequence II | :sweat:    | bottom-up to count left/right max inc/dec length                        |
 
 ## Graph
 ### Must-knows
