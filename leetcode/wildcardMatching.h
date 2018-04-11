@@ -27,104 +27,92 @@
 using namespace std;
 
 class WildcardMatching {
-   public:
-    bool isMatch(std::string s, std::string p) { return greedySecondWrite(s, p); }
-
-   private:
-    /**
-     * @brief: greedy implementation, pass the big data test
-     *
-     * @param s
-     * @param p
-     *
-     * @return
-     */
-    bool greedyImpl(const std::string& s, const std::string& p) {
-        int si = 0, pi = 0, sLen = s.length(), pLen = p.length();
-        int startSI = 0, matchPI = -1;
-
-        while (si < sLen) {
-            if (pi < pLen && (p[pi] == '?' || p[pi] == s[si])) {
-                ++si;
-                ++pi;
-            } else if (pi < pLen && p[pi] == '*') {
-                startSI = si;
-                matchPI = ++pi;
-            } else if (matchPI > -1) {
-                si = ++startSI;
-                pi = matchPI;
-            } else {
-                return false;
-            }
-        }
-        while (pi < pLen) {
-            if (p[pi++] != '*') return false;
-        }
-        return true;
+  public:
+    bool isMatch(std::string s, std::string p)
+    {
+        return greedy(s, p);
     }
 
-    bool greedySecondWrite(const std::string& s, const string& p)
+  private:
+    // exponential time complexity, timeout
+    bool recursive(string s, string p)
+    {
+        // check corner case, make sure both strings are not empty
+        if(p.empty())
+            return s.empty();
+        if(s.empty())
+            return p.find_first_not_of('*') == string::npos;
+
+        if(s.front() == p.front() || p.front() == '?') {
+            return recursive(s.substr(1), p.substr(1));
+        }
+        else if(p.front() == '*') {
+            return recursive(s, p.substr(1)) || recursive(s.substr(1), p);
+        }
+        else {
+            return false;
+        }
+    }
+
+    bool greedy(const std::string& s, const string& p)
     {
         int sLen = s.size(), pLen = p.size();
         int si = 0, pi = 0;
-        int sStartId = 0, pMatchedId = -1;
+        int sStartId = -1, pMatchedId = -1;
+        // here only use len of s as
         while(si < sLen) {
-            if(pi < pLen && (p[pi] == '?' || p[pi] ==  s[si])){
+            if(pi < pLen && (p[pi] == '?' || p[pi] == s[si])) {
                 ++si;
                 ++pi;
-            }else if(pi < pLen && p[pi] == '*') {
+            }
+            // when * met, assume s[si] not matched, ignore pi and check next char in p
+            else if(pi < pLen && p[pi] == '*') {
                 sStartId = si;
                 pMatchedId = ++pi;
-            }else if (pMatchedId > -1) {
+            }
+            // match failed: 1) current char does not match or 2) p ends earlier than s
+            // skip sStart, treat it as matched with *
+            else if(pMatchedId > -1) {
                 si = ++sStartId;
                 pi = pMatchedId;
-            }else {
+            }
+            else {
                 return false;
             }
         }
-        while(pi < pLen) {
-            if(p[pi++] != '*') return false;
-        }
+        // make sure extra chars in p are all *
+        if(pi < pLen) return p.substr(pi).find_first_not_of('*') == string::npos;
+        // if s and p exactly matches
         return true;
     }
 
-    /**
-     * @brief:  dp implementation, O(m*n) space complexity and O(m*n) time
-     *complexity
-     *          fails the big data test
-     *
-     * @param s
-     * @param p
-     *
-     * @return
-     */
-    bool dpImpl(const string& s, const string& p) {
-        int sLen = s.length(), pLen = p.length();
+    bool dpImpl(const string& s, const string& p)
+    {
+        int m = s.size(), n = p.size();
+        vector<vector<bool> > dp(m + 1, vector<bool>(n + 1, false));
+        // initialization: s empty, to match all p up to the first non-*
+        // p empty, s not empty, should be false
+        dp[0][0] = true;
+        for(int j = 1; j <= n; ++j) {
+            if(p[j - 1] != '*')
+                break;
+            dp[0][j] = true;
+        }
 
-        vector<vector<bool> > flags(sLen + 1, vector<bool>(pLen + 1, false));
-        for (int si = 0; si <= sLen; ++si) {
-            for (int pi = 0; pi <= pLen; ++pi) {
-                if (si == 0) {
-                    flags[0][pi] =
-                        (pi == 0 ? true : flags[0][pi - 1] && p[pi] == '*');
-                    continue;
+        //O(M*N)
+        for(int i = 1; i <= m; ++i) {
+            for(int j = 1; j <= n; ++j) {
+                if(p[j - 1] == '*') {
+                    dp[i][j] = dp[i][j - 1] || dp[i - 1][j];
                 }
-                if (pi == 0) {
-                    flags[si][0] = (si == 0 ? true : p[0] == '*');
-                    continue;
-                }
-
-                if (p[pi] == s[si] || p[pi] == '?') {
-                    flags[si][pi] = flags[si - 1][pi - 1];
-                    continue;
-                }
-
-                if (p[pi] == '*') {
-                    flags[si][pi] = flags[si - 1][pi] || flags[si][pi - 1];
-                    continue;
+                else {
+                    dp[i][j] = dp[i - 1][j - 1] &&
+                        (p[j - 1] == '?' || s[i - 1] == p[j - 1]);
                 }
             }
         }
-        return flags[sLen][pLen];
+        return dp[m][n];
     }
-};
+
+}
+;

@@ -24,25 +24,15 @@ using namespace std;
 
 class ValidWordSquare {
   public:
-    //bool validWordSquare(vector<string>& words)
-    //{
-        //for(int i = 0; i < words.size(); ++i) {
-            //for(int j = 0; j < words[i].size(); ++j) {
-                //if(j >= words.size() || i >= words[j].size() ||
-                   //words[i][j] != words[j][i]) {
-                    //return false;
-                //}
-            //}
-        //}
-        //return true;
-    //}
-
     bool validWordSquare(vector<string>& words)
     {
+        if(words.empty()) return true;
         if(words.size() != words[0].size())
             return false;
-        for(int i = 0; i < words.size(); ++i) {
-            for(int j = i + 1; j < words[i].size(); ++j) {
+        // have to validate all matrix, not upper/lower triangle
+        // since it might be triangle has more chars
+        for(size_t i = 0; i < words.size(); ++i) {
+            for(size_t j = 0; j < words[i].size(); ++j) {
                 if(j >= words.size() || i >= words[j].size() ||
                    words[i][j] != words[j][i])
                     return false;
@@ -53,3 +43,17 @@ class ValidWordSquare {
 
   private:
 };
+
+int main() {
+    vector<string> words;
+    words.emplace_back("abcde");
+    words.emplace_back("bgeh");
+    words.emplace_back("cei");
+    words.emplace_back("dh");
+    words.emplace_back("e");
+
+    ValidWordSquare sol;
+    cout << "valid: " << sol.validWordSquare(words) << endl;
+
+    return 0;
+}

@@ -34,9 +34,11 @@ class LargestRectangeInHistogram {
         heights.push_back(0);
 
         for(int i = 0; i < heights.size(); ++i) {
-            while(!s.empty() && heights[s.top()] >= heights[i]) {
+            while(!s.empty() && heights[s.top()] > heights[i]) {
                 int cur = s.top();
                 s.pop();
+		// if stack is empty, length is i
+		// if stack is not empty, choose the top of stack and + 1
                 res = max(res,
                           heights[cur] * (s.empty() ? i : (i - s.top() - 1)));
             }

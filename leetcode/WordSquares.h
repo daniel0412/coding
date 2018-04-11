@@ -163,3 +163,142 @@ class WordSquares {
 
     Trie d_trie;
 };
+
+struct TrieNode {
+    bool isWord;
+    vector<TrieNode*> next;
+    TrieNode() : isWord(false), next(26, nullptr) {}
+};
+
+class Trie {
+  public:
+    Trie() : root(nullptr) {}
+
+    void buildTrie(const vector<string>& words)
+    {
+        for(const auto& w : words) {
+            insertWord(w);
+        }
+    }
+
+    void getWordsWithPrefixNoLongerThanN(const string& prefix,
+                                         const size_t n,
+                                         vector<string>& res)
+    {
+        size_t cnt = 0;
+        TrieNode* cur = root;
+        for(const auto c : prefix) {
+            cur = cur->next[c - 'a'];
+            ++cnt;
+        }
+        if(cur->isWord)
+            res.emplace_back(prefix);
+        string path = prefix;
+        getWords(cur, path, n, res);
+    }
+
+    void printAllWordsInTrie() {
+        string path;
+        vector<string> res;
+        getAllWordsStartWith(root, path, res);
+        cout << "all words in trie: " << endl;
+        for(const auto& w : res) {
+            cout << w << "|";
+        }
+        cout << endl;
+    }
+
+  private:
+    void insertWrod(const string& w)
+    {
+        if(w.empty())
+            return;
+        TrieNode* cur = root;
+        if(cur == nullptr)
+            cur = new TrieNode();
+        for(const auto c : w) {
+            size_t id = c - 'a';
+            cur->next[id] = new TrieNode();
+            cur = cur->next[id];
+        }
+        cur->isWord = true;
+    }
+
+    void getAllWordsStartWith(TrieNode* cur, string& path, vector<string>& res)
+    {
+        for(size_t i = 0; i < cur->next.size(); ++i) {
+            if(cur->next[i]) {
+            path.emplace_back('a'+i);
+            if(cur->next[i]->isWord) res.emplace_back(path);
+            getAllWordsWithGivenRoot(cur->next[i], path, res);
+            path.pop_back();
+            }
+        }
+    }
+
+    void getWords(TrieNode* cur,
+                  string& path,
+                  const int n,
+                  vector<string>& res)
+    {
+        if(path.size() >= n)
+            return;
+        for(size_t i = 0; i < cur->next.size(); ++i) {
+            if(cur->next[i]) {
+                path.push_back('a' + i);
+                if(cur->next[i]->isWord)
+                    res.emplace_back(path);
+                getWords(cur->next[i], path, n, res);
+                path.pop_back();
+            }
+        }
+    }
+    TrieNode* root;
+};
+
+vector<vector<string>> wordSquares(vector<string>& words) {
+    Trie trie;
+    trie.buildTrie(words);
+    vector<vector<string>> res;
+    for(const auto& w : words) {
+        unordered_set<string> v;
+        vector<string> path;
+        path.emplace_back(w);
+        v.insert(w);
+        impl(v, path, res, trie);
+    }
+    return res;
+}
+
+void getPrefix(const vector<string>& path, string& prefix)
+{
+    size_t level = path.size();
+    for(size_t i = 0; i < min(level, path.back().size()); ++i) {
+        prefix.push_back(path[i][level]);
+    }
+}
+
+void impl(unordered_set<string>& v,
+          vector<string> path,
+          vector<vector<string> > res,
+          const Trie& trie)
+{
+    if(path.size() >= path.front().size()) {
+        res.emplace_back(path);
+        return;
+    }
+
+    string prefix;
+    getPrefix(path, prefix);
+    vector<string> res =
+        trie.getWordsWithPrefixNoLongerThanN(prefix, path.back().size());
+    if(res.empty())
+        return;
+    for(const auto& nextWord : res) {
+        if(v.count(nextWord)) continue;
+        v.insert(nextWord);
+        path.emplace_back(nextWord);
+        impl(v, path, res, trie);
+        path.pop_back();
+    }
+}

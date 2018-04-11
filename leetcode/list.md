@@ -1,6 +1,9 @@
 # Leetcode Preparation
+- [Stack](#stack)
 - [Backtracking](#backtracking)
+- [Dynamic Programming](#dynamic-programming)
 - [String](#string)
+- [Trie](#trie)
 - [Graph](#graph)
 - [Sampling](#sampling)
 
@@ -140,8 +143,6 @@
  | Add Bold Tags in String                                | :sweat: :eyes: | greedy to extend matched index, can also use merge interval |                     |
  | Encode/Decode Tiny Url                                 | :sweat:        | rand()/unordered_map                                        | :v: :eyes:          |
  | Simplify Path                                          | :sweat:        | last char not being '/' case                                | :v:                 |
- | Wildcard Matching                                      | :sob:          | greedy two pointer: mark * matchign start pos               | :v: :eyes:          |
- | Regular Expression Matching                            | :sob:          | hard&slow recursion/fast dp!!!                              | :v: :eyes:          |
  | Text Justification                                     | :sob:          | just deal with string corner case                           | :v:                 |
  | Implement Trie (Prefix Tree)                           | :sweat:        |                                                             | :v:                 |
  | Add and Search Word – Data structure design            | :sweat:        | followup with star sign                                     | :v:                 |
@@ -155,12 +156,8 @@
  | Binary Tree Level Order Traversal                      | Easy           |                                                             |                     |
  | LRU Cache                                              | :sob:          |                                                             |                     |
  | One Edit Distance                                      | :sweat:        | 3 cases, and combine for concise code                       | :v:                 |
- | Edit Distance                                          | :sob:          | 2-dim dp / brute force timeout                              | :v:  :eyes:         |
  | Excel Sheet Column Title                               | Easy           | mod/division                                                | :v:                 |
  | The Skyline Problem                                    | :sob:          | start/end points/mulitset erase                             | :eyes: :v:          |
- | Maximal Square                                         | :sweat:        | dp/find len of sides                                        | :eyes: :v:          |
- | Maximal Rectangle                                      | :sob:          | find width(histogram)/height                                | :eyes: :v:          |
- | Largest Rectangle in Histogram                         | :sob:          | stack idea important                                        | :eyes: :v:          |
  | Reverse Linked List                                    | Easy           |                                                             | :v:                 |
  | Lowest Common Ancestor of a Binary Tree                | :sweat:        | recursion                                                   | :v: :eyes:          |
  | Lowest Common Ancestor of a Binary Search Tree         | Easy           | use bst property                                            | :v:                 |
@@ -275,6 +272,9 @@
  | Binary Tree Longest Consecutive Sequence    | :sweat:    | top-down or bottom-up to count, and track max length                    |
  | Binary Tree Longest Consecutive Sequence II | :sweat:    | bottom-up to count left/right max inc/dec length                        |
 
+## Trie
+
+
 ## Graph
 ### Must-knows
 - traversal: bfs/dfs
@@ -379,17 +379,38 @@ void dfs(nums, id, path, res) {
  | Permutation                       | :sweat:     | 1) dfs with visited indication (different from subset) 2) swap recursion        |
  | Permutation II (with duplication) | :sweat:     | 1) dfs (with de-deuplication) 2) swap with deduplication                        |
  | Find Permutation                  | :sweat:     | inc order, than reverse des sequences                                           |
- | Beautiful Arrangement             | :sweat:     | permutations and validate 1) dfs backtracking and validate 2) swap and validate |
+ | Beautiful Arrangement             | :sweat:     | permutatione and validate 1) dfs backtracking and validate 2) swap and validate |
  | Beautiful ArrangementII           | :sweat:     | rather than dfs/swap, enumerate distinct diffs, and stop when k is reached      |
  | Combination Sum I/II/III          | :sweat:     | dfs+backtracing                                                                 |
  | Combination Sum IV                | :sweat:     | dp (different from I/II/III)                                                    |
  | Partition Equal Subset Sum        | :sweat:     | recursion timout, dp to the rescue                                              |
  | Partition to k Equal Sum Subset   | :sweat:     | dfs recursion                                                                   |
 
+## Stack
+- monotonic stack
+    - keep increasing order
+    - when decrease, calculate width
+    - push extra element to make sure stack is emptied in the end
 
-## Dynamic Programming/Greedy
+ | Problems                       | Difficulty | Techniques           |
+ | :-------------------------     | :---:      | :----                |
+ | Largest Rectangle in Histogram | :sob: :eyes:     | stack idea important |
+
+## Dynamic Programming
+- dp for two strings of size `m` and `n`
+    - recursive: exponential
+    - dp(m+1, n+1): initialize first row and col for dp vector, then find state transfer formula
+- dp for backpack problems
+
  | Problems                                             | Difficulty     | Techniques                                        |
  | :-------------------------                           | :---:          | :----                                             |
+ | Edit Distance                                        | :sob:          | 2-dim dp / recursion (timeout)                    |
+ | Wildcard Matching                                    | :sob:          | iterative with greedy; recursive (timeout); dp    |
+ | Regular Expression Matching                          | :sob:          | hard&slow recursion/fast dp!!!                    |
+ | Distince Subsequence                                 | :sob:          | dp                                                |
+
+ | Maximal Square                                       | :sweat:        | dp/find len of sides                              |
+ | Maximal Rectangle                                    | :sob:          | find width(histogram)/height                      |
  | Triangle                                             | :sweat:        | bottom up dp                                      |
  | Decode Ways                                          | :sweat:        | recursion(slow)/dp(cornor cases)                  |
  | Decode Ways II                                       | :sweat:        | with * decoded as 1-9                             |
