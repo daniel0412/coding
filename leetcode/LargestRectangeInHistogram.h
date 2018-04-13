@@ -37,8 +37,8 @@ class LargestRectangeInHistogram {
             while(!s.empty() && heights[s.top()] > heights[i]) {
                 int cur = s.top();
                 s.pop();
-		// if stack is empty, length is i
-		// if stack is not empty, choose the top of stack and + 1
+                // if stack is empty, length is i
+                // if stack is not empty, choose the top of stack and + 1
                 res = max(res,
                           heights[cur] * (s.empty() ? i : (i - s.top() - 1)));
             }
@@ -52,11 +52,15 @@ class LargestRectangeInHistogram {
         int res = 0;
 
         for(int i = 0; i < heights.size(); ++i) {
+            // treat current height as the height
             int h = heights[i];
+            // to calculate width by two directional expanding
             int w = 1;
+            // expand to the left with taller bars
             int j = i;
             while(--j >= 0 && heights[j] >= h)
                 ++w;
+            // expand to the right with taller bars
             j = i;
             while(++j < heights.size() && heights[j] >= h)
                 ++w;
@@ -65,15 +69,17 @@ class LargestRectangeInHistogram {
         return res;
     }
 
-    int onesideSearchTimeoutImpl(vector<int>& heights) {
+    int onesideSearchTimeoutImpl(vector<int>& heights)
+    {
         int res = 0;
         for(int i = 0; i < heights.size(); ++i) {
             int minH = heights[i];
             int j = i;
             while(j >= 0) {
                 minH = min(minH, heights[j]);
-                if(minH == 0) break;
-                res = max(res, minH * (i-j+1));
+                if(minH == 0)
+                    break;
+                res = max(res, minH * (i - j + 1));
                 --j;
             }
         }

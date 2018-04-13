@@ -23,31 +23,38 @@ class MaxSumOfRectangleNoGreaterThanK {
   public:
     int maxSumSubmatrix(vector<vector<int> >& matrix, int k)
     {
+        if(matrix.empty() || matrix[0].empty())
+            return 0;
         int m = matrix.size(), n = matrix[0].size();
-        int maxSum = numeric_limits<int>::min();
-
-        // loop over the stating col
-        for(int i = 0; i < n; ++i) {
-            vector<int> sum(m, 0);
-            // left->right sum
-            for(int j = i; j < n; ++j) {
-                // for up->down sum
-                for(int l = 0; l < m; ++l) {
-                    sum[l] += matrix[l][j];
+        int maxs = numeric_limits<int>::min();
+        // brute force for all possible rectangles
+        // fix left col, try all right cols
+        // move left col, try all right cols
+        for(int left = 0; left < n; ++left) {
+            // col vector, which ith element accumulate sum along the i-th row
+            vector<int> rowSums(m, 0);
+            for(int right = left; right < n; ++right) {
+                // accumulate sum
+                for(int i = 0; i < m; ++i) {
+                    rowSums[i] += matrix[i][right];
                 }
                 set<int> s;
+                // in case psum = k, needs 0 to insert this records
                 s.insert(0);
-                int curSum = 0;
-                for(const auto nn : sum) {
-                    curSum += nn;
-                    auto iter = s.lower_bound(curSum - k);
-                    if(iter != s.end())
-                        maxSum = max(maxSum, curSum - *iter);
-                    s.insert(curSum);
+                int psum = 0;
+                for(auto nn : rowSums) {
+                    psum += nn;
+                    // psum-x <= k is required => psum-k <= x
+                    auto iter = s.lower_bound(psum - k);
+                    if(iter != s.end()) {
+                        maxs = max(maxs, psum - *iter);
+                    }
+                    // insert presum, used for later range sum
+                    s.insert(psum);
                 }
             }
         }
-        return maxSum;
+        return maxs;
     }
 
   private:

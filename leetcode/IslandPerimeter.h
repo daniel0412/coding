@@ -27,8 +27,12 @@ class IslandPerimeter {
         int cnt = 0;
         for(int i = 0; i < m; ++i) {
             for(int j = 0; j < n; ++j) {
+                // all 1 cell, count all four edges
                 if(grid[i][j] == 1) {
                     cnt += 4;
+                    // remove edges between connected 1 cells
+                    // only consider up/left for each 1 cell
+                    // this way, no excessive count
                     if(i > 0 && grid[i - 1][j])
                         cnt -= 2;
                     if(j > 0 && grid[i][j - 1])

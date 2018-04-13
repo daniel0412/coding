@@ -56,7 +56,7 @@ class PalindromPartitionII {
     {
         int n = s.size();
         vector<vector<bool> > p(n, vector<bool>(n, false));
-        vector<int> cnt(n, numeric_limits<int>::max());
+        vector<int> cnt(n, 0);
         for(int i = 0; i < n; ++i)
             cnt[i] = i;
 
