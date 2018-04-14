@@ -1,6 +1,6 @@
 ## Questions
 
-#### How to define a priority queue as a class data member using a cusomized comparator
+#### Priority queue as a class data member using a cusomized comparator
 ```cpp
 class Test {
     auto f = [](const int a, const int b) {return a < b};
@@ -11,6 +11,37 @@ class Test {
 Issues:
 - data member f cannot be initialized inside class
 - if use a static variable above the class definition, still cannot pass compilation
+
+#### `unordered_map` with customized key
+- define `hash` function
+    - hash each data member
+    - combine into one hash value (good start is to use bit shift and XOR)
+- define `comparator` (to differentiate collision of diff keys)
+```cpp
+// `hash` is a templated struct, ways to declare and use hash functions
+hash<string> stringhash;
+auto inthash = hash<int>();
+
+// define hash function for the key
+struct KeyHasher {
+    size_t operator()(const Key& k) {
+        return ((hash<string>()(k.first) ^ (hash<string>()(k.second) << 1) ) >> 1) ^ (hash<int>()(k.third) << 1);
+    }
+};
+
+struct Key {
+    string first;
+    string second;
+    int third;
+    // define the comparator
+    bool operator==(const Key& k1) {
+        return first == k1.first && second == k1.second && third == k1.third;
+    }
+};
+
+// now we can use unordered_map for customized key
+unordered_map<Key, string, KeyHasher> m;
+```
 
 
 

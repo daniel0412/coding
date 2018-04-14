@@ -24,15 +24,17 @@ class NextGreaterElementII {
     vector<int> nextGreaterElements(vector<int>& nums)
     {
         if(nums.empty())
-            return nums;
+            return {};
         stack<int> s;
         vector<int> res(nums.size(), -1);
-        int i = 0;
-        int n = nums.size();
-        while(i < 2 * n - 1) {
-            int x = nums[i % n];
-            while(!s.empty() && nums[s.top()] < x) {
-                res[s.top()] = x;
+        size_t n = nums.size();
+        // since nums may include duplicates
+        // so stack is used to store index only, not the number value
+        //  2n-1 since no need to check for the last element
+        for(size_t i = 0; i < 2 * n - 1; ++i) {
+            int id = i % n;
+            while(!s.empty() && nums[s.top()] < nums[id]) {
+                res[s.top()] = nums[id];
                 s.pop();
             }
             // only need to find next greater element for the first n in cyclar
@@ -40,7 +42,6 @@ class NextGreaterElementII {
             if(i < n) {
                 s.push(i);
             }
-            ++i;
         }
         return res;
     }

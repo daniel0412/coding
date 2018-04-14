@@ -104,8 +104,6 @@
  | Verify Preorder Serialization of a Binary Tree         | :sweat:        | stack to squash subtree/use in and out degree           |                   |
  | Reconstruct Itinerary                                  | :sweat:        |                                                         |                   |
  | Design Phone Directory                                 | :sweat:        | keep track of recycled and used                         | :v:               |
- | Maximum Vacation Days                                  | :sob:          | dp                                                      |                   |
- | Predict The Winner                                     | :sweat:        | recursive + dp                                          |                   |
 
 ## Facebook(79)
  | Problems                                               | Difficulty     | Related Problems                                            | Status              |
@@ -202,8 +200,6 @@
  | Number of Boomerangs                        | Easy       | brute force                                             | :v:           |
  | Numbers Disappeared in Array                | Easy       | no extra space, use array itself, switch or mark        | :v:           |
  | First Missing Positive                      | :sob:      | use array itself and index to store value               | :v:           |
- | Next Greater Element I                      | Easy       | one loop to find all next greater element with stack    | :eyes: :v:    |
- | Next Greater Element II                     | :sweat:    | cycular array + stack                                   | :eyes: :v:    |
  | Next Closest Time                           | :sweat:    | ways to formulate next cloest time, min to hour         | :eyes:        |
  | Longest Word in Dictionary through Deleting | :sweat:    |                                                         | :v:           |
  | Relative Ranks                              | Easy       | customized sorting                                      | :v:           |
@@ -386,13 +382,15 @@ void dfs(nums, id, path, res) {
 
 ## Stack
 - monotonic stack
-    - keep increasing order
-    - when decrease, calculate width
+    - keep increasing/decreasing order
+    - when decrease/increase, calculate width/info needed, and pop accordingly
     - push extra element to make sure stack is emptied in the end
 
- | Problems                       | Difficulty   | Techniques           |
- | :-------------------------     | :---:        | :----                |
- | Largest Rectangle in Histogram | :sob: :eyes: | stack idea important |
+ | Problems                       | Difficulty    | Techniques                                             |
+ | :-------------------------     | :---:         | :----                                                  |
+ | Largest Rectangle in Histogram | :sob: :eyes:  | stack idea important                                   |
+ | Next Greater Element I         | :sweat: :eye: | one loop to find all next greater element with stack   |
+ | Next Greater Element II        | :sweat: :eye: | cycular array with duplicates + stack only store index |
 
 ## Dynamic Programming
 - dp for each to find state transfer formula
@@ -400,6 +398,8 @@ void dfs(nums, id, path, res) {
     - recursive: exponential
     - dp(m+1, n+1): initialize first row and col for dp vector, then find state transfer formula
 - dp for backpack problems
+- come up with recursive solution (with memorization), and then convert to dp
+- following the state transfer, record the previous state for the current state, we can get the optimal solution path
 
  | Problems                                             | Difficulty     | Techniques                                        |
  | :-------------------------                           | :---:          | :----                                             |
@@ -417,8 +417,9 @@ void dfs(nums, id, path, res) {
  | Best Time to Buy and Sell Stock III/IV               | :sob:          | local/global dp, sooo hard                        |
  | Best Time to Buy and Sell Stock with Cooldown        | :sweat:        |                                                   |
  | Best Time to Buy and Sell Stock with Transaction Fee | :sweat:        | current state depends on previous state sell/hold |
- | Guess Number Higher or Less                          | :sob:          | mini-max dp                                       |
- | Predict the Winner                                   | :sob:          | mini-max dp                                       |
+ | Predict the Winner                                   | :sob: :eyes:   | recursion/memorization/mini-max dp                |
+ | Guess Number Higher or Less                          | :sob: :eyes:   | recursion/memorization/mini-max dp                |
+ | Maximum Vacation Days                                | :sob: :eyes:   | dp to find the state transfer formula             |
  | Ones and Zeros                                       | :sob:          | dp                                                |
  | Coin Change                                          | :eyes: :sweat: | loop over all amount and then all coins           |
  | Coin Change II                                       | :eyes: :sweat: | loop over all coins, then all amount              |
@@ -661,3 +662,4 @@ int random(vector<int>& nums) {
  | Insert Delete GetRandom O(1)                | :sweat:        | combine map and vector |
  | Insert Delete GetRandom O(1) with duplicate | :sweat:        | combine map and set    |
  | Weighted Random Number                      | :eyes: :sweat: |                        |
+ | Get Random Point from rectangles            | :eyes: :sweat: |                        |

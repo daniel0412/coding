@@ -28,10 +28,13 @@ class NextGreaterElementI {
         vector<int> res;
         // loop over nums to find all next greater element
         for(auto d : nums) {
+            // pop out all elements that are smaller than d
+            // since their next greater element is already found
             while(!s.empty() && d > s.top()) {
                 m[s.top()] = d;
                 s.pop();
             }
+            // needs to push current d anyway, since its next greater element has to come after this
             s.push(d);
         }
         for(auto d : findNums) {
