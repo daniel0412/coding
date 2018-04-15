@@ -25,16 +25,16 @@ class RussianDollEnvelopes {
     int maxEnvelopes(vector<pair<int, int> >& envelopes)
     {
         // sort by first dim inc, if equal sort by second dim des
+        // so then first dim equals, only count once
         sort(envelopes.begin(),
              envelopes.end(),
              [](const pii& a, const pii& b) {
-                 return a.first < b.first ||
-                     (a.first == b.first && a.second > b.second);
+                 return a.first != b.first ? a.first < b.first :
+                                             a.second > b.second;
              });
 
         vector<int> res;
-        for(int i = 0; i < envelopes.size(); ++i) {
-            pii& e = envelopes[i];
+        for(const auto& e : envelopes) {
             auto iter = lower_bound(res.begin(), res.end(), e.second);
             if(iter == res.end()) {
                 res.push_back(e.second);

@@ -38,6 +38,7 @@ class ShortestDistFromAllBuildings {
                     int level = 1;
                     res = INT_MAX;
                     while(!q.empty()) {
+                        // use queue size to indicate if current level finishes
                         int size = q.size();
                         for(int k = 0; k < size; ++k) {
                             pair<int, int> p = q.front();
@@ -48,7 +49,7 @@ class ShortestDistFromAllBuildings {
                                 if(curi >= 0 && curj >= 0 && curi < m &&
                                    curj < n && grid[curi][curj] == visitVal) {
                                     --grid[curi][curj];  // indicate visited
-                                                         // buy x num of
+                                                         // by x num of
                                                          // buildings
                                     totalDist[curi][curj] += level;
                                     res = min(res, level);  // notice that this

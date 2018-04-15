@@ -52,66 +52,96 @@ class Maze2 {
                 vector<int>& destination)
     {
         if(maze.empty() || maze[0].empty())
-            return 0;
-        resetStates(maze.size(), maze[0].size());
-        dfs(maze, start[0], start[1], destination[0], destination[1], 0);
-        return d_steps;
+            return true;
+        vector<pair<int, int> > dirs = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+        // return bfs(
+        // maze, start[0], start[1], destination[0], destination[1], dirs);
+        vector<vector<int> > dists(
+            maze.size(),
+            vector<int>(maze[0].size(), numeric_limits<int>::max()));
+        dists[start[0]][start[1]] = 0;
+        return dfs(maze,
+                   start[0],
+                   start[1],
+                   destination[0],
+                   destination[1],
+                   dists,
+                   dirs);
     }
 
   private:
-    vector<pair<int, int> > d_directions;
-    int d_steps;
-
-    void resetStates(int numRows, int numCols)
+    int dfs(vector<vector<int> >& m,
+            int srcx,
+            int srcy,
+            int dstx,
+            int dsty,
+            vector<vector<int> >& dists,
+            const vector<pair<int, int> >& dirs)
     {
-        d_steps = -1;
-        d_directions.clear();
-        d_directions.emplace_back(make_pair(1, 0));
-        d_directions.emplace_back(make_pair(-1, 0));
-        d_directions.emplace_back(make_pair(0, 1));
-        d_directions.emplace_back(make_pair(0, -1));
+        for(const auto& d : dirs) {
+            int nextx = srcx, nexty = srcy;
+            int steps = dists[nextx][nexty];
+            while(nextx >= 0 && nexty >= 0 && nextx < m.size() &&
+                  nexty < m[0].size() && m[nextx][nexty] != 1) {
+                nextx += d.first;
+                nexty += d.second;
+                ++steps;
+            }
+            nextx -= d.first;
+            nexty -= d.second;
+            --steps;
+            if(dists[nextx][nexty] > steps) {
+                dists[nextx][nexty] = steps;
+                if(nextx != dstx || nexty != dsty) {
+                    dfs(m, nextx, nexty, dstx, dsty, dists, dirs);
+                }
+            }
+        }
+        return dists[dstx][dsty] == numeric_limits<int>::max() ?
+            -1 :
+            dists[dstx][dsty];
     }
 
-    void dfs(vector<vector<int> >& maze,
-             int startRow,
-             int startCol,
-             int destRow,
-             int destCol,
-             int steps)
+    int bfs(vector<vector<int> >& m,
+            int srcx,
+            int srcy,
+            int dstx,
+            int dsty,
+            const vector<pair<int, int> >& dirs)
     {
-        if(maze[startRow][startCol] == -1)
-            return;
-
-        if(d_steps > 0 && d_steps < steps)
-            return;
-        if(startRow == destRow && startCol == destCol) {
-            if(d_steps == -1)
-                d_steps = steps;
-            d_steps = min(d_steps, steps);
-            return;
-        }
-
-        for(auto p : d_directions) {
-            // import to know where to mark visited
-            maze[startRow][startCol] = -1;
-            int numSteps = -1;
-            int curRow = startRow;
-            int curCol = startCol;
-            while(curRow >= 0 && curRow < maze.size() && curCol >= 0 &&
-                  curCol < maze[0].size() && maze[curRow][curCol] != 1) {
-                curRow += p.first;
-                curCol += p.second;
-                ++numSteps;
+        queue<pair<int, int> > q;
+        q.emplace(srcx, srcy);
+        vector<vector<int> > dists(
+            m.size(), vector<int>(m[0].size(), numeric_limits<int>::max()));
+        dists[srcx][srcy] = 0;
+        while(!q.empty()) {
+            auto cur = q.front();
+            q.pop();
+            for(const auto& d : dirs) {
+                int steps = dists[cur.first][cur.second];
+                int nextx = cur.first, nexty = cur.second;
+                while(nextx >= 0 && nexty >= 0 && nextx < m.size() &&
+                      nexty < m[0].size() && m[nextx][nexty] != 1) {
+                    nextx += d.first;
+                    nexty += d.second;
+                    ++steps;
+                }
+                nextx -= d.first;
+                nexty -= d.second;
+                --steps;
+                if(dists[nextx][nexty] > steps) {
+                    dists[nextx][nexty] = steps;
+                    // only when next ancor is not the destination, we continue
+                    if(nextx != dstx || nexty != dsty) {
+                        q.emplace(nextx, nexty);
+                    }
+                }
             }
-            int stopRow = curRow - p.first;
-            int stopCol = curCol - p.second;
-            if(stopRow == startRow && stopCol == startCol) {
-                maze[startRow][startCol] = 0;
-                continue;
-            }
-            dfs(maze, stopRow, stopCol, destRow, destCol, steps + numSteps);
-            // important to know where to recover the mark
-            maze[startRow][startCol] = 0;
         }
+        return dists[dstx][dsty] == numeric_limits<int>::max() ?
+            -1 :
+            dists[dstx][dsty];
     }
+
+  private:
 };

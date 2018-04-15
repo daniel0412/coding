@@ -67,27 +67,29 @@ class DecodeString {
         return "";
     }
 
-    string dfs(const string& s, int& i, int cnt)
+    string dfs(const string& s, size_t& i)
     {
-        string res("");
-        int nextCnt = 1; // count for the next recursive []
+        string res;
         while(i < s.size()) {
+            // when see ']', should return recursive call
+            if(s[i] == ']') {
+                ++i;
+                return res;
+            }
+
+            // when see digit, indicating some recursive call needed
             if(isdigit(s[i])) {
                 int start = i;
                 while(i < s.size() && isdigit(s[i]))
                     ++i;
-                nextCnt = stoi(s.substr(start, i - start));
-            }
-            else if(s[i] == '[') {
-                res += dfs(s, ++i, nextCnt);
-            }
-            else if(s[i] == ']') {
+                int cnt = stoi(s.substr(start, i - start));
                 ++i;
-                string t = res;
-                while(--cnt > 0)
-                    res += t;
-                return res;
+                string tmpstr = dfs(s, i);
+                for(size_t k = 0; k < cnt; ++k) {
+                    res += tmpstr;
+                }
             }
+            // if is alpha chars, just append
             else {
                 res.push_back(s[i++]);
             }

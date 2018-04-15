@@ -3,6 +3,8 @@
 ## Basic Knowledge
 - [multi-threading](multithreading.md)
 - [database](database.md)
+- [hashing](hash.md)
+- [load-balancing](load-balance.md)
 
 ## General Principals
 ### Steps to Analyze (4S)
@@ -20,4 +22,7 @@
 - [News Feeds](newsfeeds.md)
 - [Web Crawler](crawler.md)
 - [Typeahead System](typeahead.md)
+- [Key Value Store](key-value-store.md)
+- [Point of Interest](poi.md)
 - [Rate Limiter](ratelimiter.md)
+- [Distributed Unique ID](distributed-unique-id.md)

@@ -23,6 +23,7 @@ class DeleteNodeInBST {
   public:
     TreeNode* deleteNode(TreeNode* root, int key)
     {
+        // dummy to avoid taken care of pre is nullptr case, i.e., key is the root
         TreeNode dummy(0);
         dummy.left = root;
         TreeNode* del = root;

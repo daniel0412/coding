@@ -5,6 +5,7 @@
 - [String](#string)
 - [Trie](#trie)
 - [Graph](#graph)
+- [Sweep Line](#sweep-line)
 - [Sampling](#sampling)
 
 ## Status
@@ -33,16 +34,11 @@
  | Count of Smaller Numbers After Self                    | :sob:          | binary search/lower bound                               | :v: :eyes:        |
  | Queue Reconstruction by Height                         | :sweat:        | idea: sort by height and then by order                  | :eyes:            |
  | Sequence Reconstruction                                | :sweat:        | record ele->id, and track prev ele idex from given seqs | :eyes:            |
- | Sort Transformed Array                                 | :sweat:        | two pointer from side to middle                         | :eyes: :v:        |
  | Populating Next Right Pointers in Each Node II         | :eyes: :sob:   | level order easy, const space hard                      |                   |
  | Populating Next Right Pointers in Each Node            | :eyes: :sweat: | see above, every level, track start, prev node          |                   |
  | Trapping Rain Water                                    | :sob:          |                                                         |                   |
  | Letter Combinations of a Phone Number                  | :sweat:        |                                                         |                   |
  | Longest Absolute File Path                             | :sweat:        | stack/two pointer                                       | :v:               |
- | Walls and Gates                                        | :sweat:        | dfs/bfs/reverse engineer                                | :v: :eyes: :lock: |
- | The Maze                                               | :sweat:        | dfs                                                     | :eyes: :lock:     |
- | The Maze II                                            | :sweat:        | dfs(mark/recover visited)                               | :eyes: :lock:     |
- | The Maze III                                           | :sob:          |                                                         |                   |
  | Bomb Enemy                                             | :sweat: :eyes: | matrix scan methods                                     |
  | 01 Matrix                                              | :sweat:        | dfs(TLE)/bfs/two pass idea(fastest)                     | :eyes: :v:        |
  | Lonely Pixel I                                         | :sweat:        | 2-D vector                                              | :lock:            |
@@ -61,7 +57,6 @@
  | Heaters                                                | Easy           | upper/lower bound                                       | :eyes: :v:        |
  | Fraction to Recurring Decimal                          | :sweat:        | hashmap/sstream/overflow                                | :v:               |
  | Word Search II                                         | :sob:          |                                                         |                   |
- | The Skyline Problem                                    | :sob:          |                                                         |                   |
  | Summary Ranges                                         | :sweat:        | stringstream/array/size_t                               | :v:               |
  | Missing Ranges                                         | :sweat:        | same as above                                           | :v:               |
  | Median of Two Sorted Arrays                            | :eyes::sob:    | find kth smallest, eliminate k/2 each binary search     | :v:        :eyes: |
@@ -77,9 +72,7 @@
  | Encode and Decode Strings                              | :sweat:        |                                                         |                   |
  | H-Index                                                | :sweat:        |                                                         |                   |
  | Logger Rater Limitter                                  | Easy           | map                                                     | :v:               |
- | Paint Fence                                            | Easy           |                                                         |                   |
- | Perfect Squares                                        | :sweat:        | dynamic programming from 1 to t                         |                   |
- | Perfect Rectangle                                      | :sob:          | find criteria to define perfect rectangle               | :eyes:            |
+ | Perfect Rectangle                                      | :sob: :eyes:   | criteria: area, and point points for perfect rectangle               | :eyes:            |
  | Wiggle Sort                                            | :sweat:        | equal sign, 1) sort then switch; 2) compare + switch    |                   |
  | Wiggle Sort II                                         | :sweat:        | no equal sign, 1) sort then pick; 2)                    |                   |
  | Flatten 2D Vector                                      | :sweat:        | track row, col index                                    | :v:               |
@@ -93,11 +86,9 @@
  | Max Consecutive Ones  II                               | :sweat:        | idea similar to sliding windwo, track loc of zeros      | :eyes: :v:        |
  | Longest Increasing Path in a Matrix                    | :sob:          | dfs + memorization to prun                              | :eyes: :v:        |
  | Smallest Rectangle Enclosing Black Pixels              | :sob:          | 1. brute force  2. four directions binary search idea   | :eyes: :lock:     |
- | Burst Balloons                                         | :sob:          |                                                         |                   |
  | Super Ugly Number                                      | :sweat:        |                                                         |                   |
  | Binary Tree Vertical Order Traversal                   | :sweat:        | tree traversal                                          | :lock:            |
  | Best Meeting Point                                     | :sweat:        | consider one dimensional case                           | :eyes: :v:        |
- | Shortest Distance from All Buildings                   | :sob:          | bfs, shortest dist + accessible from all buildings      | :eyes: :v:        |
  | Maximum Product of Word Lengths                        | :sweat:        |                                                         |                   |
  | Friend Cycle                                           | :sweat:        | union find (var to track count, when union reduce one)  | :eyes: :v:        |
  | Patching Array                                         | :sob:          | greedily expand [0, sum) range                          | :eyes: :v:        |
@@ -128,7 +119,6 @@
  | Remove Duplicates from Sorted Array II                 | :sweat:        | two pointer + condition                                     | :v:                 |
  | Remove Duplicate Letters                               | :sob:          | map/stack                                                   | :v: :eyes:          |
  | Merge Sorted Array                                     | Easy           | two pointer                                                 | :v:                 |
- | Merge k Sorted Lists                                   | :sob:          | min heap                                                    | :v:                 |
  | Product of Array Except Self                           | :sweat:        | left->right, then right->left                               | :v:                 |
  | Reverse Nodes in k-Group                               | :sob:          |                                                             |                     |
  | Implement strStr()                                     | Easy           |                                                             |                     |
@@ -146,26 +136,19 @@
  | Word Break                                             | :sweat:        | dp(fast)/recursion(timeout)                                 |                     |
  | Word Search                                            | :sweat:        | dfs                                                         | :v: :eyes:          |
  | Sum of Left Leaves                                     | Easy           | recursion/iterative                                         | :v: :eyes:          |
- | Validate Binary Search Tree                            | :sweat:        | track min/max for eachsubtree, beter than inorder traversal | :eyes:  :v:         |
- | Binary Tree Level Order Traversal                      | Easy           |                                                             |                     |
  | LRU Cache                                              | :sob:          |                                                             |                     |
  | One Edit Distance                                      | :sweat:        | 3 cases, and combine for concise code                       | :v:                 |
  | Excel Sheet Column Title                               | Easy           | mod/division                                                | :v:                 |
- | The Skyline Problem                                    | :sob:          | start/end points/mulitset erase                             | :eyes: :v:          |
  | Reverse Linked List                                    | Easy           |                                                             | :v:                 |
- | Lowest Common Ancestor of a Binary Tree                | :sweat:        | recursion                                                   | :v: :eyes:          |
- | Lowest Common Ancestor of a Binary Search Tree         | Easy           | use bst property                                            | :v:                 |
  | Meeting Rooms                                          | Easy           | easy/customized sorting lambda                              | :v:                 |
  | Meeting Rooms II                                       | :sweat:        | 1. greedy ideas using pq; 2. sweep line with two arrays     | :eyes: :v:          |
  | Maximum Length of Pair Chains                          | :sweat:        | sort by ending time then greedy                             | :eyes: :v:          |
  | Minimu Height Trees                                    | :sweat:        | bf timeout, use graph degree                                | :eyes: :v:          |
  | Diameter of Binary Tree                                | :sweat:        | what is needed to compute the path                          | :v:                 |
- | Paint House II                                         | :sob:          | dp->no dp storage needed                                    | :lock: :eyes:       |
  | H-Index                                                | :sweat:        |                                                             |                     |
  | H-Index II                                             | :sweat:        |                                                             |                     |
  | Find the Celebrity                                     | :sweat:        | a knows b, a is not candidate; otherwise a is candidate     | :eyes::lock:        |
  | First Bad Version                                      | Easy           |                                                             |                     |
- | Walls and Gates                                        | :sweat:        | start from gates see how far it goes                        | :v:                 |
  | Inorder Successor in BST                               | :sweat:        | BST property, track last larger node                        | :eyes: :lock:       |
  | Binary Tree Vertical Order Traversal                   | :sweat:        | map/inorder recursion/queue iteration                       | :eyes: :lock:       |
  | Increasing Triplet Subsequence                         | :sweat:        | think hard, tricky                                          | :v: :eyes:          |
@@ -176,7 +159,6 @@
 ## Other Leetcode
  | Problems                                    | Difficulty | Techniques                                              | Status        |
  | :-------------------------                  | :---:      | :----                                                   | :---:         |
- | Delete a Node in BST                        | :sweat:    | analyze 3 situations                                    | :eyes: :v:    |
  | Print Binary Tree                           | :sweat:    | find matrix size, then populate                         | :eyes: :v:    |
  | Find Mode in BST                            | :sweat:    | BST inorder is sorted                                   | :eyes: :v:    |
  | Add One Row to Tree                         | :sweat:    | recursion/iterative                                     | :v:           |
@@ -204,7 +186,6 @@
  | Longest Word in Dictionary through Deleting | :sweat:    |                                                         | :v:           |
  | Relative Ranks                              | Easy       | customized sorting                                      | :v:           |
  | Detect Capitals                             | Easy       |                                                         | :v:           |
- | Maximum Swap                                | :sweat:    | locate max after non-decreasing seq                     | :eyes: :v:    |
  | Flatten Binary Tree                         | :sweat:    | recursion, think about iterative                        | :eyes: :v:    |
  | Max Width of Binary Tree                    | :sweat:    | BFS with queue (which stores node and index)            | :eyes: :v:    |
  | Permuation in String                        | :sweat:    | ideas same as sliding window                            | :v:           |
@@ -228,8 +209,8 @@
  | Merge Intervals            | :sweat:      | customized sorting + max(end1, end2) when merge    |
  | Insert Interval            | :eyes: :sob: | find overlapped intervals first, remove and insert |
 
-## Linked Lists
 
+## Linked Lists
  | Problems                   | Difficulty | Techniques                |
  | :------------------------- | :---:      | :----                     |
  | Reverse Linked List        | Easy       | 1. iterative 2. recursive |
@@ -238,27 +219,33 @@
 ## Tree Basics
 - `k-ary` tree: each node has no more than `k` children
 
- | Problems                                    | Difficulty | Techniques                                                              |
- | :-------------------------                  | :---:      | :----                                                                   |
- | Binary Tree PreOrder Travesal/Iterator      | :sweat:    | iterative/recursive                                                     |
- | Binary Tree InOrder Travesal/Iterator       | :sweat:    | iterative/recursive                                                     |
- | Binary Tree PostOrder Travesal/Iterator     | :sob:      | iterative/recursive                                                     |
- | Binary Tree Serialization/Deserialization   | :sweat:    | preorder-recursion/level-order iteration                                |
- | N-ary Tree Serialization/Deserialization    | :sweat:    | same as binary, need delim to identify number of children for each node |
- | BST Serialization/Deserialization (compact) | :sweat:    | preorder-recursion with min/max threshold                               |
- | Find Duplicate Subtrees                     | :sweat:    | serialize to deduplicate, make sure serialize once                      |
- | Find Leaves of Binary Tree                  | :sweat:    | bottom up to count the height                                           |
- | Binary Tree Maximum Path Sum                | :sob:      | how to calculate a path sum                                             |
- | Path Sum I/II/III                           | :sweat:    | III needs more attention                                                |
- | Sum of Root to Leave Number                 | :sweat:    | each deeper level, x10                                                  |
- | Binary Tree Paths                           | Easy       | dfs                                                                     |
- | Maximum Binary Tree                         | :sweat:    | recursion/iterative (think this)                                        |
- | Convert Sorted Array/List to BST            | :sweat:    | concise coding                                                          |
- | Convert BST to Double Linked List           | :sweat:    | think about the recursion                                               |
- | Closest Binary Search Tree Value            | Easy       | BST                                                                     |
- | Closest Binary Search Tree Value II         | :sob:      | heap/BST                                                                |
- | Binary Tree Longest Consecutive Sequence    | :sweat:    | top-down or bottom-up to count, and track max length                    |
- | Binary Tree Longest Consecutive Sequence II | :sweat:    | bottom-up to count left/right max inc/dec length                        |
+ | Problems                                       | Difficulty     | Techniques                                                              |
+ | :-------------------------                     | :---:          | :----                                                                   |
+ | Validate Binary Search Tree                    | :sweat: :v:    | track min/max for eachsubtree, beter than inorder traversal             |
+ | Binary Tree Level Order Traversal I/II         | :v:            |                                                                         |
+ | Binary Tree PreOrder Travesal/Iterator         | :sweat:        | iterative/recursive                                                     |
+ | Binary Tree InOrder Travesal/Iterator          | :sweat:        | iterative/recursive                                                     |
+ | Binary Tree PostOrder Travesal/Iterator        | :sob:          | iterative/recursive                                                     |
+ | Lowest Common Ancestor of a Binary Tree        | :sweat: :v:    | recursion                                                               |
+ | Lowest Common Ancestor of a Binary Search Tree | :v:            | use bst property                                                        |
+ | Binary Tree Serialization/Deserialization      | :sweat:        | preorder-recursion/level-order iteration                                |
+ | N-ary Tree Serialization/Deserialization       | :sweat:        | same as binary, need delim to identify number of children for each node |
+ | BST Serialization/Deserialization (compact)    | :sweat:        | preorder-recursion with min/max threshold                               |
+ | Find Duplicate Subtrees                        | :sweat:        | serialize to deduplicate, make sure serialize once                      |
+ | Find Leaves of Binary Tree                     | :sweat:        | bottom up to count the height                                           |
+ | Binary Tree Maximum Path Sum                   | :sob:          | global var to track max                                                 |
+ | Path Sum I/II/III                              | :sweat:        | III needs more attention                                                |
+ | Sum of Root to Leave Number                    | :sweat:        | each deeper level, x10                                                  |
+ | Binary Tree Paths                              | Easy           | dfs                                                                     |
+ | Maximum Binary Tree                            | :sweat:        | recursion/iterative (think this)                                        |
+ | Convert Sorted Array/List to BST               | :sweat:        | concise coding                                                          |
+ | Convert BST to Double Linked List              | :sweat:        | think about the recursion                                               |
+ | Closest Binary Search Tree Value               | Easy           | BST                                                                     |
+ | Closest Binary Search Tree Value II            | :sob:          | heap/BST                                                                |
+ | Binary Tree Longest Consecutive Sequence       | :sweat:        | top-down or bottom-up to count, and track max length                    |
+ | Binary Tree Longest Consecutive Sequence II    | :sweat:        | bottom-up to count left/right max inc/dec length                        |
+ | Delete a Node in BST                           | :sweat: :eyes: | find key, then del, how? track parent, delNode                          |
+ | Delete Nodes from tree, return forests         | :sweat: :eyes: | post order                                                              |
 
 ## Trie
  | Problems                     | Difficulty | Techniques                                      |
@@ -301,11 +288,12 @@ classical problems
 
 #### classical problems
 - cycle dectection
-    - dfs/bfs
+    - dfs: top level for loop, in the loop do dfs, `vector<int>` to track visited no cycle, or in the path, if while in the path, got visited again, cycle detected
+    - bfs
 - topological sorting
     - dfs/bfs
 - all path from `src` to `dst`
-    - dfs (w/o caching/memorization) to rack path
+    - dfs (w/o caching/memorization) to track path
 - strongly connected components (SCC)
     - bfs with two passes, one for origial direction order, one for reversed direction order, starting from the same node
     - should start from degree 1 node, if there exists degree 0 node, it cannot be SCC
@@ -325,6 +313,7 @@ classical problems
  | Alien Dictionary                               | :eyes: :sob:   | order is DAG edges (topological sort)                                     |
  | (`directed`) All Path from Src to Target       | :sweat:        | dfs w/o memorization                                                      |
  | (`directed`) task with priority and dependency | :sweat:        | bfs with priority queue to break tie                                      |
+ | Graph Is Bipartite                             | :sweat:        | bfs starts with a random node                                             |
 
 ## Backtracking
 
@@ -380,8 +369,21 @@ void dfs(nums, id, path, res) {
  | Partition to k Equal Sum Subset   | :sweat:    | dfs recursion                                                                   |
  | Palindrom Partition               | :sweat:    |                                                                                 |
 
+## Traversal
+- dfs
+- bfs
+    - suitable for distance
+
+ | Problems                             | Difficulty   | Techniques                                                     |
+ | :-------------------------           | :---:        | :----                                                          |
+ | The Maze                             | :sweat:      | dfs/bfs similar                                                |
+ | The Maze II                          | :sweat:      | dfs/bfs similar, has to try all paths                          |
+ | The Maze III                         | :sob:        | keep track of path                                             |
+ | Walls and Gates                      | :sweat:      | start from gates see how far it goes                           |
+ | Shortest Distance from All Buildings | :sob: :eyes: | bfs from building to sum up dist, validate from all in the end |
+
 ## Stack
-- monotonic stack
+- monotonic stack (idea, can be a vector)
     - keep increasing/decreasing order
     - when decrease/increase, calculate width/info needed, and pop accordingly
     - push extra element to make sure stack is emptied in the end
@@ -392,59 +394,105 @@ void dfs(nums, id, path, res) {
  | Next Greater Element I         | :sweat: :eye: | one loop to find all next greater element with stack   |
  | Next Greater Element II        | :sweat: :eye: | cycular array with duplicates + stack only store index |
 
+## Number Formulation
+
+ | Problems                   | Difficulty     | Techniques                                                                       |
+ | :------------------------- | :---:          | :----                                                                            |
+ | Maximum Swap               | :sweat:        | locate the last max char after non-decreasing seq                                |
+ | Remove K Digits            | :eyes: :sweat: | try to maintain increasing digits order                                          |
+ | Create Maximum Number      | :eyes: :sob:   | choose i digits from one array, merge (when two digits equal), vector comparison |
+ | Next Greater Element III   | :sweat:        | digits comp, think!!                                                             |
+ | Next Permutation           | :sweat:        | same with finding next greater number                                            |
+
+## Top K Problem
+- use `heap` (check how to declare `priority_queue`)
+
+ | Problems                   | Difficulty | Techniques               |
+ | :------------------------- | :---:      | :----                    |
+ | Merge k Sorted Lists       | :v:        | min heap with dummy node |
+
+
 ## Dynamic Programming
 - dp for each to find state transfer formula
+    - for each `n`, it has limited `k` states, can enumerate all possible states `dp[n][k]`, e.g., paint house
 - dp for two strings (match) of size `m` and `n`
     - recursive: exponential
     - dp(m+1, n+1): initialize first row and col for dp vector, then find state transfer formula
 - dp for backpack problems
 - come up with recursive solution (with memorization), and then convert to dp
 - following the state transfer, record the previous state for the current state, we can get the optimal solution path
+- minmax idea
 
- | Problems                                             | Difficulty     | Techniques                                        |
- | :-------------------------                           | :---:          | :----                                             |
- | Edit Distance                                        | :sob:          | 2-dim dp / recursion (timeout)                    |
- | Wildcard Matching                                    | :sob:          | iterative with greedy; recursive (timeout); dp    |
- | Regular Expression Matching                          | :sob:          | hard&slow recursion/fast dp!!!                    |
- | Distince Subsequence                                 | :sob:          | dp                                                |
- | Palindrom Partition II                               | :sob: :eyes:   | 1. dp 2. two-sided extending                      |
- | Maximal Square                                       | :sweat:        | dp/find len of sides                              |
- | Maximal Rectangle                                    | :sob:          | find width(histogram)/height                      |
- | Triangle                                             | :sweat:        | bottom up dp                                      |
- | Decode Ways                                          | :sweat:        | recursion(slow)/dp(cornor cases)                  |
- | Decode Ways II                                       | :sweat:        | with * decoded as 1-9                             |
- | Best Time to Buy and Sell Stock I/II                 | Easy           | greedy                                            |
- | Best Time to Buy and Sell Stock III/IV               | :sob:          | local/global dp, sooo hard                        |
- | Best Time to Buy and Sell Stock with Cooldown        | :sweat:        |                                                   |
- | Best Time to Buy and Sell Stock with Transaction Fee | :sweat:        | current state depends on previous state sell/hold |
- | Predict the Winner                                   | :sob: :eyes:   | recursion/memorization/mini-max dp                |
- | Guess Number Higher or Less                          | :sob: :eyes:   | recursion/memorization/mini-max dp                |
- | Maximum Vacation Days                                | :sob: :eyes:   | dp to find the state transfer formula             |
- | Ones and Zeros                                       | :sob:          | dp                                                |
- | Coin Change                                          | :eyes: :sweat: | loop over all amount and then all coins           |
- | Coin Change II                                       | :eyes: :sweat: | loop over all coins, then all amount              |
- | Coin Path                                            | :eyes: :sob:   | dp, and reconstruct path                          |
- | Gas Station                                          | :sweat: :eyes: |                                                   |
+```cpp
+// template
+// winner: dp[i][j] = max(nums[i] - dp[i+1][r], nums[i] - dp[i][j-1])
+// guess number: dp[i][j] = min(dp[i][j], cost(k) + max(dp[i][k-1], dp[k+1][j])) for k in [i,j]
+// burst ballon: dp[i][j] = max(dp[i][j], dp[i][k-1]+dp[k+1][j]+nums[i-1]*nums[k]*nums[j+1]) for k in [i, j]
+for(int l = n; l >= 1; --l) {
+    for(int r = l; r <= n; ++r) {
+        for(int k = l; k <= r; ++k) {
+            dp[l][r] = max(dp[l][r],
+                            dp[l][k - 1] + dp[k + 1][r] +
+                                v[l - 1] * v[r + 1] * v[k]);
+        }
+    }
+}
+```
+
+ | Problems                                             | Difficulty     | Techniques                                                    |
+ | :-------------------------                           | :---:          | :----                                                         |
+ | Edit Distance                                        | :sob:          | 2-dim dp / recursion (timeout)                                |
+ | Wildcard Matching                                    | :sob:          | iterative with greedy; recursive (timeout); dp                |
+ | Regular Expression Matching                          | :sob:          | hard&slow recursion/fast dp!!!                                |
+ | Distince Subsequence                                 | :sob:          | dp                                                            |
+ | Palindrom Partition II                               | :sob: :eyes:   | 1. dp 2. two-sided extending                                  |
+ | Encode String With Shortest Length                   | :sob: :eyes:   | idea                                                          |
+ | Maximal Square                                       | :sweat:        | dp/find len of sides                                          |
+ | Maximal Rectangle                                    | :sob:          | find width(histogram)/height                                  |
+ | Longest Increasing Subsequence                       | :sweat:        | 1. dp O(n^2) 2. greedy, only replace with becomes small       |
+ | Russian Doll Envelopes                               | :sob: :eyes:   | sort by first dim, and then find LIS                          |
+ | Russian Doll Envelopes 3D                            | :sob: :eyes:   | sort 1 dim, and then use dp for rest two dim                  |
+ | Triangle                                             | :sweat:        | bottom up dp                                                  |
+ | Decode Ways                                          | :sweat:        | recursion(slow)/dp(cornor cases)                              |
+ | Decode Ways II                                       | :sweat:        | with * decoded as 1-9                                         |
+ | Paint Fence                                          | :eyes:         | idea tricker                                                  |  |
+ | Paint House (2 colors)                               | :sob: :eyes:   |                                                               |
+ | Paint House II (k colors)                            | :sob: :eyes:   | dp->no dp storage needed                                      |
+ | Burst Balloons                                       | :sob: :eyes:   | recursion timeout; dp tricky: consider k as the last to burst |
+ | Best Time to Buy and Sell Stock I/II                 | Easy           | greedy                                                        |
+ | Best Time to Buy and Sell Stock III/IV               | :sob:          | local/global dp, sooo hard                                    |
+ | Best Time to Buy and Sell Stock with Cooldown        | :sweat:        |                                                               |
+ | Best Time to Buy and Sell Stock with Transaction Fee | :sweat:        | current state depends on previous state sell/hold             |
+ | Predict the Winner                                   | :sob: :eyes:   | recursion/memorization/mini-max dp                            |
+ | Guess Number Higher or Less                          | :sob: :eyes:   | recursion/memorization/mini-max dp                            |
+ | Guess Secret Word (google question)                  | :sweat: :eyes: | min-max to choose the starting word                           |
+ | Maximum Vacation Days                                | :sob: :eyes:   | dp to find the state transfer formula                         |
+ | Perfect Squares                                      | :sweat:        | dynamic programming from 1 to t                               |  |
+ | Ones and Zeros                                       | :sob:          | dp                                                            |
+ | Coin Change                                          | :eyes: :sweat: | loop over all amount and then all coins                       |
+ | Coin Change II                                       | :eyes: :sweat: | loop over all coins, then all amount                          |
+ | Coin Path                                            | :eyes: :sob:   | dp, and reconstruct path                                      |
+ | Gas Station                                          | :sweat: :eyes: |                                                               |
 
 ## String
- | Problems                                               | Difficulty  | Techniques                                                    |
- | :-------------------------                             | :---:       | :----                                                         |
- | Valid Anagrams                                         | Easy        | sort/map                                                      |
- | Group Anagrams                                         | :sweat:      | hash map/sort string                                          |
- | Find All Anagrams in String                            | Easy        | sliding window template + map to track count                  |
- | Minimum Window Substring                               | :eyes: :sob: | sliding window template + map/count to track                  |
- | Minimum Window Subsequence                             | :eyes: :sob: | diff from above, keep order, bruteforce, dp                   |
- | Longest subsring without repeating chars               | :sweat:      | sliding window template + map to index                        |
- | Longest Substring with At Most K Distinct Characters   | :sob:        | sliding window template + map to rightmost index              |
- | Valid Parentheses                                      | Easy        | stack/non-stack counter solution                              |
- | Generate Parentheses                                   | :sweat:      | dfs to print parenthsis                                       |
- | Remove Invalid Parentheses                             | :sob:        | count num to remove, then dfs                                 |
- | Remove Invalid Parentheses (return one valid solution) | :sob:        | 1.two loops 2. one loop                                       |
- | Different Ways to add parentheses                      | :sweat:      | divide and conqure                                            |
- | Expression Add Operators                               | :sob:        | get first val, then (op, val) pair dfs                        |
- | Longest Uncommon Subsequence I                         | Easy        |                                                               |
- | Longest Uncommon Subsequence II                        | :sweat:      | utility function to check sub sequence                        |
- | Delete Operation for Two Strings                       | :sweat:      | longest common subsequence problem, diff from LIS             |
+ | Problems                                               | Difficulty   | Techniques                                        |
+ | :-------------------------                             | :---:        | :----                                             |
+ | Valid Anagrams                                         | Easy         | sort/map                                          |
+ | Group Anagrams                                         | :sweat:      | hash map/sort string                              |
+ | Find All Anagrams in String                            | Easy         | sliding window template + map to track count      |
+ | Minimum Window Substring                               | :eyes: :sob: | sliding window template + map/count to track      |
+ | Minimum Window Subsequence                             | :eyes: :sob: | diff from above, keep order, bruteforce, dp       |
+ | Longest subsring without repeating chars               | :sweat:      | sliding window template + map to index            |
+ | Longest Substring with At Most K Distinct Characters   | :sob:        | sliding window template + map to rightmost index  |
+ | Valid Parentheses                                      | Easy         | stack/non-stack counter solution                  |
+ | Generate Parentheses                                   | :sweat:      | dfs to print parenthsis                           |
+ | Remove Invalid Parentheses                             | :sob:        | count num to remove, then dfs                     |
+ | Remove Invalid Parentheses (return one valid solution) | :sob:        | 1.two loops 2. one loop                           |
+ | Different Ways to add parentheses                      | :sweat:      | divide and conqure                                |
+ | Expression Add Operators                               | :sob:        | get first val, then (op, val) pair dfs            |
+ | Longest Uncommon Subsequence I                         | Easy         |                                                   |
+ | Longest Uncommon Subsequence II                        | :sweat:      | utility function to check sub sequence            |
+ | Delete Operation for Two Strings                       | :sweat:      | longest common subsequence problem, diff from LIS |
 
 ## Recursion
 - easy to identify recursive subproblems
@@ -476,47 +524,46 @@ void dfs(nums, id, path, res) {
 
 
 ## Array
- | Problems                                   | Difficulty     | Techniques                                                          |
- | :-------------------------                 | :---:          | :----                                                               |
- | Sparse Vector Multiplication               | :sweat:        | pair store, 1. two pointer 2. binary search 3. divide & conqure     |
- | Sparse Matrix Multiplication               | :sweat:        | avoid multiplication when possible                                  |
- | Rotate Array                               | Easy           | think at lease 3 ways                                               |
- | Search in Rotated Sorted Array             | :sweat:        | decide which part is sorted, then choose direction                  |
- | Search in Rotated Sorted Array II          | :sweat:        | only start/end equal affects it, how to break this                  |
- | Find Min in Rotated Sorted Array           | :sweat:        | early stop if sorted                                                |
- | Find Min in Rotated Sorted Array II        | :sweat:        | how to break start/mid/end are equal                                |
- | Sort Colors                                | :sweat:        | two pointer/two side to middle                                      |
- | Contiguous Array                           | :sweat:        | hash map/presum idea/store mod                                      |
- | Two Sum                                    | Easy           | hashmap/two pointer                                                 |
- | Two Sum II – Input array is sorted         | Easy           | two pointer to squeeze                                              |
- | Two Sum III – Data structure design        | Easy           | hashmap/multiset                                                    |
- | Two Sum in BST                             | Easy           | inorder to form sorted array, two pointer                           |
- | 3Sum                                       | :sweat:        | two pointer/de-duplicate                                            |
- | 3Sum Closest                               | :sweat:        | two pointer/de-dupicate                                             |
- | 3Sum Smaller                               | :sweat:        | two pointer                                                         |
- | Target Sum                                 | :sweat:        | 1. recursion 2. dp to cache                                         |
- | Continuous Subarray Sum                    | :sweat:        | hash map/(a-c)%b==0/cornercase                                      |
- | Maximum Subarray                           | :v:            | dp/think about divide & conqure                                     |
- | Maximum Subrectangle Sum                   | :eyes: :sob:   | 2d maximum subarray, how to convert to 1d problems                  |
- | Max Sum of Rectangle No Greater Thank K    | :eyes: :sob:   | idea: max sum of sub rectangle + lower bound  of diff               |
- | Maximum Averate Subarray                   | Easy           | equals to find maximum sum of fixed size                            |
- | Maximum Averate Subarray II                | :eyes: :sob:   | binary search in solution space + O(n) existence check              |
- | Maximum Sum of 3 Non-overlapping Subarrays | :eyes: :sob:   | presum, fix middle subarray, dp to cache left/right max             |
- | Minimum Size Subarray Sum                  | :sweat:        | two pointer find range, then reduce range, analyze why O(n)         |
- | Maximum Size Subarray Sum Equals k         | :sweat:        | hash map/idea                                                       |
- | Subarray Sum Equals k                      | :sweat:        | hash map/idea, initialization issue                                 |
- | Subarray Prod Less Than k                  | :sweat:        | idea                                                                |
- | Shortest Unsorted Continuous Subarray      | :eyes:  Easy   | find the disordered index boundary                                  |
- | Split Array into Consecutive Sequence      | :eyes: :sweat: | array sorted, greedy idea                                           |
- | Longest Consecutive Sequence               | :sob:          | think differently  (linear solution)                                |
- | Longest Continuous Increasing Subsequence  | Easy           | basic array operation                                               |
- | Longest Increasing Subsequence             | :eyes: :sweat: | 1. dp O(n^2) 2. put/replace the constructed array using lower bound |
- | Number of Longest Increasing Subsequence   | :eyes: :sweat: | dp to record maxlen up to i, another vec to record count            |
- | Non-decreasing Array                       | :eyes: Easy    | find patterns to modify the number depends on three numbers         |
- | Russian Doll Envelopes                     | :sob:          | sort by first dim, and then find LIS                                |
- | Maximum Product of Three Numbers           | :v:            | sort and  not sort solution                                         |
- | Majority Element                           | :v:            | cancel out                                                          |
- | Majority Element II                        | :eyes: :sweat: | extend to n/k case                                                  |
+ | Problems                                   | Difficulty     | Techniques                                                                              |
+ | :-------------------------                 | :---:          | :----                                                                                   |
+ | Sparse Vector Multiplication               | :sweat:        | pair store, 1. two pointer 2. binary search 3. divide & conqure                         |
+ | Sparse Matrix Multiplication               | :sweat:        | avoid multiplication when possible                                                      |
+ | Rotate Array                               | Easy           | think at lease 3 ways                                                                   |
+ | Search in Rotated Sorted Array             | :sweat:        | decide which part is sorted, then choose direction                                      |
+ | Search in Rotated Sorted Array II          | :sweat:        | only start/end equal affects it, how to break this                                      |
+ | Find Min in Rotated Sorted Array           | :sweat:        | early stop if sorted                                                                    |
+ | Find Min in Rotated Sorted Array II        | :sweat:        | how to break start/mid/end are equal                                                    |
+ | Sort Colors                                | :sweat:        | two pointer/two side to middle                                                          |
+ | Contiguous Array                           | :sweat:        | hash map/presum idea/store mod                                                          |
+ | Two Sum                                    | Easy           | hashmap/two pointer                                                                     |
+ | Two Sum II – Input array is sorted         | Easy           | two pointer to squeeze                                                                  |
+ | Two Sum III – Data structure design        | Easy           | hashmap/multiset                                                                        |
+ | Two Sum in BST                             | Easy           | inorder to form sorted array, two pointer                                               |
+ | 3Sum                                       | :sweat:        | two pointer/de-duplicate                                                                |
+ | 3Sum Closest                               | :sweat:        | two pointer/de-dupicate                                                                 |
+ | 3Sum Smaller                               | :sweat:        | two pointer                                                                             |
+ | Target Sum                                 | :sweat:        | 1. recursion 2. dp to cache                                                             |
+ | Continuous Subarray Sum                    | :sweat:        | hash map/(a-c)%b==0/cornercase                                                          |
+ | Maximum Subarray                           | :v:            | dp/think about divide & conqure                                                         |
+ | Maximum Subrectangle Sum                   | :eyes: :sob:   | 2d maximum subarray, how to convert to 1d problems                                      |
+ | Max Sum of Rectangle No Greater Than K     | :eyes: :sob:   | idea: max sum of sub rectangle + lower bound  of diff                                   |
+ | Maximum Averate Subarray                   | Easy           | equals to find maximum sum of fixed size                                                |
+ | Maximum Averate Subarray II                | :eyes: :sob:   | binary search in solution space + O(n) existence check                                  |
+ | Maximum Sum of 3 Non-overlapping Subarrays | :eyes: :sob:   | presum, fix middle subarray, dp to cache left/right max                                 |
+ | Minimum Size Subarray Sum                  | :sweat:        | two pointer find range, then reduce range, analyze why O(n)                             |
+ | Maximum Size Subarray Sum Equals k         | :sweat:        | hash map/idea                                                                           |
+ | Subarray Sum Equals k                      | :sweat:        | hash map/idea, initialization issue                                                     |
+ | Subarray Prod Less Than k                  | :sweat:        | idea                                                                                    |
+ | Shortest Unsorted Continuous Subarray      | :eyes:  Easy   | find the disordered index boundary                                                      |
+ | Split Array into Consecutive Sequence      | :eyes: :sweat: | array sorted, greedy idea                                                               |
+ | Longest Consecutive Sequence               | :sob:          | think differently  (linear solution)                                                    |
+ | Longest Continuous Increasing Subsequence  | Easy           | basic array operation                                                                   |
+ | Number of Longest Increasing Subsequence   | :eyes: :sweat: | dp to record maxlen up to i, another vec to record count                                |
+ | Non-decreasing Array                       | :eyes: Easy    | find patterns to modify the number depends on three numbers                             |
+ | Maximum Product of Three Numbers           | :v:            | sort and  not sort solution                                                             |
+ | Majority Element                           | :v:            | cancel out                                                                              |
+ | Majority Element II                        | :eyes: :sweat: | extend to n/k case                                                                      |
+ | Find Duplicate Number (w/o modification)   | :sweat: :eyes: | 1) O(n^2) 2) set 3) binary search in value space O(Nlg(N)) 4) slow/fast cycle detection |
 
 ## Kth problem
 - when locating `k`-th, binary first find the solution boundary, and then do binary search in the solution space might help
@@ -543,20 +590,18 @@ void dfs(nums, id, path, res) {
 ## Binary Search
  | Problems                   | Difficulty | Techniques                          |
  | :------------------------- | :---:      | :----                               |
- | Find Peak Element          | :sweat:     | how to move to the next iteration   |
- | Search a 2D Matrix         | :sweat:     | binary search, location conversion  |
- | Search a 2D Matrix II      | :sweat:     | find correct starting location      |
- | Diagonal Traversal         | :sweat:     | flip directions when meets boundary |
+ | Find Peak Element          | :sweat:    | how to move to the next iteration   |
+ | Search a 2D Matrix         | :sweat:    | binary search, location conversion  |
+ | Search a 2D Matrix II      | :sweat:    | find correct starting location      |
+ | Diagonal Traversal         | :sweat:    | flip directions when meets boundary |
+ | Valid Perfect Square       | :v:        | binary search in the domain space   |
 
+## Two Pointers
 
-## Number Formulation
+ | Problems                   | Difficulty     | Techniques                      |
+ | :------------------------- | :---:          | :----                           |
+ | Sort Transformed Array     | :sweat: :eyes: | two pointer from side to middle |
 
- | Problems                   | Difficulty     | Techniques                                               |
- | :------------------------- | :---:          | :----                                                    |
- | Remove K Digits            | :eyes: :sweat: | try to maintain increasing digits order                  |
- | Create Maximum Number      | :eyes: :sob:   | choose 0-k form one array, then merge, vector comparison |
- | Next Greater Element III   | :sweat:        | digits comp, think!!                                     |
- | Next Permutation           | :sweat:        | same with finding next greater number                    |
 
 ## Math
 - `prime` number: a `natural number` greater than 1, and cannot be formed by multiplying two smaller natural number
@@ -573,6 +618,7 @@ void dfs(nums, id, path, res) {
  | Problems                   | Difficulty | Techniques                                                                  |
  | :------------------------- | :---:      | :----                                                                       |
  | Hamming Distance           | Easy       | clear right most left 1                                                     |
+ | Number of 1 in binary form | :eyes:     | keep clear right most 1 bit by n&(n-1), and ++cnt                           |
  | Total Hamming Distance     | :sweat:    | vertical 1s, combination                                                    |
  | Power of Two               | :v:        | only one non-zero bit, minus 1 check or rotate check                        |
  | Power of Three             | :eyes:     | logarithm `(log10(n)-log10(3))`, then check if it is integer                |
@@ -637,6 +683,13 @@ int method2(int mi, int mx) {
     return x % n + mi;
 }
 ```
+
+### sweep line
+ | Problems                    | Difficulty     | Techniques                                                        |
+ | :-------------------------  | :---:          | :----                                                             |
+ | The Skyline Problem         | :sob:          | sweep line to track/update heights at start/end points (multiset) |
+ | Number of Corner Rectangles | :sweat: :eyes: | brute force/loop and fix two rows optimization                    |
+
 
 ### reservoir sampling
 given online stream of numbers, make sure probably for each number gets selected is the same.

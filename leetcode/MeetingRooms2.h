@@ -45,7 +45,7 @@ class MeetingRooms2 {
         return q.size();
     }
 
-    // two array solution
+    // sweepling line algorithm
     // 0  5  15 (start array)
     // 10 20 30 (end array)
     int minMeetingRooms(vector<Interval>& intervals)
@@ -59,11 +59,16 @@ class MeetingRooms2 {
         sort(end.begin(), end.end());
         int minRooms = 0;
         int endpos = 0;
+        int res = 0;
         for(int i = 0; i < start.size(); ++i) {
-            if(start[i] < end[endpos])
+            if(start[i] < end[endpos]) {
                 ++minRooms;
-            else
+                res = max(res, minRooms);
+            }
+            else {
+                --minRooms;
                 ++endpos;
+            }
         }
         return minRooms;
     }

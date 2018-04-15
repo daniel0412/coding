@@ -63,7 +63,7 @@ class WallsAndGates {
     void dfsFromGates(vector<vector<int> >& rooms, int row, int col, int steps)
     {
         if(row < 0 || row >= rooms.size() || col < 0 ||
-           col >= rooms[0].size() || rooms[row][col] < steps)
+           col >= rooms[0].size() || rooms[row][col] <= steps)
             return;
         rooms[row][col] = steps;
         dfsFromGates(rooms, row - 1, col, steps + 1);
@@ -90,7 +90,7 @@ class WallsAndGates {
         while(!myque.empty()) {
             int i = myque.front().first, j = myque.front().second;
             myque.pop();
-            for(auto p : loc) {
+            for(auto& p : loc) {
                 int iLoc = i + p.first, jLoc = j + p.second;
                 if(iLoc < 0 || iLoc >= rooms.size() || jLoc < 0 ||
                    jLoc >= rooms[0].size() ||
@@ -101,27 +101,5 @@ class WallsAndGates {
             }
         }
     }
-    void wallsAndGates(vector<vector<int>>& rooms) {
-        if(rooms.empty()) return;
-        int numRows = rooms.size();
-        int numCols = rooms[0].size();
-        for(int i = 0; i < numRows; ++i) {
-            for(int j = 0; j < numCols; ++j) {
-                if(rooms[i][j] == 0) {
-                    dfs(rooms, i, j, 0);
-                }
-            }
-        }
-    }
-    void dfs(vector<vector<int> >& rooms, int i, int j, int steps)
-    {
-        if(i < 0 || j < 0 || i >= rooms.size() || j >= rooms[0].size() || rooms[i][j]<=steps)
-            return;
-        rooms[i][j] = steps;
-        ++steps;
-        dfs(rooms, i+1, j, steps);
-        dfs(rooms, i-1, j, steps);
-        dfs(rooms, i, j+1, steps);
-        dfs(rooms, i, j-1, steps);
-    }
+
 };

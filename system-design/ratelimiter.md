@@ -4,7 +4,7 @@ Given `maxRate`, return if access permit can be obtained. [Ref](http://systemdes
 ### fixed queue
 ```cpp
 // vector size is rate per second
-vector <int> ts(maxRate, 0); // curcularly used
+vector <int> ts(maxRate, 0); // circular array
 int nextId = 0;
 bool acquire() {
     int currentTs;

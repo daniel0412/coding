@@ -53,57 +53,70 @@ class Maze {
     {
         if(maze.empty() || maze[0].empty())
             return true;
-        resetStates(maze.size(), maze[0].size());
-        dfs(maze, start[0], start[1], destination[0], destination[1]);
-        return d_pathFound;
+        vector<pair<int, int> > dirs = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+        return dfs(
+            maze, start[0], start[1], destination[0], destination[1], dirs);
     }
 
   private:
-    vector<pair<int, int> > d_directions;
-    bool d_pathFound;
-
-    void resetStates(int numRows, int numCols)
+    bool dfs(vector<vector<int> >& m,
+             int srcx,
+             int srcy,
+             int dstx,
+             int dsty,
+             const vector<pair<int, int> >& dirs)
     {
-        d_pathFound = false;
-        d_directions.clear();
-        d_directions.emplace_back(make_pair(1, 0));
-        d_directions.emplace_back(make_pair(-1, 0));
-        d_directions.emplace_back(make_pair(0, 1));
-        d_directions.emplace_back(make_pair(0, -1));
+        if(srcx == dstx && srcy == dsty)
+            return true;
+        m[srcx][srcy] = -1;
+        for(const auto& d : dirs) {
+            int nextx = srcx, nexty = srcy;
+            while(nextx >= 0 && nexty >= 0 && nextx < m.size() &&
+                  nexty < m[0].size() && m[nextx][nexty] != 1) {
+                nextx += d.first;
+                nexty += d.second;
+            }
+            nextx -= d.first;
+            nexty -= d.second;
+            if(m[nextx][nexty] != -1) {
+                if(dfs(m, nextx, nexty, dstx, dsty, dirs))
+                    return true;
+            }
+        }
+        return false;
     }
 
-    void dfs(vector<vector<int> >& maze,
-             int startRow,
-             int startCol,
-             int destRow,
-             int destCol)
+    bool bfs(vector<vector<int> >& m,
+             int srcx,
+             int srcy,
+             int dstx,
+             int dsty,
+             const vector<pair<int, int> >& dirs)
     {
-        if(d_pathFound)
-            return;
-        if(startRow == destRow && startCol == destCol) {
-            d_pathFound = true;
-            return;
-        }
+        queue<pair<int, int> > q;
+        q.emplace(srcx, srcy);
+        m[srcx][srcy] = -1;
+        while(!q.empty()) {
+            auto cur = q.front();
+            q.pop();
+            for(const auto& d : dirs) {
+                int nextx = cur.first, nexty = cur.second;
+                while(nextx >= 0 && nexty >= 0 && nextx < m.size() &&
+                      nexty < m[0].size() && m[nextx][nexty] != 1) {
+                    nextx += d.first;
+                    nexty += d.second;
+                }
 
-        if(maze[startRow][startCol] == -1)
-            return;
-
-        for(auto p : d_directions) {
-            int curRow = startRow;
-            int curCol = startCol;
-            while(curRow >= 0 && curRow < maze.size() && curCol >= 0 &&
-                  curCol < maze[0].size() && maze[curRow][curCol] != 1) {
-                curRow += p.first;
-                curCol += p.second;
+                nextx -= d.first;
+                nexty -= d.second;
+                if(nextx == dstx && nexty == dsty)
+                    return true;
+                if(m[nextx][nexty] != -1) {
+                    q.emplace(nextx, nexty);
+                    m[nextx][nexty] = -1;
+                }
             }
-            int stopRow = curRow - p.first;
-            int stopCol = curCol - p.second;
-            if(stopRow == startRow && stopCol == startCol) {
-                maze[startRow][startCol] = -1;
-                continue;
-            }
-            dfs(maze, stopRow, stopCol, destRow, destCol);
-            maze[startRow][startCol] = -1;
         }
+        return false;
     }
 };

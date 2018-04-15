@@ -69,4 +69,33 @@ NOT possible to build an implementation of read-write storage in an asynchronous
  | Operations  | support `join` and `secondary indexing`                                   | no support for `join` and `secondary indexing`                              |
  | Performance | cannot handle too much write                                              | can handle more write per second                                            |
 
+## File Storage
+### features
+- organize and represent data as a hierarchy of files in folders
+- rely on single path to the data
+- formated within local filesystem, e.g., ext3, ntfs, fat32, as well as network file system, e.g., NAS (network attached storage), SAN
 
+## Block Storage
+### features
+- chunks data into arbitriarily organized, and evenly sized volums
+- software can store data into different chunks, and assembl them to return upon request
+- deployed in SNA (storage network area)
+- faster access, since one file is stored in different blocks
+- persistent storage organized into unstructured blocks of same size, e.g., ssd, RAID array, USB
+- low latency IO, suitable for database
+- each storage is attached to a running server to access it
+- limited meta-data
+
+## Object Storage
+### components
+- id
+- meta-data (lives together with contenet)
+- content: byte stream
+### features
+- organized in a flat addresss pace, thus can be infinitely horizontally scaled, across different geographical locations
+- 3 replicas across two DC
+- eventual consistency, so might read differnt version while
+- once created, cannot be modified, only copy/delete
+- read/write the whole file all at once, cannot read/write part of it, very suitable for picture/video/music files
+- help fanout, write once, read by many clients many times
+- REAT api can retrieve the data via http

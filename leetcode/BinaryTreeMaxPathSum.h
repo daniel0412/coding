@@ -31,6 +31,7 @@ class BinaryTreeMaxPathSum {
   private:
     // return max sum starting from root, plus either left path or right path
     // or nothing
+    // *** cache not needed, and not suitable, since each node will only be checked once
     int helper(TreeNode* root, int& maxS)
     {
         if(root == nullptr)
