@@ -28,7 +28,6 @@ class SummaryRanges {
         if(nums.size() == 0)
             return res;
 
-
         int l = nums.front(), r = nums.front();
         for(int i = 1; i < nums.size(); ++i) {
             if(r + 1 != nums[i]) {

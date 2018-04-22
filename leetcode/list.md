@@ -36,7 +36,6 @@
  | Sequence Reconstruction                                | :sweat:        | record ele->id, and track prev ele idex from given seqs | :eyes:            |
  | Populating Next Right Pointers in Each Node II         | :eyes: :sob:   | level order easy, const space hard                      |                   |
  | Populating Next Right Pointers in Each Node            | :eyes: :sweat: | see above, every level, track start, prev node          |                   |
- | Trapping Rain Water                                    | :sob:          |                                                         |                   |
  | Letter Combinations of a Phone Number                  | :sweat:        |                                                         |                   |
  | Longest Absolute File Path                             | :sweat:        | stack/two pointer                                       | :v:               |
  | Bomb Enemy                                             | :sweat: :eyes: | matrix scan methods                                     |
@@ -72,7 +71,6 @@
  | Encode and Decode Strings                              | :sweat:        |                                                         |                   |
  | H-Index                                                | :sweat:        |                                                         |                   |
  | Logger Rater Limitter                                  | Easy           | map                                                     | :v:               |
- | Perfect Rectangle                                      | :sob: :eyes:   | criteria: area, and point points for perfect rectangle               | :eyes:            |
  | Wiggle Sort                                            | :sweat:        | equal sign, 1) sort then switch; 2) compare + switch    |                   |
  | Wiggle Sort II                                         | :sweat:        | no equal sign, 1) sort then pick; 2)                    |                   |
  | Flatten 2D Vector                                      | :sweat:        | track row, col index                                    | :v:               |
@@ -81,7 +79,6 @@
  | Generalized Abbreviation                               | :sweat:        | dfs                                                     | :lock:            |
  | Game of Life                                           | :sweat:        | track state, note state changes cell value              | :eyes: :v:        |
  | Flip Game                                              | Easy           |                                                         |                   |
- | Flip Game II                                           | :sweat:        | both player try to win, player1 flip, and player2 fails |                   |
  | Max Consecutive Ones                                   | Easy           |                                                         | :v:               |
  | Max Consecutive Ones  II                               | :sweat:        | idea similar to sliding windwo, track loc of zeros      | :eyes: :v:        |
  | Longest Increasing Path in a Matrix                    | :sob:          | dfs + memorization to prun                              | :eyes: :v:        |
@@ -136,7 +133,6 @@
  | Word Break                                             | :sweat:        | dp(fast)/recursion(timeout)                                 |                     |
  | Word Search                                            | :sweat:        | dfs                                                         | :v: :eyes:          |
  | Sum of Left Leaves                                     | Easy           | recursion/iterative                                         | :v: :eyes:          |
- | LRU Cache                                              | :sob:          |                                                             |                     |
  | One Edit Distance                                      | :sweat:        | 3 cases, and combine for concise code                       | :v:                 |
  | Excel Sheet Column Title                               | Easy           | mod/division                                                | :v:                 |
  | Reverse Linked List                                    | Easy           |                                                             | :v:                 |
@@ -164,7 +160,6 @@
  | Add One Row to Tree                         | :sweat:    | recursion/iterative                                     | :v:           |
  | Find Bottom Left Tree Value                 | :sweat:    | inorder travesal                                        | :v:           |
  | Most Frequent Subtree Sum                   | :sweat:    | postorder travesal to capture subtree sum               | :v:           |
- | Count Univalue Subtree                      | :sweat:    | postorder                                               | :eyes: :lock: |
  | Binary Tree Tilt                            | Easy       | postorder sum and track                                 | :v:           |
  | Merge Two Binary Trees                      | Easy       | recursion                                               | :v:           |
  | Subtree of Another Tree                     | Easy       |                                                         | :v:           |
@@ -218,34 +213,39 @@
 
 ## Tree Basics
 - `k-ary` tree: each node has no more than `k` children
+- one type of question:
+    - recursive call is to compute part of the result, and return the partial result
+    - assemble partial results from left and right subtree, and keep track of the final result by passing a reference
 
- | Problems                                       | Difficulty     | Techniques                                                              |
- | :-------------------------                     | :---:          | :----                                                                   |
- | Validate Binary Search Tree                    | :sweat: :v:    | track min/max for eachsubtree, beter than inorder traversal             |
- | Binary Tree Level Order Traversal I/II         | :v:            |                                                                         |
- | Binary Tree PreOrder Travesal/Iterator         | :sweat:        | iterative/recursive                                                     |
- | Binary Tree InOrder Travesal/Iterator          | :sweat:        | iterative/recursive                                                     |
- | Binary Tree PostOrder Travesal/Iterator        | :sob:          | iterative/recursive                                                     |
- | Lowest Common Ancestor of a Binary Tree        | :sweat: :v:    | recursion                                                               |
- | Lowest Common Ancestor of a Binary Search Tree | :v:            | use bst property                                                        |
- | Binary Tree Serialization/Deserialization      | :sweat:        | preorder-recursion/level-order iteration                                |
- | N-ary Tree Serialization/Deserialization       | :sweat:        | same as binary, need delim to identify number of children for each node |
- | BST Serialization/Deserialization (compact)    | :sweat:        | preorder-recursion with min/max threshold                               |
- | Find Duplicate Subtrees                        | :sweat:        | serialize to deduplicate, make sure serialize once                      |
- | Find Leaves of Binary Tree                     | :sweat:        | bottom up to count the height                                           |
- | Binary Tree Maximum Path Sum                   | :sob:          | global var to track max                                                 |
- | Path Sum I/II/III                              | :sweat:        | III needs more attention                                                |
- | Sum of Root to Leave Number                    | :sweat:        | each deeper level, x10                                                  |
- | Binary Tree Paths                              | Easy           | dfs                                                                     |
- | Maximum Binary Tree                            | :sweat:        | recursion/iterative (think this)                                        |
- | Convert Sorted Array/List to BST               | :sweat:        | concise coding                                                          |
- | Convert BST to Double Linked List              | :sweat:        | think about the recursion                                               |
- | Closest Binary Search Tree Value               | Easy           | BST                                                                     |
- | Closest Binary Search Tree Value II            | :sob:          | heap/BST                                                                |
- | Binary Tree Longest Consecutive Sequence       | :sweat:        | top-down or bottom-up to count, and track max length                    |
- | Binary Tree Longest Consecutive Sequence II    | :sweat:        | bottom-up to count left/right max inc/dec length                        |
- | Delete a Node in BST                           | :sweat: :eyes: | find key, then del, how? track parent, delNode                          |
- | Delete Nodes from tree, return forests         | :sweat: :eyes: | post order                                                              |
+ | Problems                                       | Difficulty     | Techniques                                                                   |
+ | :-------------------------                     | :---:          | :----                                                                        |
+ | Validate Binary Search Tree                    | :sweat: :v:    | track min/max for eachsubtree, beter than inorder traversal                  |
+ | Binary Tree Level Order Traversal I/II         | :v:            |                                                                              |
+ | Binary Tree PreOrder Travesal/Iterator         | :sweat:        | iterative/recursive                                                          |
+ | Binary Tree InOrder Travesal/Iterator          | :sweat:        | iterative/recursive                                                          |
+ | Binary Tree PostOrder Travesal/Iterator        | :sob:          | iterative/recursive                                                          |
+ | Lowest Common Ancestor of a Binary Tree        | :sweat: :v:    | recursion                                                                    |
+ | Lowest Common Ancestor of a Binary Search Tree | :v:            | use bst property                                                             |
+ | Binary Tree Serialization/Deserialization      | :sweat:        | preorder-recursion/level-order iteration                                     |
+ | N-ary Tree Serialization/Deserialization       | :sweat:        | same as binary, need delim to identify number of children for each node      |
+ | BST Serialization/Deserialization (compact)    | :sweat:        | preorder-recursion with min/max threshold                                    |
+ | Find Duplicate Subtrees                        | :sweat:        | serialize to deduplicate, make sure serialize once                           |
+ | Find Leaves of Binary Tree                     | :sweat:        | bottom up to count the height                                                |
+ | Binary Tree Maximum Path Sum                   | :sob:          | global var to track max                                                      |
+ | Longest Univalue Path                          | :sob: :eyes:   | recursive call for single side longest path, then combine and track globally |
+ | Count Univalue Subtree                         | :sweat:        | postorder                                                                    |
+ | Path Sum I/II/III                              | :sweat:        | III needs more attention                                                     |
+ | Sum of Root to Leave Number                    | :sweat:        | each deeper level, x10                                                       |
+ | Binary Tree Paths                              | Easy           | dfs                                                                          |
+ | Maximum Binary Tree                            | :sweat:        | recursion/iterative (think this)                                             |
+ | Convert Sorted Array/List to BST               | :sweat:        | concise coding                                                               |
+ | Convert BST to Double Linked List              | :sweat:        | think about the recursion                                                    |
+ | Closest Binary Search Tree Value               | Easy           | BST                                                                          |
+ | Closest Binary Search Tree Value II            | :sob:          | heap/BST                                                                     |
+ | Binary Tree Longest Consecutive Sequence       | :sweat:        | top-down or bottom-up to count, and track max length                         |
+ | Binary Tree Longest Consecutive Sequence II    | :sweat:        | bottom-up to count left/right max inc/dec length                             |
+ | Delete a Node in BST                           | :sweat: :eyes: | find key, then del, how? track parent, delNode                               |
+ | Delete Nodes from tree, return forests         | :sweat: :eyes: | post order                                                                   |
 
 ## Trie
  | Problems                     | Difficulty | Techniques                                      |
@@ -390,6 +390,8 @@ void dfs(nums, id, path, res) {
 
  | Problems                       | Difficulty    | Techniques                                             |
  | :-------------------------     | :---:         | :----                                                  |
+ | Trapping Rain Water            | :sob:  :eyes: | monotonic decreasing stack of indices / two pointer    |
+ | Trapping Rain Water  (3D)      | :sob:  :eyes: | ????                                                   |
  | Largest Rectangle in Histogram | :sob: :eyes:  | stack idea important                                   |
  | Next Greater Element I         | :sweat: :eye: | one loop to find all next greater element with stack   |
  | Next Greater Element II        | :sweat: :eye: | cycular array with duplicates + stack only store index |
@@ -463,6 +465,7 @@ for(int l = n; l >= 1; --l) {
  | Best Time to Buy and Sell Stock III/IV               | :sob:          | local/global dp, sooo hard                                    |
  | Best Time to Buy and Sell Stock with Cooldown        | :sweat:        |                                                               |
  | Best Time to Buy and Sell Stock with Transaction Fee | :sweat:        | current state depends on previous state sell/hold             |
+ | Flip Game II                                         | :sweat:        | both player try to win, player1 flip, and player2 fails       |
  | Predict the Winner                                   | :sob: :eyes:   | recursion/memorization/mini-max dp                            |
  | Guess Number Higher or Less                          | :sob: :eyes:   | recursion/memorization/mini-max dp                            |
  | Guess Secret Word (google question)                  | :sweat: :eyes: | min-max to choose the starting word                           |
@@ -498,13 +501,13 @@ for(int l = n; l >= 1; --l) {
 - easy to identify recursive subproblems
 - as go into the next recursive call, the index grows, thus `O(n)` time complexity
 
- | Problems                         | Difficulty | Techniques                                                    |
- | :-------------------------       | :---:      | :----                                                         |
- | Evaluate Reverse Polish Notation | :v:        | stack or recursion                                            |
- | Basic Calculator                 | :sob:      | parenthesis only, recursive with O(n) or iterative with stack |
- | Basic Calculator II              | :sob:      | only +-\*/, agg only with higher ops                          |
- | Basic Calculator III             | :sob:      | support parenthesis and all four ops                          |
- | Decode String                    | :sweat:    | like iterator of iterator, stack + one loop                   |
+ | Problems                         | Difficulty | Techniques                                                             |
+ | :-------------------------       | :---:      | :----                                                                  |
+ | Evaluate Reverse Polish Notation | :v:        | stack or recursion                                                     |
+ | Basic Calculator                 | :sob:      | parenthesis only, recursive with O(n) or iterative with stack          |
+ | Basic Calculator II              | :sob:      | only +-\*/, agg only with higher ops                                   |
+ | Basic Calculator III             | :sob:      | support parenthesis and all four ops                                   |
+ | Decode String                    | :sweat:    | O(n) with changing index, check how to encode str with shortest length |
 
 ### Palindromic Problems
 - check `if size(s) < 2`, return `true`
@@ -626,6 +629,7 @@ for(int l = n; l >= 1; --l) {
 
 ## Data Structure Design
 - `std::list` is implemented as a `double linked list`, so `prev/next` operation is `O(1)`
+- `std::list` does not have member function of `prev` or `next`, and cannot perform pointer change
 
  | Problems                   | Difficulty | Techniques                   |
  | :------------------------- | :---:      | :----                        |
@@ -638,13 +642,14 @@ for(int l = n; l >= 1; --l) {
 - transform an image, is to transform all the points in the image (rotate 90/180/270 degrees, leftright/updown reflect)
 - given point `(x,y)`, all transforms can results in 8 different representations, pick one as its intrinsic representation
 
- | Problems                      | Difficulty     | Techniques                                     |
- | :-------------------------    | :---:          | :----                                          |
- | Nnumber of Islands            | :v:            | dfs/marking                                    |
- | Number of Islands II          | :eyes: :sweat: | union find + pass compression                  |
- | Nnumber of Distinct Islands   | :eyes: :sweat: | use vector of pairs to store normalized island |
- | Number of Distinct Islands II | :eyes: :sob:   | how to represent intrinct island               |
- | Island Perimeter              | :eyes: :v:     | just loop, no need to use dfs                  |
+ | Problems                      | Difficulty     | Techniques                                      |
+ | :-------------------------    | :---:          | :----                                           |
+ | Nnumber of Islands            | :v:            | dfs/marking                                     |
+ | Number of Islands II          | :eyes: :sweat: | union find + pass compression                   |
+ | Nnumber of Distinct Islands   | :eyes: :sweat: | use vector of pairs to store normalized island  |
+ | Number of Distinct Islands II | :eyes: :sob:   | how to represent intrinct island                |
+ | Island Perimeter              | :eyes: :v:     | just loop, no need to use dfs, side deduplicate |
+ | Perfect Rectangle             | :sob: :eyes:   | criteria: area, and point reuse check           |
 
 
 ## Range Sum

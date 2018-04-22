@@ -34,6 +34,7 @@ class CountUnivalSubtree {
     bool isUnivalSubtree(TreeNode* root, int& cnt)
     {
         if(root->left && root->right) {
+            // this case, we might want to count it as 3 univalue subtrees
             if(isUnivalSubtree(root->left) && isUnivalSubtree(root->right) &&
                root->left->val == root->right->val &&
                root->val == root->left->val) {

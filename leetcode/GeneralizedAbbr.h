@@ -61,4 +61,16 @@ class GeneralizedAbbr {
         w[id] = '1';
         dfsImpl(res, w, id + 1);
     }
+
+    vector<string> abbr(const string& s)
+    {
+        vector<string> res;
+        for(size_t i = 0; i < s.size(); ++i) {
+            for(size_t j = i; j < s.size(); ++j) {
+                res.emplace_back(s.substr(0, j) + to_string(j - i + 1) +
+                                 s.substr(j + 1));
+            }
+        }
+        return res;
+    }
 };

@@ -32,20 +32,19 @@ class LRUCache {
 
     int get(int key)
     {
+        int val = -1;
         // check if key can be found from cache
         if(d_iters.count(key)) {
             auto iter = d_iters[key];
-            // insert in the front of the list
-            d_list.emplace_front(iter->first, iter->second);
+            val = iter->second;
             // erase the old one
             d_list.erase(iter);
+            // insert in the front of the list
+            d_list.emplace_front(key, val);
             // update new location
             d_iters[key] = d_list.begin();
-            return d_list.begin()->second;
         }
-        else {
-            return -1;
-        }
+        return val;
     }
 
     void put(int key, int value)
@@ -75,6 +74,6 @@ class LRUCache {
     // double linked list store <key, value> pairs
     list<pair<int, int> > d_list;
     // map key-> iterator of where value is stored
-    unordered_iters<int, list<pair<int, int>>::iterator> d_iters;
+    unordered_iters<int, list<pair<int, int> >::iterator> d_iters;
     int d_maxCap;
 };
