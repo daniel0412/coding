@@ -40,7 +40,7 @@ class BinaryTreeIteratorPreOrder {
                 d_stack.push(res->right);
             if(res->left)
                 d_stack.push(res->left);
-	    return res;
+            return res;
         }
         return nullptr;
     }

@@ -44,6 +44,11 @@ Database `sharding` is to split data across different serves to improve scalabil
 ### Normalization
 
 ## SQL Database
+### ACID
+- Atomicity: each transaction is all or nothing
+- Consistency: any transaction will bring the database from one valid state to another
+- Isolation: executing transactions concurrently has the same results as if the transactions were executed serially
+- Durability: once a transaction has been committed, it will remain so
 
 ## NoSQL Database
 NoSQL is short for `not only SQL`, is designed to handle problems with relational database, e.g., horizontal scaling, frequent write

@@ -38,12 +38,10 @@
  | Spiral Matrix II                                       | :sweat:        | square, track leftmost/down line, center element             |                   |
  | License Key Formatting                                 | :sweat:        | string operation                                             | :v:               |
  | Plus One                                               | Easy           |                                                              |                   |
- | Min Stack                                              | Easy           |                                                              |                   |
  | Read N Characters Given Read4 II – Call multiple times | :sob:          |                                                              |                   |
  | Repeated Substring Pattern                             | Easy           |                                                              | :eyes: :v:        |
  | Heaters                                                | Easy           | upper/lower bound                                            | :eyes: :v:        |
  | Fraction to Recurring Decimal                          | :sweat:        | hashmap/sstream/overflow                                     | :v:               |
- | Word Search II                                         | :sob:          |                                                              |                   |
  | Summary Ranges                                         | :sweat:        | stringstream/array/size_t                                    | :v:               |
  | Missing Ranges                                         | :sweat:        | same as above                                                | :v:               |
  | Median of Two Sorted Arrays                            | :eyes::sob:    | find kth smallest, eliminate k/2 each binary search          | :v:        :eyes: |
@@ -59,8 +57,6 @@
  | Encode and Decode Strings                              | :sweat:        |                                                              |                   |
  | H-Index                                                | :sweat:        |                                                              |                   |
  | Logger Rater Limitter                                  | Easy           | map                                                          | :v:               |
- | Wiggle Sort                                            | :sweat:        | equal sign, 1) sort then switch; 2) compare + switch         |                   |
- | Wiggle Sort II                                         | :sweat:        | no equal sign, 1) sort then pick; 2)                         |                   |
  | Flatten 2D Vector                                      | :sweat:        | track row, col index                                         | :v:               |
  | Unique Word Abbreviation                               | Easy           | pass                                                         | :lock:            |
  | Valid Word Abbreviation                                | Easy           |                                                              | :lock:            |
@@ -179,16 +175,17 @@
  | Balanced Binary Tree                        | Easy       | 1. top-down 2. buttom up                                | :eyes: :v:    |
  | Surrounded Region                           | :sweat:    | from edge to dfs mark reachable cell                    | :eyes: :v:    |
  | Minimum Path Sum                            | :sweat:    | 2d dp with 1d store, initial value!                     | :eyes: :v:    |
- | Longest Line of Consecutive Ones in Matrix  | :sweat:    | 3-dim dp/dfs                                            | :lock:        |
 
 
 ## Sorting Algorithms
- | Problems                   | Difficulty   | Techniques                                              |
- | :------------------------- | :---:        | :----                                                   |
- | Merge Intervals            | :sweat:      | customized sorting + max(end1, end2) when merge         |
- | Insert Interval            | :eyes: :sob: | find overlapped intervals first, remove and insert      |
- | Meeting Rooms              | :v:          | easy/customized sorting lambda                          |
- | Meeting Rooms II           | :sweat:      | 1. greedy ideas using pq; 2. sweep line with two arrays |
+ | Problems                   | Difficulty     | Techniques                                                    |
+ | :------------------------- | :---:          | :----                                                         |
+ | Merge Intervals            | :sweat:        | customized sorting + max(end1, end2) when merge               |
+ | Insert Interval            | :sob: :eyes:   | find overlapped intervals first, remove and insert            |
+ | Meeting Rooms              | :v:            | easy/customized sorting lambda                                |
+ | Meeting Rooms II           | :sweat:        | 1. greedy ideas using pq; 2. sweep line with two arrays       |
+ | Wiggle Sort                | :sweat:        | equal sign, 1) sort then switch; 2) compare + switch          |
+ | Wiggle Sort II             | :sweat: :eyes: | no equal sign, 1) sort then pick; 2) O(N) virtual indexing??? |
 
 
 ## Linked Lists
@@ -207,9 +204,9 @@
  | :-------------------------                     | :---:          | :----                                                                        |
  | Validate Binary Search Tree                    | :sweat: :v:    | track min/max for eachsubtree, beter than inorder traversal                  |
  | Binary Tree Level Order Traversal I/II         | :v:            |                                                                              |
- | Binary Tree PreOrder Travesal/Iterator         | :sweat:        | iterative/recursive                                                          |
- | Binary Tree InOrder Travesal/Iterator          | :sweat:        | iterative/recursive                                                          |
- | Binary Tree PostOrder Travesal/Iterator        | :sob:          | iterative/recursive                                                          |
+ | Binary Tree PreOrder Travesal/Iterator         | :sweat:        | iterative/recursive (stack, print current, push right, then left)            |
+ | Binary Tree InOrder Travesal/Iterator          | :sweat:        | iterative/recursive (stack, push left, print, get right to push and all left |
+ | Binary Tree PostOrder Travesal/Iterator        | :sob: :eyes:   | iterative/recursive (stack, push non-null left/right, use parent push next)  |
  | Lowest Common Ancestor of a Binary Tree        | :sweat: :v:    | recursion                                                                    |
  | Lowest Common Ancestor of a Binary Search Tree | :v:            | use bst property                                                             |
  | Binary Tree Serialization/Deserialization      | :sweat:        | preorder-recursion/level-order iteration                                     |
@@ -239,6 +236,7 @@
  | Valid Word Square            | :v:        | brute force                                     |
  | Word Squares                 | :sob:      | dfs/trie                                        |
  | Implement Trie (Prefix Tree) | :sweat:    |                                                 |
+ | Word Search II               | :sob:      |                                                 |
  | Match words from char stream | :sweat:    | sliding window + suffix trie, how AC algorithm? |
 
 ## Graph
@@ -342,33 +340,34 @@ void dfs(nums, id, path, res) {
 ```
 
 
- | Problems                          | Difficulty | Techniques                                                                      |
- | :-------------------------        | :---:      | :----                                                                           |
- | Subsets                           | :sweat:    | recursion -> think about iterative                                              |
- | Subsets II                        | :sweat:    | recursion/deduplication                                                         |
- | Permutation                       | :sweat:    | 1) dfs with visited indication (different from subset) 2) swap recursion        |
- | Permutation II (with duplication) | :sweat:    | 1) dfs (with de-deuplication) 2) swap with deduplication                        |
- | Find Permutation                  | :sweat:    | inc order, than reverse des sequences                                           |
- | Beautiful Arrangement             | :sweat:    | permutatione and validate 1) dfs backtracking and validate 2) swap and validate |
- | Beautiful ArrangementII           | :sweat:    | rather than dfs/swap, enumerate distinct diffs, and stop when k is reached      |
- | Combination Sum I/II/III          | :sweat:    | dfs+backtracing                                                                 |
- | Partition Equal Subset Sum        | :sweat:    | recursion timout, dp to the rescue                                              |
- | Partition to k Equal Sum Subset   | :sweat:    | dfs recursion                                                                   |
- | Palindrom Partition               | :sweat:    |                                                                                 |
- | Word Search                       | :sweat:    | dfs                                                                             |
+ | Problems                          | Difficulty     | Techniques                                                                      |
+ | :-------------------------        | :---:          | :----                                                                           |
+ | Subsets                           | :sweat:        | recursion -> think about iterative                                              |
+ | Subsets II                        | :sweat:        | recursion/deduplication                                                         |
+ | Permutation                       | :sweat: :eyes: | 1) dfs with visited indication (different from subset) 2) swap recursion        |
+ | Permutation II (with duplication) | :sweat: :eyes: | 1) dfs (with de-deuplication) 2) swap with deduplication                        |
+ | Find Permutation                  | :sweat:        | inc order, than reverse des sequences                                           |
+ | Beautiful Arrangement             | :sweat:        | permutatione and validate 1) dfs backtracking and validate 2) swap and validate |
+ | Beautiful ArrangementII           | :sweat:        | rather than dfs/swap, enumerate distinct diffs, and stop when k is reached      |
+ | Combination Sum I/II/III          | :sweat:        | dfs+backtracing                                                                 |
+ | Partition Equal Subset Sum        | :sweat:        | recursion timout, dp to the rescue                                              |
+ | Partition to k Equal Sum Subset   | :sweat:        | dfs recursion                                                                   |
+ | Palindrom Partition               | :sweat:        |                                                                                 |
+ | Word Search                       | :sweat:        | dfs                                                                             |
 
 ## Traversal
 - dfs
 - bfs
     - suitable for distance
 
- | Problems                             | Difficulty   | Techniques                                                     |
- | :-------------------------           | :---:        | :----                                                          |
- | The Maze                             | :sweat:      | dfs/bfs similar                                                |
- | The Maze II                          | :sweat:      | dfs/bfs similar, has to try all paths                          |
- | The Maze III                         | :sob:        | keep track of path                                             |
- | Walls and Gates                      | :sweat:      | start from gates see how far it goes                           |
- | Shortest Distance from All Buildings | :sob: :eyes: | bfs from building to sum up dist, validate from all in the end |
+ | Problems                                   | Difficulty   | Techniques                                                     |
+ | :-------------------------                 | :---:        | :----                                                          |
+ | The Maze                                   | :sweat:      | dfs/bfs similar                                                |
+ | The Maze II                                | :sweat:      | dfs/bfs similar, has to try all paths                          |
+ | The Maze III                               | :sob:        | keep track of path                                             |
+ | Walls and Gates                            | :sweat:      | start from gates see how far it goes                           |
+ | Shortest Distance from All Buildings       | :sob: :eyes: | bfs from building to sum up dist, validate from all in the end |
+ | Longest Line of Consecutive Ones in Matrix | :sweat: :v:     | 4-dim dp/dfs                                                   |
 
 ## Stack
 - monotonic stack (idea, can be a vector)
@@ -627,6 +626,8 @@ for(int l = n; l >= 1; --l) {
  | :------------------------- | :---:      | :----                        |
  | LRU Cache                  | :sob:      | double linked list/map  O(1) |
  | LFU Cache                  | :sob:      | double linked list/map  O(1) |
+ | Min Stack                  | :v:        |                              |
+ | Max Stack                  | :sob:      |                              |
 
 ## Island Problems
 - `pair<int,int>` comparison is defined in stl as `p1.first < p2.first || (!(p1.first > p2.first) && p1.second < p2.second)`

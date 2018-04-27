@@ -1,10 +1,12 @@
 # System Design Interview
 
 ## Basic Knowledge
+- [basic concepts](concepts.md)
 - [multi-threading](multithreading.md)
 - [database](database.md)
 - [hashing](hash.md)
 - [load-balancing](load-balance.md)
+- [content deliver network](cdn.md)
 
 ## General Principals
 ### Steps to Analyze (4S)
