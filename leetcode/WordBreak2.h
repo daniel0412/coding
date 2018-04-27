@@ -33,50 +33,49 @@ class WordBreak2 {
   public:
     vector<string> wordBreak(string s, vector<string>& wordDict)
     {
-        d_minWordLen = INT_MAX;
-        d_maxWordLen = INT_MIN;
-        for(const auto& w : wordDict) {
-            d_minWordLen = d_minWordLen > (int)w.size() ? w.size() : d_minWordLen;
-            d_maxWordLen = d_maxWordLen > (int)w.size() ? d_maxWordLen : w.size();
-        }
         unordered_set<string> dict(wordDict.begin(), wordDict.end());
-        unordered_set<string> res;
-        vector<bool> flags(s.size() + 1, true);
-        flags[0] = true;
-        vector<string> path;
-        dfsImpl(s, dict, flags, 0, path, res);
-        return vector<string>(res.begin(), res.end());
-    }
-
-  private:
-    int d_minWordLen;
-    int d_maxWordLen;
-    void dfsImpl(const string& s,
-                 const unordered_set<string>& dict,
-                 vector<bool>& flags,
-                 int start,
-                 vector<string>& path,
-                 unordered_set<string>& res)
-    {
-        if(start == s.size()) {
-            ostringstream ss;
-            copy(path.begin(), path.end()-1, ostream_iterator<string>(ss, " "));
-            ss << *path.rbegin();
-            res.insert(ss.str());
-            return;
+        // starting from any index, next word can only be of length within this
+        // range
+        size_t minl = s.size(), maxl = 0;
+        for(const auto& w : wordDict) {
+            minl = min(minl, w.size());
+            maxl = max(maxl, w.size());
         }
-
-        for(int i = start + d_minWordLen - 1;
-            i < s.size() && i < start + d_maxWordLen;
-            ++i) {
-            string tmp(s.substr(start, i - start + 1));
-            if(dict.count(tmp) > 0 && flags[i + 1]) {
-                int oldResSize = res.size();
-                path.push_back(tmp);
-                dfsImpl(s, dict, flags, i + 1, path, res);
-                if(oldResSize == res.size())
-                    flags[i + 1] = false;
-                path.pop_back();
+        // dp[i]: from i->n, it is breakable or not
+        vector<bool> dp(s.size() + 1, true);
+        vector<string> res;
+        string path;
+        dfs(s, dict, 0, minl, maxl, dp, path, res);
+        return res;
+    }
+    void dfs(const string& s,
+             unordered_set<string>& dict,
+             int start,
+             const size_t minl,
+             const size_t maxl,
+             vector<bool>& dp,
+             string& path,
+             vector<string>& res)
+    {
+        if(start >= s.size())
+            return;
+        for(int i = start + minl - 1; i < s.size() && i < start + maxl; ++i) {
+            string sub = s.substr(start, i - start + 1);
+            if(dp[i+1] && dict.count(sub)) {
+                if(i == s.size() - 1) {
+                    res.emplace_back(path + sub);
+                }
+                else {
+                    // check result size before
+                    int oldsize = res.size();
+                    path = path + sub + " ";
+                    dfs(s, dict, i + 1, minl, maxl, dp, path, res);
+                    // if result size not changed, means not breakable from i
+                    // to n
+                    if(oldsize == res.size())
+                        dp[i+1] = false;
+                    path = path.substr(0, path.size() - sub.size() - 1);
+                }
             }
         }
     }

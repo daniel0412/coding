@@ -82,7 +82,7 @@ catch (exception e) {
 ```
 
 #### priority_queue declaration with customized comparator
-- comparator class
+- comparator class (the only way that works of priority queue as a data member in a class)
 ```cpp
 class Comp{
     public:
@@ -90,6 +90,7 @@ class Comp{
         return a.first < b.first;
     }
 };
+// no need to pass any parameter
 priority_queue<pair<int, int>, vector<pair<int, int>>, Comp> heap;
 ```
 - comparator function
@@ -110,7 +111,7 @@ priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(comp))> heap(com
 
 #### numeric_limits
 - `numeric_limits<T>::min()` returns negative value for `T=int`, for positive value for `float` or `double`
-- use '`numeric_limits<double>::lowest()` if needed
+- use `numeric_limits<double>::lowest()` if needed
 
 #### level order travesal of binary tree
 - use dfs and tracking parameter
