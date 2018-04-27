@@ -62,6 +62,8 @@ class ClosestBSTVal2 {
         inorder(root->left, target, k);
         inorder(root->right, target, k);
     }
+
+    // ATTENTION: how we declare priority queue with customized comparator
     typedef pair<double, int> DiffPair;
     class Comp {
       public:
@@ -72,11 +74,10 @@ class ClosestBSTVal2 {
     };
     priority_queue<DiffPair, vector<DiffPair>, Comp> d_maxHeap;
 
-
   private:
     vector<int> twoStackImpl(TreeNode* root, double target, int k)
     {
-        stack<TreeNode *> pre, suc;
+        stack<TreeNode*> pre, suc;
         while(root) {
             if(root->val <= target) {
                 pre.push(root);

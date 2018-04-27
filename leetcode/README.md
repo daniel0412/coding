@@ -1,22 +1,12 @@
-# Leetcode Preparation
+# Leetcode Problems Categorization
+- [String](#string)
 - [Stack](#stack)
 - [Backtracking](#backtracking)
 - [Dynamic Programming](#dynamic-programming)
-- [String](#string)
 - [Trie](#trie)
 - [Graph](#graph)
 - [Sweep Line](#sweep-line)
 - [Sampling](#sampling)
-
-## Status
-| Icon      | Meaning           |
-| :---:     | :-----            |
-| :v:       | passed            |
-| :lock:    | locked problem    |
-| :warning: | truely hard       |
-| :eyes:    | worth second look |
-| :sob:     | :sob:             |
-| :sweat:   | :sweat:           |
 
 ## Solved problems not in Google list
  | Problems                    | Difficulty | Techniques                  |
@@ -128,7 +118,6 @@
  | Increasing Subsequence                                 | :sweat:        | dfs/set to deduplicate                                      | :v:          :eyes: |
  | Word Ladder                                            | :sweat:        | (double) bfs                                                | :eyes: :v:          |
  | Word Ladder II                                         | :sob:          | (double) bfs                                                | :eyes: :v:          |
- | Word Search                                            | :sweat:        | dfs                                                         | :v: :eyes:          |
  | Sum of Left Leaves                                     | Easy           | recursion/iterative                                         | :v: :eyes:          |
  | One Edit Distance                                      | :sweat:        | 3 cases, and combine for concise code                       | :v:                 |
  | Excel Sheet Column Title                               | Easy           | mod/division                                                | :v:                 |
@@ -237,8 +226,8 @@
  | Maximum Binary Tree                            | :sweat:        | recursion/iterative (think this)                                             |
  | Convert Sorted Array/List to BST               | :sweat:        | concise coding                                                               |
  | Convert BST to Double Linked List              | :sweat:        | think about the recursion                                                    |
- | Closest Binary Search Tree Value               | Easy           | BST                                                                          |
- | Closest Binary Search Tree Value II            | :sob:          | heap/BST                                                                     |
+ | Closest Binary Search Tree Value               | :v:            | BST                                                                          |
+ | Closest Binary Search Tree Value II            | :sob: :eyes:   | heap/BST, predecessor/successor                                              |
  | Binary Tree Longest Consecutive Sequence       | :sweat:        | top-down or bottom-up to count, and track max length                         |
  | Binary Tree Longest Consecutive Sequence II    | :sweat:        | bottom-up to count left/right max inc/dec length                             |
  | Delete a Node in BST                           | :sweat: :eyes: | find key, then del, how? track parent, delNode                               |
@@ -330,6 +319,8 @@ void dfs(nums, id, path, res){
 // better loop skeleton to add deduplication
 // current loop include the element
 // next loop pop back to backtrack previous state where the element is not included for next loop
+// Time complexity: T(n) = T(n-1) + T(n-2) + ... + T(0)
+// thus is O(2^n) exponential, since each recursive, has one less call
 void dfs(nums, id, path, res) {
     for(int i = id; i < nums.size(); ++i) {
         path.push_back(nums[i]);
@@ -361,10 +352,10 @@ void dfs(nums, id, path, res) {
  | Beautiful Arrangement             | :sweat:    | permutatione and validate 1) dfs backtracking and validate 2) swap and validate |
  | Beautiful ArrangementII           | :sweat:    | rather than dfs/swap, enumerate distinct diffs, and stop when k is reached      |
  | Combination Sum I/II/III          | :sweat:    | dfs+backtracing                                                                 |
- | Combination Sum IV                | :sweat:    | dp (different from I/II/III)                                                    |
  | Partition Equal Subset Sum        | :sweat:    | recursion timout, dp to the rescue                                              |
  | Partition to k Equal Sum Subset   | :sweat:    | dfs recursion                                                                   |
  | Palindrom Partition               | :sweat:    |                                                                                 |
+ | Word Search                       | :sweat:    | dfs                                                                             |
 
 ## Traversal
 - dfs
@@ -387,7 +378,6 @@ void dfs(nums, id, path, res) {
 
  | Problems                       | Difficulty    | Techniques                                             |
  | :-------------------------     | :---:         | :----                                                  |
- | Trapping Rain Water            | :sob:  :eyes: | monotonic decreasing stack of indices / two pointer    |
  | Trapping Rain Water  (3D)      | :sob:  :eyes: | ????                                                   |
  | Largest Rectangle in Histogram | :sob: :eyes:  | stack idea important                                   |
  | Next Greater Element I         | :sweat: :eye: | one loop to find all next greater element with stack   |
@@ -471,6 +461,7 @@ for(int l = n; l >= 1; --l) {
  | Maximum Vacation Days                                | :sob: :eyes:   | dp to find the state transfer formula                         |
  | Perfect Squares                                      | :sweat:        | dynamic programming from 1 to t                               |  |
  | Ones and Zeros                                       | :sob:          | dp                                                            |
+ | Combination Sum IV                                   | :sweat:        | dp (different from I/II/III)                                  |
  | Coin Change                                          | :eyes: :sweat: | loop over all amount and then all coins                       |
  | Coin Change II                                       | :eyes: :sweat: | loop over all coins, then all amount                          |
  | Coin Path                                            | :eyes: :sob:   | dp, and reconstruct path                                      |
@@ -601,9 +592,10 @@ for(int l = n; l >= 1; --l) {
 
 ## Two Pointers
 
- | Problems                   | Difficulty     | Techniques                      |
- | :------------------------- | :---:          | :----                           |
- | Sort Transformed Array     | :sweat: :eyes: | two pointer from side to middle |
+ | Problems                   | Difficulty     | Techniques                                          |
+ | :------------------------- | :---:          | :----                                               |
+ | Sort Transformed Array     | :sweat: :eyes: | two pointer from side to middle                     |
+ | Trapping Rain Water        | :sob:  :eyes:  | monotonic decreasing stack of indices / two pointer |
 
 
 ## Math
