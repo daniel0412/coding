@@ -45,12 +45,15 @@ class RegularExpressionMatch {
         int sLen = s.size(), pLen = p.size();
         vector<vector<bool> > dp(sLen + 1, vector<bool>(pLen + 1, false));
         dp[0][0] = true;
+        // initial condition to process p="a*b*c*" cases
         for(int pi = 1; pi <= pLen; ++pi) {
             dp[0][pi] = pi > 1 && dp[0][pi - 2] && p[pi - 1] == '*';
         }
         for(int si = 1; si <= sLen; ++si) {
             for(int pi = 1; pi <= pLen; ++pi) {
                 if(p[pi - 1] == '*') {
+                    // 1. c* matches zero occurence
+                    // 2. (si-1, pi) matches, and c* also matches
                     dp[si][pi] = dp[si][pi - 2] ||
                         ((s[si - 1] == p[pi - 2] || p[pi - 2] == '.') &&
                          dp[si - 1][pi]);

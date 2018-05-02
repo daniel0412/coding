@@ -1,0 +1,5 @@
+- http vs websocket
+    - both of them are application level protocol
+    - http is request-response
+    - websocket is bidirectional communication channel, first established by http request/reponse, then all tcp packets
+- websocket vs socket

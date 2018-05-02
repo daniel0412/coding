@@ -41,7 +41,9 @@ class WordBreak2 {
             minl = min(minl, w.size());
             maxl = max(maxl, w.size());
         }
-        // dp[i]: from i->n, it is breakable or not
+        // dp[i]: from i->n, it is breakable or not memorization
+        // initially we treat all breakable to force we do the dfs
+        // later if it is false, we know it will fail so prune
         vector<bool> dp(s.size() + 1, true);
         vector<string> res;
         string path;
@@ -59,8 +61,10 @@ class WordBreak2 {
     {
         if(start >= s.size())
             return;
+        // from start, just try all possible length that might form a word in dict
         for(int i = start + minl - 1; i < s.size() && i < start + maxl; ++i) {
             string sub = s.substr(start, i - start + 1);
+            // substring is in the dict, as well as the following substring is breakable
             if(dp[i+1] && dict.count(sub)) {
                 if(i == s.size() - 1) {
                     res.emplace_back(path + sub);

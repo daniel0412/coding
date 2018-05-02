@@ -27,13 +27,14 @@ class NumArray {
         int height = nums.empty() ? 0 : ceil(log(nums.size()) / log(2));
         int len = pow(2, height + 1) - 1;
         d_st.resize(len);
-        updateSt(0, d_nums.size() - 1, 0);
+        initSt(0, d_nums.size() - 1, 0);
     }
 
     void update(int i, int val)
     {
         if(i < 0 || i >= d_nums.size())
             return;
+        // get the diff, and update nodes by adding this diff
         int diff = val - d_nums[i];
         d_nums[i] = val;
         updateSt(0, d_nums.size() - 1, 0, i, diff);
@@ -65,18 +66,22 @@ class NumArray {
                 return;
             int m = s + (e - s) / 2;
             updateSt(s, m, 2 * id + 1, i, diff);
-            update(m + 1, e, 2 * id + 2, i, diff);
+            updateSt(m + 1, e, 2 * id + 2, i, diff);
         }
     }
 
     int querySum(int s, int e, int id, int qs, int qe)
     {
+        // current [s,e] is within [qs, qe]
         if(qs <= s && qe >= e) {
             return d_st[id];
         }
 
+        // queried range is out of current range
         if(qs > e || qe < s)
             return 0;
+
+        // keep sliting the queried range
         int m = s + (e - s) / 2;
         return querySum(s, m, 2 * id + 1, qs, qe) +
             querySum(m + 1, e, 2 * id + 2, qs, qe);

@@ -56,7 +56,6 @@ class MaxRectangle {
 
 
     // Largest rectangle in histogram solution
-
     int maximalRectangle(vector<vector<char> >& matrix)
     {
         if(matrix.empty() || matrix[0].empty())

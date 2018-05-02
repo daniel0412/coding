@@ -44,6 +44,7 @@ class SentenceSimilarityII {
         return true;
     }
 
+    // map to represent root relationships
     string getRoot(unordered_map<string, string>& roots, string s)
     {
         if(roots.count(s) == 0)

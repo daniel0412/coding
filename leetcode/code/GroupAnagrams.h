@@ -24,6 +24,7 @@ class GroupAnagrams {
     vector<vector<string> > groupAnagrams(vector<string>& strs) {
         int id = 0;
         vector<vector<string>> res;
+        // sorted string -> index of result vector
         unordered_map<string, size_t> m;
         for(auto s : strs) {
             sort(s.begin(), s.end());

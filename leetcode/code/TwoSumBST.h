@@ -31,13 +31,13 @@ class TwoSumBST {
     }
 
   private:
-    void findImpl(TreeNode* node, TreeNode* root, int k, bool& found)
+    void findImpl(TreeNode* curnode, TreeNode* root, int k, bool& found)
     {
-        if(found || !node)
+        if(found || !curnode)
             return;
-        found = findVal(root, k - node->val);
-        findImpl(node->left, root, k, found);
-        findImpl(node->right, root, k, found);
+        found = findVal(root, k - curnode->val);
+        findImpl(curnode->left, root, k, found);
+        findImpl(curnode->right, root, k, found);
     }
     bool findVal(TreeNode* root, int val)
     {

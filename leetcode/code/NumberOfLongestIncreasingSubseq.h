@@ -26,7 +26,7 @@ class NumberOfLongestIncreasingSubseq {
         int maxlen = 1;
         // track len of increasing subsequency ending at index i
         vector<int> dp(nums.size(), 1);
-        // track number of longest increasing subseq ending at index i
+        // ATTENTION: track number of longest increasing subseq ending at index i
         vector<int> cnt(nums.size(), 1);
         for(int i = 1; i < nums.size(); ++i) {
             for(int j = 0; j < i; ++j) {

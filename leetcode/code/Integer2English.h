@@ -21,11 +21,12 @@ using namespace std;
 
 class Integer2English {
   public:
-    string numberToWords(int num){
-        if(num == 0) return "Zero";
-        const int BILLION = 1000000000;
-        const int THOUSAND = 1000;
-        vector<string> bases = {"Billion ", "Million ", "Thousand ", " "};
+    string numberToWords(int num)
+    {
+        // corner case
+        if(num == 0)
+            return "Zero";
+        // list all possible values
         unordered_map<int, string> dict = {
             {1, "One"},
             {2, "Two"},
@@ -55,49 +56,46 @@ class Integer2English {
             {80, "Eighty"},
             {90, "Ninety"},
         };
-        string res;
-        int divider = BILLION;
-        for(size_t i = 0; i < bases.size(); ++i) {
-            int a = num / divider;
+        // make sure we convert below thousands part first
+        int divider = 1000;
+        string res = convertHundred(dict, num % divider);
+        num /= divider;
+        // starting from lower bits to upper bits
+        vector<string> base = {"Thousand", "Million", "Billion"};
+        for(int i = 0; i < base.size(); ++i) {
+            int a = num % divider;
             if(a > 0) {
-                res += convertHundred(a, dict) + bases[i];
-                num %= divider;
+                res = convertHundred(dict, a) + base[i] + " " + res;
             }
-            divider /= THOUSAND;
+            num /= divider;
+            if(num == 0)
+                break;
         }
-        int id = res.find_last_not_of(' ');
-        return res.substr(0, id+1);
-
+        res.pop_back();
+        return res;
     }
-    string convertHundred(int num, unordered_map<int, string>& dict)
+
+    // this function is important
+    string convertHundred(unordered_map<int, string>& dict, int n)
     {
         string res;
-        int a = num / 100;
+        int a = n / 100;
+        int b = n % 100;
+        int c = b % 10;
         if(a) {
             res = dict[a] + " Hundred ";
         }
-        num %= 100;
-        if(num == 0) {
+        if(b == 0)
             return res;
 
-        }
-        if(num <= 20 || num % 10 == 0) {
-            res = res + dict[num] + " ";
-        }else{
-            res = res + dict[(num/10) * 10] + " " + dict[num % 10] + " ";
-        }
-        return res;
-    }
-    string convertHundred2(int num, unordered_map<int, string>& dict)
-    {
-        string res;
-        int a = num / 100, b = num % 100, c = num % 10;
-        res += (a == 0 ? "" : dict[a] + " Hundred ");
-        if(b <= 20) {
-            res += (b == 0 ? "" : dict[b]);
+        if(b < 20) {
+            res += (dict[b] + " ");
         }
         else {
-            res += (dict[b / 10 * 10] + (c == 0 ? "" : dict[c]) + " ");
+            // here we only get the number in the second bit (shi wei)
+            res += dict[b / 10 * 10] + " ";
+            if(c > 0)
+                res += dict[c] + " ";
         }
         return res;
     }

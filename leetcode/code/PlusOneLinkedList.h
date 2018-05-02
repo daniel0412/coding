@@ -27,6 +27,7 @@ class PlusOneLinkedList {
         if(head == nullptr)
             return head;
         int carry = recursiveImpl(head);
+        // take care of the carry for the first node after the recursive call
         if(carry > 0) {
             ListNode* l = new ListNode(carry);
             l->next = head;

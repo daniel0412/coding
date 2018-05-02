@@ -23,36 +23,45 @@ class SimplifyPath {
   public:
     string simplifyPath(string path)
     {
-        stack<string> mystack;
-        int start = 0, pathLen = path.size();
-        for(int i = 0; i < pathLen; ++i) {
-            if(path[i] == '/' || i == pathLen-1) {
-                int len = i-start-1;
-                if(i == pathLen-1 && path[i] != '/') ++len;
-                if(len > 0) {
-                    string tmp = path.substr(start + 1, len);
-                    if(tmp == ".") {
-                        //continue;
-                    }
-                    else if(tmp == "..") {
-                        if(!mystack.empty()) {
-                            mystack.pop();
-                        }
-                    }
-                    else {
-                        mystack.push(tmp);
-                    }
-                }
-                start = i;
+        int i = 0, len = path.size();
+        stack<string> s;
+        while(i < len) {
+            string tmp = getNext(path, i);
+            if(tmp.empty() || tmp == ".")
+                continue;
+            if(tmp == "..") {
+                // corner case "/../"
+                if(!s.empty())
+                    s.pop();
+            }
+            else {
+                s.push(tmp);
             }
         }
-
+        if(s.empty())
+            return "/";
         string res;
-        while(!mystack.empty()) {
-            res = "/" + mystack.top() + res;
-            mystack.pop();
+        while(!s.empty()) {
+            res = "/" + s.top() + res;
+            s.pop();
         }
+        // empty case
         return res.empty() ? "/" : res;
+    }
+
+    string getNext(const string& path, int& i)
+    {
+        int len = path.size();
+        if(i >= len)
+            return "";
+        if(i < len && path[i] == '/')
+            ++i;
+        int start = i, end = start;
+        while(end < len && path[end] != '/') {
+            ++end;
+        }
+        i = end;
+        return path.substr(start, end - start);
     }
 
   private:

@@ -92,6 +92,7 @@ class Maze2 {
             --steps;
             if(dists[nextx][nexty] > steps) {
                 dists[nextx][nexty] = steps;
+                // only recursive call if not dst
                 if(nextx != dstx || nexty != dsty) {
                     dfs(m, nextx, nexty, dstx, dsty, dists, dirs);
                 }

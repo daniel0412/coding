@@ -23,6 +23,7 @@ class LinkedListRandomNode {
   public:
     LinkedListRandomNode(ListNode* head) { d_head = head; }
 
+    // each call need to run over all the nodes
     int getRandom()
     {
         int cnt = 1, res = -1;

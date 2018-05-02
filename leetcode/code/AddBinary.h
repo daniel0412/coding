@@ -21,6 +21,7 @@ using namespace std;
 
 class AddBinary {
   public:
+    // a little bit faster
     string addBinary(string a, string b)
     {
         if(a.empty() || b.empty()) {
@@ -50,7 +51,27 @@ class AddBinary {
         return res;
     }
 
+    // more concise coding
+    string addBinary(string a, string b)
+    {
+        if(a.empty())
+            return b;
+        if(b.empty())
+            return a;
+        int an = a.size(), bn = b.size();
+        int ai = an - 1, bi = bn - 1;
+        int carry = 0;
+        string res;
+        // here consider all cases until a/b all bits calculated
+        while(ai >= 0 || bi >= 0) {
+            int x = ai >= 0 ? a[ai--] - '0' : 0;
+            int y = bi >= 0 ? b[bi--] - '0' : 0;
+            int sum = x + y + carry;
+            carry = sum / 2;
+            res = to_string(sum % 2) + res;
+        }
+        return carry == 1 ? "1" + res : res;
+    }
+
   private:
 };
-
-

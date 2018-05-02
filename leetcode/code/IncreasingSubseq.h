@@ -24,6 +24,7 @@ class IncreasingSubseq {
     vector<vector<int> > findSubsequences(vector<int>& nums)
     {
         vector<int> path;
+        // here not using hashset, because we need to define hash function for vectors
         set<vector<int> > results;
         recursiveImpl(nums, 0, path, results);
         return vector<vector<int> >(results.begin(), results.end());

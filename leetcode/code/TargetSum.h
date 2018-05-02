@@ -61,4 +61,26 @@ class TargetSum {
         dp[i][target] = cnt1 + cnt2;
         return dp[i][target];
     }
+
+
+    // pure dp
+    int findTargetSumWays(vector<int>& nums, int S)
+    {
+        // initial map of (sum -> cnt)
+        unordered_map<int, int> m;
+        m[0] = 1;
+        for(auto n : nums) {
+            // constuct a new map for each number
+            unordered_map<int, int> tmp;
+            // loop over old map, make sure we got the new sum->cnt
+            for(auto& kv : m) {
+                int cursum = kv.first, cnt = kv.second;
+                tmp[cursum + n] += cnt;
+                tmp[cursum - n] += cnt;
+            }
+            // update the map with new map
+            m = tmp;
+        }
+        return m[S];
+    }
 };

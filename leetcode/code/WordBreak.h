@@ -40,9 +40,11 @@ class WordBreak {
     bool dpImpl(const string& s, const vector<string>& wordDict)
     {
         unordered_set<string> dict(wordDict.begin(), wordDict.end());
+        // dp[i]: [0-i] is breakable
         vector<bool> dp(s.size() + 1, false);
         dp[0] = true;
         for(int i = 0; i < s.size(); ++i) {
+            // if [0, breakpos] is breakable and [breakpos, i] is in the dict
             for(int breakPos = 0; breakPos < i; ++breakPos) {
                 if(dp[breakPos + 1] &&
                    dict.count(s.substr(breakPos + 1, i - breakPos)) > 0) {
@@ -50,6 +52,7 @@ class WordBreak {
                     break;
                 }
             }
+            // if the entire word is in the dict
             if(!dp[i + 1] && dict.count(s.substr(0, i + 1)) > 0) {
                 dp[i + 1] = true;
             }

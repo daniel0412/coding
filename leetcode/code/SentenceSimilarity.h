@@ -36,7 +36,7 @@ class SentenceSimilarity {
             const auto& w2 = words2[i];
             if(w1 == w2)
                 continue;
-            if(!m[w1].count(w2) && !m[2].count(w1))
+            if(!m[w1].count(w2) && !m[w2].count(w1))
                 return false;
         }
         return true;

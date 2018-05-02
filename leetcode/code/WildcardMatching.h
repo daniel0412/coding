@@ -28,10 +28,7 @@ using namespace std;
 
 class WildcardMatching {
   public:
-    bool isMatch(std::string s, std::string p)
-    {
-        return greedy(s, p);
-    }
+    bool isMatch(std::string s, std::string p) { return greedy(s, p); }
 
   private:
     // exponential time complexity, timeout
@@ -58,19 +55,23 @@ class WildcardMatching {
     {
         int sLen = s.size(), pLen = p.size();
         int si = 0, pi = 0;
+        // index for s and p to go back when failed to match
         int sStartId = -1, pMatchedId = -1;
-        // here only use len of s as
+        // ATTENTION: here only use len of s, since it is possible that pi ==
+        // p.size(), then we should go back to pmatchedId
         while(si < sLen) {
             if(pi < pLen && (p[pi] == '?' || p[pi] == s[si])) {
                 ++si;
                 ++pi;
             }
-            // when * met, assume s[si] not matched, ignore pi and check next char in p
+            // when * met, assume s[si] not matched, ignore pi and check next
+            // char in p
             else if(pi < pLen && p[pi] == '*') {
                 sStartId = si;
                 pMatchedId = ++pi;
             }
-            // match failed: 1) current char does not match or 2) p ends earlier than s
+            // match failed: 1) current char does not match or 2) p ends
+            // earlier than s
             // skip sStart, treat it as matched with *
             else if(pMatchedId > -1) {
                 si = ++sStartId;
@@ -81,7 +82,8 @@ class WildcardMatching {
             }
         }
         // make sure extra chars in p are all *
-        if(pi < pLen) return p.substr(pi).find_first_not_of('*') == string::npos;
+        if(pi < pLen)
+            return p.substr(pi).find_first_not_of('*') == string::npos;
         // if s and p exactly matches
         return true;
     }
@@ -99,7 +101,7 @@ class WildcardMatching {
             dp[0][j] = true;
         }
 
-        //O(M*N)
+        // O(M*N)
         for(int i = 1; i <= m; ++i) {
             for(int j = 1; j <= n; ++j) {
                 if(p[j - 1] == '*') {
@@ -113,6 +115,4 @@ class WildcardMatching {
         }
         return dp[m][n];
     }
-
-}
-;
+};

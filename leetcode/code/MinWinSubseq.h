@@ -15,8 +15,7 @@
 #include <functional>
 #include <algorithm>
 #include <utility>
-#include "utils.h"
-
+#include "utils.h" 
 using namespace std;
 
 class MinWinSubseq {

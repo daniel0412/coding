@@ -1,6 +1,6 @@
 /*
- *
- */
+*
+*/
 
 #include <string>
 #include <vector>
@@ -42,20 +42,19 @@ class TwoSum {
     }
 
     // one pass
-    vector<int> twoSumImpl1(vector<int>& nums, int target)
+    vector<int> twoSum(vector<int>& nums, int target)
     {
+        vector<int> res;
         unordered_map<int, int> m;
-        for(int i = 0; i < nums.size(); ++i) {
+        for(int i = 0; i < (int) nums.size(); ++i) {
             int diff = target - nums[i];
-            if(m.count(diff) && m[diff] != i) {
+            if(m.count(diff) > 0) {
                 return {m[diff], i};
-                res.push_back(m[diff]);
-                res.push_back(i);
-                break;
             }
             m[nums[i]] = i;
         }
-        return res;
+        return {};
+    }
 
-      private:
-    };
+  private:
+};

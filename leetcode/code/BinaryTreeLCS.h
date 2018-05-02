@@ -54,7 +54,8 @@ class BinaryTreeLCS {
         if(root == nullptr)
             return 0;
         int maxLen = 0;
-        return helper(root, maxLen, 0, root->val);
+        helper(root, maxLen, 0, root->val);
+        return maxLen;
     }
 
   private:

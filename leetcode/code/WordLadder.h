@@ -29,11 +29,9 @@ class WordLadder {
     }
 
   private:
-    int doubleBfs(
-            const string& beginword,
-            const string& endword,
-            vector<string>& wordlist
-            )
+    int doubleBfs(const string& beginword,
+                  const string& endword,
+                  vector<string>& wordlist)
     {
         unordered_set<string> dict(wordlist.begin(), wordlist.end());
         if(beginword.size() != endword.size() || dict.count(endword) == 0)
@@ -53,7 +51,8 @@ class WordLadder {
             if(begins.size() <= ends.size()) {
                 pB = &begins;
                 pE = &ends;
-            }else{
+            }
+            else {
                 pB = &ends;
                 pE = &begins;
             }
@@ -73,7 +72,7 @@ class WordLadder {
                             }
                         }
                     }
-                    s[i]=curC;
+                    s[i] = curC;
                 }
             }
             ++length;
@@ -82,51 +81,37 @@ class WordLadder {
         return 0;
     }
 
-    int bfs(const string& beginword,
-             const string& endword,
-             const vector<string>& wordlist)
+    // bfs
+    int ladderLength(string beginWord,
+                     string endWord,
+                     vector<string>& wordList)
     {
-        unordered_set<string> dict(wordlist.begin(), wordlist.end());
-        if(beginword.size() != endword.size() || dict.count(endword) == 0)
-            return 0;
-        if(beginword == endword)
-            return 0;
-
-        // reuse dict rather than 'visited' can avoid timeout
-        //unordered_set<string> visited;
+        unordered_set<string> dict(wordList.begin(), wordList.end());
+        unordered_set<string> v;
         queue<string> q;
-        q.push(beginword);
-        q.push("*");
-        //visited.insert(beginword);
-        dict.erase(beginword);
-        int length = 1;
+        q.push(beginWord);
+        v.insert(beginWord);
+        int steps = 1;
         while(!q.empty()) {
-            string tmp = q.front();
-            q.pop();
-            // ***** make sure only when q is not empyt, we push '*', otherwise, never ends
-            if(tmp == "*" && !q.empty()) {
-                ++length;
-                // ******* important where to push '*'
-                q.push("*");
-                continue;
-            }
-            else if(tmp == endword) {
-                return length;
-            }
-            else {
-                for(int i = 0; i < tmp.size(); ++i) {
-                    char curC = tmp[i];
+            ++steps;
+            int len = q.size();
+            for(size_t i = 0; i < len; ++i) {
+                auto s = q.front();
+                q.pop();
+                for(size_t j = 0; j < s.size(); ++j) {
+                    auto tmp = s;
                     for(char c = 'a'; c <= 'z'; ++c) {
-                        tmp[i] = c;
-                        //if(visited.count(tmp) == 0 && dict.count(tmp) > 0) {
-                        if( dict.count(tmp) > 0) {
-                            //visited.insert(tmp);
-                            dict.erase(tmp);
+                        if(s[j] == c)
+                            continue;
+                        tmp[j] = c;
+                        if(dict.count(tmp) && !v.count(tmp)) {
+                            if(tmp == endWord)
+                                return steps;
+                            v.insert(tmp);
                             q.push(tmp);
-                            cout << tmp << " ";
                         }
+                        tmp[j] = s[j];
                     }
-                    tmp[i] = curC;
                 }
             }
         }

@@ -21,8 +21,8 @@ using namespace std;
 
 class ReverseLinkedList {
   public:
-      ListNode* reverseList(ListNode* head) {
-      }
+    ListNode* reverseList(ListNode* head) {}
+
   private:
     ListNode* iterativeImpl(ListNode* head)
     {
@@ -42,9 +42,10 @@ class ReverseLinkedList {
         return cur;
     }
 
-    ListNode* recursiveImpl(ListNode* head) {
+    ListNode* recursiveImpl(ListNode* head)
+    {
         // consider head nullptr case: empty list
-        if(head==nullptr || head->next == nullptr) {
+        if(head == nullptr || head->next == nullptr) {
             return head;
         }
         ListNode* cur = recursiveImpl(head->next);

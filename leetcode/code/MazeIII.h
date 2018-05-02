@@ -31,6 +31,7 @@ class MazeIII {
             return "impossible";
         vector<pair<int, int> > dirs = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
         string dirStr = "durl";
+        // cache transformed loc -> (steps, move ops)
         unordered_map<int, pair<int, string> > cache;
         cache[getLoc(maze[0].size(), start[0], start[1])] = {0, ""};
         return dfs(
@@ -74,6 +75,7 @@ class MazeIII {
                     cache[dstLoc].first = steps;
                     cache[dstLoc].second = path;
                 }
+                // hole found, then no need to continue recursive call
                 continue;
             }
             else {
@@ -82,9 +84,10 @@ class MazeIII {
                 --steps;
 
                 int nextLoc = getLoc(ncols, nextx, nexty);
-                if(cache.count(nextLoc) == 0 || cache[nextLoc].first > steps) {
+                if(cache.count(nextLoc) == 0 || steps < cache[nextLoc].first) {
                     cache[nextLoc].first = steps;
                     cache[nextLoc].second = path;
+                    // continue recursive call
                     dfs(m, nextx, nexty, dstx, dsty, cache, dirStr, dirs);
                 }
             }

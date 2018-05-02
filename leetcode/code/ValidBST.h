@@ -21,10 +21,14 @@ using namespace std;
 
 class ValidBST {
   public:
-      bool isValidBST(TreeNode* root) {
-          return recursiveImpl(root, LLONG_MIN, LLONG_MAX);
-      }
+    bool isValidBST(TreeNode* root)
+    {
+        return recursiveImpl(root, LLONG_MIN, LLONG_MAX);
+    }
+
   private:
+    // keep track of lowerst and largest boundary for each subtree, and
+    // updating in each recursive call
     bool recursiveImpl(TreeNode* root, long long minVal, long long maxVal)
     {
         if(!root)
@@ -35,6 +39,7 @@ class ValidBST {
             recursiveImpl(root->right, root->val, maxVal);
     }
 
+    // inorder traversal and make sure the sequence is increasing
     bool iterativeImpl(TreeNode* root)
     {
         if(root == nullptr)

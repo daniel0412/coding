@@ -21,22 +21,23 @@ using namespace std;
 
 class MinSizeSubarraySum {
   public:
-      int minSubArrayLen(int s, vector<int>& nums) {
-          int left = 0, right = 0;
-          int sum = 0;
-          int minLen = numeric_limits<int>::max();
-          // this is O(n) since inner loop the `left` index is moving all the time
-          while(right < nums.size()) {
-              sum += nums[right];
-              if(sum >= s) {
-                  while(sum - nums[left] >= s) {
-                      sum -= nums[left++];
-                  }
-                  minLen = min(minLen, right - left + 1);
-              }
-              ++right;
-          }
-          return minLen == numeric_limits<int>::max() ? 0 : minLen;
-      }
+    int minSubArrayLen(int s, vector<int>& nums)
+    {
+        // two pointer
+        int left = 0, right = 0;
+        int n = nums.size();
+        int sum = 0, minlen = n + 1;
+        while(right < n) {
+            sum += nums[right++];
+            if(sum >= s) {
+                while(sum >= s) {
+                    sum -= nums[left++];
+                }
+                minlen = min(minlen, right - left + 1);
+            }
+        }
+        return minlen == n + 1 ? 0 : minlen;
+    }
+
   private:
 };

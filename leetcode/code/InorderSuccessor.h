@@ -21,15 +21,19 @@ using namespace std;
 
 class InorderSuccessor {
   public:
-    TreeNode* inorderSuccessor(TreeNode* root, TreeNode* p)
+    TreeNode* inorderSuccessorBST(TreeNode* root, TreeNode* p)
     {
         TreeNode* res = nullptr;
         TreeNode* cur = root;
         while(cur) {
+            // keep updating the last greater element,
+            // which will end up with the successor
             if(cur->val > p->val) {
                 res = cur;
                 cur = cur->left;
             }
+            // cannot break when cur->val == p->val
+            // example, successor is in the right subtree
             else {
                 cur = cur->right;
             }

@@ -21,9 +21,13 @@ using namespace std;
 
 class ConvertSortedListToBST {
   public:
-    TreeNode* sortedListToBST(ListNode* head) { return recursiveImpl(head, nullptr); }
+    // recursion from root to leaves
+    // O(nlog(n)) solution T(n) = 2T(n/2) + O(n), O(n) to loop over the list
+    TreeNode* sortedListToBST(ListNode* head)
+    {
+        return recursiveImpl(head, nullptr);
+    }
 
-  private:
     TreeNode* recursiveImpl(ListNode* head, ListNode* tail)
     {
         if(head == tail)
@@ -41,6 +45,34 @@ class ConvertSortedListToBST {
         TreeNode* root = new TreeNode(mid->val);
         root->left = recursiveImpl(head, mid);
         root->right = recursiveImpl(mid->next, tail);
+        return root;
+    }
+
+    // recursion to construct from leaves to root
+    // O(n) solution: T(n) = 2T(n/2) + const 
+    TreeNode* sortedListToBST(ListNode* head)
+    {
+        int n = 0;
+        ListNode* cur = head;
+        while(cur) {
+            ++n;
+            cur = cur->next;
+        }
+        cur = head;
+        return impl(cur, n);
+    }
+
+    TreeNode* impl(ListNode*& cur, int n)
+    {
+        if(n == 0)
+            return nullptr;
+        TreeNode* left = impl(cur, n / 2);
+        TreeNode* root = new TreeNode(cur->val);
+        cur = cur->next;
+        // ATTENTION: here n-n/2-1 since root also takes one node
+        TreeNode* right = impl(cur, n - n / 2 - 1);
+        root->left = left;
+        root->right = right;
         return root;
     }
 };
