@@ -35,10 +35,13 @@ class LonelyPixel2 {
         int count = 0;
         int numRows = pic.size(), numCols = pic[0].size();
 
+        // stores indicies of 'B' in each col and row
         vector<vector<int> > bpColIndices(numRows, vector<int>());
         vector<vector<int> > bpRowIndices(numCols, vector<int>());
 
+        // store each row pattern
         vector<string> rowStrs;
+        // store pattern to row indicies that have the same pattern
         unordered_map<string, unordered_set<int> > rowToIndexMap;
 
         for(int i = 0; i < numRows; ++i) {

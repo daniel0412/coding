@@ -32,8 +32,7 @@ class TaskScheduler {
             ++m[c];
         }
 
-        auto comp = [](int a, int b) { return a < b; };
-        priority_queue<int, vector<int>, decltype(comp)> q(comp);
+        priority_queue<int, vector<int>, less<int>> q;
         for(const auto& kv : m) {
             q.emplace(kv.second);
         }

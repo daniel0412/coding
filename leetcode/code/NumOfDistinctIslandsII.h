@@ -83,6 +83,5 @@ class NumOfDistinctIslandsII {
         return *res.begin();
     }
 
-
   private:
 };

@@ -62,15 +62,20 @@ class GeneralizedAbbr {
         dfsImpl(res, w, id + 1);
     }
 
-    vector<string> abbr(const string& s)
+    void impl(vector<string>& res, string w, int id)
     {
-        vector<string> res;
-        for(size_t i = 0; i < s.size(); ++i) {
-            for(size_t j = i; j < s.size(); ++j) {
-                res.emplace_back(s.substr(0, j) + to_string(j - i + 1) +
-                                 s.substr(j + 1));
+        // loop over all starting index
+        for(int i = id; i < (int) w.size(); ++i) {
+            // loop over all possible length for abbreviation
+            for(int j = 1; i + j <= (int) w.size(); ++j) {
+                string t = w.substr(0, i);
+                string cnt = to_string(j);
+                t = t + cnt + w.substr(i + j);
+                res.emplace_back(t);
+                // do the same thing for the abbreviated word
+                // but need to make sure there is at least 1 in between two numbers
+                impl(res, t, i + cnt.size() + 1);
             }
         }
-        return res;
     }
 };

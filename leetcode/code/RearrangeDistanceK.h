@@ -48,6 +48,9 @@ class RearrangeDistanceK {
               vector<pair<int, char>> v;
               // make sure for the last block, cycle has the right number of elements
               int cycle = min(k, len);
+              // for each cycle of distinct chars, take one from priority queue
+              // if before filling all k slots, no distinct chars in the queue,
+              // indicating not possible
               for(int i = 0; i < cycley; ++i) {
                   if(q.empty()) return "";
                   res.push_back(q.top().second);

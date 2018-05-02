@@ -25,7 +25,7 @@ class MaxSumOf3NonoverlappingSubarrays {
     {
         int n = nums.size();
         if(n < 3 * k)
-            return vector<int>();
+            return {};
 
         // calculate pre-sum
         vector<int> sums(n, 0);

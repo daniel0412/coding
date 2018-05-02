@@ -25,28 +25,30 @@ class NondecreasingArray {
     {
         if(nums.size() < 3)
             return true;
-        int cnt = 0;
+        int cnt = 1;
         for(int i = 0; i < nums.size() - 1; ++i) {
             if(nums[i] > nums[i + 1]) {
-                if(cnt >= 1)
+                if(cnt == 0)
                     return false;
-                ++cnt;
-                // can be combined into two cases
+                // if it is the first element
                 if(i == 0) {
-                    nums[i] = nums[i - 1];
+                    nums[i] = nums[i + 1];
                 }
                 else {
-                    if(nums[i - 1] > nums[i + 1]) {
-                        nums[i + 1] = nums[i];
-                    }
-                    else {
+                    if(nums[i - 1] < nums[i + 1]) {
                         nums[i] = nums[i - 1];
                     }
+                    else {
+                        nums[i + 1] = nums[i];
+                    }
                 }
+                --cnt;
             }
         }
         return true;
     }
 
-  private:
-};
+
+private:
+}
+;
